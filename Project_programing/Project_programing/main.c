@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-
+//halo halo
+//zmiana
 int main()
 {
 

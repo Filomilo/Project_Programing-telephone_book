@@ -7,6 +7,7 @@ int main()
 {
 
 	printf("hello world \n");
+	printf("welcome to the internet\n");
 	return 0;
 
 }

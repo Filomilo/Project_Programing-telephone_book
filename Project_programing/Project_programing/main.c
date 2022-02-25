@@ -2,6 +2,7 @@
 
 //halo halo
 //zmiana
+//zmiana2
 int main()
 {
 

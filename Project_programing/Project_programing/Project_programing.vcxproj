@@ -146,6 +146,9 @@
   <ItemGroup>
     <ClInclude Include="phone_book.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Spis funkcji.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,0 +1,13 @@
+Filip Borowiec 25.02.2022
+type danych "contact_type" w pliku phone_book.h
+
+typ ten jest struktur¹ pojedyñczego kontaktu do póŸniejszej listy ksi¹¿ki teleofniczej
+zawiera on
+.id - id konaktu o typie unsigned int
+.name - imie konkatku które jest tablica znaków o d³ugoœci 30
+.surname - nazwisko konkatku które jest tablica znaków o d³ugoœci 30
+adress.street - ulica konkatku która jest tablica znaków o d³ugoœci 30 i jest czêœci¹ struktury adress_type
+adress.number - numer domu lub budynku konkatu o typie short int i jest czêœci¹ struktury adress_type
+adress.postal_code - kod pocztowy kontaktu który jest tablic¹ znaków o d³ugoœæi 8 i która jest czêœci¹ struktury adress_type
+adress.city - nazwa miasta konkatku która jest tablica znaków o d³ugoœci 30 i jest czêœci¹ struktury adress_type
+.phone_number - numer telefonu kontaktu któta jest tablic¹ znaków o d³ugoœci 11 

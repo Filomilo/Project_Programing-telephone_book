@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="phone_book.c" />
+    <ClCompile Include="phone_book_list.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="phone_book.h" />

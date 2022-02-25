@@ -21,6 +21,9 @@
     <ClCompile Include="phone_book.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="phone_book_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="phone_book.h">

@@ -5,7 +5,7 @@
 #include <string.h>
 
 
-
+/*
 void list_test()
 {
 	printf("\n\n\n\n\n thisi s the test of list data structure: \n\n");
@@ -117,7 +117,7 @@ void list_test()
 	printf("\n\n\n\n\n\n\n");
 
 }
-
+*/
 contact_type generate_rand_contact(int seed)
 {
 	srand(seed);
@@ -221,7 +221,7 @@ void genrating_contacts_test()
 
 
 }
-
+/*
 int int_cmp(list_data a, list_data b)
 {
 	if (a > b)
@@ -232,9 +232,9 @@ int int_cmp(list_data a, list_data b)
 		else 
 			return 0;
 
-}
+} */
 
-
+/*
 void list_test_sort()
 {
 	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
@@ -251,9 +251,62 @@ void list_test_sort()
 	list = list_add_tail(list, 6);
 	list = list_add_tail(list, -1);
 	list = list_add_tail(list, 7);
-	list = merge_sort(list, int_cmp);
-	printf("\n your lsit sorted: \n");
-	print_list_tail(list);
+	list_pointers list_new = merge_sort(list, int_cmp);
+	printf("\n your lsit sorted:");
+	print_list_head(list_new);
 	printf("\n\n\n\n\n\n\n");
 
+}
+
+
+*/
+void list_contact_test_sort()
+{
+	srand(time(0));
+	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
+	list_pointers list = list_init();
+	for (int i = 0; i < 10; i++)
+	{
+		list = list_add_head(list, generate_rand_contact(rand()));
+
+	}
+	print_list_tail(list);
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by id: \n\n\n\n");
+		list = merge_sort(list, id_cmp);
+	print_list_tail(list);
+
+
+
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by name: \n\n\n\n");
+	list = merge_sort(list, name_cmp);
+	print_list_tail(list);
+
+
+
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by phone: \n\n\n\n");
+	list = merge_sort(list, phone_cmp);
+	print_list_tail(list);
+
+
+
+
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by city: \n\n\n\n");
+	list = merge_sort(list, city_cmp);
+	print_list_tail(list);
+
+
+
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by street: \n\n\n\n");
+	list = merge_sort(list, street_cmp);
+	print_list_tail(list);
+
+
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by postal_code: \n\n\n\n");
+	list = merge_sort(list, postal_code_cmp);
+	print_list_tail(list);
+
+
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by house numb: \n\n\n\n");
+	list = merge_sort(list, number_cmp);
+	print_list_tail(list);
 }

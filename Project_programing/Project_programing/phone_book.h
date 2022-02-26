@@ -28,7 +28,7 @@ typedef struct contact_struct contact_type;
 
 //data type of int with change name to use as data type in list and make it easier for later change to sturcture
 
-typedef int list_data;
+typedef contact_type list_data;
 
 
 //strcuture type of a single element of list
@@ -69,6 +69,14 @@ extern list_pointers merge_sort(list_pointers list, int (*cmp)(list_data, list_d
 extern void print_contact(contact_type contact);
 
 
+
+extern int id_cmp(list_node* a, list_node* b);
+extern int name_cmp(list_node* a, list_node* b);
+extern int phone_cmp(list_node* a, list_node* b);
+extern int city_cmp(list_node* a, list_node* b);
+extern int street_cmp(list_node* a, list_node* b);
+extern int postal_code_cmp(list_node* a, list_node* b);
+extern number_cmp(list_node* a, list_node* b);
 
 
 

@@ -70,11 +70,11 @@ list_pointers list_add_tail(list_pointers list, list_data data)
 	return list;
 }
 
-list_node* find_node(list_pointers list, list_data searched_value)
+list_node* find_node(list_pointers list, int searched_value)
 {
 	while (list.tail != NULL)
 	{
-		if (list.tail->data == searched_value)
+		if (list.tail->data.id == searched_value)
 			return list.tail;
 		list.tail = list.tail->next;
 
@@ -174,12 +174,12 @@ void print_list_head(list_pointers list)
 	}
 	while (list.head != list.tail)
 	{
-		printf("%d, ", list.head->data);
+		print_contact( list.head->data);
 		list.head = list.head->prev;
 
 
 	}
-	printf("%d, ", list.head->data);
+	print_contact(list.head->data);
 	printf("\n");
 }
 
@@ -192,14 +192,35 @@ void print_list_tail(list_pointers list)
 	}
 	while (list.tail != list.head)
 	{
-		printf("%d, ", list.tail ->data);
+		print_contact(list.tail ->data);
 		list.tail = list.tail->next;
 
 
 	}
-	printf("%d, ", list.tail ->data);
+	print_contact(list.tail->data);
 	printf("\n");
 }
+
+
+void delete_list(list_pointers list)
+{
+	if (list.head == NULL)
+	{
+		printf("your list is empty\n");
+		return;
+	}
+	list_node* tmp = NULL;;
+	while (list.tail != list.head)
+	{
+		tmp = list.tail;
+		list.tail = list.tail->next;
+		free(tmp);
+
+
+	}
+}
+
+
 
 list_node* find_middle_node(list_pointers list)
 {
@@ -230,7 +251,7 @@ list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(list_dat
 	
 	list_node* lpointer = left.tail;
 	list_node* rpointer = right.tail;
-
+	list_node* delpointer = NULL;
 
 
 	while (lpointer != left.head->next && rpointer != right.head->next)
@@ -238,11 +259,13 @@ list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(list_dat
 		if (cmp(lpointer->data, rpointer->data) >= 0)
 		{
 			list = list_add_head(list, lpointer->data);
+			delpointer = lpointer;
 			lpointer = lpointer->next;
 		}
 		else
 		{
 			list = list_add_head(list, rpointer->data);
+			delpointer = rpointer;
 			rpointer = rpointer->next;
 		}
 	}
@@ -259,9 +282,6 @@ list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(list_dat
 		rpointer = rpointer->next;
 	}
 
-
-	printf("tst: \n");
-	print_list_tail(list);
 
 	return list;
 }
@@ -285,7 +305,5 @@ list_pointers merge_sort(list_pointers list, int (*cmp)(list_data, list_data))
 	right_list = merge_sort(right_list, cmp);
 	return merge(left_list,right_list, cmp);
 }
-
-
 
 

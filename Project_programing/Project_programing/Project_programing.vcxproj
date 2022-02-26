@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="list_cmp.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="phone_book.c" />
     <ClCompile Include="phone_book_list.c" />

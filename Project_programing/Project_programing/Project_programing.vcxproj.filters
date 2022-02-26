@@ -27,6 +27,9 @@
     <ClCompile Include="temporary_functions.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="list_cmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="phone_book.h">

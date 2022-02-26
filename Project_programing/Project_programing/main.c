@@ -14,7 +14,8 @@ int main()
 	//printf("\n \n size of your structure: %d\n\n size of double for comparsion: %d\n\n", sizeof(phone_book), sizeof(double));
 	//list_test();
 	//genrating_contacts_test();
-	list_test_sort();
+	//list_test_sort();
+	list_contact_test_sort();
 	
 	return 0;
 

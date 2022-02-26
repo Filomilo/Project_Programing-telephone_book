@@ -41,7 +41,6 @@ list_pointers list_add_head(list_pointers list, list_data data)
 		return list;
 }
 
-
 list_pointers list_add_tail(list_pointers list, list_data data)
 {
 	list_node* new_node = (list_node*)malloc(sizeof(list_node));
@@ -71,8 +70,6 @@ list_pointers list_add_tail(list_pointers list, list_data data)
 	return list;
 }
 
-
-
 list_node* find_node(list_pointers list, list_data searched_value)
 {
 	while (list.tail != NULL)
@@ -85,12 +82,6 @@ list_node* find_node(list_pointers list, list_data searched_value)
 	printf("no value found\n");
 	return NULL;
 }
-
-
-
-
-
-
 
 list_pointers list_remove_tail(list_pointers list)
 {
@@ -109,14 +100,6 @@ list_pointers list_remove_tail(list_pointers list)
 
 	return list;
 }
-
-
-
-
-
-
-
-
 
 list_pointers list_remove_head(list_pointers list)
 {
@@ -145,7 +128,6 @@ list_pointers list_remove_head(list_pointers list)
 	return list;
 }
 
-
 list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 {
 	if (node_to_remove == NULL)
@@ -172,11 +154,6 @@ list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 
 }
 
-
-
-
-
-
 void list_edit_node(list_node* node_to_edit, list_data data)
 {
 	if (node_to_edit == NULL)
@@ -188,7 +165,6 @@ void list_edit_node(list_node* node_to_edit, list_data data)
 
 }
 
-
 void print_list_head(list_pointers list)
 {
 	if (list.head == NULL)
@@ -196,37 +172,119 @@ void print_list_head(list_pointers list)
 		printf("your list is empty\n");
 		return;
 	}
-	while (list.head != NULL)
+	while (list.head != list.tail)
 	{
 		printf("%d, ", list.head->data);
 		list.head = list.head->prev;
 
 
 	}
+	printf("%d, ", list.head->data);
 	printf("\n");
 }
-
-
 
 void print_list_tail(list_pointers list)
 {
 	if (list.head == NULL)
 	{
 		printf("your list is empty\n");
+		return;
 	}
-	while (list.tail != NULL)
+	while (list.tail != list.head)
 	{
 		printf("%d, ", list.tail ->data);
 		list.tail = list.tail->next;
 
 
 	}
+	printf("%d, ", list.tail ->data);
 	printf("\n");
 }
 
+list_node* find_middle_node(list_pointers list)
+{
+	if (list.head==NULL )
+	{
+		printf("ERROR: list is empty");
+		return NULL;
+	}
+	if (list.head == list.tail)
+	{
+		return list.head;
+	}
+	list_node* first = list.tail;
+	list_node* sec = list.tail;
+	while (sec->next != list.head && sec->next->next != list.head)
+	{
+		first = first->next;
+		sec=sec->next->next;
+	}
+	//first = first->next;
+	return first;
+
+}
+
+list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(list_data, list_data))
+{
+	list_pointers list = list_init();
+	
+	list_node* lpointer = left.tail;
+	list_node* rpointer = right.tail;
 
 
 
+	while (lpointer != left.head->next && rpointer != right.head->next)
+	{
+		if (cmp(lpointer->data, rpointer->data) >= 0)
+		{
+			list = list_add_head(list, lpointer->data);
+			lpointer = lpointer->next;
+		}
+		else
+		{
+			list = list_add_head(list, rpointer->data);
+			rpointer = rpointer->next;
+		}
+	}
+
+	while (lpointer!= left.head->next)
+	{
+		list = list_add_head(list, lpointer->data);
+		lpointer = lpointer->next;
+	}
+
+	while (rpointer != right.head->next)
+	{
+		list = list_add_head(list, rpointer->data);
+		rpointer = rpointer->next;
+	}
+
+
+	printf("tst: \n");
+	print_list_tail(list);
+
+	return list;
+}
+
+list_pointers merge_sort(list_pointers list, int (*cmp)(list_data, list_data))
+{
+	if (list.head == list.tail)
+		return list;
+	list_node* mid = find_middle_node(list);
+	list_pointers left_list;
+	left_list.head = list.head;
+	left_list.tail = mid->next;
+
+	list_pointers right_list;
+	right_list.head = mid;
+	right_list.tail = list.tail;
+
+
+
+	left_list = merge_sort(left_list, cmp);
+	right_list = merge_sort(right_list, cmp);
+	return merge(left_list,right_list, cmp);
+}
 
 
 

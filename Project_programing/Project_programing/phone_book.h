@@ -63,10 +63,12 @@ extern list_pointers list_remove_node(list_pointers list, list_node* node_to_rem
 void list_edit_node(list_node* node_to_edit, list_data data);
 void print_list_head(list_pointers list);
 void print_list_tail(list_pointers list);
-
-
+extern list_node* find_middle_node(list_pointers list);
+extern list_pointers merge_sort(list_pointers list, int (*cmp)(list_data, list_data));
 
 extern void print_contact(contact_type contact);
+
+
 
 
 
@@ -74,6 +76,8 @@ extern void print_contact(contact_type contact);
 
 extern void list_test(); 
 extern void genrating_contacts_test();
+int int_cmp(list_data a, list_data b);
+void list_test_sort();
 
 
 

@@ -11,3 +11,218 @@ adress.number - numer domu lub budynku konkatu o typie short int i jest czêœci¹ 
 adress.postal_code - kod pocztowy kontaktu który jest tablic¹ znaków o d³ugoœæi 8 i która jest czêœci¹ struktury adress_type
 adress.city - nazwa miasta konkatku która jest tablica znaków o d³ugoœci 30 i jest czêœci¹ struktury adress_type
 .phone_number - numer telefonu kontaktu któta jest tablic¹ znaków o d³ugoœci 11 
+
+
+
+Filip Borowiec 26.02.2022
+typ danych "list_data" w pliku phone_book.h
+
+jest to zwyk³y int ze zmianion¹ nazw¹ u¿yty w tworznieu listy dwukierunkowej aby póŸniej 
+u³atwiæ zmiane na strukture konaktu w póŸnijszej czêœæi pracy programu 
+
+
+
+Filip Borowiec 26.02.2022
+typ danych "list_node_struct" w pliku phone_book.h
+
+typ ten jest struktur¹ pojedyñczego elemtu listy dwukierunkowej typ ten zawiera:
+.data - zawiera dane danego elementu o typie list_data
+.next - zawiera wskaŸnik na nastêpny element listy, je¿eli jest to koniec listy (head) wsakŸnik wskazuje na NULL
+.prev - zawiera wskaŸnik na poprzedni element listy, je¿eli jest to pocz¹tek listy (tail) wsakŸnik wskazuje na NULL
+
+
+
+Filip Borowiec 26.02.2022
+typ danych "list_pointers" w pliku phone_book.h
+
+jest to struktura zawiertajaca informacje o utworzonej liscie w celu jej zarz¹dzania, typ ten zawiera:
+.head- jest to wskaŸñik na pierwszy element listy 
+.tail - jest to wsakŸnik na ostatni element listy
+Kiedy lista jest pusta oba wsak¿ñiki wsazuja na NULL,
+w przypadku kiedy lista sk³¹da siê z pojedyñczego elemntu oba wskaŸniki wsazuj¹ na ten sam element
+
+
+
+Filip Borowiec 26.02.2022
+funkcja "list_init" w pliku phone_book_list.c
+
+funkcja incjuj¹c¹ pust¹ liste czyli nadaje .head i .tail wartosæi NULL,
+nie przyjumuje ¿adnych parametrów, zwraca strukture list_pointers z parametrami z elemntami .head i .tail ustawionymi na NULL
+nale¿y u¿ywaæ przy tworzeniu nowej listy
+
+przyk³ad u¿ycia:
+list_pointers list = list_init();
+
+
+
+Filip Borowiec 26.02.2022
+funkcja "list_add_head" w pliku phone_book_list.c
+
+funcja dodaj¹ca elemnt na pocz¹tku listy (za head), 
+funkcja przyjmuje dwa arugumenty 
+pierwszy jest to struktura list_pointers na listy do której ma dodaæ elemntami
+drugi arugument jest elemntem typu list_data który ma zastoæ wprowadzony do listy
+funkcja zwraca strukture list_pointers listy do której zosta³ dodany element
+w przypadku kiedy nie uda siê utworzyæ nowego elemnetu funcja zwraca nie zminion¹ liste i wyœwietla napis "ERROR: Stack oberflow"
+
+przyk³ad u¿ycia:
+list = list_add_head(list, 5);
+
+
+
+Filip Borowiec 26.02.2022
+funkcja "list_add_tail" w pliku phone_book_list.c
+
+funcja dodaj¹ca elemnt na koñcu listy(przed tail), 
+funkcja przyjmuje dwa arugumenty 
+pierwszy jest to struktura list_pointers na listy do której ma dodaæ elemntami
+drugi arugument jest elemntem typu list_data który ma zastoæ wprowadzony do listy
+funkcja zwraca strukture list_pointers listy do której zosta³ dodany element
+w przypadku kiedy nie uda siê utworzyæ nowego elemnetu funcja zwraca nie zminion¹ liste i wyœwietla napis "ERROR: Stack oberflow"
+
+przyk³ad u¿ycia:
+list = list_add_tail(list, 123);
+
+
+Filip Borowiec 26.02.2022
+funkcja "find_node" w pliku phone_book_list.c
+
+funkcja znajduj¹ca elemnt o danenej wartoœæi we wprowadzonej lisæie
+funkcja przyjmuje dwa argumrnty 
+pierwszy jest to struktura list_pointers na liste gdzie ma znaleŸæ elememnt
+drugie jest typ danych list_data jako wartoœæ która ma znaleŸæ w podanej lisæe 
+funkcja zwraca wskaŸñik typu list_node na znaleŸiony elemt listy spe³niajacy wyszukiwan¹ wartosæi
+w przypadku je¿eli fuckcja nie znalaz³a elementu o danej wartosæ "no value found\n" i zwraca wawrtosæ NULL
+
+
+
+Filip Borowiec 26.02.2022
+funkcja "list_remove_tail" w pliku phone_book_list.c
+
+funcja usuwaj¹ca ostatni elemnt listy(tail), 
+funkcja przyjmuje argument list_pointers okreœlajacy liste której ogon ma zostaæ usuniêty
+funkcja zwraca strukture list_pointers której elemnt zosta³ usuniêty
+w przypadku kiedy .tail jest równt NULL funkcja zwraca listê bez zmiany i wyœwietla "ERROR: Nothing to remove\n"
+
+przyk³ad u¿ycia:
+list = list_remove_tail(list);
+
+
+
+Filip Borowiec 26.02.2022
+funkcja " list_remove_head" w pliku phone_book_list.c
+
+funcja usuwaj¹ca pierwszy elemnt listy(head), 
+funkcja przyjmuje argument list_pointers okreœlajacy liste której elemnt ma zostaæ usuniêty
+funkcja zwraca strukture list_pointers której elemnt zosta³ usuniêty
+w przypadku kiedy .head jest równt NULL funkcja zwraca listê bez zmiany i wyœwietla "ERROR: Nothing to remove\n"
+
+przyk³ad u¿ycia:
+list = list_remove_head(list);
+
+
+
+Filip Borowiec 26.02.2022
+funkcja "list_remove_node" w pliku phone_book_list.c
+
+funkcja usuwajaca wybrany element listy
+funkcja przyjmuje dwa argumeny
+pierwszy jest to struktura list_pointers na liste gdzie ma zostaæ usuniêty elememnt
+drugi jest to wska¿ñik list_node na element ktróry ma zostaæ usuniêy
+funkcja zwraca strukture list_pointers której elemnt zosta³ usuniêty
+w przypadku gdy wybrany element wskzuje na NULL funkcja zwraca liste bez zmian i wyœwietla "ERROR: no node to remove selected\n"
+funkcja mo¿ê byæ u¿yta w parze z funkcj¹ find_node w celu usuniêcie elemntu znalezionego przez te funkcje
+
+przyk³ad u¿ycia:
+list = list_remove_node(list, find_node(list, 55));
+
+
+
+Filip Borowiec 26.02.2022
+funkcja "list_edit_node" w pliku phone_book_list.c
+
+funkcja zminiaj¹ca dane wybranego na dane wprowadzone jako argumeny
+funkcja przyjmuje dwa argumeny
+pierszy jest to wska¿ñik list_node na element ktróry ma zostaæ zmieniony
+drugie jest typ danych list_data jako wartoœæ na któr¹ element listy ma zostaæ zmieniony
+funkcja nie zwraca wartosæi
+w przypadku gdy wybrany element wskzuje na NULL funkcja zwraca liste bez zmian i wyœwietla "ERROR: no node to remove selected\n"
+funkcja mo¿ê byæ u¿yta w parze z funkcj¹ find_node w celu usuniêcie elemntu znalezionego przez te funkcje
+
+przyk³ad u¿ycia:
+list_edit_node(find_node(list, 33), 456);
+
+
+
+Filip Borowiec 26.02.2022
+funkcja "print_list_head" w pliku phone_book_list.c
+
+funckja wyœwietlj¹ca liste pocz¹wszy od head id¹æ do tail
+funkcja przyjmuje jeden arugment któreym jest struktura list_pointers listy która ma wyœwieliæ
+funkcja nie zwraca wartosæi
+w przypadku gdy lista jest pusta, funkcja wyœwietla "your list is empty\n"
+
+przyk³ad u¿ycia:
+print_list_head(list);
+
+
+
+Filip Borowiec 26.02.2022
+funkcja "print_list_tail" w pliku phone_book_list.c
+
+funckja wyœwietlj¹ca liste pocz¹wszy od tail id¹c do head
+funkcja przyjmuje jeden arugment któreym jest struktura list_pointers listy która ma wyœwieliæ
+funkcja nie zwraca wartosæi
+w przypadku gdy lista jest pusta, funkcja wyœwietla "your list is empty\n"
+
+przyk³ad u¿ycia:
+print_list_head(tail);
+
+
+
+Filip Borowiec 26.02.2022
+funkcja "list_test" w pliku temporary_functions.c
+
+funckja jest tymczasowa funckcj¹ która nie powinna sie znaleŸæ w finalnej wersji prgramu,
+ma ona celu  sprawdzenie dzia³ania struktuy danych listy na której przeprowadza operacje w takiej kolejnoœci:
+
+inicujujê psut¹ liste
+wyœwietla liste od head do tail
+dodaje wartosæ 5 od strony head
+wyœwietla liste od head do tail
+dodaje wartosæ 82 od strony head 
+wyœwietla liste od head do tail
+dodaje wartosæ 22 od strony head 
+wyœwietla liste od tail do head
+dodaje wartosæ 123 od strony tail 
+wyœwietla liste od tail do head
+usuwa elemnt tail z listy
+wyœwietla liste od tail do head
+usuwa elemnt tail z listy
+wyœwietla liste od tail do head
+usuwa elemnt head z listy
+wyœwietla liste od tail do head
+usuwa elemnt head z listy
+wyœwietla liste od tail do head
+usuwa elemnt head z listy
+wyœwietla liste od tail do head
+usuwa elemnt tail z listy
+wyœwietla liste od tail do head
+dodaje wartosæ 55 od strony head
+wyœwietla liste od head do tail
+dodaje wartosæ 78 od strony head
+wyœwietla liste od head do tail
+dodaje wartosæ 4 od strony head 
+wyœwietla liste od tail do head
+dodaje wartosæ 33 od strony tail 
+wyœwietla liste od tail do head
+usuwa z listy element o wartosæ 55
+wyœwietla liste od tail do head
+usuwa z listy element o wartosæ 4
+wyœwietla liste od tail do head
+usuwa z listy element o wartosæ 58
+wyœwietla liste od tail do head
+zmienia element listy o wartoœci 11 na 22
+wyœwietla liste od tail do head
+zmienia element listy o wartoœci 33 na 456
+wyœwietla liste od tail do head

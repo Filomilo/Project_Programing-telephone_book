@@ -226,3 +226,37 @@ zmienia element listy o wartoœci 11 na 22
 wyœwietla liste od tail do head
 zmienia element listy o wartoœci 33 na 456
 wyœwietla liste od tail do head
+
+
+
+Filip Borowiec 26.02.2022
+funkcja generate_rand_contact w pliku temporary_functions.c
+
+funkcja generuje strtukture typu conact_type wype³nion¹ wartoœæiami losowanymi z wczeœniej okreœlonego zakresu
+funkcja przyjmuje wartosæ int jaki seed na podstawie którego losuje wartoœci
+funkcja zwraca strukture typu contact_type wype³nion¹ losowaymiw wartoœæami
+
+przyk³ad u¿ycia:
+contact = generate_rand_contact(rand());
+
+
+
+Filip Borowiec 26.02.2022
+funkcja genrating_contacts_test w pliku temporary_functions.c
+
+funkcja generuje generuje i wypisuje 200 przyk³adowo wygenrowanych konkatków
+funkcja nie przyjmuje i nie zwraca wartosæi
+
+
+
+Filip Borowiec 26.02.2022
+funkcja print_contact w pliku phone_book.c
+
+funkcja wypisuje na ekranie ca³a strukture typu contact_type
+funkcja przyjmuje wartosæ typu contact_type
+funkcja nie zwraca ¿adnej wartoœci 
+
+przyk³ad u¿ycia:
+print_contact(contact);
+
+

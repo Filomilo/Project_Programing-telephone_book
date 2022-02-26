@@ -65,16 +65,20 @@ void print_list_head(list_pointers list);
 void print_list_tail(list_pointers list);
 
 
+
+extern void print_contact(contact_type contact);
+
+
+
 // temporary function for testing if list data structure works properly, located in temporary_functions.c
 
 extern void list_test(); 
+extern void genrating_contacts_test();
 
 
 
 
 
-
-extern void print_test();
 
 
 

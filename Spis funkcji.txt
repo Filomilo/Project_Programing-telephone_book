@@ -1,56 +1,56 @@
 Filip Borowiec 25.02.2022
 type danych "contact_type" w pliku phone_book.h
 
-typ ten jest struktur¹ pojedyñczego kontaktu do póŸniejszej listy ksi¹¿ki teleofniczej
+typ ten jest strukturÄ… pojedyÅ„czego kontaktu do pÃ³Åºniejszej listy ksiÄ…Å¼ki teleofniczej
 zawiera on
 .id - id konaktu o typie unsigned int
-.name - imie konkatku które jest tablica znaków o d³ugoœci 30
-.surname - nazwisko konkatku które jest tablica znaków o d³ugoœci 30
-adress.street - ulica konkatku która jest tablica znaków o d³ugoœci 30 i jest czêœci¹ struktury adress_type
-adress.number - numer domu lub budynku konkatu o typie short int i jest czêœci¹ struktury adress_type
-adress.postal_code - kod pocztowy kontaktu który jest tablic¹ znaków o d³ugoœæi 8 i która jest czêœci¹ struktury adress_type
-adress.city - nazwa miasta konkatku która jest tablica znaków o d³ugoœci 30 i jest czêœci¹ struktury adress_type
-.phone_number - numer telefonu kontaktu któta jest tablic¹ znaków o d³ugoœci 11 
+.name - imie konkatku ktÃ³re jest tablica znakÃ³w o dÅ‚ugoÅ›ci 30
+.surname - nazwisko konkatku ktÃ³re jest tablica znakÃ³w o dÅ‚ugoÅ›ci 30
+adress.street - ulica konkatku ktÃ³ra jest tablica znakÃ³w o dÅ‚ugoÅ›ci 30 i jest czÄ™Å›ciÄ… struktury adress_type
+adress.number - numer domu lub budynku konkatu o typie short int i jest czÄ™Å›ciÄ… struktury adress_type
+adress.postal_code - kod pocztowy kontaktu ktÃ³ry jest tablicÄ… znakÃ³w o dÅ‚ugoÅ›Ä‡i 8 i ktÃ³ra jest czÄ™Å›ciÄ… struktury adress_type
+adress.city - nazwa miasta konkatku ktÃ³ra jest tablica znakÃ³w o dÅ‚ugoÅ›ci 30 i jest czÄ™Å›ciÄ… struktury adress_type
+.phone_number - numer telefonu kontaktu ktÃ³ta jest tablicÄ… znakÃ³w o dÅ‚ugoÅ›ci 11 
 
 
 
 Filip Borowiec 26.02.2022
 typ danych "list_data" w pliku phone_book.h
 
-jest to zwyk³y int ze zmianion¹ nazw¹ u¿yty w tworznieu listy dwukierunkowej aby póŸniej 
-u³atwiæ zmiane na strukture konaktu w póŸnijszej czêœæi pracy programu 
+jest to zwykÅ‚y int ze zmianionÄ… nazwÄ… uÅ¼yty w tworznieu listy dwukierunkowej aby pÃ³Åºniej 
+uÅ‚atwiÄ‡ zmiane na strukture konaktu w pÃ³Åºnijszej czÄ™Å›Ä‡i pracy programu 
 
 
 
 Filip Borowiec 26.02.2022
 typ danych "list_node_struct" w pliku phone_book.h
 
-typ ten jest struktur¹ pojedyñczego elemtu listy dwukierunkowej typ ten zawiera:
+typ ten jest strukturÄ… pojedyÅ„czego elemtu listy dwukierunkowej typ ten zawiera:
 .data - zawiera dane danego elementu o typie list_data
-.next - zawiera wskaŸnik na nastêpny element listy, je¿eli jest to koniec listy (head) wsakŸnik wskazuje na NULL
-.prev - zawiera wskaŸnik na poprzedni element listy, je¿eli jest to pocz¹tek listy (tail) wsakŸnik wskazuje na NULL
+.next - zawiera wskaÅºnik na nastÄ™pny element listy, jeÅ¼eli jest to koniec listy (head) wsakÅºnik wskazuje na NULL
+.prev - zawiera wskaÅºnik na poprzedni element listy, jeÅ¼eli jest to poczÄ…tek listy (tail) wsakÅºnik wskazuje na NULL
 
 
 
 Filip Borowiec 26.02.2022
 typ danych "list_pointers" w pliku phone_book.h
 
-jest to struktura zawiertajaca informacje o utworzonej liscie w celu jej zarz¹dzania, typ ten zawiera:
-.head- jest to wskaŸñik na pierwszy element listy 
-.tail - jest to wsakŸnik na ostatni element listy
-Kiedy lista jest pusta oba wsak¿ñiki wsazuja na NULL,
-w przypadku kiedy lista sk³¹da siê z pojedyñczego elemntu oba wskaŸniki wsazuj¹ na ten sam element
+jest to struktura zawiertajaca informacje o utworzonej liscie w celu jej zarzÄ…dzania, typ ten zawiera:
+.head- jest to wskaÅºÅ„ik na pierwszy element listy 
+.tail - jest to wsakÅºnik na ostatni element listy
+Kiedy lista jest pusta oba wsakÅ¼Å„iki wsazuja na NULL,
+w przypadku kiedy lista skÅ‚Ä…da siÄ™ z pojedyÅ„czego elemntu oba wskaÅºniki wsazujÄ… na ten sam element
 
 
 
 Filip Borowiec 26.02.2022
 funkcja "list_init" w pliku phone_book_list.c
 
-funkcja incjuj¹c¹ pust¹ liste czyli nadaje .head i .tail wartosæi NULL,
-nie przyjumuje ¿adnych parametrów, zwraca strukture list_pointers z parametrami z elemntami .head i .tail ustawionymi na NULL
-nale¿y u¿ywaæ przy tworzeniu nowej listy
+funkcja incjujÄ…cÄ… pustÄ… liste czyli nadaje .head i .tail wartosÄ‡i NULL,
+nie przyjumuje Å¼adnych parametrÃ³w, zwraca strukture list_pointers z parametrami z elemntami .head i .tail ustawionymi na NULL
+naleÅ¼y uÅ¼ywaÄ‡ przy tworzeniu nowej listy
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 list_pointers list = list_init();
 
 
@@ -58,14 +58,14 @@ list_pointers list = list_init();
 Filip Borowiec 26.02.2022
 funkcja "list_add_head" w pliku phone_book_list.c
 
-funcja dodaj¹ca elemnt na pocz¹tku listy (za head), 
+funcja dodajÄ…ca elemnt na poczÄ…tku listy (za head), 
 funkcja przyjmuje dwa arugumenty 
-pierwszy jest to struktura list_pointers na listy do której ma dodaæ elemntami
-drugi arugument jest elemntem typu list_data który ma zastoæ wprowadzony do listy
-funkcja zwraca strukture list_pointers listy do której zosta³ dodany element
-w przypadku kiedy nie uda siê utworzyæ nowego elemnetu funcja zwraca nie zminion¹ liste i wyœwietla napis "ERROR: Stack oberflow"
+pierwszy jest to struktura list_pointers na listy do ktÃ³rej ma dodaÄ‡ elemntami
+drugi arugument jest elemntem typu list_data ktÃ³ry ma zastoÄ‡ wprowadzony do listy
+funkcja zwraca strukture list_pointers listy do ktÃ³rej zostaÅ‚ dodany element
+w przypadku kiedy nie uda siÄ™ utworzyÄ‡ nowego elemnetu funcja zwraca nie zminionÄ… liste i wyÅ›wietla napis "ERROR: Stack oberflow"
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 list = list_add_head(list, 5);
 
 
@@ -73,38 +73,38 @@ list = list_add_head(list, 5);
 Filip Borowiec 26.02.2022
 funkcja "list_add_tail" w pliku phone_book_list.c
 
-funcja dodaj¹ca elemnt na koñcu listy(przed tail), 
+funcja dodajÄ…ca elemnt na koÅ„cu listy(przed tail), 
 funkcja przyjmuje dwa arugumenty 
-pierwszy jest to struktura list_pointers na listy do której ma dodaæ elemntami
-drugi arugument jest elemntem typu list_data który ma zastoæ wprowadzony do listy
-funkcja zwraca strukture list_pointers listy do której zosta³ dodany element
-w przypadku kiedy nie uda siê utworzyæ nowego elemnetu funcja zwraca nie zminion¹ liste i wyœwietla napis "ERROR: Stack oberflow"
+pierwszy jest to struktura list_pointers na listy do ktÃ³rej ma dodaÄ‡ elemntami
+drugi arugument jest elemntem typu list_data ktÃ³ry ma zastoÄ‡ wprowadzony do listy
+funkcja zwraca strukture list_pointers listy do ktÃ³rej zostaÅ‚ dodany element
+w przypadku kiedy nie uda siÄ™ utworzyÄ‡ nowego elemnetu funcja zwraca nie zminionÄ… liste i wyÅ›wietla napis "ERROR: Stack oberflow"
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 list = list_add_tail(list, 123);
 
 
 Filip Borowiec 26.02.2022
 funkcja "find_node" w pliku phone_book_list.c
 
-funkcja znajduj¹ca elemnt o danym id we wprowadzonej lisæie
+funkcja znajdujÄ…ca elemnt o danym id we wprowadzonej lisÄ‡ie
 funkcja przyjmuje dwa argumrnty 
-pierwszy jest to struktura list_pointers na liste gdzie ma znaleŸæ elememnt
-drugie jest typ danych list_data jako wartoœæ która ma znaleŸæ w podanej lisæe 
-funkcja zwraca wskaŸñik typu list_node na znaleŸiony elemt listy spe³niajacy wyszukiwan¹ wartosæi
-w przypadku je¿eli fuckcja nie znalaz³a elementu o danej wartosæ "no value found\n" i zwraca wawrtosæ NULL
+pierwszy jest to struktura list_pointers na liste gdzie ma znaleÅºÄ‡ elememnt
+drugie jest typ danych list_data jako wartoÅ›Ä‡ ktÃ³ra ma znaleÅºÄ‡ w podanej lisÄ‡e 
+funkcja zwraca wskaÅºÅ„ik typu list_node na znaleÅºiony elemt listy speÅ‚niajacy wyszukiwanÄ… wartosÄ‡i
+w przypadku jeÅ¼eli fuckcja nie znalazÅ‚a elementu o danej wartosÄ‡ "no value found\n" i zwraca wawrtosÄ‡ NULL
 
 
 
 Filip Borowiec 26.02.2022
 funkcja "list_remove_tail" w pliku phone_book_list.c
 
-funcja usuwaj¹ca ostatni elemnt listy(tail), 
-funkcja przyjmuje argument list_pointers okreœlajacy liste której ogon ma zostaæ usuniêty
-funkcja zwraca strukture list_pointers której elemnt zosta³ usuniêty
-w przypadku kiedy .tail jest równt NULL funkcja zwraca listê bez zmiany i wyœwietla "ERROR: Nothing to remove\n"
+funcja usuwajÄ…ca ostatni elemnt listy(tail), 
+funkcja przyjmuje argument list_pointers okreÅ›lajacy liste ktÃ³rej ogon ma zostaÄ‡ usuniÄ™ty
+funkcja zwraca strukture list_pointers ktÃ³rej elemnt zostaÅ‚ usuniÄ™ty
+w przypadku kiedy .tail jest rÃ³wnt NULL funkcja zwraca listÄ™ bez zmiany i wyÅ›wietla "ERROR: Nothing to remove\n"
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 list = list_remove_tail(list);
 
 
@@ -112,12 +112,12 @@ list = list_remove_tail(list);
 Filip Borowiec 26.02.2022
 funkcja " list_remove_head" w pliku phone_book_list.c
 
-funcja usuwaj¹ca pierwszy elemnt listy(head), 
-funkcja przyjmuje argument list_pointers okreœlajacy liste której elemnt ma zostaæ usuniêty
-funkcja zwraca strukture list_pointers której elemnt zosta³ usuniêty
-w przypadku kiedy .head jest równt NULL funkcja zwraca listê bez zmiany i wyœwietla "ERROR: Nothing to remove\n"
+funcja usuwajÄ…ca pierwszy elemnt listy(head), 
+funkcja przyjmuje argument list_pointers okreÅ›lajacy liste ktÃ³rej elemnt ma zostaÄ‡ usuniÄ™ty
+funkcja zwraca strukture list_pointers ktÃ³rej elemnt zostaÅ‚ usuniÄ™ty
+w przypadku kiedy .head jest rÃ³wnt NULL funkcja zwraca listÄ™ bez zmiany i wyÅ›wietla "ERROR: Nothing to remove\n"
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 list = list_remove_head(list);
 
 
@@ -127,13 +127,13 @@ funkcja "list_remove_node" w pliku phone_book_list.c
 
 funkcja usuwajaca wybrany element listy
 funkcja przyjmuje dwa argumeny
-pierwszy jest to struktura list_pointers na liste gdzie ma zostaæ usuniêty elememnt
-drugi jest to wska¿ñik list_node na element ktróry ma zostaæ usuniêy
-funkcja zwraca strukture list_pointers której elemnt zosta³ usuniêty
-w przypadku gdy wybrany element wskzuje na NULL funkcja zwraca liste bez zmian i wyœwietla "ERROR: no node to remove selected\n"
-funkcja mo¿ê byæ u¿yta w parze z funkcj¹ find_node w celu usuniêcie elemntu znalezionego przez te funkcje
+pierwszy jest to struktura list_pointers na liste gdzie ma zostaÄ‡ usuniÄ™ty elememnt
+drugi jest to wskaÅ¼Å„ik list_node na element ktrÃ³ry ma zostaÄ‡ usuniÄ™y
+funkcja zwraca strukture list_pointers ktÃ³rej elemnt zostaÅ‚ usuniÄ™ty
+w przypadku gdy wybrany element wskzuje na NULL funkcja zwraca liste bez zmian i wyÅ›wietla "ERROR: no node to remove selected\n"
+funkcja moÅ¼Ä™ byÄ‡ uÅ¼yta w parze z funkcjÄ… find_node w celu usuniÄ™cie elemntu znalezionego przez te funkcje
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 list = list_remove_node(list, find_node(list, 55));
 
 
@@ -141,15 +141,15 @@ list = list_remove_node(list, find_node(list, 55));
 Filip Borowiec 26.02.2022
 funkcja "list_edit_node" w pliku phone_book_list.c
 
-funkcja zminiaj¹ca dane wybranego na dane wprowadzone jako argumeny
+funkcja zminiajÄ…ca dane wybranego na dane wprowadzone jako argumeny
 funkcja przyjmuje dwa argumeny
-pierszy jest to wska¿ñik list_node na element ktróry ma zostaæ zmieniony
-drugie jest typ danych list_data jako wartoœæ na któr¹ element listy ma zostaæ zmieniony
-funkcja nie zwraca wartosæi
-w przypadku gdy wybrany element wskzuje na NULL funkcja zwraca liste bez zmian i wyœwietla "ERROR: no node to remove selected\n"
-funkcja mo¿ê byæ u¿yta w parze z funkcj¹ find_node w celu usuniêcie elemntu znalezionego przez te funkcje
+pierszy jest to wskaÅ¼Å„ik list_node na element ktrÃ³ry ma zostaÄ‡ zmieniony
+drugie jest typ danych list_data jako wartoÅ›Ä‡ na ktÃ³rÄ… element listy ma zostaÄ‡ zmieniony
+funkcja nie zwraca wartosÄ‡i
+w przypadku gdy wybrany element wskzuje na NULL funkcja zwraca liste bez zmian i wyÅ›wietla "ERROR: no node to remove selected\n"
+funkcja moÅ¼Ä™ byÄ‡ uÅ¼yta w parze z funkcjÄ… find_node w celu usuniÄ™cie elemntu znalezionego przez te funkcje
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 list_edit_node(find_node(list, 33), 456);
 
 
@@ -157,12 +157,12 @@ list_edit_node(find_node(list, 33), 456);
 Filip Borowiec 26.02.2022
 funkcja "print_list_head" w pliku phone_book_list.c
 
-funckja wyœwietlj¹ca liste pocz¹wszy od head id¹æ do tail
-funkcja przyjmuje jeden arugment któreym jest struktura list_pointers listy która ma wyœwieliæ
-funkcja nie zwraca wartosæi
-w przypadku gdy lista jest pusta, funkcja wyœwietla "your list is empty\n"
+funckja wyÅ›wietljÄ…ca liste poczÄ…wszy od head idÄ…Ä‡ do tail
+funkcja przyjmuje jeden arugment ktÃ³reym jest struktura list_pointers listy ktÃ³ra ma wyÅ›wieliÄ‡
+funkcja nie zwraca wartosÄ‡i
+w przypadku gdy lista jest pusta, funkcja wyÅ›wietla "your list is empty\n"
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 print_list_head(list);
 
 
@@ -170,12 +170,12 @@ print_list_head(list);
 Filip Borowiec 26.02.2022
 funkcja "print_list_tail" w pliku phone_book_list.c
 
-funckja wyœwietlj¹ca liste pocz¹wszy od tail id¹c do head
-funkcja przyjmuje jeden arugment któreym jest struktura list_pointers listy która ma wyœwieliæ
-funkcja nie zwraca wartosæi
-w przypadku gdy lista jest pusta, funkcja wyœwietla "your list is empty\n"
+funckja wyÅ›wietljÄ…ca liste poczÄ…wszy od tail idÄ…c do head
+funkcja przyjmuje jeden arugment ktÃ³reym jest struktura list_pointers listy ktÃ³ra ma wyÅ›wieliÄ‡
+funkcja nie zwraca wartosÄ‡i
+w przypadku gdy lista jest pusta, funkcja wyÅ›wietla "your list is empty\n"
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 print_list_head(tail);
 
 
@@ -188,11 +188,11 @@ funkcja "list_test" w pliku temporary_functions.c
 Filip Borowiec 26.02.2022
 funkcja generate_rand_contact w pliku temporary_functions.c
 
-funkcja generuje strtukture typu conact_type wype³nion¹ wartoœæiami losowanymi z wczeœniej okreœlonego zakresu
-funkcja przyjmuje wartosæ int jaki seed na podstawie którego losuje wartoœci
-funkcja zwraca strukture typu contact_type wype³nion¹ losowaymiw wartoœæami
+funkcja generuje strtukture typu conact_type wypeÅ‚nionÄ… wartoÅ›Ä‡iami losowanymi z wczeÅ›niej okreÅ›lonego zakresu
+funkcja przyjmuje wartosÄ‡ int jaki seed na podstawie ktÃ³rego losuje wartoÅ›ci
+funkcja zwraca strukture typu contact_type wypeÅ‚nionÄ… losowaymiw wartoÅ›Ä‡ami
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 contact = generate_rand_contact(rand());
 
 
@@ -200,19 +200,19 @@ contact = generate_rand_contact(rand());
 Filip Borowiec 26.02.2022
 funkcja genrating_contacts_test w pliku temporary_functions.c
 
-funkcja generuje generuje i wypisuje 200 przyk³adowo wygenrowanych konkatków
-funkcja nie przyjmuje i nie zwraca wartosæi
+funkcja generuje generuje i wypisuje 200 przykÅ‚adowo wygenrowanych konkatkÃ³w
+funkcja nie przyjmuje i nie zwraca wartosÄ‡i
 
 
 
 Filip Borowiec 26.02.2022
 funkcja print_contact w pliku phone_book.c
 
-funkcja wypisuje na ekranie ca³a strukture typu contact_type
-funkcja przyjmuje wartosæ typu contact_type
-funkcja nie zwraca ¿adnej wartoœci 
+funkcja wypisuje na ekranie caÅ‚a strukture typu contact_type
+funkcja przyjmuje wartosÄ‡ typu contact_type
+funkcja nie zwraca Å¼adnej wartoÅ›ci 
 
-przyk³ad u¿ycia:
+przykÅ‚ad uÅ¼ycia:
 print_contact(contact);
 
 
@@ -220,41 +220,41 @@ print_contact(contact);
 Filip Borowiec 26.02.2022
 funkcja find_middle_node w pliku phone_book_list.c
 
-funkcja znajduje œrodek podanej lilsty
-funkcja przyjmuje wartosæ typu list_pointers liste do znalezienia œrodka
-funkcja zwraca wskaŸnik na œrodkowy element listy
+funkcja znajduje Å›rodek podanej lilsty
+funkcja przyjmuje wartosÄ‡ typu list_pointers liste do znalezienia Å›rodka
+funkcja zwraca wskaÅºnik na Å›rodkowy element listy
 
 
 
 Filip Borowiec 26.02.2022
 funkcja merge_sort w pliku phone_book_list.c
 
-funkcja znajduje sortuje podana¹ liste algorytmem merge sort
+funkcja znajduje sortuje podanaÄ… liste algorytmem merge sort
 funkcja przyjmuje 2 argumenty
-pierwszy jest to list_pointers na liste któr¹ funkcja ma posortowaæ
-drugi jest wska¿nkiem na funkcje okreœlajacy wed³ug jakiego elemntu ma posortowaæ
-funkcja zwraca list_pointers na posortown¹ ju¿ tablice
+pierwszy jest to list_pointers na liste ktÃ³rÄ… funkcja ma posortowaÄ‡
+drugi jest wskaÅ¼nkiem na funkcje okreÅ›lajacy wedÅ‚ug jakiego elemntu ma posortowaÄ‡
+funkcja zwraca list_pointers na posortownÄ… juÅ¼ tablice
 
 
 
 Filip Borowiec 26.02.2022
 funkcja merge w pliku phone_book_list.c
 
-funkcja scalaj¹ca ze sob¹ dwie listy sortuj¹c je w zale¿noœci od elemntu wybranego przez wskaŸnik na funkcje
+funkcja scalajÄ…ca ze sobÄ… dwie listy sortujÄ…c je w zaleÅ¼noÅ›ci od elemntu wybranego przez wskaÅºnik na funkcje
 funkcja przyjmuje 3 arugemnty
-piewrszy i drugi s¹ to list_pointrs na dwie listy  które ma scalic
-trzeci jest wska¿nkiem na funkcje okreœlajacy wed³ug jakiego elemntu ma posortowaæ
-funkcja zwraca zmienna typu list_pointers okreœlajaæa scalanoa juz liste
+piewrszy i drugi sÄ… to list_pointrs na dwie listy  ktÃ³re ma scalic
+trzeci jest wskaÅ¼nkiem na funkcje okreÅ›lajacy wedÅ‚ug jakiego elemntu ma posortowaÄ‡
+funkcja zwraca zmienna typu list_pointers okreÅ›lajaÄ‡a scalanoa juz liste
 
 
 
 Filip Borowiec 26.02.2022
 funkcja id_cmp w pliku list_cmp.c
 
-funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od id
+funkcja pÃ³rÃ³wnujÄ…ca ze sobÄ… dwa wpisy w ksiÄ…Å¼ce telfoniczej w zaleÅ¼nosÄ‡ od id
 funkcja przyjmuje dwa argumenty 
-wska¿nik na elemnty list a;
-wskaŸnik na element listy b;
+wskaÅ¼nik na elemnty list a;
+wskaÅºnik na element listy b;
 funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 
 
@@ -262,10 +262,10 @@ funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 Filip Borowiec 26.02.2022
 funkcja name_cmp w pliku list_cmp.c
 
-funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od nazwiska i imenia
+funkcja pÃ³rÃ³wnujÄ…ca ze sobÄ… dwa wpisy w ksiÄ…Å¼ce telfoniczej w zaleÅ¼nosÄ‡ od nazwiska i imenia
 funkcja przyjmuje dwa argumenty 
-wska¿nik na elemnty list a;
-wskaŸnik na element listy b;
+wskaÅ¼nik na elemnty list a;
+wskaÅºnik na element listy b;
 funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 
 
@@ -273,10 +273,10 @@ funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 Filip Borowiec 26.02.2022
 funkcja phone_cmp w pliku list_cmp.c
 
-funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od numeru telefonu
+funkcja pÃ³rÃ³wnujÄ…ca ze sobÄ… dwa wpisy w ksiÄ…Å¼ce telfoniczej w zaleÅ¼nosÄ‡ od numeru telefonu
 funkcja przyjmuje dwa argumenty 
-wska¿nik na elemnty list a;
-wskaŸnik na element listy b;
+wskaÅ¼nik na elemnty list a;
+wskaÅºnik na element listy b;
 funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 
 
@@ -284,10 +284,10 @@ funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 Filip Borowiec 26.02.2022
 funkcja city_cmp w pliku list_cmp.c
 
-funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od nazwy miasta
+funkcja pÃ³rÃ³wnujÄ…ca ze sobÄ… dwa wpisy w ksiÄ…Å¼ce telfoniczej w zaleÅ¼nosÄ‡ od nazwy miasta
 funkcja przyjmuje dwa argumenty 
-wska¿nik na elemnty list a;
-wskaŸnik na element listy b;
+wskaÅ¼nik na elemnty list a;
+wskaÅºnik na element listy b;
 funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 
 
@@ -295,10 +295,10 @@ funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 Filip Borowiec 26.02.2022
 funkcja street_cmp w pliku list_cmp.c
 
-funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od nazwy ulicy
+funkcja pÃ³rÃ³wnujÄ…ca ze sobÄ… dwa wpisy w ksiÄ…Å¼ce telfoniczej w zaleÅ¼nosÄ‡ od nazwy ulicy
 funkcja przyjmuje dwa argumenty 
-wska¿nik na elemnty list a;
-wskaŸnik na element listy b;
+wskaÅ¼nik na elemnty list a;
+wskaÅºnik na element listy b;
 funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 
 
@@ -306,10 +306,10 @@ funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 Filip Borowiec 26.02.2022
 funkcja postal_code_cmp w pliku list_cmp.c
 
-funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od kodu pocztowego
+funkcja pÃ³rÃ³wnujÄ…ca ze sobÄ… dwa wpisy w ksiÄ…Å¼ce telfoniczej w zaleÅ¼nosÄ‡ od kodu pocztowego
 funkcja przyjmuje dwa argumenty 
-wska¿nik na elemnty list a;
-wskaŸnik na element listy b;
+wskaÅ¼nik na elemnty list a;
+wskaÅºnik na element listy b;
 funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 
 
@@ -317,16 +317,16 @@ funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 Filip Borowiec 26.02.2022
 funkcja number_cmp w pliku list_cmp.c
 
-funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od numeru domu/budynku
+funkcja pÃ³rÃ³wnujÄ…ca ze sobÄ… dwa wpisy w ksiÄ…Å¼ce telfoniczej w zaleÅ¼nosÄ‡ od numeru domu/budynku
 funkcja przyjmuje dwa argumenty 
-wska¿nik na elemnty list a;
-wskaŸnik na element listy b;
+wskaÅ¼nik na elemnty list a;
+wskaÅºnik na element listy b;
 funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 
 
 
-Filip Borowiec 26.02.2022
+Filip Borowiec 27.02.2022
  list_contact_test_sort w pliku temporary_functions.c
  
- funkcja testujaca dzia³anie wszystkich metod sortowania na losowo wygenerowenj lisæie dwu elemntowej
+ funkcja testujaca dziaÅ‚anie wszystkich metod sortowania na losowo wygenerowenj lisÄ‡ie dwu elemntowej
 

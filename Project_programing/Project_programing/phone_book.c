@@ -1,5 +1,9 @@
+//funckcje odpowiedzlane za zarz¹dzanie ksi¹zk¹ telefoniczn¹
+
 #include "phone_book.h"
 
+
+// funckcja wyœwietlaj¹c podany jej konkat wraz z podpisamy
 
 void print_contact(contact_type contact)
 {

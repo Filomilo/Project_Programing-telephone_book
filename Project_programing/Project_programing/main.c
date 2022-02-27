@@ -10,11 +10,11 @@ int main()
 
 	printf("hello world \n");
 	printf("welcome to the internet\n");
-	//contact_type phone_book[1000];
-	//printf("\n \n size of your structure: %d\n\n size of double for comparsion: %d\n\n", sizeof(phone_book), sizeof(double));
-	//list_test();
-	//genrating_contacts_test();
-	//list_test_sort();
+	contact_type phone_book;
+	printf("\n \n size of your structure: %d\n\n size of double for comparsion: %d\n\n", sizeof(phone_book), sizeof(double));
+	printf("\n\n\n\n\n test losowego generownia kontaktu \n\n\n\n\n\n");
+	genrating_contacts_test();
+	printf("\n\n\n\n\n sort test\n\n\n\n\n\n");
 	list_contact_test_sort();
 	
 	return 0;

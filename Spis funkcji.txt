@@ -87,7 +87,7 @@ list = list_add_tail(list, 123);
 Filip Borowiec 26.02.2022
 funkcja "find_node" w pliku phone_book_list.c
 
-funkcja znajduj¹ca elemnt o danenej wartoœæi we wprowadzonej lisæie
+funkcja znajduj¹ca elemnt o danym id we wprowadzonej lisæie
 funkcja przyjmuje dwa argumrnty 
 pierwszy jest to struktura list_pointers na liste gdzie ma znaleŸæ elememnt
 drugie jest typ danych list_data jako wartoœæ która ma znaleŸæ w podanej lisæe 

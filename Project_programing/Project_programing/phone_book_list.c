@@ -4,6 +4,8 @@
 
 
 
+//funkcja incjuj¹c¹ pust¹ liste czyli nadaje .head i .tail wartosæi NULL,
+
 list_pointers list_init()
 {
 	list_pointers list;
@@ -12,7 +14,11 @@ list_pointers list_init()
 	return list;
 }
 
-list_pointers list_add_head(list_pointers list, list_data data)
+
+
+//funcja dodaj¹ca elemnt na pocz¹tku listy (za head),
+
+list_pointers list_add_head(list_pointers list, contact_type data)
 {
 	list_node* new_node = (list_node*)malloc(sizeof(list_node));
 	if (new_node == NULL)
@@ -41,7 +47,11 @@ list_pointers list_add_head(list_pointers list, list_data data)
 		return list;
 }
 
-list_pointers list_add_tail(list_pointers list, list_data data)
+
+
+//funcja dodaj¹ca elemnt na koñcu listy(przed tail)
+
+list_pointers list_add_tail(list_pointers list, contact_type data)
 {
 	list_node* new_node = (list_node*)malloc(sizeof(list_node));
 	if (new_node == NULL)
@@ -70,6 +80,10 @@ list_pointers list_add_tail(list_pointers list, list_data data)
 	return list;
 }
 
+
+
+//funkcja znajduj¹ca elemnt o danym id we wprowadzonej lisæie
+
 list_node* find_node(list_pointers list, int searched_value)
 {
 	while (list.tail != NULL)
@@ -82,6 +96,10 @@ list_node* find_node(list_pointers list, int searched_value)
 	printf("no value found\n");
 	return NULL;
 }
+
+
+
+//funcja usuwaj¹ca ostatni elemnt listy(tail), 
 
 list_pointers list_remove_tail(list_pointers list)
 {
@@ -100,6 +118,10 @@ list_pointers list_remove_tail(list_pointers list)
 
 	return list;
 }
+
+
+
+//funcja usuwaj¹ca pierwszy elemnt listy(head)
 
 list_pointers list_remove_head(list_pointers list)
 {
@@ -128,6 +150,10 @@ list_pointers list_remove_head(list_pointers list)
 	return list;
 }
 
+
+
+//funkcja usuwajaca wybrany element listy
+
 list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 {
 	if (node_to_remove == NULL)
@@ -154,7 +180,11 @@ list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 
 }
 
-void list_edit_node(list_node* node_to_edit, list_data data)
+
+
+//funkcja zminiaj¹ca dane wybranego na dane wprowadzone jako argumeny
+
+void list_edit_node(list_node* node_to_edit, contact_type data)
 {
 	if (node_to_edit == NULL)
 	{
@@ -164,6 +194,10 @@ void list_edit_node(list_node* node_to_edit, list_data data)
 	node_to_edit->data = data;
 
 }
+
+
+
+//funckja wyœwietlj¹ca liste pocz¹wszy od head id¹æ do tail
 
 void print_list_head(list_pointers list)
 {
@@ -182,6 +216,10 @@ void print_list_head(list_pointers list)
 	print_contact(list.head->data);
 	printf("\n");
 }
+
+
+
+//funckja wyœwietlj¹ca liste pocz¹wszy od tail id¹c do head
 
 void print_list_tail(list_pointers list)
 {
@@ -202,25 +240,8 @@ void print_list_tail(list_pointers list)
 }
 
 
-void delete_list(list_pointers list)
-{
-	if (list.head == NULL)
-	{
-		printf("your list is empty\n");
-		return;
-	}
-	list_node* tmp = NULL;;
-	while (list.tail != list.head)
-	{
-		tmp = list.tail;
-		list.tail = list.tail->next;
-		free(tmp);
 
-
-	}
-}
-
-
+//funkcja znajudj¹ca œrodek listy wykorzystywana przy sortowaniu
 
 list_node* find_middle_node(list_pointers list)
 {
@@ -240,12 +261,15 @@ list_node* find_middle_node(list_pointers list)
 		first = first->next;
 		sec=sec->next->next;
 	}
-	//first = first->next;
 	return first;
 
 }
 
-list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(list_data, list_data))
+
+
+//funkcja ³acz¹ca ze sob¹ dwie listy sortuj¹c je
+
+list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(contact_type, contact_type))
 {
 	list_pointers list = list_init();
 	
@@ -286,7 +310,11 @@ list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(list_dat
 	return list;
 }
 
-list_pointers merge_sort(list_pointers list, int (*cmp)(list_data, list_data))
+
+
+// funkcja wykorzstyj¹ca sposób merge sort do posortownaia listy
+
+list_pointers merge_sort(list_pointers list, int (*cmp)(contact_type, contact_type))
 {
 	if (list.head == list.tail)
 		return list;

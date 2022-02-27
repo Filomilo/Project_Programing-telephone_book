@@ -1,7 +1,7 @@
 #ifndef PHONE_BOOK
 #define PHONE_BOOK
 
-//structure of adrees for later use in contact sturcture
+//struktura adresu wykorzystywana we strukturze wpisu w ksi¹zce telefoniczej
 
 struct adress_struct
 {
@@ -12,7 +12,8 @@ struct adress_struct
 };
 typedef struct adress_struct adress_type;
 
-//strcuture of single contact to use in phone book
+
+//struktura pojedyñczego wpisu w ksi¹zce telefoniczej
 
 struct contact_struct
 {
@@ -26,22 +27,19 @@ struct contact_struct
 typedef struct contact_struct contact_type;
 
 
-//data type of int with change name to use as data type in list and make it easier for later change to sturcture
+//typ danych struktry pojedyñczego elemntu list, zawiera dane oraz onaczenie poprzeniego i koljengo elemenmtu
 
-typedef contact_type list_data;
-
-
-//strcuture type of a single element of list
 struct list_node_struct
 {
-	list_data data;
+	contact_type data;
 	struct list_node_struct* next;
 	struct list_node_struct* prev;
 };
 typedef struct list_node_struct list_node;
 
 
-//strcuture contating first and last element of list
+// typ danych struktury list_pointers do oznaczenia listy dynamicznej
+
 struct list_pointers_strucrt
 {
 	list_node* head;
@@ -51,24 +49,31 @@ struct list_pointers_strucrt
 typedef struct list_pointers_strucrt list_pointers;
 
 
-//functions for managing list, located in file phone_book_list.c
+//funckcje zjaduje sie w pliku phone_book_list.c do osbsu³ugi listy dynamicznej
 
 extern list_pointers list_init();
-extern list_pointers list_add_head(list_pointers list, list_data data);
-extern list_pointers list_add_tail(list_pointers list, list_data data);
-extern list_node* find_node(list_pointers list, list_data searched_value);
+extern list_pointers list_add_head(list_pointers list, contact_type data);
+extern list_pointers list_add_tail(list_pointers list, contact_type data);
+extern list_node* find_node(list_pointers list, contact_type searched_value);
 extern list_pointers list_remove_tail(list_pointers list);
 extern list_pointers list_remove_head(list_pointers list);
 extern list_pointers list_remove_node(list_pointers list, list_node* node_to_remove);
-void list_edit_node(list_node* node_to_edit, list_data data);
+void list_edit_node(list_node* node_to_edit, contact_type data);
 void print_list_head(list_pointers list);
 void print_list_tail(list_pointers list);
 extern list_node* find_middle_node(list_pointers list);
-extern list_pointers merge_sort(list_pointers list, int (*cmp)(list_data, list_data));
+extern list_pointers merge_sort(list_pointers list, int (*cmp)(contact_type, contact_type));
+
+
+
+//funkcje znajduj¹ce sie w pliku phone_book.c do obs³ugi ksi¹zki telefonicznej
 
 extern void print_contact(contact_type contact);
 
 
+
+//funkcje poróujaæe ze sob¹ dwa elemnty listy w zale¿noœci od parametru opisanegro w nazwie funkcjiu, znajudj¹ siê w pliku list_cmp.c
+// zwracaj¹ -1 gdy a<b, 0 gdy a=b, 1 gdy a>b 1
 
 extern int id_cmp(list_node* a, list_node* b);
 extern int name_cmp(list_node* a, list_node* b);
@@ -79,13 +84,12 @@ extern int postal_code_cmp(list_node* a, list_node* b);
 extern number_cmp(list_node* a, list_node* b);
 
 
-
-// temporary function for testing if list data structure works properly, located in temporary_functions.c
+// tymczasowe funkcje znajduj¹ce sie w pliku temporary_functions.c u¿ywane do tesowtaia poprawnoœæi dzia³ania prgramu
 
 extern void list_test(); 
 extern void genrating_contacts_test();
-int int_cmp(list_data a, list_data b);
-void list_test_sort();
+extern int int_cmp(contact_type a, contact_type b);
+extern void list_test_sort();
 
 
 

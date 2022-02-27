@@ -86,7 +86,7 @@ list_pointers list_add_tail(list_pointers list, contact_type data)
 
 list_node* find_node(list_pointers list, int searched_value)
 {
-	while (list.tail != NULL)
+	while (list.tail != NULL || list.head == NULL)
 	{
 		if (list.tail->data.id == searched_value)
 			return list.tail;
@@ -125,7 +125,7 @@ list_pointers list_remove_tail(list_pointers list)
 
 list_pointers list_remove_head(list_pointers list)
 {
-	if (list.tail == NULL)
+	if (list.tail == NULL || list.head == NULL)
 	{
 
 		printf("ERROR: Nothing to remove\n");
@@ -266,6 +266,18 @@ list_node* find_middle_node(list_pointers list)
 }
 
 
+//funkcja usuwajaca liste z pamiêci
+
+list_pointers free_list(list_pointers list)
+{
+
+	while (list.head != list.tail)
+		list = list_remove_head(list);
+	list = list_remove_head(list);
+	return list;
+}
+
+
 
 //funkcja ³acz¹ca ze sob¹ dwie listy sortuj¹c je
 
@@ -306,6 +318,8 @@ list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(contact_
 		rpointer = rpointer->next;
 	}
 
+	left = free_list(left);
+	right = free_list(right);
 
 	return list;
 }

@@ -330,3 +330,14 @@ Filip Borowiec 26.02.2022
  
  funkcja testujaca dzia³anie wszystkich metod sortowania na losowo wygenerowenj lisæie dwu elemntowej
 
+
+
+ Filip Borowiec 26.02.2022
+free_list w pliku phone_book_list.c
+ 
+ funkcja usuwajaca liste z pamiêci
+ funkjca przyjmuje argument list_pointers okreslajacy liste która chcesz ususnac i zwraca list_pointer juz z usuniêta tablic¹
+
+ przyk³adowe u¿ycie
+ left = free_list(left);
+

@@ -63,7 +63,7 @@ void print_list_head(list_pointers list);
 void print_list_tail(list_pointers list);
 extern list_node* find_middle_node(list_pointers list);
 extern list_pointers merge_sort(list_pointers list, int (*cmp)(contact_type, contact_type));
-
+extern list_pointers free_list(list_pointers list);
 
 
 //funkcje znajduj¹ce sie w pliku phone_book.c do obs³ugi ksi¹zki telefonicznej

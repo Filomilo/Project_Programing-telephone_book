@@ -182,51 +182,7 @@ print_list_head(tail);
 
 Filip Borowiec 26.02.2022
 funkcja "list_test" w pliku temporary_functions.c
-
-funckja jest tymczasowa funckcj¹ która nie powinna sie znaleŸæ w finalnej wersji prgramu,
-ma ona celu  sprawdzenie dzia³ania struktuy danych listy na której przeprowadza operacje w takiej kolejnoœci:
-
-inicujujê psut¹ liste
-wyœwietla liste od head do tail
-dodaje wartosæ 5 od strony head
-wyœwietla liste od head do tail
-dodaje wartosæ 82 od strony head 
-wyœwietla liste od head do tail
-dodaje wartosæ 22 od strony head 
-wyœwietla liste od tail do head
-dodaje wartosæ 123 od strony tail 
-wyœwietla liste od tail do head
-usuwa elemnt tail z listy
-wyœwietla liste od tail do head
-usuwa elemnt tail z listy
-wyœwietla liste od tail do head
-usuwa elemnt head z listy
-wyœwietla liste od tail do head
-usuwa elemnt head z listy
-wyœwietla liste od tail do head
-usuwa elemnt head z listy
-wyœwietla liste od tail do head
-usuwa elemnt tail z listy
-wyœwietla liste od tail do head
-dodaje wartosæ 55 od strony head
-wyœwietla liste od head do tail
-dodaje wartosæ 78 od strony head
-wyœwietla liste od head do tail
-dodaje wartosæ 4 od strony head 
-wyœwietla liste od tail do head
-dodaje wartosæ 33 od strony tail 
-wyœwietla liste od tail do head
-usuwa z listy element o wartosæ 55
-wyœwietla liste od tail do head
-usuwa z listy element o wartosæ 4
-wyœwietla liste od tail do head
-usuwa z listy element o wartosæ 58
-wyœwietla liste od tail do head
-zmienia element listy o wartoœci 11 na 22
-wyœwietla liste od tail do head
-zmienia element listy o wartoœci 33 na 456
-wyœwietla liste od tail do head
-
+(deleted)
 
 
 Filip Borowiec 26.02.2022
@@ -259,4 +215,118 @@ funkcja nie zwraca ¿adnej wartoœci
 przyk³ad u¿ycia:
 print_contact(contact);
 
+
+
+Filip Borowiec 26.02.2022
+funkcja find_middle_node w pliku phone_book_list.c
+
+funkcja znajduje œrodek podanej lilsty
+funkcja przyjmuje wartosæ typu list_pointers liste do znalezienia œrodka
+funkcja zwraca wskaŸnik na œrodkowy element listy
+
+
+
+Filip Borowiec 26.02.2022
+funkcja merge_sort w pliku phone_book_list.c
+
+funkcja znajduje sortuje podana¹ liste algorytmem merge sort
+funkcja przyjmuje 2 argumenty
+pierwszy jest to list_pointers na liste któr¹ funkcja ma posortowaæ
+drugi jest wska¿nkiem na funkcje okreœlajacy wed³ug jakiego elemntu ma posortowaæ
+funkcja zwraca list_pointers na posortown¹ ju¿ tablice
+
+
+
+Filip Borowiec 26.02.2022
+funkcja merge w pliku phone_book_list.c
+
+funkcja scalaj¹ca ze sob¹ dwie listy sortuj¹c je w zale¿noœci od elemntu wybranego przez wskaŸnik na funkcje
+funkcja przyjmuje 3 arugemnty
+piewrszy i drugi s¹ to list_pointrs na dwie listy  które ma scalic
+trzeci jest wska¿nkiem na funkcje okreœlajacy wed³ug jakiego elemntu ma posortowaæ
+funkcja zwraca zmienna typu list_pointers okreœlajaæa scalanoa juz liste
+
+
+
+Filip Borowiec 26.02.2022
+funkcja id_cmp w pliku list_cmp.c
+
+funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od id
+funkcja przyjmuje dwa argumenty 
+wska¿nik na elemnty list a;
+wskaŸnik na element listy b;
+funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
+
+
+
+Filip Borowiec 26.02.2022
+funkcja name_cmp w pliku list_cmp.c
+
+funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od nazwiska i imenia
+funkcja przyjmuje dwa argumenty 
+wska¿nik na elemnty list a;
+wskaŸnik na element listy b;
+funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
+
+
+
+Filip Borowiec 26.02.2022
+funkcja phone_cmp w pliku list_cmp.c
+
+funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od numeru telefonu
+funkcja przyjmuje dwa argumenty 
+wska¿nik na elemnty list a;
+wskaŸnik na element listy b;
+funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
+
+
+
+Filip Borowiec 26.02.2022
+funkcja city_cmp w pliku list_cmp.c
+
+funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od nazwy miasta
+funkcja przyjmuje dwa argumenty 
+wska¿nik na elemnty list a;
+wskaŸnik na element listy b;
+funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
+
+
+
+Filip Borowiec 26.02.2022
+funkcja street_cmp w pliku list_cmp.c
+
+funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od nazwy ulicy
+funkcja przyjmuje dwa argumenty 
+wska¿nik na elemnty list a;
+wskaŸnik na element listy b;
+funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
+
+
+
+Filip Borowiec 26.02.2022
+funkcja postal_code_cmp w pliku list_cmp.c
+
+funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od kodu pocztowego
+funkcja przyjmuje dwa argumenty 
+wska¿nik na elemnty list a;
+wskaŸnik na element listy b;
+funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
+
+
+
+Filip Borowiec 26.02.2022
+funkcja number_cmp w pliku list_cmp.c
+
+funkcja pórównuj¹ca ze sob¹ dwa wpisy w ksi¹¿ce telfoniczej w zale¿nosæ od numeru domu/budynku
+funkcja przyjmuje dwa argumenty 
+wska¿nik na elemnty list a;
+wskaŸnik na element listy b;
+funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
+
+
+
+Filip Borowiec 26.02.2022
+ list_contact_test_sort w pliku temporary_functions.c
+ 
+ funkcja testujaca dzia³anie wszystkich metod sortowania na losowo wygenerowenj lisæie dwu elemntowej
 

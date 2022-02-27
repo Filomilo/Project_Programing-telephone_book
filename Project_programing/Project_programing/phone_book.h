@@ -86,9 +86,7 @@ extern number_cmp(list_node* a, list_node* b);
 
 // tymczasowe funkcje znajduj¹ce sie w pliku temporary_functions.c u¿ywane do tesowtaia poprawnoœæi dzia³ania prgramu
 
-extern void list_test(); 
 extern void genrating_contacts_test();
-extern int int_cmp(contact_type a, contact_type b);
 extern void list_test_sort();
 
 

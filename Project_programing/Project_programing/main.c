@@ -7,7 +7,7 @@
 
 int main()
 {
-
+	/*
 	printf("hello world \n");
 	printf("welcome to the internet\n");
 	contact_type phone_book;
@@ -15,7 +15,8 @@ int main()
 	printf("\n\n\n\n\n test losowego generownia kontaktu \n\n\n\n\n\n");
 	genrating_contacts_test();
 	printf("\n\n\n\n\n sort test\n\n\n\n\n\n");
-	list_contact_test_sort();
+	list_contact_test_sort();*/
+	list_contact_test_search();
 	
 	return 0;
 

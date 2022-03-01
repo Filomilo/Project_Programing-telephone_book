@@ -325,14 +325,14 @@ funkcja zwraca 1 gdy a>b		0 gdy a=bez		-1 gdy a<b
 
 
 
-Filip Borowiec 27.02.2022
+Filip Borowiec 26.02.2022
  list_contact_test_sort w pliku temporary_functions.c
  
  funkcja testujaca działanie wszystkich metod sortowania na losowo wygenerowenj lisćie dwu elemntowej
 
 
 
- Filip Borowiec 26.02.2022
+ Filip Borowiec 27.02.2022
 free_list w pliku phone_book_list.c
  
  funkcja usuwajaca liste z pami�ci
@@ -340,4 +340,117 @@ free_list w pliku phone_book_list.c
 
  przyk�adowe u�ycie
  left = free_list(left);
+
+
+
+  Filip Borowiec 01.03.2022
+list_contact_test_search w pliku temporary_functions.c
+
+tymczasowa funckja używana do przetestowania funkcji wyszukajacych
+
+
+
+  Filip Borowiec 01.03.2022
+search_results w pliku search_functions.c
+
+funckja generujace liste wynikó wyszukiwania w zleżnosci od podanych parametrów
+przyjmuje 3 argumrnyt
+pierwszym jest lista która ma zostać pszeszukana
+drugi to wskaźńik na funkcje oznaczajacy według którego elemntu ma zostać pszeszukany (opisane poniżek)
+trzeci jest to ciag znaków określajacy co ma byc wyszukane
+funckja zwra list pointers określające liste rezultatów
+
+
+
+  Filip Borowiec 01.03.2022
+is_search_name w pliku search_functions.c
+
+funckcja sprawdzjace czy elemnt name listy zgadza sie z elemntem wyszukiwania
+funkcja przyjmuje dwa argumenty
+pierwszym jest ciag znakow który ma byc wyszkawny
+drugim jest typ contact_type dla którego ma ozstać pszesuzkanie
+
+funkcja zwraca wartosc 0 kiedy elemnt sie nie zgasza i 1 kiedy sie zgadza
+
+
+
+  Filip Borowiec 01.03.2022
+is_search_surname w pliku search_functions.c
+
+funckcja sprawdzjace czy elemnt surname listy zgadza sie z elemntem wyszukiwania
+funkcja przyjmuje dwa argumenty
+pierwszym jest ciag znakow który ma byc wyszkawny
+drugim jest typ contact_type dla którego ma ozstać pszesuzkanie
+
+funkcja zwraca wartosc 0 kiedy elemnt sie nie zgasza i 1 kiedy sie zgadza
+
+
+
+  Filip Borowiec 01.03.2022
+is_search_phone_number w pliku search_functions.c
+
+funckcja sprawdzjace czy elemnt phone_number listy zgadza sie z elemntem wyszukiwania
+funkcja przyjmuje dwa argumenty
+pierwszym jest ciag znakow który ma byc wyszkawny
+drugim jest typ contact_type dla którego ma ozstać pszesuzkanie
+
+funkcja zwraca wartosc 0 kiedy elemnt sie nie zgasza i 1 kiedy sie zgadza
+
+
+
+  Filip Borowiec 01.03.2022
+is_search_city w pliku search_functions.c
+
+funckcja sprawdzjace czy elemnt adress.city listy zgadza sie z elemntem wyszukiwania
+funkcja przyjmuje dwa argumenty
+pierwszym jest ciag znakow który ma byc wyszkawny
+drugim jest typ contact_type dla którego ma ozstać pszesuzkanie
+
+funkcja zwraca wartosc 0 kiedy elemnt sie nie zgasza i 1 kiedy sie zgadza
+
+
+
+  Filip Borowiec 01.03.2022
+is_search_street w pliku search_functions.c
+
+funckcja sprawdzjace czy elemnt adress.street listy zgadza sie z elemntem wyszukiwania
+funkcja przyjmuje dwa argumenty
+pierwszym jest ciag znakow który ma byc wyszkawny
+drugim jest typ contact_type dla którego ma ozstać pszesuzkanie
+
+funkcja zwraca wartosc 0 kiedy elemnt sie nie zgasza i 1 kiedy sie zgadza
+
+
+
+  Filip Borowiec 01.03.2022
+is_search_postal_code w pliku search_functions.c
+
+funckcja sprawdzjace czy elemnt adress.postal_code listy zgadza sie z elemntem wyszukiwania
+funkcja przyjmuje dwa argumenty
+pierwszym jest ciag znakow który ma byc wyszkawny
+drugim jest typ contact_type dla którego ma ozstać pszesuzkanie
+
+funkcja zwraca wartosc 0 kiedy elemnt sie nie zgasza i 1 kiedy sie zgadza
+
+
+
+  Filip Borowiec 01.03.2022
+is_search_number w pliku search_functions.c
+
+funckcja sprawdzjace czy elemnt adress.number listy zgadza sie z elemntem wyszukiwania
+funkcja przyjmuje dwa argumenty
+pierwszym jest ciag znakow który ma byc wyszkawny
+drugim jest typ contact_type dla którego ma ozstać pszesuzkanie
+
+funkcja zwraca wartosc 0 kiedy elemnt sie nie zgasza i 1 kiedy sie zgadza
+
+
+
+  Filip Borowiec 01.03.2022
+string_to_low w pliku search_functions.c
+
+funckja używana przez funckje wyszukajace aby do zamaisny ciagu znakow na dame male znaki
+funkcja przyjmuje jeden argumenty jakim jest caig znakow do zamieniia
+
+funkcja nie zwraca żadnej wartosci
 

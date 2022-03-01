@@ -30,6 +30,9 @@
     <ClCompile Include="list_cmp.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="search_fuctions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="phone_book.h">

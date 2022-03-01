@@ -84,10 +84,27 @@ extern int postal_code_cmp(list_node* a, list_node* b);
 extern number_cmp(list_node* a, list_node* b);
 
 
+
+
+// funkcje wyszukiwujce
+
+extern list_pointers search_results(list_pointers list, int(*is_selected)(char[30], int));
+extern int is_search_name(char string[30], contact_type node);
+extern int is_search_surname(char string[30], contact_type node);
+extern int is_search_phone_number(char string[30], contact_type node);
+extern int is_search_city(char string[30], contact_type node);
+extern int is_search_street(char string[30], contact_type node);
+extern int is_search_postal_code(char string[30], contact_type node);
+extern int is_search_number(char string[30], contact_type node);
+
+
+
+
 // tymczasowe funkcje znajduj¹ce sie w pliku temporary_functions.c u¿ywane do tesowtaia poprawnoœæi dzia³ania prgramu
 
 extern void genrating_contacts_test();
 extern void list_test_sort();
+void list_contact_test_search();
 
 
 

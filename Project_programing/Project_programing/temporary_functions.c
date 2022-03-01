@@ -169,3 +169,26 @@ void list_contact_test_sort()
 	getchar();
 
 }
+
+
+
+void list_contact_test_search()
+{
+	srand(time(0));
+	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
+
+	getchar();
+
+	list_pointers list = list_init();
+	for (int i = 0; i < 1000; i++)
+	{
+		list = list_add_head(list, generate_rand_contact(rand()));
+
+	}
+	print_list_tail(list);
+	printf("\n\n\n\n\n\n");
+	list=search_results(list, is_search_street, "l");
+
+
+
+}

@@ -143,6 +143,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="phone_book.c" />
     <ClCompile Include="phone_book_list.c" />
+    <ClCompile Include="search_fuctions.c" />
     <ClCompile Include="temporary_functions.c" />
   </ItemGroup>
   <ItemGroup>

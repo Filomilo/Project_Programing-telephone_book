@@ -335,7 +335,7 @@ Filip Borowiec 26.02.2022
  Filip Borowiec 27.02.2022
 free_list w pliku phone_book_list.c
  
- funkcja usuwajaca liste z pami�ci
+ funkcja usuwajaca liste z pamięci
  funkjca przyjmuje argument list_pointers okreslajacy liste kt�ra chcesz ususnac i zwraca list_pointer juz z usuni�ta tablic�
 
  przyk�adowe u�ycie
@@ -454,3 +454,57 @@ funkcja przyjmuje jeden argumenty jakim jest caig znakow do zamieniia
 
 funkcja nie zwraca żadnej wartosci
 
+
+
+Filip Borowiec 03.03.2022
+ start_ui w pliku user_interface.c
+
+funkcja ta rozpoczyna główne menu, nie przyjmuje ani nie zwraca żadnej wartości
+
+
+
+Filip Borowiec 03.03.2022
+ phone_book_manage w pliku user_interface.c
+
+funkcja ta rozpoczyna segment menu od zarządzania książką telefoniczna, 
+funkcja ta przyjumje list_pointers określające ksiązke telfoinczje
+
+
+
+Filip Borowiec 03.03.2022
+ edit_element w pliku user_interface.c
+
+funkcja ta rozpoczyna segment menu od edycji kontaktu,
+funkcja ta przyjumje list_pointers określające ksiązke telfoinczje oraz zwraca list_pointers
+
+
+
+Filip Borowiec 03.03.2022
+save_phone_book w pliku user_interface.c
+
+funkcja ta rozpoczyna segment menu od zapisu ksiązki telefonicznej 
+funkcja ta przyjumje list_pointers określające ksiązke telfoinczje 
+
+
+
+Filip Borowiec 03.03.2022
+delete_element w pliku user_interface.c
+
+funkcja ta rozpoczyna segment menu od usunięcia elemntu ksiązki telefonicznej, 
+funkcja ta przyjumje list_pointers określające ksiązke telfoinczje oraz zwraca list_pointers
+
+
+
+Filip Borowiec 03.03.2022
+search_phone_book w pliku user_interface.c
+
+funkcja ta rozpoczyna segment menu od pszeszukiwania ksiązki telefonicznej, 
+funkcja ta przyjumje list_pointers określające ksiązke telfoinczje
+
+
+
+Filip Borowiec 03.03.2022
+add_new_element w pliku user_interface.c
+
+funkcja ta rozpoczyna segment menu od dodawania elemrntu do ksiązki telefonicznej
+funkcja ta przyjumje list_pointers określające ksiązke telfoinczje oraz zwraca list_pointers

@@ -54,7 +54,7 @@ typedef struct list_pointers_strucrt list_pointers;
 extern list_pointers list_init();
 extern list_pointers list_add_head(list_pointers list, contact_type data);
 extern list_pointers list_add_tail(list_pointers list, contact_type data);
-extern list_node* find_node(list_pointers list, contact_type searched_value);
+extern list_node* find_node(list_pointers list, int searched_value);
 extern list_pointers list_remove_tail(list_pointers list);
 extern list_pointers list_remove_head(list_pointers list);
 extern list_pointers list_remove_node(list_pointers list, list_node* node_to_remove);

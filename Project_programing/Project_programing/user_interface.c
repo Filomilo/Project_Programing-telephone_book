@@ -7,9 +7,31 @@
 
 list_pointers add_new_element(list_pointers list)
 {
+	/*
+
 	system("cls");
 	contact_type contact;
-	contact = generate_rand_contact(1);
+	printf("please provide full name of your contact:\n");
+	scanf_s("%s", contact.name, 30);
+	scanf_s("%s", contact.surname, 30);
+
+	printf("please provide street name of your contact:\n");
+	scanf_s("%s", contact.adress.street, 30);
+
+	printf("please provide house number of your contact:\n");
+	scanf_s("%d", &contact.adress.number, 1);
+
+	printf("please provide postal code of your contact:\n");
+	scanf_s("%s", contact.adress.postal_code, 7);
+
+	printf("please provide city name of your contact:\n");
+	scanf_s("%s", contact.adress.city, 30);
+
+	printf("please provide phone number of your contact:\n");
+	scanf_s("%s", contact.phone_number, 10);
+	contact.id = 1;
+	*/
+	contact_type contact = generate_rand_contact(time(0));
 	list = list_add_head(list, contact);
 
 
@@ -53,20 +75,20 @@ list_pointers sort_phone_book(list_pointers list)
 	do
 	{
 		system("cls");
+		print_list_tail(list);
 		printf("Depending on what parameter, would you like to sort: \n\n");
-		printf("8- id\n7- name\n6- surname\n5- phone number\n4- city \n3- street\n2- postal code\n1- house number\n0-fisnish searching phone book\n\n ");
+		printf("7- id\n6- full name\n5- phone number\n4- city \n3- street\n2- postal code\n1- house number\n0-fisnish searching phone book\n\n ");
 		scanf_s("%d", &choice, 1);
 		switch (choice)
 		{
 		case 0:  break;
-		case 1: printf("\sort by house number\n"); ; break;
-		case 2: printf("\sort by postal code\n"); break;
-		case 3: printf("\sort by street\n"); break;
-		case 4: printf("\sort by city\n"); break;
-		case 5: printf("\nsort by phone number\n"); break;
-		case 6: printf("\nsort by surname\n"); break;
-		case 7: printf("\nsort by name\n"); break;
-		case 8: printf("\nsort by id\n"); break;
+		case 1: list=merge_sort(list,number_cmp); break;
+		case 2: list = merge_sort(list, postal_code_cmp); break;
+		case 3: list = merge_sort(list, street_cmp); break;
+		case 4: list = merge_sort(list, city_cmp); break;
+		case 5: list = merge_sort(list, phone_cmp); break;
+		case 6: list = merge_sort(list, name_cmp); break;
+		case 7: list = merge_sort(list, id_cmp); break;
 		default: printf("\n ERROR: provided wrong value\n\n"); break;
 		}
 
@@ -86,10 +108,19 @@ list_pointers delete_element(list_pointers list)
 	do
 	{
 		system("cls");
+		print_list_head(list);
 		printf("what is the id of an element  you'd like to remove: \n\n");
 		scanf_s("%d", &id, 1);
-
-		printf("\n\n would you like to add another element: \n 1- yes \n 0- no \n\n");
+		//printf("\nnode:\n\n");
+		
+		list_node* element_to_del = find_node(list, id);
+		//print_contact(element_to_del->data);
+		getchar();
+		list_remove_node(list, element_to_del);
+		printf("\n\n test: \n\n");
+		print_contact(list.head->data);
+		//print_list_head(list);
+		printf("\n\n would you like to delete another element: \n 1- yes \n 0- no \n\n");
 		scanf_s("%d", &choice, 1);
 		if (choice == 0)
 			break;
@@ -97,7 +128,8 @@ list_pointers delete_element(list_pointers list)
 			continue;
 		printf("\n ERROR: provided wrong value\n\n");
 	} while (1);
-
+	
+	getchar();
 	return list;
 }
 
@@ -165,6 +197,7 @@ void phone_book_manage(list_pointers list)
 			case 3 : list= sort_phone_book(list); break;
 			case 4 : list = edit_element(list); break;
 			case 5 : list = delete_element(list); break;
+			//case 5: list = list_remove_head(list); break;
 			case 6 : list=add_new_element(list); break;
 		default: printf("\n ERROR: provided wrong value\n\n"); break;
 		}

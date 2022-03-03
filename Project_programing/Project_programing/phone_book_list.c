@@ -161,21 +161,31 @@ list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 		printf("ERROR: no node to remove selected\n");
 		return list;
 	}
-	if (node_to_remove == list.head)
+	else
+	if (node_to_remove==list.tail)
 	{
-		list = list_remove_head(list);
-		return list;
-	}
-	if (node_to_remove == list.tail)
-	{
+		printf("\nremoving tail\n");
 		list = list_remove_tail(list);
 		return list;
 	}
-	node_to_remove->prev->next = node_to_remove->next;
-	node_to_remove->next->prev = node_to_remove->prev;
-	free(node_to_remove);
-	return list;
+	else
+	if (node_to_remove == list.head)
+	{
+		printf("\nremoving head\n");
 
+		list = list_remove_head(list);
+		//print_list_head(list);
+		print_contact(list.head->data);
+		printf("\n\n finsihed test");
+		getchar();
+		return list;
+	}
+	else {
+		node_to_remove->prev->next = node_to_remove->next;
+		node_to_remove->next->prev = node_to_remove->prev;
+		free(node_to_remove);
+		return list;
+	}
 
 
 }

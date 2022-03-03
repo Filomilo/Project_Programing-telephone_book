@@ -12,7 +12,7 @@
 
 contact_type generate_rand_contact(int seed)
 {
-	srand(seed);
+	srand(time(0));
 	contact_type contact;
 	contact.id = rand() % 20000;
 	switch (rand()%13)

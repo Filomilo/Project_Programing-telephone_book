@@ -99,12 +99,20 @@ extern int is_search_number(char string[30], contact_type node);
 
 
 
+//user interface functions 
+extern void start_ui();
+
+
+
+
+
 
 // tymczasowe funkcje znajduj¹ce sie w pliku temporary_functions.c u¿ywane do tesowtaia poprawnoœæi dzia³ania prgramu
 
 extern void genrating_contacts_test();
 extern void list_test_sort();
 void list_contact_test_search();
+extern contact_type generate_rand_contact(int seed);
 
 
 

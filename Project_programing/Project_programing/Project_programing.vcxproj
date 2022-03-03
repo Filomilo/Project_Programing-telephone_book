@@ -145,6 +145,7 @@
     <ClCompile Include="phone_book_list.c" />
     <ClCompile Include="search_fuctions.c" />
     <ClCompile Include="temporary_functions.c" />
+    <ClCompile Include="user_interface.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="phone_book.h" />

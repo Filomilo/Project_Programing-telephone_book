@@ -18,8 +18,10 @@ int main()
 	list_contact_test_sort();
 	list_contact_test_search();*/
 	//list_contact_test_sort();
-	list_file_test();
-	//start_ui();
+	//list_file_test();
+	start_ui();
+
+	//open_file_test();
 	return 0;
 
 }

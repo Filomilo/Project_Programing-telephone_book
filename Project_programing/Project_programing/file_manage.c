@@ -5,6 +5,32 @@
 #include "dirent.h"
 #include <filesystem>
 
+
+int phone_book_list()
+{
+	printf("your phone books:\n\n");
+	DIR* dirct;
+	dirct = opendir("\phone_data");
+	struct dirent* dir;
+	dir = readdir(dirct);
+	dir = readdir(dirct);
+	if (!(dir = readdir(dirct)))
+	{
+		printf("there are no phonebooks saved\n");
+		return 0;
+	}
+	int i = 0;
+	char* tok;
+	do
+	{
+		tok = strtok_s(dir->d_name, ".", &tok);
+		printf("%d: %s\n", i++,tok);
+	} while (dir = readdir(dirct));
+	
+	return 1;
+}
+
+
 void save(list_pointers list, char file_name[30])
 {
 
@@ -27,7 +53,6 @@ void save(list_pointers list, char file_name[30])
 	char directory[60]="phone_data\\";
 	strcat_s(directory, 60, file_name);
 	strcat_s(directory, 60, ".pbd");
-	printf("file: \n%s", directory);
 	int a =fopen_s(&file , directory, "w");
 	
 
@@ -89,4 +114,31 @@ list_pointers load(char file_name[30])
 
 	return	list;
 
+}
+
+
+
+int get_file_name(char file_name[30], int choice)
+{
+	DIR* dirct;
+	dirct = opendir("\phone_data");
+	struct dirent* dir;
+	dir = readdir(dirct);
+	dir = readdir(dirct);
+	dir = readdir(dirct);
+	int i = 0;
+	char* tok;
+	do
+	{
+		tok = strtok_s(dir->d_name, ".", &tok);
+		
+		if (i == choice)
+		{
+			strncpy_s(file_name, 30, tok, 30);
+			return 1;
+		}
+		i++;
+	} while (dir = readdir(dirct));
+
+	return 0;
 }

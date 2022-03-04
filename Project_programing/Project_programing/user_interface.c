@@ -5,6 +5,15 @@
 #include <string.h>
 
 
+
+
+
+
+
+
+
+
+
 list_pointers add_new_element(list_pointers list)
 {
 	system("cls");
@@ -275,6 +284,28 @@ void load_phone_book()
 
 }
 
+void opening_book()
+{
+	int choice;
+	if (!phone_book_list())
+		return;
+	printf("\n\n please choose number of phone you would like to open: \n");
+	scanf_s("%d", &choice, 1);
+	char file_name[30] = "";
+	if (!get_file_name(file_name, choice))
+	{
+		printf("there is phone book with that number");
+		return NULL;
+	}
+	printf("%s", file_name);
+	list_pointers list;
+	list = load(file_name);
+	phone_book_manage(list);
+
+}
+
+
+
 void start_ui()
 {
 	int choice=0;
@@ -286,7 +317,7 @@ void start_ui()
 		{
 		case 0:  break;
 		case 1: create_new_phone_book(); break;
-		case 2: load_phone_book(); break;
+		case 2: opening_book(); break;
 		default: printf("Wrong value provided"); break;
 		}
 

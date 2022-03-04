@@ -190,3 +190,9 @@ void list_file_test()
 	list = load("test");
 	print_list_tail(list);
 }
+
+
+void open_file_test()
+{
+	opening_book();
+}

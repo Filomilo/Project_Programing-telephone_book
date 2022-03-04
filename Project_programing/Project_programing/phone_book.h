@@ -114,7 +114,7 @@ extern void list_test_sort();
 void list_contact_test_search();
 extern contact_type generate_rand_contact(int seed);
 extern void list_file_test();
-
+extern void open_file_test();
 
 
 extern int generate_id(list_pointers list);
@@ -123,5 +123,7 @@ extern int generate_id(list_pointers list);
 
 extern void save(list_pointers list, char file_name[30]);
 extern list_pointers load(char file_name[30]);
-
+extern int phone_book_list();
+extern void opening_book();
+extern get_file_name(char file_name[60], int choice);
 #endif 

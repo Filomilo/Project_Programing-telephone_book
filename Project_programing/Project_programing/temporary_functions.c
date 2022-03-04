@@ -128,45 +128,18 @@ void list_contact_test_sort()
 	getchar();
 	
 	list_pointers list = list_init();
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 20; i++)
 	{
-		list = list_add_head(list, generate_rand_contact(rand()));
+		list = add_new_element(list);
 
 	}
 	print_list_tail(list);
+	getchar();
 	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by id: \n\n\n\n");
 	list = merge_sort(list, id_cmp);
 	print_list_tail(list);
 	getchar();
 
-
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by name: \n\n\n\n");
-	list = merge_sort(list, name_cmp);
-	print_list_tail(list);
-	getchar();
-	getchar();
-
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by phone: \n\n\n\n");
-	list = merge_sort(list, phone_cmp);
-	print_list_tail(list);
-
-	getchar();
-
-
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by city: \n\n\n\n");
-	list = merge_sort(list, city_cmp);
-	print_list_tail(list);
-	getchar();
-
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by street: \n\n\n\n");
-	list = merge_sort(list, street_cmp);
-	print_list_tail(list);
-	getchar();
-
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by postal_code: \n\n\n\n");
-	list = merge_sort(list, postal_code_cmp);
-	print_list_tail(list);
-	getchar();
 
 }
 

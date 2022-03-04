@@ -101,7 +101,7 @@ extern int is_search_number(char string[30], contact_type node);
 
 //user interface functions 
 extern void start_ui();
-
+extern list_pointers add_new_element(list_pointers list);
 
 
 
@@ -116,7 +116,7 @@ extern contact_type generate_rand_contact(int seed);
 
 
 
-
+extern int generate_id(list_pointers list);
 
 
 

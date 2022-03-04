@@ -7,6 +7,7 @@
 
 list_pointers add_new_element(list_pointers list)
 {
+	system("cls");
 	/*
 
 	system("cls");
@@ -32,6 +33,7 @@ list_pointers add_new_element(list_pointers list)
 	contact.id = 1;
 	*/
 	contact_type contact = generate_rand_contact(time(0));
+	contact.id = generate_id(list);
 	list = list_add_head(list, contact);
 
 
@@ -111,15 +113,9 @@ list_pointers delete_element(list_pointers list)
 		print_list_head(list);
 		printf("what is the id of an element  you'd like to remove: \n\n");
 		scanf_s("%d", &id, 1);
-		//printf("\nnode:\n\n");
-		
 		list_node* element_to_del = find_node(list, id);
-		//print_contact(element_to_del->data);
 		getchar();
-		list_remove_node(list, element_to_del);
-		printf("\n\n test: \n\n");
-		print_contact(list.head->data);
-		//print_list_head(list);
+		list=list_remove_node(list, element_to_del);
 		printf("\n\n would you like to delete another element: \n 1- yes \n 0- no \n\n");
 		scanf_s("%d", &choice, 1);
 		if (choice == 0)

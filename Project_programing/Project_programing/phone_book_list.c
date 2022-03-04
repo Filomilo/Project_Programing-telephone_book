@@ -112,8 +112,13 @@ list_pointers list_remove_tail(list_pointers list)
 	}
 	list_node* tmp;
 	tmp = list.tail->next;
-	tmp->prev = NULL;
 	free(list.tail);
+	if (tmp == NULL)
+	{
+		list = list_init();
+		return list;
+	}
+	tmp->prev = NULL;
 	list.tail = tmp;
 
 	return list;

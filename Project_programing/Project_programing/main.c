@@ -17,6 +17,7 @@ int main()
 	printf("\n\n\n\n\n sort test\n\n\n\n\n\n");
 	list_contact_test_sort();
 	list_contact_test_search();*/
+	//list_contact_test_sort();
 
 	start_ui();
 	return 0;

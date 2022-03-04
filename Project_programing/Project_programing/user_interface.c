@@ -183,8 +183,45 @@ void save_phone_book(list_pointers list)
 }
 
 
+void edit_element(list_node* element_to_edit)
+{
+	system("cls");
+	print_contact(element_to_edit->data);
+	printf("\n");
 
-list_pointers edit_element(list_pointers list)
+		int choice;
+	do {
+		printf("what element would you like to edit: \n\n");
+		printf("7- edit name\n6- edit surname\n5- edit street name\n4- house number\n3- edit postal code\n2- edit city\n1- edit phone number\n0-fisnish editing this contact\n\n ");
+		scanf_s("%d", &choice, 1);
+		if (choice == 0)
+			break;
+		printf("\n please provide new value:\n");
+		char new[30];
+			scanf_s("%s", new, 30);
+
+		switch (choice)
+		{
+		case 0:  break;
+		case 1: strncpy_s(element_to_edit->data.phone_number,11,new,11); break;
+		case 2: strncpy_s(element_to_edit->data.adress.city, 30, new, 30); break;
+		case 3: strncpy_s(element_to_edit->data.adress.postal_code, 11, new, 11); break;
+		case 4: element_to_edit->data.adress.number=atoi(new); break;
+		case 5: strncpy_s(element_to_edit->data.adress.street, 30, new, 30); break;
+		case 6: strncpy_s(element_to_edit->data.surname, 30, new, 30); break;
+		case 7: strncpy_s(element_to_edit->data.name, 30, new, 30); break;
+		default: printf("\n ERROR: provided wrong value\n\n"); break;
+		}
+
+
+	} while (choice != 0);
+
+
+
+}
+
+
+list_pointers edit_phone_list(list_pointers list)
 {
 	int choice;
 	int id;
@@ -193,8 +230,21 @@ list_pointers edit_element(list_pointers list)
 		system("cls");
 		printf("what is the id of an element  you'd like to edit: \n\n");
 		scanf_s("%d", &id, 1);
+		list_node* element_to_edit = find_node(list, id);
+		if (element_to_edit == NULL)
+		{
+			printf("there is no eelemt with that id\n");
+			continue;
 
-		printf("\n\n would you like to add another element: \n 1- yes \n 0- no \n\n");
+		}
+
+
+
+		edit_element(element_to_edit);
+
+
+
+		printf("\n\n would you like to eddit another element: \n 1- yes \n 0- no \n\n");
 		scanf_s("%d", &choice, 1);
 		if (choice == 0)
 			break;
@@ -222,9 +272,8 @@ void phone_book_manage(list_pointers list)
 			case 1 :  save_phone_book(list); break;
 			case 2 : search_phone_book(list); break;
 			case 3 : list= sort_phone_book(list); break;
-			case 4 : list = edit_element(list); break;
+			case 4 : list = edit_phone_list(list); break;
 			case 5 : list = delete_element(list); break;
-			//case 5: list = list_remove_head(list); break;
 			case 6 : list=add_new_element(list); break;
 		default: printf("\n ERROR: provided wrong value\n\n"); break;
 		}

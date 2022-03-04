@@ -573,4 +573,14 @@ funckcja zwraca wartosć 0 jezeli wybranego numer który nie odpwaia zadnemu pli
 
 
 
+Filip Borowiec 04.03.2022
+edit_phone_list w pliku user_interface.c
 
+funkcja odpwiadajce ze wybór kontaktu w książce telefonicznej do edycji
+
+
+
+Filip Borowiec 04.03.2022
+edit_element w pliku user_interface.c
+
+funkcja odpwiadajcea ze wybór i edycje wybranego atrubutu kontaktu wybrawngo w poprzediej funkcji

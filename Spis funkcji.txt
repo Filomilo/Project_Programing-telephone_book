@@ -1,4 +1,4 @@
-Filip Borowiec 25.02.2022
+﻿Filip Borowiec 25.02.2022
 type danych "contact_type" w pliku phone_book.h
 
 typ ten jest strukturą pojedyńczego kontaktu do późniejszej listy książki teleofniczej
@@ -336,9 +336,9 @@ Filip Borowiec 26.02.2022
 free_list w pliku phone_book_list.c
  
  funkcja usuwajaca liste z pamięci
- funkjca przyjmuje argument list_pointers okreslajacy liste kt�ra chcesz ususnac i zwraca list_pointer juz z usuni�ta tablic�
+ funkjca przyjmuje argument list_pointers okreslajacy liste kt�ra chcesz ususnac i zwraca list_pointer juz z usuni�ta tablic�
 
- przyk�adowe u�ycie
+ przyk�adowe u�ycie
  left = free_list(left);
 
 
@@ -508,3 +508,69 @@ add_new_element w pliku user_interface.c
 
 funkcja ta rozpoczyna segment menu od dodawania elemrntu do ksiązki telefonicznej
 funkcja ta przyjumje list_pointers określające ksiązke telfoinczje oraz zwraca list_pointers
+
+
+
+Filip Borowiec 04.03.2022
+generate_id w pliku 
+
+jest to protyp funkcji mający wygenerować unikatwe id dla elementu ksiązki(PROTTYP jeszce nie działa)
+funkcja przyjmuje list_pointers dla której ma wygenerować unikatowe id
+funkcja ta zwraca wartosc int określające nowe id
+
+
+
+Filip Borowiec 04.03.2022
+save w pliku file_manage.caig
+
+funkcja ta zapiuje książke telfoniczna do pliku
+funkcja ta przyjmnuje 2 argumenty
+pierwszym jest list pointers określające ksiązke które chesz zapisać 
+drugim jest tablica znaków określająca nazwe pod jaka ma zostac zapisana
+
+
+
+Filip Borowiec 04.03.2022
+load w pliku file_manage.caig
+
+funkcja ta wczytuje książke telefoniczna z pliku
+funkcja ta przyjmnuje talbice znaków określająca nazwe pliku który ma zostać wczytany
+funkcja ta zwraca list_pointerse określające wczytaną tablice
+
+
+
+Filip Borowiec 04.03.2022
+list_file_test w pliku temporary_functions.c
+
+tymczasowa funckja do tesowania wczytywania i zapisywania książki
+
+
+
+Filip Borowiec 04.03.2022
+searching w pliku user_interface.c
+
+funccja interfesju odpowiadająca za wczytywanie z pliku
+
+
+
+Filip Borowiec 04.03.2022
+phone_book_list w pliku file_manage.c
+
+funckja wyświetlajaća liste możliwych plików do otwarca
+zwraca wartosć 0 kiedy nie ma dostepnych plików otawatcai
+i 1 kiedy sa dsotepne
+
+
+
+Filip Borowiec 04.03.2022
+get_file_name w pliku file_manage.c
+
+funkjca wydobywająca nazwe książki telefoniczej w zaleznosi od  o numeru przypsanego w funckji phone_book_list
+funcka przyjmuje 2 argumetny
+pierwsyzm jest tablica znaków do której ma być zapisane nazwa wybrawngo pliku
+drugim jest wartość int określająca numer pliku do wydobycia nazwy
+funckcja zwraca wartosć 0 jezeli wybranego numer który nie odpwaia zadnemu pliku i 1 kiedy udało sie wydobyc nazwe
+
+
+
+

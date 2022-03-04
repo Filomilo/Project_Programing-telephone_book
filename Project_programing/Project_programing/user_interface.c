@@ -41,6 +41,28 @@ list_pointers add_new_element(list_pointers list)
 }
 
 
+void searching(list_pointers list, int(*search_option)(char[30]))
+{
+	printf("Please provide text by which your going to search: \n");
+	char text[30];
+	scanf_s("%s", text, 30);
+	list_pointers result;
+	result = list_init();
+	result = search_results(list, search_option, text);
+	print_list_head(result);
+	free_list(result);
+	printf("push eneter to return\n");
+	getchar();
+	getchar();
+
+
+
+}
+
+
+
+
+
 void search_phone_book(list_pointers list)
 {
 	int choice;
@@ -53,13 +75,13 @@ void search_phone_book(list_pointers list)
 		switch (choice)
 		{
 		case 0:  break;
-		case 1: printf("\nsearching by house number\n"); ; break;
-		case 2: printf("\nserach by postal code\n"); break;
-		case 3: printf("\nsearch by street\n"); break;
-		case 4: printf("\nsearch by city\n"); break;
-		case 5: printf("\nsearch by phone number\n"); break;
-		case 6: printf("\nsearch by surname\n"); break;
-		case 7: printf("\nsearch by name\n"); break;
+		case 1: searching(list, is_search_number); break;
+		case 2: searching(list, is_search_postal_code); break;
+		case 3: searching(list, is_search_street); break;
+		case 4: searching(list, is_search_city); break;
+		case 5: searching(list, is_search_phone_number); break;
+		case 6: searching(list, is_search_surname); break;
+		case 7: searching(list, is_search_name); break;
 		default: printf("\n ERROR: provided wrong value\n\n"); break;
 		}
 
@@ -139,7 +161,7 @@ void save_phone_book(list_pointers list)
 		system("cls");
 		printf("how would you like to name your phone_book: \n\n");
 		scanf_s("%s", file_name, 30);
-
+		save(list, file_name);
 		printf("\n\n would you like to save  another copy of your phone book: \n 1- yes \n 0- no \n\n");
 		scanf_s("%d", &choice, 1);
 		if (choice == 0)

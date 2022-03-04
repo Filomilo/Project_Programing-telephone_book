@@ -165,3 +165,28 @@ void list_contact_test_search()
 
 
 }
+
+
+
+
+void list_file_test()
+{
+	srand(time(0));
+	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
+
+	getchar();
+
+	list_pointers list = list_init();
+	for (int i = 0; i < 10; i++)
+	{
+		list = add_new_element(list);
+
+	}
+	print_list_tail(list);
+	save(list, "test");
+	list=free_list(list);
+	print_list_tail(list);
+	getchar();
+	list = load("test");
+	print_list_tail(list);
+}

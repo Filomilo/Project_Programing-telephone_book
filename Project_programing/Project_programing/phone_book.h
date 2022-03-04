@@ -113,6 +113,7 @@ extern void genrating_contacts_test();
 extern void list_test_sort();
 void list_contact_test_search();
 extern contact_type generate_rand_contact(int seed);
+extern void list_file_test();
 
 
 
@@ -120,7 +121,7 @@ extern int generate_id(list_pointers list);
 
 
 
-
-
+extern void save(list_pointers list, char file_name[30]);
+extern list_pointers load(char file_name[30]);
 
 #endif 

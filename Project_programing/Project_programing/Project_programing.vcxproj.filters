@@ -36,6 +36,9 @@
     <ClCompile Include="user_interface.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="file_manage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="phone_book.h">

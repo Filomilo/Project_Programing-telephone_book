@@ -511,10 +511,11 @@ funkcja ta przyjumje list_pointers określające ksiązke telfoinczje oraz zwrac
 
 
 
-Filip Borowiec 04.03.2022
-generate_id w pliku 
+Filip Borowiec 04.03.2022 
+(Filip Borowiec 05.03.2022 update)
+generate_id w pliku phone_book.c
 
-jest to protyp funkcji mający wygenerować unikatwe id dla elementu ksiązki(PROTTYP jeszce nie działa)
+jest to funkjca odpwiadajaca za geneorwanie unikatowego id
 funkcja przyjmuje list_pointers dla której ma wygenerować unikatowe id
 funkcja ta zwraca wartosc int określające nowe id
 
@@ -584,3 +585,25 @@ Filip Borowiec 04.03.2022
 edit_element w pliku user_interface.c
 
 funkcja odpwiadajcea ze wybór i edycje wybranego atrubutu kontaktu wybrawngo w poprzediej funkcji
+
+
+
+Filip Borowiec 05.03.2022
+list_id_test w pliku temporary_functions.c
+
+funkcje tesotowa do przetestowania generaotra id
+
+
+
+Filip Borowiec 05.03.2022
+duplicate_book w pliku phone_book.c
+
+funkjca służąca zduplikowaniu listy
+funkcja przyjmuje list_pointer określajace liste do zduplikowania
+funkcja zwraca list_pointers określająca zduplikowana liste
+
+
+
+
+
+

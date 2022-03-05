@@ -8,33 +8,68 @@
 void print_contact(contact_type contact)
 {
 	printf("ID: %d\n", contact.id);
-	printf("Name: %s\tSurname: %s\n", contact.name,contact.surname);
-	printf("%s, st.%s %d     %s\n", contact.adress.city, contact.adress.street, contact.adress.number, contact.adress.postal_code);
-	printf("pohone number: %s", contact.phone_number);
-	printf("\n\n\n");
+	//printf("Name: %s\tSurname: %s\n", contact.name,contact.surname);
+	//printf("%s, st.%s %d     %s\n", contact.adress.city, contact.adress.street, contact.adress.number, contact.adress.postal_code);
+	//printf("pohone number: %s", contact.phone_number);
+	//printf("\n\n\n");
 }
 
-int id = 0;
+list_pointers duplicate_book( list_pointers list)
+{
+	list_pointers new = list_init();
+	
+
+	if (list.head == NULL)
+	{
+		return new;
+	}
+	while (list.tail != list.head)
+	{
+		new=list_add_tail(new, list.tail->data);
+		list.tail = list.tail->next;
+
+
+	}
+	new = list_add_tail(new, list.tail->data);
+
+
+
+
+
+	return new;
+
+}
+
+
 
 int generate_id(list_pointers list)
 {
-	//print_list_tail(list);
-	int i = 0;
-	if (list.head == NULL)
+	int i=0;
+	list_pointers tmp = duplicate_book(list);
+	tmp = merge_sort(tmp, id_cmp);
+	
+	list_node* active = tmp.head;
+
+	if (tmp.head == NULL)
 	{
+		printf("your list is empty\n");
 		return i;
 	}
-	//list = merge_sort(list, id_cmp);
-	//print_list_head(list);
-	while (list.head != list.tail)
+	while (tmp.tail != active)
 	{
-		//printf("id: %d, ",list.tail->data.id);
-		list.tail = list.tail->next;
-		//printf("contact :"); 
-		//print_contact(list.tail->data);
 		i++;
+		
+		active = active->prev;
+		if (active->data.id != i)
+		{
+			free_list(tmp);
+			return i;
+		}
+			
 
 	}
-
-	return ++id;
+	i++;
+	free_list(tmp);
+	
+	return i;
 }

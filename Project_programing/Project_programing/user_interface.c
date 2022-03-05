@@ -16,7 +16,7 @@
 
 list_pointers add_new_element(list_pointers list)
 {
-	system("cls");
+	//system("cls");
 	/*
 
 	system("cls");
@@ -40,7 +40,7 @@ list_pointers add_new_element(list_pointers list)
 	printf("please provide phone number of your contact:\n");
 	scanf_s("%s", contact.phone_number, 10);
 	contact.id = 1;
-	*/
+	*/ 
 	contact_type contact = generate_rand_contact(time(0));
 	contact.id = generate_id(list);
 	list = list_add_head(list, contact);

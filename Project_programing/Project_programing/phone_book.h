@@ -115,6 +115,7 @@ void list_contact_test_search();
 extern contact_type generate_rand_contact(int seed);
 extern void list_file_test();
 extern void open_file_test();
+extern void list_id_test();
 
 
 extern int generate_id(list_pointers list);

@@ -196,3 +196,46 @@ void open_file_test()
 {
 	opening_book();
 }
+
+
+
+void list_id_test()
+{
+	srand(time(0));
+	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
+
+	getchar();
+
+	list_pointers list = list_init();
+	for (int i = 0; i < 10; i++)
+	{
+		printf("\n\n");
+		list = add_new_element(list);
+		printf("list:\n");
+		print_list_tail(list);
+
+		getchar();
+	}
+	print_list_tail(list);
+	printf("\n\n");
+	getchar();
+	list = list_remove_node(list, find_node(list,3));
+	list = list_remove_node(list, find_node(list, 1));
+	list = list_remove_node(list, find_node(list, 5));
+	list = list_remove_node(list, find_node(list, 7));
+	list = list_remove_node(list, find_node(list, 8));
+	print_list_tail(list);
+	getchar();
+
+
+	for (int i = 0; i < 10; i++)
+	{
+		printf("\n\n");
+		list = add_new_element(list);
+		printf("list:\n");
+		print_list_tail(list);
+	
+		getchar();
+	}
+
+}

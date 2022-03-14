@@ -7,6 +7,7 @@
 
 int main()
 {
+	system("CHCP 1250 >NUL");
 	/*
 	printf("hello world \n");
 	printf("welcome to the internet\n");

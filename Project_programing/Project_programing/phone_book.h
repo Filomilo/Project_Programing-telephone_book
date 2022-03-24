@@ -64,7 +64,7 @@ void print_list_tail(list_pointers list);
 extern list_node* find_middle_node(list_pointers list);
 extern list_pointers merge_sort(list_pointers list, int (*cmp)(contact_type, contact_type));
 extern list_pointers free_list(list_pointers list);
-
+extern int count_elements(list_pointers list);
 
 //funkcje znajduj¹ce sie w pliku phone_book.c do obs³ugi ksi¹zki telefonicznej
 
@@ -127,4 +127,17 @@ extern list_pointers load(char file_name[30]);
 extern int phone_book_list();
 extern void opening_book();
 extern get_file_name(char file_name[60], int choice);
+
+
+
+
+
+
+
+
+
+//gui
+
+extern void start_gui();
+
 #endif 

@@ -39,6 +39,9 @@
     <ClCompile Include="file_manage.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gui.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="phone_book.h">
@@ -47,5 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Spis funkcji.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

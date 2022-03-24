@@ -364,3 +364,22 @@ list_pointers merge_sort(list_pointers list, int (*cmp)(contact_type, contact_ty
 }
 
 
+
+int count_elements(list_pointers list)
+{
+	int i = 0;
+	if (list.head == NULL)
+	{
+		
+		return i;
+	}
+	while (list.tail != list.head)
+	{
+		print_contact(list.tail->data);
+		list.tail = list.tail->next;
+
+		i++;
+	}
+	return ++i;
+}
+

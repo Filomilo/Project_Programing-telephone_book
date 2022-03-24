@@ -20,7 +20,8 @@ int main()
 	list_contact_test_search();*/
 	//list_contact_test_sort();
 	//list_file_test();
-	start_ui();
+	//start_ui();
+	start_gui();
 	//list_id_test();
 	//open_file_test();
 	return 0;

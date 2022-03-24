@@ -1,0 +1,120 @@
+\hypertarget{file__manage_8c}{}\doxysection{D\+:/gogle drive/studia/\+Semestr 2/\+Podstawy programowania 2/\+Projekt -\/ Podstawy programowania 2/projekt/\+Project\+\_\+\+Programing-\/telephone\+\_\+book/\+Project\+\_\+programing/\+Project\+\_\+programing/file\+\_\+manage.c File Reference}
+\label{file__manage_8c}\index{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/file\_manage.c@{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/file\_manage.c}}
+
+
+plik ten zawiera funkcje odpowiedzilne za zarzadzenie plikami ksiazki telefonicznej  
+
+
+{\ttfamily \#include \char`\"{}phone\+\_\+book.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}dirent.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{file__manage_8c_a2e3eb4c09f45c47e5a1e4b7b90545904}{phone\+\_\+book\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em funckja te generuje liste plików dostenych w folderze przeznaczonym na zapis ksiązek telefonicznych \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{file__manage_8c_a05e91a23881226c31872a5f29d8df505}{save}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, char file\+\_\+name\mbox{[}30\mbox{]})
+\begin{DoxyCompactList}\small\item\em funckjaja zapisuje liste dynamiczną do pliku o podanej nazwie \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{file__manage_8c_a46da9c08707171512b37318155d32a77}{load}} (char file\+\_\+name\mbox{[}30\mbox{]})
+\begin{DoxyCompactList}\small\item\em funkcja wczytuje liste z pliku o podanej nazwie \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__manage_8c_a78aafff3639ca0659fd6427532b6b012}{get\+\_\+file\+\_\+name}} (char file\+\_\+name\mbox{[}30\mbox{]}, int choice)
+\begin{DoxyCompactList}\small\item\em funckja pozwala na zodbycie nazwy pliku w zaleznodci od wybranego numeru pliku \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+plik ten zawiera funkcje odpowiedzilne za zarzadzenie plikami ksiazki telefonicznej 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/24
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{file__manage_8c_a78aafff3639ca0659fd6427532b6b012}\label{file__manage_8c_a78aafff3639ca0659fd6427532b6b012}} 
+\index{file\_manage.c@{file\_manage.c}!get\_file\_name@{get\_file\_name}}
+\index{get\_file\_name@{get\_file\_name}!file\_manage.c@{file\_manage.c}}
+\doxysubsubsection{\texorpdfstring{get\_file\_name()}{get\_file\_name()}}
+{\footnotesize\ttfamily int get\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{char}]{file\+\_\+name\mbox{[}30\mbox{]},  }\item[{int}]{choice }\end{DoxyParamCaption})}
+
+
+
+funckja pozwala na zodbycie nazwy pliku w zaleznodci od wybranego numeru pliku 
+
+funckja bierze wartosc int okreslajaca numer pliku przypisany według schematu co w funckji phone\+\_\+book\+\_\+list a nastepnie wydobywa nazwe tego pliku i zwrraca go do talbicy znakow podanych jako pierwszy argument funkcji
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & -\/ tablica znakow do ktorej zostanie zapisana wybrana nazwa pliku \\
+\hline
+{\em choice} & -\/ wartosc liczbowa wybranego pliku przypisanej na tej same zasadzie co w funkcji phone\+\_\+book\+\_\+list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int zwraca 0 gdy funkcja wykonala sie poprawnie 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file__manage_8c_a46da9c08707171512b37318155d32a77}\label{file__manage_8c_a46da9c08707171512b37318155d32a77}} 
+\index{file\_manage.c@{file\_manage.c}!load@{load}}
+\index{load@{load}!file\_manage.c@{file\_manage.c}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} load (\begin{DoxyParamCaption}\item[{char}]{file\+\_\+name\mbox{[}30\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+funkcja wczytuje liste z pliku o podanej nazwie 
+
+na samym początku funkjcja towrzy nowa liste nastepenie genruje lokaliazacje nazwe i roserzenie pliku o podanej naziwe nastepnie otwiera ten plik o podanej nazwie i wczytuje elementy listy elemnt po elemencie i dodaje je do nowo utworzonej listy az do osiagniecia konca pliku po wczytaniu wszystkich elemntow moze zostac zwrocona lista wypelniona
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & -\/ 30 elemtowy ciag znakow okreslajacy nazwe pliku do otworzenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ struktura list\+\_\+pointers okreslajaca wczytana z pliku 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file__manage_8c_a2e3eb4c09f45c47e5a1e4b7b90545904}\label{file__manage_8c_a2e3eb4c09f45c47e5a1e4b7b90545904}} 
+\index{file\_manage.c@{file\_manage.c}!phone\_book\_list@{phone\_book\_list}}
+\index{phone\_book\_list@{phone\_book\_list}!file\_manage.c@{file\_manage.c}}
+\doxysubsubsection{\texorpdfstring{phone\_book\_list()}{phone\_book\_list()}}
+{\footnotesize\ttfamily int phone\+\_\+book\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckja te generuje liste plików dostenych w folderze przeznaczonym na zapis ksiązek telefonicznych 
+
+na samy na poczatku funckacja wyswietal your phone books\+: nastepnie z pomoca bibliotekei dirent.\+h otwiera lokalizacje przeznaczona na zapisywanie ksiązek telefonciznych nastepnie rónwiez z pomoca bilbioteki dirent.\+h wypisuje liste nazw plikow bez roszezrzenia wraz przypiasniem do nich wartosci numerecznej umozliwajacyh późniejszy wybór ksiazki do wybrania
+
+\begin{DoxyReturn}{Returns}
+int funckja zwraca wartosc 0 jezeli nie masz zadnych dostepnych ksiazek telfonicnzych i 1-\/ jezeli masz dostepne ksiązki telefonczne 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file__manage_8c_a05e91a23881226c31872a5f29d8df505}\label{file__manage_8c_a05e91a23881226c31872a5f29d8df505}} 
+\index{file\_manage.c@{file\_manage.c}!save@{save}}
+\index{save@{save}!file\_manage.c@{file\_manage.c}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{char}]{file\+\_\+name\mbox{[}30\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+funckjaja zapisuje liste dynamiczną do pliku o podanej nazwie 
+
+na samym poczatku funkjca sprawdza czy istnieje folder przeznaczony na zapisywanie ksiazek telefoncznych jezeli nie tworzy taki folder natepnie tworzy caig znakow okreslajacy lokalziacje nazwe i rozszerzenie pliku do zapisania nastpnie wchodzi w petle ktora przechodzdi przez wszystkie lemnty listy i zapisuje je do pliku binarnego o podnaej nazwie i rozszerzeniu .pbd
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointer okreslajaca liste do zapisania \\
+\hline
+{\em file\+\_\+name} & -\/ 30 elemntowy ciag znakwy okreslajacy nazwe pod ktora ma zostac zapisana lista \\
+\hline
+\end{DoxyParams}

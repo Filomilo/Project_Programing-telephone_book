@@ -48,4 +48,7 @@
   <ItemGroup>
     <Text Include="Spis funkcji.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>

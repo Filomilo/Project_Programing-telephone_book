@@ -1,0 +1,938 @@
+\hypertarget{phone__book_8h}{}\doxysection{D\+:/gogle drive/studia/\+Semestr 2/\+Podstawy programowania 2/\+Projekt -\/ Podstawy programowania 2/projekt/\+Project\+\_\+\+Programing-\/telephone\+\_\+book/\+Project\+\_\+programing/\+Project\+\_\+programing/phone\+\_\+book.h File Reference}
+\label{phone__book_8h}\index{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/phone\_book.h@{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/phone\_book.h}}
+
+
+plik nagłowkowki bibliteki łączacej wszystkie pliki programu  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structadress__struct}{adress\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em struktura zawierająća dane o adresie danej osoby \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcontact__struct}{contact\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em struktura pojedyńczego wpisusu w książće telefoniczej \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlist__node__struct}{list\+\_\+node\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em typ struktury opisujące pojedyńczy elemnt listy dynamicznej ksiązki telefonicznej \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlist__pointers__strucrt}{list\+\_\+pointers\+\_\+strucrt}}
+\begin{DoxyCompactList}\small\item\em struktura wykorzystana jako określnnie listy dynamicznej \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structadress__struct}{adress\+\_\+struct}} \mbox{\hyperlink{phone__book_8h_a6e22820f633bf6882d9486f8b510987f}{adress\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em typ struktury adresu utworzony aby skrócić nazwe typu do krótzej przystępniejszej formy \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structcontact__struct}{contact\+\_\+struct}} \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em typ danych struktury wpisu w konakcie aby ułatwić poźnijesze odnoszenie sie do tego typu \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structlist__node__struct}{list\+\_\+node\+\_\+struct}} \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}}
+\begin{DoxyCompactList}\small\item\em typ danych struktury pojedyńczego lemntu listy dynamicznje utworzony w celu późniejszego łatwiejszego przywoływania tego typu w kodzie \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structlist__pointers__strucrt}{list\+\_\+pointers\+\_\+strucrt}} \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}
+\begin{DoxyCompactList}\small\item\em typ danych struktualny dla opisu listy dynamicznej w celu późnijeszego ułatwienia odniesienia się w dalszej części programu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_a36960d26a9f13daef3d9ba2db9fcd804}{list\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em funkcja incjująca pusta liste dynamiczną \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_a09fe4582d87d9a56316be921a7668c6f}{list\+\_\+add\+\_\+head}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} data)
+\begin{DoxyCompactList}\small\item\em funkja doaje do listy elemnt od storny głowy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_a7a3637e283f2ddb5107381c206bdc928}{list\+\_\+add\+\_\+tail}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} data)
+\begin{DoxyCompactList}\small\item\em funkja doaje do listy elemnt od storny ogona \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$ \mbox{\hyperlink{phone__book_8h_a2dc8f8411f74f588363b93aa8e973b06}{find\+\_\+node}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, int searched\+\_\+value)
+\begin{DoxyCompactList}\small\item\em funkcja znajduje elemnt o podanym id \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_a902a61753de40c7598e7b8021ce2d344}{list\+\_\+remove\+\_\+tail}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funkcja usuwa końcowy elemnt (tail) z listy dynamicznje \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_a63472df91ba71cfdd80093f8f5cfb2cd}{list\+\_\+remove\+\_\+head}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funkcja usuwa początkowy elemnt (head) z listy dynamicznje \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_ad2551e4d1c1ed889b0f4797e4847ecde}{list\+\_\+remove\+\_\+node}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$node\+\_\+to\+\_\+remove)
+\begin{DoxyCompactList}\small\item\em funkcja usuwa wybrany elemnt z listy dynamicznej \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_a13241d8914822a06ce6ecaacf384eb64}{list\+\_\+edit\+\_\+node}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$node\+\_\+to\+\_\+edit, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} data)
+\begin{DoxyCompactList}\small\item\em funckcja podmienia wartośc wybranego elemntu na wartosć podaną w argumencie \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_a15be9e9ccacc4aea366819f9045fd37b}{print\+\_\+list\+\_\+head}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony głowy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_a1be4155bd4debdb679084ac51f6e44d0}{print\+\_\+list\+\_\+tail}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony ogona \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$ \mbox{\hyperlink{phone__book_8h_adb6b6e14166bddec49991d35359efae9}{find\+\_\+middle\+\_\+node}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckcja ta znajduje i zwraca środkowy elemnt listy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_a64a2878307e95238731870587851fbf4}{merge\+\_\+sort}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, int($\ast$cmp)(\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}))
+\begin{DoxyCompactList}\small\item\em funckja sortuje liste dynamiczna według elemntu podanago jako wskaźńik funkcji \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_aaba6afe0c7d1ac6c03ed763fccf01e5f}{free\+\_\+list}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckja usuwa calą lsite z pamięci \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_acaa0c6091546098d3178389e9b64a1b4}{print\+\_\+contact}} (\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} contact)
+\begin{DoxyCompactList}\small\item\em funkcja odpowiada ze wyświeltnie jedeno wpisu w kontakcie \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_ae4030b34d278806fa6d9e3ee81320966}{id\+\_\+cmp}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$a, \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em funkcja porównuje ze sobą id dwóch elemtów listy \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_ade45458216235ef53ed75d2346844d86}{name\+\_\+cmp}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$a, \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em funkcja porównuje ze sobą imie i nazwisko dwóch elemtów listy \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_a2d79a2f241597a9ea602d16522610715}{phone\+\_\+cmp}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$a, \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em funkcja porównuje ze sobą numer telefonu dwóch elemtów listy \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_a4c5ccbe0a2d00340f0af5b20b8562139}{city\+\_\+cmp}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$a, \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$b)
+\item 
+int \mbox{\hyperlink{phone__book_8h_a68b8290675503130e4337a0e44a6c5a1}{street\+\_\+cmp}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$a, \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em funkcja porównuje ze sobą nazwy ulic dwóch elemtów listy \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_a946b717b74f034d1ec5ba481f6cc4147}{postal\+\_\+code\+\_\+cmp}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$a, \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em funkcja porównuje ze sobą kod pocztowy dwóch elemtów listy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a596706c52dad41933f9f9408d0a1439a}{number\+\_\+cmp}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$a, \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em funkcja porównuje ze sobą numer domu/budynku dwóch elemtów listy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_af4e1eeb880cba9ed7adccf94574062cd}{search\+\_\+results}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, int($\ast$is\+\_\+selected)(char\mbox{[}30\mbox{]}, int))
+\item 
+int \mbox{\hyperlink{phone__book_8h_a4cfadeb865613a75daa61b0793255d65}{is\+\_\+search\+\_\+name}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy imie danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_aa9ae464ffb4d4c41dbffc26e50c80048}{is\+\_\+search\+\_\+surname}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy nazwisko danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_a85e98d9ed753090765bb863b0a18b1eb}{is\+\_\+search\+\_\+phone\+\_\+number}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy numer telefonu danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_ab5c1bb0087966f1037b3073250ee36aa}{is\+\_\+search\+\_\+city}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy miasto w adresie zamieszkania danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_a116fee475d694db485660bf9d38fa3cd}{is\+\_\+search\+\_\+street}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy ulica w adresie zamieszkania danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_a6f0a0de863dcb600ea7883e25dddff74}{is\+\_\+search\+\_\+postal\+\_\+code}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy kod pocztowy danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_a6032bf90a5375b7caeebdae301a0ad9b}{is\+\_\+search\+\_\+number}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy numer domu spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_a948657c2d00c8465e429b5b697e92744}{start\+\_\+ui}} ()
+\begin{DoxyCompactList}\small\item\em funckja rozpoczyna konsolowy interefejsc użykownika \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_acae1958c448e88785f5b31ad032f27fb}{add\+\_\+new\+\_\+element}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckja odpwodzialna za pisywanie danych do dowanie nowego elmntu do listy o podanych przez użytkowniak danych \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_aa51908cd178f403a3a4b2a4dc2aee2ac}{genrating\+\_\+contacts\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em funkcja testująca funckje generowanie losowego kontkatu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_ae0d82ec0c44767fba0c990f6894151ea}{list\+\_\+test\+\_\+sort}} ()
+\item 
+void \mbox{\hyperlink{phone__book_8h_a4e01c796058e58a96b8003248b43dc96}{list\+\_\+contact\+\_\+test\+\_\+search}} ()
+\begin{DoxyCompactList}\small\item\em funkcja pozwala na przetestowanie funkcji pszeszukiwania listy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} \mbox{\hyperlink{phone__book_8h_a22e985f14e1f15ee4abc3c5ae97631d5}{generate\+\_\+rand\+\_\+contact}} (int seed)
+\begin{DoxyCompactList}\small\item\em funkjca genruje loswy wpis konaktu na podstawie podanego ziarna losowaia \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_a723d3aac8b6795c541b6014e28cb7907}{list\+\_\+file\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em funckja pozwala na przetestowanie funkcji odczyytu i zapisu list do pliku \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_ab174392952ae1c4c89d66f736ba37db5}{open\+\_\+file\+\_\+test}} ()
+\item 
+void \mbox{\hyperlink{phone__book_8h_a6b7c89dcbddf237cbc4b04fa39e8ac7c}{list\+\_\+id\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em funkcja ta pozwala na prztestowanie generowania unikatowego id \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_ac0c8dd51ca89a74e3bac27da25de8d9d}{generate\+\_\+id}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funkcja genruje dla listy unikatowe id \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_a05e91a23881226c31872a5f29d8df505}{save}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, char file\+\_\+name\mbox{[}30\mbox{]})
+\begin{DoxyCompactList}\small\item\em funckjaja zapisuje liste dynamiczną do pliku o podanej nazwie \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book_8h_a46da9c08707171512b37318155d32a77}{load}} (char file\+\_\+name\mbox{[}30\mbox{]})
+\begin{DoxyCompactList}\small\item\em funkcja wczytuje liste z pliku o podanej nazwie \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{phone__book_8h_a2e3eb4c09f45c47e5a1e4b7b90545904}{phone\+\_\+book\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em funckja te generuje liste plików dostenych w folderze przeznaczonym na zapis ksiązek telefonicznych \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book_8h_a9ff867bc6f9209f37a9f8f18de63ba90}{opening\+\_\+book}} ()
+\begin{DoxyCompactList}\small\item\em funckja odpowiada za segment menu odpowiadzilany za otawcie ksiazki z pliku \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_aa58a328252fc2b7a17740bda1b86b016}{get\+\_\+file\+\_\+name}} (char file\+\_\+name\mbox{[}60\mbox{]}, int choice)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+plik nagłowkowki bibliteki łączacej wszystkie pliki programu 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/24
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{phone__book_8h_a6e22820f633bf6882d9486f8b510987f}\label{phone__book_8h_a6e22820f633bf6882d9486f8b510987f}} 
+\index{phone\_book.h@{phone\_book.h}!adress\_type@{adress\_type}}
+\index{adress\_type@{adress\_type}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{adress\_type}{adress\_type}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structadress__struct}{adress\+\_\+struct}} \mbox{\hyperlink{phone__book_8h_a6e22820f633bf6882d9486f8b510987f}{adress\+\_\+type}}}
+
+
+
+typ struktury adresu utworzony aby skrócić nazwe typu do krótzej przystępniejszej formy 
+
+\mbox{\Hypertarget{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}\label{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}} 
+\index{phone\_book.h@{phone\_book.h}!contact\_type@{contact\_type}}
+\index{contact\_type@{contact\_type}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{contact\_type}{contact\_type}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structcontact__struct}{contact\+\_\+struct}} \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}
+
+
+
+typ danych struktury wpisu w konakcie aby ułatwić poźnijesze odnoszenie sie do tego typu 
+
+\mbox{\Hypertarget{phone__book_8h_ae45649e1bf49bca0d951a12786951052}\label{phone__book_8h_ae45649e1bf49bca0d951a12786951052}} 
+\index{phone\_book.h@{phone\_book.h}!list\_node@{list\_node}}
+\index{list\_node@{list\_node}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_node}{list\_node}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structlist__node__struct}{list\+\_\+node\+\_\+struct}} \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}}}
+
+
+
+typ danych struktury pojedyńczego lemntu listy dynamicznje utworzony w celu późniejszego łatwiejszego przywoływania tego typu w kodzie 
+
+\mbox{\Hypertarget{phone__book_8h_a78becf181354a193adc61987626098cb}\label{phone__book_8h_a78becf181354a193adc61987626098cb}} 
+\index{phone\_book.h@{phone\_book.h}!list\_pointers@{list\_pointers}}
+\index{list\_pointers@{list\_pointers}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_pointers}{list\_pointers}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structlist__pointers__strucrt}{list\+\_\+pointers\+\_\+strucrt}} \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}
+
+
+
+typ danych struktualny dla opisu listy dynamicznej w celu późnijeszego ułatwienia odniesienia się w dalszej części programu 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{phone__book_8h_acae1958c448e88785f5b31ad032f27fb}\label{phone__book_8h_acae1958c448e88785f5b31ad032f27fb}} 
+\index{phone\_book.h@{phone\_book.h}!add\_new\_element@{add\_new\_element}}
+\index{add\_new\_element@{add\_new\_element}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{add\_new\_element()}{add\_new\_element()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} add\+\_\+new\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckja odpwodzialna za pisywanie danych do dowanie nowego elmntu do listy o podanych przez użytkowniak danych 
+
+funkjca towrzy nowy elemnt contact\+\_\+type a nastepnei po kolei prosi uzytkowniak o podanie imeinai i nazwiska, nazyw ulicy, numeru domu/budynku, kodu pocztowego, nazwy miasta, numer telefonu nastepnei elemnt\+\_\+conatact\+\_\+type zostaje dodany do listy z uzyciem funckji list\+\_\+add\+\_\+head
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers okreslajaca lsite do ktorej uztykownik ma dopisac elemnt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca struktura lsit\+\_\+pointers z dodanym elemntem przez uzytkownika 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a4c5ccbe0a2d00340f0af5b20b8562139}\label{phone__book_8h_a4c5ccbe0a2d00340f0af5b20b8562139}} 
+\index{phone\_book.h@{phone\_book.h}!city\_cmp@{city\_cmp}}
+\index{city\_cmp@{city\_cmp}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{city\_cmp()}{city\_cmp()}}
+{\footnotesize\ttfamily int city\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{phone__book_8h_adb6b6e14166bddec49991d35359efae9}\label{phone__book_8h_adb6b6e14166bddec49991d35359efae9}} 
+\index{phone\_book.h@{phone\_book.h}!find\_middle\_node@{find\_middle\_node}}
+\index{find\_middle\_node@{find\_middle\_node}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{find\_middle\_node()}{find\_middle\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}}$\ast$ find\+\_\+middle\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckcja ta znajduje i zwraca środkowy elemnt listy 
+
+funkcja ta najpierw sprawdza czy lista nie jest psuta, jezeli jest jest to wyswietla komunikat \char`\"{}your list is empty\char`\"{}. nastepnie jezeli lista jedno elemtowa to zwraca ten jeden elemnt. następnie jezeli nie jest jedno elmntowa to tworzy dwa wskażńiki first i sec oba przyjmujące wartosc tail następnie do czasu aż wskaźnik sec nie osiągnie końca listy to wskaźńik first przemiesza się z każdą iteracja o jeden elemnt listy do przodu natomiast sec o dwa elemnty do przodu po zakończeniu listy wartosć first jest wskaźnikime na na środkowy elemnt listy i taki też i dzie do zwortu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ funckja przyjmuje list\+\_\+pointers określającą liste której środkowy elemnt ma zostać znaleziony \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+node$\ast$ -\/ funckja zwraca wskaźńik na środkowy elemnt listy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a2dc8f8411f74f588363b93aa8e973b06}\label{phone__book_8h_a2dc8f8411f74f588363b93aa8e973b06}} 
+\index{phone\_book.h@{phone\_book.h}!find\_node@{find\_node}}
+\index{find\_node@{find\_node}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{find\_node()}{find\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}}$\ast$ find\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{int}]{searched\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+funkcja znajduje elemnt o podanym id 
+
+funckja ta przechodzi przez kolejne elemnty listy dynamicznej tak długo aż nie osiagnie lub nie znajdzie elemntu o id równym podanego w searched\+\_\+value jezei znajdzie takowy elemnt to zwraca wskaźnik na ten właśnie element a jeżeli zwraca pusty wskaźnik
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers na liste dynamiczną któej elemnt należy znaleźć \\
+\hline
+{\em searched\+\_\+value} & -\/ wartość int określająca id elemntu który ma zostać odnaleziony \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+node$\ast$ -\/ zwraca wskaźńik na odnaleziony elemnt listy dynamicznej lub jeżeli taki nie został odnaleziony w pusty wskaźńk 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_aaba6afe0c7d1ac6c03ed763fccf01e5f}\label{phone__book_8h_aaba6afe0c7d1ac6c03ed763fccf01e5f}} 
+\index{phone\_book.h@{phone\_book.h}!free\_list@{free\_list}}
+\index{free\_list@{free\_list}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{free\_list()}{free\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} free\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckja usuwa calą lsite z pamięci 
+
+funckja ta wykonuje operacja list\+\_\+remove\+\_\+head dla lsity aż head i tail nie sa sobie równe po osiągnięciu wychodzi z listy i usuwa ostani pozostaly elemnt listy i zwraca pustą lite
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ funckja przyjmuje list\+\_\+pointers określającą liste która chemy usunąc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ funkcja zwraca pustą liste 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_ac0c8dd51ca89a74e3bac27da25de8d9d}\label{phone__book_8h_ac0c8dd51ca89a74e3bac27da25de8d9d}} 
+\index{phone\_book.h@{phone\_book.h}!generate\_id@{generate\_id}}
+\index{generate\_id@{generate\_id}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{generate\_id()}{generate\_id()}}
+{\footnotesize\ttfamily int generate\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funkcja genruje dla listy unikatowe id 
+
+funckja ta duplikuje liste do ktorej ma zostac wygenrwoany uniktowe id nastepnie sortuje ja wedlug id po czym bierze wartsoc i=0 i idzie przez kazdy elemnty posortownej listy zwiekszjac wartosc i o 1 jezeli w kotryms momecnie wartosc i nie bedzie sie zgadzac z wartoscia id elemntu listy znaczy ze to id jest wolne lub jesli lsita sie skonczyla to rowniez powieskzone i bedzie oznaczac wolne id i takie zatem zwracaca
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ strutura list\+\_\+pointers okreslaja liste do zduplikowania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ zwraca wartosc int okreslajaca najmniejsze wolne id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a22e985f14e1f15ee4abc3c5ae97631d5}\label{phone__book_8h_a22e985f14e1f15ee4abc3c5ae97631d5}} 
+\index{phone\_book.h@{phone\_book.h}!generate\_rand\_contact@{generate\_rand\_contact}}
+\index{generate\_rand\_contact@{generate\_rand\_contact}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{generate\_rand\_contact()}{generate\_rand\_contact()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} generate\+\_\+rand\+\_\+contact (\begin{DoxyParamCaption}\item[{int}]{seed }\end{DoxyParamCaption})}
+
+
+
+funkjca genruje loswy wpis konaktu na podstawie podanego ziarna losowaia 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & -\/ wartość ziarana na podstwie którego będzie generwoany kontakt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+contact\+\_\+type -\/ zwraca losowow wygenrerowany kontakt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_aa51908cd178f403a3a4b2a4dc2aee2ac}\label{phone__book_8h_aa51908cd178f403a3a4b2a4dc2aee2ac}} 
+\index{phone\_book.h@{phone\_book.h}!genrating\_contacts\_test@{genrating\_contacts\_test}}
+\index{genrating\_contacts\_test@{genrating\_contacts\_test}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{genrating\_contacts\_test()}{genrating\_contacts\_test()}}
+{\footnotesize\ttfamily void genrating\+\_\+contacts\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funkcja testująca funckje generowanie losowego kontkatu 
+
+funkcje genruje i wypisuje 200 przykładowo losowo wygenerowanych kontaktków \mbox{\Hypertarget{phone__book_8h_aa58a328252fc2b7a17740bda1b86b016}\label{phone__book_8h_aa58a328252fc2b7a17740bda1b86b016}} 
+\index{phone\_book.h@{phone\_book.h}!get\_file\_name@{get\_file\_name}}
+\index{get\_file\_name@{get\_file\_name}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{get\_file\_name()}{get\_file\_name()}}
+{\footnotesize\ttfamily get\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{char}]{file\+\_\+name\mbox{[}60\mbox{]},  }\item[{int}]{choice }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{phone__book_8h_ae4030b34d278806fa6d9e3ee81320966}\label{phone__book_8h_ae4030b34d278806fa6d9e3ee81320966}} 
+\index{phone\_book.h@{phone\_book.h}!id\_cmp@{id\_cmp}}
+\index{id\_cmp@{id\_cmp}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{id\_cmp()}{id\_cmp()}}
+{\footnotesize\ttfamily int id\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+funkcja porównuje ze sobą id dwóch elemtów listy 
+
+funkcja ta porównuje id dwóch elemtów lsity i zwraca -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ wskaznik lsit\+\_\+node na elemnt listy a do porównania \\
+\hline
+{\em b} & -\/ wskaznik lsit\+\_\+node na elemnt listy b do porównania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ zwraca wynik porownania na zasadzie \+: -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_ab5c1bb0087966f1037b3073250ee36aa}\label{phone__book_8h_ab5c1bb0087966f1037b3073250ee36aa}} 
+\index{phone\_book.h@{phone\_book.h}!is\_search\_city@{is\_search\_city}}
+\index{is\_search\_city@{is\_search\_city}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{is\_search\_city()}{is\_search\_city()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+city (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy miasto w adresie zamieszkania danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funckja zamienia najpierw zarówno miasto jak i warunek wyszukiwania na male litery za pomoca funkcji string\+\_\+to\+\_\+low następnie porónuje oba ciągi za pomoca funkcji strncmp i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1-\/ jeżęli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a4cfadeb865613a75daa61b0793255d65}\label{phone__book_8h_a4cfadeb865613a75daa61b0793255d65}} 
+\index{phone\_book.h@{phone\_book.h}!is\_search\_name@{is\_search\_name}}
+\index{is\_search\_name@{is\_search\_name}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{is\_search\_name()}{is\_search\_name()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+name (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy imie danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funckja zamienia najpierw zarówno imie jak i warunek wyszukiwania na male litery za pomoca funkcji string\+\_\+to\+\_\+low następnie porónuje oba ciągi za pomoca funkcji strncmp i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1-\/ jeżęli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a6032bf90a5375b7caeebdae301a0ad9b}\label{phone__book_8h_a6032bf90a5375b7caeebdae301a0ad9b}} 
+\index{phone\_book.h@{phone\_book.h}!is\_search\_number@{is\_search\_number}}
+\index{is\_search\_number@{is\_search\_number}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{is\_search\_number()}{is\_search\_number()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+number (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy numer domu spełnia warunek wyszukiwania 
+
+funkcja najpierw zaminia ciąg znaków podany jako warunek wyszukiwania na wartość int z pomoćą funkcji atoi() a nastęnie porónuje tą wartość z wartośćia numveru adresu w danym wpisie i zwraca 0 jeżeli nie są równe i 1 kiedy są równe 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1 -\/ jeżeli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a85e98d9ed753090765bb863b0a18b1eb}\label{phone__book_8h_a85e98d9ed753090765bb863b0a18b1eb}} 
+\index{phone\_book.h@{phone\_book.h}!is\_search\_phone\_number@{is\_search\_phone\_number}}
+\index{is\_search\_phone\_number@{is\_search\_phone\_number}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{is\_search\_phone\_number()}{is\_search\_phone\_number()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+phone\+\_\+number (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy numer telefonu danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funcja porónuje paraemtr wyszukiwnaia oraz numer telefonu za pomocą funkcji strncmp() i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1 -\/ jeżeli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a6f0a0de863dcb600ea7883e25dddff74}\label{phone__book_8h_a6f0a0de863dcb600ea7883e25dddff74}} 
+\index{phone\_book.h@{phone\_book.h}!is\_search\_postal\_code@{is\_search\_postal\_code}}
+\index{is\_search\_postal\_code@{is\_search\_postal\_code}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{is\_search\_postal\_code()}{is\_search\_postal\_code()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+postal\+\_\+code (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy kod pocztowy danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funcja porónuje paraemtr wyszukiwnaia oraz kod pocztowys za pomocą funkcji strncmp() i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1 -\/ jeżeli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a116fee475d694db485660bf9d38fa3cd}\label{phone__book_8h_a116fee475d694db485660bf9d38fa3cd}} 
+\index{phone\_book.h@{phone\_book.h}!is\_search\_street@{is\_search\_street}}
+\index{is\_search\_street@{is\_search\_street}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{is\_search\_street()}{is\_search\_street()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+street (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy ulica w adresie zamieszkania danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funckja zamienia najpierw zarówno ulica jak i warunek wyszukiwania na male litery za pomoca funkcji string\+\_\+to\+\_\+low następnie porónuje oba ciągi za pomoca funkcji strncmp i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1-\/ jeżęli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_aa9ae464ffb4d4c41dbffc26e50c80048}\label{phone__book_8h_aa9ae464ffb4d4c41dbffc26e50c80048}} 
+\index{phone\_book.h@{phone\_book.h}!is\_search\_surname@{is\_search\_surname}}
+\index{is\_search\_surname@{is\_search\_surname}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{is\_search\_surname()}{is\_search\_surname()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+surname (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy nazwisko danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funckja zamienia najpierw zarówno nazwisko jak i warunek wyszukiwania na male litery za pomoca funkcji string\+\_\+to\+\_\+low następnie porónuje oba ciągi za pomoca funkcji strncmp i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1-\/ jeżęli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a09fe4582d87d9a56316be921a7668c6f}\label{phone__book_8h_a09fe4582d87d9a56316be921a7668c6f}} 
+\index{phone\_book.h@{phone\_book.h}!list\_add\_head@{list\_add\_head}}
+\index{list\_add\_head@{list\_add\_head}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_add\_head()}{list\_add\_head()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+add\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{data }\end{DoxyParamCaption})}
+
+
+
+funkja doaje do listy elemnt od storny głowy 
+
+na samym poczatku funkcja umieszczaw w pamieci nowy elemnt listy dynamicznej w przypadku jeśli się nie uda wyświetla komunikat \char`\"{}\+ERROR\+: Stack oberflow\char`\"{} następnie przypisuje do danych tego elemntu dane podane jaako argumet wywołanaia funkjci, w kolejnym koroku wartosć poprzedniego elemntu dla nowo utworzonego jest elemnt head a następnym NULL czyli koniec listy. Następnie jeżli aktualny head nie jest psuty to ustawia wartość jego nastepnego lemntu na ten utworzony kolejno jezli tail lsity dynamicznej jest pusty zostaje on również ustawiony na nowy element. na sam koniec ustwaia wartość head na nowy elemnt, tak zmieniiona struktura zostaje zwrócona do programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określająca liste do któej użytkownik che dodaćelemnt \\
+\hline
+{\em data} & -\/ struktura contactt\+\_\+type który ma zostać dodany do lsity dynamicznej \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca zmieniona struktura lsit\+\_\+pointers określajaca liste z już dodanym elemntem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a7a3637e283f2ddb5107381c206bdc928}\label{phone__book_8h_a7a3637e283f2ddb5107381c206bdc928}} 
+\index{phone\_book.h@{phone\_book.h}!list\_add\_tail@{list\_add\_tail}}
+\index{list\_add\_tail@{list\_add\_tail}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_add\_tail()}{list\_add\_tail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+add\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{data }\end{DoxyParamCaption})}
+
+
+
+funkja doaje do listy elemnt od storny ogona 
+
+na samym poczatku funkcja umieszczaw w pamieci nowy elemnt listy dynamicznej w przypadku jeśli się nie uda wyświetla komunikat \char`\"{}\+ERROR\+: Stack oberflow\char`\"{} następnie przypisuje do danych tego elemntu dane podane jaako argumet wywołanaia funkjci, w kolejnym koroku wartosć kolejnego elemntu dla nowo utworzonego jest elemnt tail a poprzednim NULL czyli koniec listy. Następnie jeżli aktualny tail nie jest psuty to ustawia wartość jego poprzediniego lemntu na ten utworzony kolejno jezli head lsity dynamicznej jest pusty zostaje on również ustawiony na nowy element. na sam koniec ustwaia wartość tail na nowy elemnt, tak zmieniiona struktura zostaje zwrócona do programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określająca liste do któej użytkownik che dodaćelemnt \\
+\hline
+{\em data} & -\/ struktura contactt\+\_\+type który ma zostać dodany do lsity dynamicznej \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca zmieniona struktura lsit\+\_\+pointers określajaca liste z już dodanym elemntem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a4e01c796058e58a96b8003248b43dc96}\label{phone__book_8h_a4e01c796058e58a96b8003248b43dc96}} 
+\index{phone\_book.h@{phone\_book.h}!list\_contact\_test\_search@{list\_contact\_test\_search}}
+\index{list\_contact\_test\_search@{list\_contact\_test\_search}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_contact\_test\_search()}{list\_contact\_test\_search()}}
+{\footnotesize\ttfamily void list\+\_\+contact\+\_\+test\+\_\+search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funkcja pozwala na przetestowanie funkcji pszeszukiwania listy 
+
+funkcja na poczatku towrzy 1000 elemtową losową lsite kontaktów następnie wykonuje operacje sortowania na tej liście wedlug parametrów podanych bezpośrednio w kodzie \mbox{\Hypertarget{phone__book_8h_a13241d8914822a06ce6ecaacf384eb64}\label{phone__book_8h_a13241d8914822a06ce6ecaacf384eb64}} 
+\index{phone\_book.h@{phone\_book.h}!list\_edit\_node@{list\_edit\_node}}
+\index{list\_edit\_node@{list\_edit\_node}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_edit\_node()}{list\_edit\_node()}}
+{\footnotesize\ttfamily void list\+\_\+edit\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{node\+\_\+to\+\_\+edit,  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{data }\end{DoxyParamCaption})}
+
+
+
+funckcja podmienia wartośc wybranego elemntu na wartosć podaną w argumencie 
+
+funkcja ta najpierw sprwadza czy wybrany elemnt do podmiany nie jest psuty jezeli jest pusty to wysiwetla \char`\"{}\+ERROR\+: no node to edit selected\char`\"{} jeżeli nie jest pusty podmienia wartosć jego data na wartosć podana w agumencies
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+to\+\_\+edit} & -\/ wskaźnik na elment ktorgo dane ma funkcja podmienic, może zostać uzyskany np poprez funckje \mbox{\hyperlink{phone__book__list_8c_a2dc8f8411f74f588363b93aa8e973b06}{find\+\_\+node()}} \\
+\hline
+{\em data} & -\/ struktura contact\+\_\+type który zawiera dane na któe ma zostać podminiony podany element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{phone__book_8h_a723d3aac8b6795c541b6014e28cb7907}\label{phone__book_8h_a723d3aac8b6795c541b6014e28cb7907}} 
+\index{phone\_book.h@{phone\_book.h}!list\_file\_test@{list\_file\_test}}
+\index{list\_file\_test@{list\_file\_test}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_file\_test()}{list\_file\_test()}}
+{\footnotesize\ttfamily void list\+\_\+file\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckja pozwala na przetestowanie funkcji odczyytu i zapisu list do pliku 
+
+funkcja na początek pozwala stworzyć liste złożona z 10 elemntów a na steonie ja wypisuje po czym zapiuje utworzona liste do pliku o nazwie \char`\"{}test\char`\"{} i ponownie załaduwje tą liste z pliku i wypisuje ją na akrenie \mbox{\Hypertarget{phone__book_8h_a6b7c89dcbddf237cbc4b04fa39e8ac7c}\label{phone__book_8h_a6b7c89dcbddf237cbc4b04fa39e8ac7c}} 
+\index{phone\_book.h@{phone\_book.h}!list\_id\_test@{list\_id\_test}}
+\index{list\_id\_test@{list\_id\_test}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_id\_test()}{list\_id\_test()}}
+{\footnotesize\ttfamily void list\+\_\+id\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funkcja ta pozwala na prztestowanie generowania unikatowego id 
+
+funkjca na początek genruje 10 elemntową lsite a następnie usuwa z listy elemnty o id 3,1,5,7,8 nastepnie do akiej talbicy dodaje koljen 10 elemntó i przy każym doadniu wyświetla stan listy aby możńa było zaobserować czy genwrowane id jest unikatowe \mbox{\Hypertarget{phone__book_8h_a36960d26a9f13daef3d9ba2db9fcd804}\label{phone__book_8h_a36960d26a9f13daef3d9ba2db9fcd804}} 
+\index{phone\_book.h@{phone\_book.h}!list\_init@{list\_init}}
+\index{list\_init@{list\_init}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_init()}{list\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funkcja incjująca pusta liste dynamiczną 
+
+funckja ta tworzy liste dynamiczną w formie typu list pointers i następnie ustawia wszystkie jej elemnty na NULL jako oznaczenie żę jest pusta a nastęnie przekazuje ja do zwrotu \begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca typ lsit\+\_\+pointers któy jest okreśłeneim pustej listy dynamicznej 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a63472df91ba71cfdd80093f8f5cfb2cd}\label{phone__book_8h_a63472df91ba71cfdd80093f8f5cfb2cd}} 
+\index{phone\_book.h@{phone\_book.h}!list\_remove\_head@{list\_remove\_head}}
+\index{list\_remove\_head@{list\_remove\_head}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_remove\_head()}{list\_remove\_head()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+remove\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funkcja usuwa początkowy elemnt (head) z listy dynamicznje 
+
+na samym początku funkcja sprawdza czy lista nie jest juz pusta jezeli jest to wyswietla \char`\"{}\+ERROR\+: Nothing to remove\textbackslash{}n\char`\"{} następnie pyszpiuje tymczasowemy wskaźnikowi poprzedni elemnt od zaczynajac od head, nastepnie usuwa head za pomoca funkcji free() następnei jezeli tymczasowy elemnt jest równy n\+ULL to oznacza żę lista jest pusta i zwraca liste z \mbox{\hyperlink{phone__book__list_8c_a36960d26a9f13daef3d9ba2db9fcd804}{list\+\_\+init()}} jeżeli nie to ustwaia następny element tymczasowgo elemnt jako NULL czyli koniec listy a potem ustawia head listy jako właśnie ten tymczaswowey element. tak zmieniona lista zostaje zwrócona do programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określajaca liste dynamiczną z której ma usunać head \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca strukture list\+\_\+pointers opisujaca liste z już usuniętymi head 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_ad2551e4d1c1ed889b0f4797e4847ecde}\label{phone__book_8h_ad2551e4d1c1ed889b0f4797e4847ecde}} 
+\index{phone\_book.h@{phone\_book.h}!list\_remove\_node@{list\_remove\_node}}
+\index{list\_remove\_node@{list\_remove\_node}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_remove\_node()}{list\_remove\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+remove\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{node\+\_\+to\+\_\+remove }\end{DoxyParamCaption})}
+
+
+
+funkcja usuwa wybrany elemnt z listy dynamicznej 
+
+funckja na samym poczatku sprawdza czy wartośc elemntu do usunięcia jest różna od NULL jeżli nie to wypisuje \char`\"{}\+ERROR\+: no node to remove selected\textbackslash{}n\char`\"{}. Następnie jezeli elemnt do usnięcia jest równy elemntowi head to wywuuje funkcje list\+\_\+remove\+\_\+head a jeżli jest równe tail funkcje list\+\_\+remove\+\_\+tail. jezeli nie jest równy żadnego z tych elemntów to ustawua wartości następnego elemntu poprzedneigo elemtu listy na nastoeny elemnt list , z kolei wartosć porzedniego elemntu kolejengo elemntu listy jest ustawiana na poprzendi elemnt listy, po czym usuwa się wy brany eleemnt za pomoca funkjci free() nastepnie zmieniiona liste zwraca sie do głónego programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określajaca liste dynamiczną z której ma usunać element \\
+\hline
+{\em node\+\_\+to\+\_\+remove} & -\/ wskaźnik na elemnt ktory ma zostać usuniety, wskaźńik taki mozńa uzyskać np poprzez funckje \mbox{\hyperlink{phone__book__list_8c_a2dc8f8411f74f588363b93aa8e973b06}{find\+\_\+node()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca strukture list\+\_\+pointers opisujaca liste z już usuniętymi elemntem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a902a61753de40c7598e7b8021ce2d344}\label{phone__book_8h_a902a61753de40c7598e7b8021ce2d344}} 
+\index{phone\_book.h@{phone\_book.h}!list\_remove\_tail@{list\_remove\_tail}}
+\index{list\_remove\_tail@{list\_remove\_tail}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_remove\_tail()}{list\_remove\_tail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+remove\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funkcja usuwa końcowy elemnt (tail) z listy dynamicznje 
+
+na samym początku funkcja sprawdza czy lista nie jest juz pusta jezeli jest to wyswietla \char`\"{}\+ERROR\+: Nothing to remove\textbackslash{}n\char`\"{} następnie pyszpiuje tymczasowemy wskaźnikowi następny elemnt od zaczynajac od tail, nastepnie usuwa tail za pomoca funkcji free() następnei jezeli tymczasowy elemnt jest równy n\+ULL to oznacza żę lista jest pusta i zwraca liste z \mbox{\hyperlink{phone__book__list_8c_a36960d26a9f13daef3d9ba2db9fcd804}{list\+\_\+init()}} jeżeli nie to ustwaia poprzedni element tymczasowgo elemnt jako NULL czyli koniec listy a potem ustawia tail listy jako właśnie ten tymczaswowey element. tak zmieniona lista zostaje zwrócona do programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określajaca liste dynamiczną z której ma usunać ogon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca strukture list\+\_\+pointers opisujaca liste z już usuniętymi ogonem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_ae0d82ec0c44767fba0c990f6894151ea}\label{phone__book_8h_ae0d82ec0c44767fba0c990f6894151ea}} 
+\index{phone\_book.h@{phone\_book.h}!list\_test\_sort@{list\_test\_sort}}
+\index{list\_test\_sort@{list\_test\_sort}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{list\_test\_sort()}{list\_test\_sort()}}
+{\footnotesize\ttfamily void list\+\_\+test\+\_\+sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{phone__book_8h_a46da9c08707171512b37318155d32a77}\label{phone__book_8h_a46da9c08707171512b37318155d32a77}} 
+\index{phone\_book.h@{phone\_book.h}!load@{load}}
+\index{load@{load}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} load (\begin{DoxyParamCaption}\item[{char}]{file\+\_\+name\mbox{[}30\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+funkcja wczytuje liste z pliku o podanej nazwie 
+
+na samym początku funkjcja towrzy nowa liste nastepenie genruje lokaliazacje nazwe i roserzenie pliku o podanej naziwe nastepnie otwiera ten plik o podanej nazwie i wczytuje elementy listy elemnt po elemencie i dodaje je do nowo utworzonej listy az do osiagniecia konca pliku po wczytaniu wszystkich elemntow moze zostac zwrocona lista wypelniona
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & -\/ 30 elemtowy ciag znakow okreslajacy nazwe pliku do otworzenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ struktura list\+\_\+pointers okreslajaca wczytana z pliku 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a64a2878307e95238731870587851fbf4}\label{phone__book_8h_a64a2878307e95238731870587851fbf4}} 
+\index{phone\_book.h@{phone\_book.h}!merge\_sort@{merge\_sort}}
+\index{merge\_sort@{merge\_sort}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{merge\_sort()}{merge\_sort()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} merge\+\_\+sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{int($\ast$)(\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}})}]{cmp }\end{DoxyParamCaption})}
+
+
+
+funckja sortuje liste dynamiczna według elemntu podanago jako wskaźńik funkcji 
+
+funkcja ta jest rekurencyjna którym warunkiem koncowym jest podanie listy jedno elemnotwej czyli head===tail na sam pocztek funkcja znajduje śrdodkowy elemnt i według niegod dzieli ta liste rna lewa i prawa na nastepnie dla kazdej z postalych rowniez wykonuje funkcje merge sort tak dlugo az bedzie liste jedno elemnto w momecnei kiedy masz juz liste jedno elemtowa zscalarz je dwie za pomoca funkcji merge czyli w odpoweinej koljenosci nastepnie scalasz tak tablice rodzica i w tedn spsob zostajesz z posortowana talibca
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list pointers okreslajaca liste do posrotwoania \\
+\hline
+{\em cmp} & -\/ wskaxnik na funkcje porowujaca dwa elemnty listy okreslajace wedlug ktoreg elemntu ma zostac posortowane mozna podac\+: id\+\_\+cmp, name\+\_\+cmp, number\+\_\+cmp, phone\+\_\+cmp, postal\+\_\+code\+\_\+cmp, street\+\_\+cmp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca strukture list\+\_\+pointer okreslajaca posortowana lsite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_ade45458216235ef53ed75d2346844d86}\label{phone__book_8h_ade45458216235ef53ed75d2346844d86}} 
+\index{phone\_book.h@{phone\_book.h}!name\_cmp@{name\_cmp}}
+\index{name\_cmp@{name\_cmp}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{name\_cmp()}{name\_cmp()}}
+{\footnotesize\ttfamily int name\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+funkcja porównuje ze sobą imie i nazwisko dwóch elemtów listy 
+
+funkcja ta porównuje imie i nazwiska dwóch elemtów lsity i zwraca -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ wskaznik lsit\+\_\+node na elemnt listy a do porównania \\
+\hline
+{\em b} & -\/ wskaznik lsit\+\_\+node na elemnt listy b do porównania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ zwraca wynik porownania na zasadzie \+: -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a596706c52dad41933f9f9408d0a1439a}\label{phone__book_8h_a596706c52dad41933f9f9408d0a1439a}} 
+\index{phone\_book.h@{phone\_book.h}!number\_cmp@{number\_cmp}}
+\index{number\_cmp@{number\_cmp}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{number\_cmp()}{number\_cmp()}}
+{\footnotesize\ttfamily number\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+funkcja porównuje ze sobą numer domu/budynku dwóch elemtów listy 
+
+funkcja ta porównuje numer domu/budynku dwóch elemtów lsity i zwraca -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ wskaznik lsit\+\_\+node na elemnt listy a do porównania \\
+\hline
+{\em b} & -\/ wskaznik lsit\+\_\+node na elemnt listy b do porównania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ zwraca wynik porownania na zasadzie \+: -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_ab174392952ae1c4c89d66f736ba37db5}\label{phone__book_8h_ab174392952ae1c4c89d66f736ba37db5}} 
+\index{phone\_book.h@{phone\_book.h}!open\_file\_test@{open\_file\_test}}
+\index{open\_file\_test@{open\_file\_test}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{open\_file\_test()}{open\_file\_test()}}
+{\footnotesize\ttfamily void open\+\_\+file\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{phone__book_8h_a9ff867bc6f9209f37a9f8f18de63ba90}\label{phone__book_8h_a9ff867bc6f9209f37a9f8f18de63ba90}} 
+\index{phone\_book.h@{phone\_book.h}!opening\_book@{opening\_book}}
+\index{opening\_book@{opening\_book}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{opening\_book()}{opening\_book()}}
+{\footnotesize\ttfamily void opening\+\_\+book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckja odpowiada za segment menu odpowiadzilany za otawcie ksiazki z pliku 
+
+funckja wyswirtla uztkonkowi liste ksiazek dostepnych w dedykowanym folderze a nastepnie pozwala uztykowniowi numer pliku ktory chce otworzyc\textquotesingle{} nastpenie na podstawie wybranego numeru ładuje plik do nowej listy i przecchodzi z ta lista do interefjsu zarzadzania \mbox{\hyperlink{user__interface_8c_a502049a74b1c4dfc08953ca9639dfc52}{phone\+\_\+book\+\_\+manage()}} \mbox{\Hypertarget{phone__book_8h_a2e3eb4c09f45c47e5a1e4b7b90545904}\label{phone__book_8h_a2e3eb4c09f45c47e5a1e4b7b90545904}} 
+\index{phone\_book.h@{phone\_book.h}!phone\_book\_list@{phone\_book\_list}}
+\index{phone\_book\_list@{phone\_book\_list}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{phone\_book\_list()}{phone\_book\_list()}}
+{\footnotesize\ttfamily int phone\+\_\+book\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckja te generuje liste plików dostenych w folderze przeznaczonym na zapis ksiązek telefonicznych 
+
+na samy na poczatku funckacja wyswietal your phone books\+: nastepnie z pomoca bibliotekei dirent.\+h otwiera lokalizacje przeznaczona na zapisywanie ksiązek telefonciznych nastepnie rónwiez z pomoca bilbioteki dirent.\+h wypisuje liste nazw plikow bez roszezrzenia wraz przypiasniem do nich wartosci numerecznej umozliwajacyh późniejszy wybór ksiazki do wybrania
+
+\begin{DoxyReturn}{Returns}
+int funckja zwraca wartosc 0 jezeli nie masz zadnych dostepnych ksiazek telfonicnzych i 1-\/ jezeli masz dostepne ksiązki telefonczne 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a2d79a2f241597a9ea602d16522610715}\label{phone__book_8h_a2d79a2f241597a9ea602d16522610715}} 
+\index{phone\_book.h@{phone\_book.h}!phone\_cmp@{phone\_cmp}}
+\index{phone\_cmp@{phone\_cmp}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{phone\_cmp()}{phone\_cmp()}}
+{\footnotesize\ttfamily int phone\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+funkcja porównuje ze sobą numer telefonu dwóch elemtów listy 
+
+funkcja ta porównuje numer telefonu dwóch elemtów lsity i zwraca -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ wskaznik lsit\+\_\+node na elemnt listy a do porównania \\
+\hline
+{\em b} & -\/ wskaznik lsit\+\_\+node na elemnt listy b do porównania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ zwraca wynik porownania na zasadzie \+: -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_a946b717b74f034d1ec5ba481f6cc4147}\label{phone__book_8h_a946b717b74f034d1ec5ba481f6cc4147}} 
+\index{phone\_book.h@{phone\_book.h}!postal\_code\_cmp@{postal\_code\_cmp}}
+\index{postal\_code\_cmp@{postal\_code\_cmp}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{postal\_code\_cmp()}{postal\_code\_cmp()}}
+{\footnotesize\ttfamily int postal\+\_\+code\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+funkcja porównuje ze sobą kod pocztowy dwóch elemtów listy 
+
+funkcja ta porównuje kod pocztowy dwóch elemtów lsity i zwraca -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ wskaznik lsit\+\_\+node na elemnt listy a do porównania \\
+\hline
+{\em b} & -\/ wskaznik lsit\+\_\+node na elemnt listy b do porównania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ zwraca wynik porownania na zasadzie \+: -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book_8h_acaa0c6091546098d3178389e9b64a1b4}\label{phone__book_8h_acaa0c6091546098d3178389e9b64a1b4}} 
+\index{phone\_book.h@{phone\_book.h}!print\_contact@{print\_contact}}
+\index{print\_contact@{print\_contact}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{print\_contact()}{print\_contact()}}
+{\footnotesize\ttfamily void print\+\_\+contact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{contact }\end{DoxyParamCaption})}
+
+
+
+funkcja odpowiada ze wyświeltnie jedeno wpisu w kontakcie 
+
+funckcja wypisuje elemnt konatku na zasadzie\+:
+
+ID
+
+imie, nazwisko
+
+miasto, st.\+ullica numer, kod pocztowy
+
+numer telefonu
+
+
+\begin{DoxyParams}{Parameters}
+{\em contact} & -\/ typ conact\+\_\+type zawierajace dane do wysiwtlenia przez funckje \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{phone__book_8h_a15be9e9ccacc4aea366819f9045fd37b}\label{phone__book_8h_a15be9e9ccacc4aea366819f9045fd37b}} 
+\index{phone\_book.h@{phone\_book.h}!print\_list\_head@{print\_list\_head}}
+\index{print\_list\_head@{print\_list\_head}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{print\_list\_head()}{print\_list\_head()}}
+{\footnotesize\ttfamily void print\+\_\+list\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony głowy 
+
+funkcja ta najpierw sprawdza czy lista nie jest psuta, jezeli jest jest to wyswietla komunikat \char`\"{}your list is empty\char`\"{} jezeli nie jest pusta to dla danych każdego elemntu listu od głowy zaczynajac na ogonie kończąc wykonuje funkcje \mbox{\hyperlink{phone__book_8c_acaa0c6091546098d3178389e9b64a1b4}{print\+\_\+contact()}} który wysiwtla na dane elemntu listy w odpowiednim formacie
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ funckja przyjmuje list\+\_\+pointers określającą liste do wyświetlenia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{phone__book_8h_a1be4155bd4debdb679084ac51f6e44d0}\label{phone__book_8h_a1be4155bd4debdb679084ac51f6e44d0}} 
+\index{phone\_book.h@{phone\_book.h}!print\_list\_tail@{print\_list\_tail}}
+\index{print\_list\_tail@{print\_list\_tail}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{print\_list\_tail()}{print\_list\_tail()}}
+{\footnotesize\ttfamily void print\+\_\+list\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony ogona 
+
+funkcja ta najpierw sprawdza czy lista nie jest psuta, jezeli jest jest to wyswietla komunikat \char`\"{}your list is empty\char`\"{} jezeli nie jest pusta to dla danych każdego elemntu listu od ogona zaczynajac na głowie kończąc wykonuje funkcje \mbox{\hyperlink{phone__book_8c_acaa0c6091546098d3178389e9b64a1b4}{print\+\_\+contact()}} który wysiwtla na dane elemntu listy w odpowiednim formacie
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ funckja przyjmuje list\+\_\+pointers określającą liste do wyświetlenia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{phone__book_8h_a05e91a23881226c31872a5f29d8df505}\label{phone__book_8h_a05e91a23881226c31872a5f29d8df505}} 
+\index{phone\_book.h@{phone\_book.h}!save@{save}}
+\index{save@{save}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{char}]{file\+\_\+name\mbox{[}30\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+funckjaja zapisuje liste dynamiczną do pliku o podanej nazwie 
+
+na samym poczatku funkjca sprawdza czy istnieje folder przeznaczony na zapisywanie ksiazek telefoncznych jezeli nie tworzy taki folder natepnie tworzy caig znakow okreslajacy lokalziacje nazwe i rozszerzenie pliku do zapisania nastpnie wchodzi w petle ktora przechodzdi przez wszystkie lemnty listy i zapisuje je do pliku binarnego o podnaej nazwie i rozszerzeniu .pbd
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointer okreslajaca liste do zapisania \\
+\hline
+{\em file\+\_\+name} & -\/ 30 elemntowy ciag znakwy okreslajacy nazwe pod ktora ma zostac zapisana lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{phone__book_8h_af4e1eeb880cba9ed7adccf94574062cd}\label{phone__book_8h_af4e1eeb880cba9ed7adccf94574062cd}} 
+\index{phone\_book.h@{phone\_book.h}!search\_results@{search\_results}}
+\index{search\_results@{search\_results}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{search\_results()}{search\_results()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} search\+\_\+results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{int($\ast$)(char\mbox{[}30\mbox{]}, int)}]{is\+\_\+selected }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{phone__book_8h_a948657c2d00c8465e429b5b697e92744}\label{phone__book_8h_a948657c2d00c8465e429b5b697e92744}} 
+\index{phone\_book.h@{phone\_book.h}!start\_ui@{start\_ui}}
+\index{start\_ui@{start\_ui}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{start\_ui()}{start\_ui()}}
+{\footnotesize\ttfamily void start\+\_\+ui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckja rozpoczyna konsolowy interefejsc użykownika 
+
+funckja daje uztkonikw wybór liczby od 0-\/2, 0 pozwala na wyjscie z programu, 1 przechodzi do funkcji odpowadizlnej za towrzenie nowej listy a 2 odpowiada za otwracie ksiażki z pliku \mbox{\Hypertarget{phone__book_8h_a68b8290675503130e4337a0e44a6c5a1}\label{phone__book_8h_a68b8290675503130e4337a0e44a6c5a1}} 
+\index{phone\_book.h@{phone\_book.h}!street\_cmp@{street\_cmp}}
+\index{street\_cmp@{street\_cmp}!phone\_book.h@{phone\_book.h}}
+\doxysubsubsection{\texorpdfstring{street\_cmp()}{street\_cmp()}}
+{\footnotesize\ttfamily int street\+\_\+cmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+funkcja porównuje ze sobą nazwy ulic dwóch elemtów listy 
+
+funkcja ta porównuje ulice dwóch elemtów lsity i zwraca -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ wskaznik lsit\+\_\+node na elemnt listy a do porównania \\
+\hline
+{\em b} & -\/ wskaznik lsit\+\_\+node na elemnt listy b do porównania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ zwraca wynik porownania na zasadzie \+: -\/1 jezeli a jest mniejsze od b, 0 jezeli a i b sa rowne, i 1 jezelie a jest wieksze od b 
+\end{DoxyReturn}

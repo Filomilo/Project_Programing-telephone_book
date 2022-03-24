@@ -1,0 +1,235 @@
+\hypertarget{search__fuctions_8c}{}\doxysection{D\+:/gogle drive/studia/\+Semestr 2/\+Podstawy programowania 2/\+Projekt -\/ Podstawy programowania 2/projekt/\+Project\+\_\+\+Programing-\/telephone\+\_\+book/\+Project\+\_\+programing/\+Project\+\_\+programing/search\+\_\+fuctions.c File Reference}
+\label{search__fuctions_8c}\index{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/search\_fuctions.c@{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/search\_fuctions.c}}
+
+
+funckje odpowidzialne za pszeszukiwanie elemntów ksiązki telefonicznej  
+
+
+{\ttfamily \#include \char`\"{}phone\+\_\+book.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{search__fuctions_8c_ab17fcfe306474ad8456d316877463a75}{string\+\_\+to\+\_\+low}} (char string\mbox{[}30\mbox{]})
+\begin{DoxyCompactList}\small\item\em funkja zamienia wszystkie duże litery w podanym ciągu znaków na małe litery. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{search__fuctions_8c_a4cfadeb865613a75daa61b0793255d65}{is\+\_\+search\+\_\+name}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy imie danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{search__fuctions_8c_aa9ae464ffb4d4c41dbffc26e50c80048}{is\+\_\+search\+\_\+surname}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy nazwisko danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{search__fuctions_8c_a85e98d9ed753090765bb863b0a18b1eb}{is\+\_\+search\+\_\+phone\+\_\+number}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy numer telefonu danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{search__fuctions_8c_ab5c1bb0087966f1037b3073250ee36aa}{is\+\_\+search\+\_\+city}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy miasto w adresie zamieszkania danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{search__fuctions_8c_a116fee475d694db485660bf9d38fa3cd}{is\+\_\+search\+\_\+street}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy ulica w adresie zamieszkania danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{search__fuctions_8c_a6f0a0de863dcb600ea7883e25dddff74}{is\+\_\+search\+\_\+postal\+\_\+code}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy kod pocztowy danego wpisu w książce telfoniczej spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{search__fuctions_8c_a6032bf90a5375b7caeebdae301a0ad9b}{is\+\_\+search\+\_\+number}} (char string\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} node)
+\begin{DoxyCompactList}\small\item\em funckja sprawdza czy numer domu spełnia warunek wyszukiwania \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{search__fuctions_8c_a270b1902b688dd45302580c0bdca9aee}{search\+\_\+results}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, int($\ast$is\+\_\+selected)(char\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}), char text\mbox{[}30\mbox{]})
+\begin{DoxyCompactList}\small\item\em funkcja wyszukuje elemnty w podanej talibcy według podanego tekstu i kategori wyszukiwanego elemntu. następnie zwraca liste wypełniona wyszukiwanymi elementami \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+funckje odpowidzialne za pszeszukiwanie elemntów ksiązki telefonicznej 
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/24
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{search__fuctions_8c_ab5c1bb0087966f1037b3073250ee36aa}\label{search__fuctions_8c_ab5c1bb0087966f1037b3073250ee36aa}} 
+\index{search\_fuctions.c@{search\_fuctions.c}!is\_search\_city@{is\_search\_city}}
+\index{is\_search\_city@{is\_search\_city}!search\_fuctions.c@{search\_fuctions.c}}
+\doxysubsubsection{\texorpdfstring{is\_search\_city()}{is\_search\_city()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+city (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy miasto w adresie zamieszkania danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funckja zamienia najpierw zarówno miasto jak i warunek wyszukiwania na male litery za pomoca funkcji string\+\_\+to\+\_\+low następnie porónuje oba ciągi za pomoca funkcji strncmp i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1-\/ jeżęli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{search__fuctions_8c_a4cfadeb865613a75daa61b0793255d65}\label{search__fuctions_8c_a4cfadeb865613a75daa61b0793255d65}} 
+\index{search\_fuctions.c@{search\_fuctions.c}!is\_search\_name@{is\_search\_name}}
+\index{is\_search\_name@{is\_search\_name}!search\_fuctions.c@{search\_fuctions.c}}
+\doxysubsubsection{\texorpdfstring{is\_search\_name()}{is\_search\_name()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+name (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy imie danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funckja zamienia najpierw zarówno imie jak i warunek wyszukiwania na male litery za pomoca funkcji string\+\_\+to\+\_\+low następnie porónuje oba ciągi za pomoca funkcji strncmp i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1-\/ jeżęli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{search__fuctions_8c_a6032bf90a5375b7caeebdae301a0ad9b}\label{search__fuctions_8c_a6032bf90a5375b7caeebdae301a0ad9b}} 
+\index{search\_fuctions.c@{search\_fuctions.c}!is\_search\_number@{is\_search\_number}}
+\index{is\_search\_number@{is\_search\_number}!search\_fuctions.c@{search\_fuctions.c}}
+\doxysubsubsection{\texorpdfstring{is\_search\_number()}{is\_search\_number()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+number (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy numer domu spełnia warunek wyszukiwania 
+
+funkcja najpierw zaminia ciąg znaków podany jako warunek wyszukiwania na wartość int z pomoćą funkcji atoi() a nastęnie porónuje tą wartość z wartośćia numveru adresu w danym wpisie i zwraca 0 jeżeli nie są równe i 1 kiedy są równe 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1 -\/ jeżeli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{search__fuctions_8c_a85e98d9ed753090765bb863b0a18b1eb}\label{search__fuctions_8c_a85e98d9ed753090765bb863b0a18b1eb}} 
+\index{search\_fuctions.c@{search\_fuctions.c}!is\_search\_phone\_number@{is\_search\_phone\_number}}
+\index{is\_search\_phone\_number@{is\_search\_phone\_number}!search\_fuctions.c@{search\_fuctions.c}}
+\doxysubsubsection{\texorpdfstring{is\_search\_phone\_number()}{is\_search\_phone\_number()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+phone\+\_\+number (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy numer telefonu danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funcja porónuje paraemtr wyszukiwnaia oraz numer telefonu za pomocą funkcji strncmp() i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1 -\/ jeżeli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{search__fuctions_8c_a6f0a0de863dcb600ea7883e25dddff74}\label{search__fuctions_8c_a6f0a0de863dcb600ea7883e25dddff74}} 
+\index{search\_fuctions.c@{search\_fuctions.c}!is\_search\_postal\_code@{is\_search\_postal\_code}}
+\index{is\_search\_postal\_code@{is\_search\_postal\_code}!search\_fuctions.c@{search\_fuctions.c}}
+\doxysubsubsection{\texorpdfstring{is\_search\_postal\_code()}{is\_search\_postal\_code()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+postal\+\_\+code (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy kod pocztowy danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funcja porónuje paraemtr wyszukiwnaia oraz kod pocztowys za pomocą funkcji strncmp() i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1 -\/ jeżeli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{search__fuctions_8c_a116fee475d694db485660bf9d38fa3cd}\label{search__fuctions_8c_a116fee475d694db485660bf9d38fa3cd}} 
+\index{search\_fuctions.c@{search\_fuctions.c}!is\_search\_street@{is\_search\_street}}
+\index{is\_search\_street@{is\_search\_street}!search\_fuctions.c@{search\_fuctions.c}}
+\doxysubsubsection{\texorpdfstring{is\_search\_street()}{is\_search\_street()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+street (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy ulica w adresie zamieszkania danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funckja zamienia najpierw zarówno ulica jak i warunek wyszukiwania na male litery za pomoca funkcji string\+\_\+to\+\_\+low następnie porónuje oba ciągi za pomoca funkcji strncmp i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1-\/ jeżęli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{search__fuctions_8c_aa9ae464ffb4d4c41dbffc26e50c80048}\label{search__fuctions_8c_aa9ae464ffb4d4c41dbffc26e50c80048}} 
+\index{search\_fuctions.c@{search\_fuctions.c}!is\_search\_surname@{is\_search\_surname}}
+\index{is\_search\_surname@{is\_search\_surname}!search\_fuctions.c@{search\_fuctions.c}}
+\doxysubsubsection{\texorpdfstring{is\_search\_surname()}{is\_search\_surname()}}
+{\footnotesize\ttfamily int is\+\_\+search\+\_\+surname (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]},  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{node }\end{DoxyParamCaption})}
+
+
+
+funckja sprawdza czy nazwisko danego wpisu w książce telfoniczej spełnia warunek wyszukiwania 
+
+funckja zamienia najpierw zarówno nazwisko jak i warunek wyszukiwania na male litery za pomoca funkcji string\+\_\+to\+\_\+low następnie porónuje oba ciągi za pomoca funkcji strncmp i jeżeli ciagi są takie same zwraca wartosć 1 a jezeli nie to 0 
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory określający wyszukiany element \\
+\hline
+{\em node} & -\/ sprawdzany wpis w ksiąće telefoniszej który jest sprawdzany z tekstem string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ liczba zwracana przez funkcje określająca czy dany elemnt spełnia warunek wyszukiwania 0-\/ jeżeli nie spełnia warunku 1-\/ jeżęli spełnia warunek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{search__fuctions_8c_a270b1902b688dd45302580c0bdca9aee}\label{search__fuctions_8c_a270b1902b688dd45302580c0bdca9aee}} 
+\index{search\_fuctions.c@{search\_fuctions.c}!search\_results@{search\_results}}
+\index{search\_results@{search\_results}!search\_fuctions.c@{search\_fuctions.c}}
+\doxysubsubsection{\texorpdfstring{search\_results()}{search\_results()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} search\+\_\+results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{int($\ast$)(char\mbox{[}30\mbox{]}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}})}]{is\+\_\+selected,  }\item[{char}]{text\mbox{[}30\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+funkcja wyszukuje elemnty w podanej talibcy według podanego tekstu i kategori wyszukiwanego elemntu. następnie zwraca liste wypełniona wyszukiwanymi elementami 
+
+funckja na samym poczatku tworzy nową lsite do której benda zapiyswane wyniki wyszukiwania następnie dla każdego elemtnu listy orginalnej wywołuje wskaźnik na funckje w zależnosci od tego która kateogire danych sie wszykuje, funkja sprawdzająca zwraca wartosć 1 wtedy dany element jest dodawny do nowej listy z wynikami wyszukiwania po stworzeniu listy z wynikami wyszukiami jest ona wysiwirtlona na ekranie a także i zwrócona jako wynik funkcji
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ list\+\_\+pointers określająca liste która ma zostać pszeszukana \\
+\hline
+{\em is\+\_\+selected} & -\/ wskaźnik na funkcje sprawdzająca czy dany elemnt spełnia warunki wyszukiwania można podać\+: is\+\_\+search\+\_\+city, is\+\_\+search\+\_\+name, is\+\_\+search\+\_\+number, is\+\_\+search\+\_\+phone\+\_\+number, is\+\_\+search\+\_\+postal\+\_\+code, is\+\_\+search\+\_\+street, is\+\_\+search\+\_\+surname ~\newline
+ \\
+\hline
+{\em text} & -\/ 30 elemtowy ciąg znaków określająca wyszukiwany elemnt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ struktura list pointers określająca liste z elementami spełniającaymi podane warunki 
+\end{DoxyReturn}
+\mbox{\Hypertarget{search__fuctions_8c_ab17fcfe306474ad8456d316877463a75}\label{search__fuctions_8c_ab17fcfe306474ad8456d316877463a75}} 
+\index{search\_fuctions.c@{search\_fuctions.c}!string\_to\_low@{string\_to\_low}}
+\index{string\_to\_low@{string\_to\_low}!search\_fuctions.c@{search\_fuctions.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_low()}{string\_to\_low()}}
+{\footnotesize\ttfamily void string\+\_\+to\+\_\+low (\begin{DoxyParamCaption}\item[{char}]{string\mbox{[}30\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+funkja zamienia wszystkie duże litery w podanym ciągu znaków na małe litery. 
+
+funckja dla podanego ciagu znaków int wchodzi w pętle przechodząca przez każdy znak w danym ciągu. Dla każdego znaku w pętli wyowłuje funkcje tolower() z biblioteki ctype.\+h która zamienia duża litere na jej mały odpowiednik
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ 30 elemnotwy ciag znakow ktory ma zostac zamieniony na male litery \\
+\hline
+\end{DoxyParams}

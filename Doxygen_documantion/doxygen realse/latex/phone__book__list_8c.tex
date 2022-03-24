@@ -1,0 +1,341 @@
+\hypertarget{phone__book__list_8c}{}\doxysection{D\+:/gogle drive/studia/\+Semestr 2/\+Podstawy programowania 2/\+Projekt -\/ Podstawy programowania 2/projekt/\+Project\+\_\+\+Programing-\/telephone\+\_\+book/\+Project\+\_\+programing/\+Project\+\_\+programing/phone\+\_\+book\+\_\+list.c File Reference}
+\label{phone__book__list_8c}\index{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/phone\_book\_list.c@{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/phone\_book\_list.c}}
+
+
+plik zawierajace funkjce umożliwajaće twrzenie i zarzadzanie lsita dynamiczną  
+
+
+{\ttfamily \#include \char`\"{}phone\+\_\+book.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book__list_8c_a36960d26a9f13daef3d9ba2db9fcd804}{list\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em funkcja incjująca pusta liste dynamiczną \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book__list_8c_a09fe4582d87d9a56316be921a7668c6f}{list\+\_\+add\+\_\+head}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} data)
+\begin{DoxyCompactList}\small\item\em funkja doaje do listy elemnt od storny głowy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book__list_8c_a7a3637e283f2ddb5107381c206bdc928}{list\+\_\+add\+\_\+tail}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} data)
+\begin{DoxyCompactList}\small\item\em funkja doaje do listy elemnt od storny ogona \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$ \mbox{\hyperlink{phone__book__list_8c_a2dc8f8411f74f588363b93aa8e973b06}{find\+\_\+node}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, int searched\+\_\+value)
+\begin{DoxyCompactList}\small\item\em funkcja znajduje elemnt o podanym id \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book__list_8c_a902a61753de40c7598e7b8021ce2d344}{list\+\_\+remove\+\_\+tail}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funkcja usuwa końcowy elemnt (tail) z listy dynamicznje \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book__list_8c_a63472df91ba71cfdd80093f8f5cfb2cd}{list\+\_\+remove\+\_\+head}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funkcja usuwa początkowy elemnt (head) z listy dynamicznje \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book__list_8c_ad2551e4d1c1ed889b0f4797e4847ecde}{list\+\_\+remove\+\_\+node}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$node\+\_\+to\+\_\+remove)
+\begin{DoxyCompactList}\small\item\em funkcja usuwa wybrany elemnt z listy dynamicznej \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book__list_8c_a13241d8914822a06ce6ecaacf384eb64}{list\+\_\+edit\+\_\+node}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$node\+\_\+to\+\_\+edit, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} data)
+\begin{DoxyCompactList}\small\item\em funckcja podmienia wartośc wybranego elemntu na wartosć podaną w argumencie \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book__list_8c_a15be9e9ccacc4aea366819f9045fd37b}{print\+\_\+list\+\_\+head}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony głowy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{phone__book__list_8c_a1be4155bd4debdb679084ac51f6e44d0}{print\+\_\+list\+\_\+tail}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony ogona \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$ \mbox{\hyperlink{phone__book__list_8c_adb6b6e14166bddec49991d35359efae9}{find\+\_\+middle\+\_\+node}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckcja ta znajduje i zwraca środkowy elemnt listy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book__list_8c_aaba6afe0c7d1ac6c03ed763fccf01e5f}{free\+\_\+list}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckja usuwa calą lsite z pamięci \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book__list_8c_aa039a04bee99175d8bda34f063095c5b}{merge}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} left, \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} right, int($\ast$cmp)(\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}))
+\begin{DoxyCompactList}\small\item\em funckja wykorzystwana przez funckje merge\+\_\+sort do scalenia dwóch posortowanych lisr \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{phone__book__list_8c_a64a2878307e95238731870587851fbf4}{merge\+\_\+sort}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, int($\ast$cmp)(\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}))
+\begin{DoxyCompactList}\small\item\em funckja sortuje liste dynamiczna według elemntu podanago jako wskaźńik funkcji \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+plik zawierajace funkjce umożliwajaće twrzenie i zarzadzanie lsita dynamiczną 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/24
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{phone__book__list_8c_adb6b6e14166bddec49991d35359efae9}\label{phone__book__list_8c_adb6b6e14166bddec49991d35359efae9}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!find\_middle\_node@{find\_middle\_node}}
+\index{find\_middle\_node@{find\_middle\_node}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{find\_middle\_node()}{find\_middle\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}}$\ast$ find\+\_\+middle\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckcja ta znajduje i zwraca środkowy elemnt listy 
+
+funkcja ta najpierw sprawdza czy lista nie jest psuta, jezeli jest jest to wyswietla komunikat \char`\"{}your list is empty\char`\"{}. nastepnie jezeli lista jedno elemtowa to zwraca ten jeden elemnt. następnie jezeli nie jest jedno elmntowa to tworzy dwa wskażńiki first i sec oba przyjmujące wartosc tail następnie do czasu aż wskaźnik sec nie osiągnie końca listy to wskaźńik first przemiesza się z każdą iteracja o jeden elemnt listy do przodu natomiast sec o dwa elemnty do przodu po zakończeniu listy wartosć first jest wskaźnikime na na środkowy elemnt listy i taki też i dzie do zwortu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ funckja przyjmuje list\+\_\+pointers określającą liste której środkowy elemnt ma zostać znaleziony \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+node$\ast$ -\/ funckja zwraca wskaźńik na środkowy elemnt listy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_a2dc8f8411f74f588363b93aa8e973b06}\label{phone__book__list_8c_a2dc8f8411f74f588363b93aa8e973b06}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!find\_node@{find\_node}}
+\index{find\_node@{find\_node}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{find\_node()}{find\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}}$\ast$ find\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{int}]{searched\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+funkcja znajduje elemnt o podanym id 
+
+funckja ta przechodzi przez kolejne elemnty listy dynamicznej tak długo aż nie osiagnie lub nie znajdzie elemntu o id równym podanego w searched\+\_\+value jezei znajdzie takowy elemnt to zwraca wskaźnik na ten właśnie element a jeżeli zwraca pusty wskaźnik
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers na liste dynamiczną któej elemnt należy znaleźć \\
+\hline
+{\em searched\+\_\+value} & -\/ wartość int określająca id elemntu który ma zostać odnaleziony \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+node$\ast$ -\/ zwraca wskaźńik na odnaleziony elemnt listy dynamicznej lub jeżeli taki nie został odnaleziony w pusty wskaźńk 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_aaba6afe0c7d1ac6c03ed763fccf01e5f}\label{phone__book__list_8c_aaba6afe0c7d1ac6c03ed763fccf01e5f}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!free\_list@{free\_list}}
+\index{free\_list@{free\_list}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{free\_list()}{free\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} free\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckja usuwa calą lsite z pamięci 
+
+funckja ta wykonuje operacja list\+\_\+remove\+\_\+head dla lsity aż head i tail nie sa sobie równe po osiągnięciu wychodzi z listy i usuwa ostani pozostaly elemnt listy i zwraca pustą lite
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ funckja przyjmuje list\+\_\+pointers określającą liste która chemy usunąc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ funkcja zwraca pustą liste 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_a09fe4582d87d9a56316be921a7668c6f}\label{phone__book__list_8c_a09fe4582d87d9a56316be921a7668c6f}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!list\_add\_head@{list\_add\_head}}
+\index{list\_add\_head@{list\_add\_head}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_add\_head()}{list\_add\_head()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+add\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{data }\end{DoxyParamCaption})}
+
+
+
+funkja doaje do listy elemnt od storny głowy 
+
+na samym poczatku funkcja umieszczaw w pamieci nowy elemnt listy dynamicznej w przypadku jeśli się nie uda wyświetla komunikat \char`\"{}\+ERROR\+: Stack oberflow\char`\"{} następnie przypisuje do danych tego elemntu dane podane jaako argumet wywołanaia funkjci, w kolejnym koroku wartosć poprzedniego elemntu dla nowo utworzonego jest elemnt head a następnym NULL czyli koniec listy. Następnie jeżli aktualny head nie jest psuty to ustawia wartość jego nastepnego lemntu na ten utworzony kolejno jezli tail lsity dynamicznej jest pusty zostaje on również ustawiony na nowy element. na sam koniec ustwaia wartość head na nowy elemnt, tak zmieniiona struktura zostaje zwrócona do programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określająca liste do któej użytkownik che dodaćelemnt \\
+\hline
+{\em data} & -\/ struktura contactt\+\_\+type który ma zostać dodany do lsity dynamicznej \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca zmieniona struktura lsit\+\_\+pointers określajaca liste z już dodanym elemntem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_a7a3637e283f2ddb5107381c206bdc928}\label{phone__book__list_8c_a7a3637e283f2ddb5107381c206bdc928}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!list\_add\_tail@{list\_add\_tail}}
+\index{list\_add\_tail@{list\_add\_tail}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_add\_tail()}{list\_add\_tail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+add\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{data }\end{DoxyParamCaption})}
+
+
+
+funkja doaje do listy elemnt od storny ogona 
+
+na samym poczatku funkcja umieszczaw w pamieci nowy elemnt listy dynamicznej w przypadku jeśli się nie uda wyświetla komunikat \char`\"{}\+ERROR\+: Stack oberflow\char`\"{} następnie przypisuje do danych tego elemntu dane podane jaako argumet wywołanaia funkjci, w kolejnym koroku wartosć kolejnego elemntu dla nowo utworzonego jest elemnt tail a poprzednim NULL czyli koniec listy. Następnie jeżli aktualny tail nie jest psuty to ustawia wartość jego poprzediniego lemntu na ten utworzony kolejno jezli head lsity dynamicznej jest pusty zostaje on również ustawiony na nowy element. na sam koniec ustwaia wartość tail na nowy elemnt, tak zmieniiona struktura zostaje zwrócona do programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określająca liste do któej użytkownik che dodaćelemnt \\
+\hline
+{\em data} & -\/ struktura contactt\+\_\+type który ma zostać dodany do lsity dynamicznej \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca zmieniona struktura lsit\+\_\+pointers określajaca liste z już dodanym elemntem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_a13241d8914822a06ce6ecaacf384eb64}\label{phone__book__list_8c_a13241d8914822a06ce6ecaacf384eb64}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!list\_edit\_node@{list\_edit\_node}}
+\index{list\_edit\_node@{list\_edit\_node}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_edit\_node()}{list\_edit\_node()}}
+{\footnotesize\ttfamily void list\+\_\+edit\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{node\+\_\+to\+\_\+edit,  }\item[{\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}}]{data }\end{DoxyParamCaption})}
+
+
+
+funckcja podmienia wartośc wybranego elemntu na wartosć podaną w argumencie 
+
+funkcja ta najpierw sprwadza czy wybrany elemnt do podmiany nie jest psuty jezeli jest pusty to wysiwetla \char`\"{}\+ERROR\+: no node to edit selected\char`\"{} jeżeli nie jest pusty podmienia wartosć jego data na wartosć podana w agumencies
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+to\+\_\+edit} & -\/ wskaźnik na elment ktorgo dane ma funkcja podmienic, może zostać uzyskany np poprez funckje \mbox{\hyperlink{phone__book__list_8c_a2dc8f8411f74f588363b93aa8e973b06}{find\+\_\+node()}} \\
+\hline
+{\em data} & -\/ struktura contact\+\_\+type który zawiera dane na któe ma zostać podminiony podany element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{phone__book__list_8c_a36960d26a9f13daef3d9ba2db9fcd804}\label{phone__book__list_8c_a36960d26a9f13daef3d9ba2db9fcd804}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!list\_init@{list\_init}}
+\index{list\_init@{list\_init}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_init()}{list\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funkcja incjująca pusta liste dynamiczną 
+
+funckja ta tworzy liste dynamiczną w formie typu list pointers i następnie ustawia wszystkie jej elemnty na NULL jako oznaczenie żę jest pusta a nastęnie przekazuje ja do zwrotu \begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca typ lsit\+\_\+pointers któy jest okreśłeneim pustej listy dynamicznej 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_a63472df91ba71cfdd80093f8f5cfb2cd}\label{phone__book__list_8c_a63472df91ba71cfdd80093f8f5cfb2cd}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!list\_remove\_head@{list\_remove\_head}}
+\index{list\_remove\_head@{list\_remove\_head}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_remove\_head()}{list\_remove\_head()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+remove\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funkcja usuwa początkowy elemnt (head) z listy dynamicznje 
+
+na samym początku funkcja sprawdza czy lista nie jest juz pusta jezeli jest to wyswietla \char`\"{}\+ERROR\+: Nothing to remove\textbackslash{}n\char`\"{} następnie pyszpiuje tymczasowemy wskaźnikowi poprzedni elemnt od zaczynajac od head, nastepnie usuwa head za pomoca funkcji free() następnei jezeli tymczasowy elemnt jest równy n\+ULL to oznacza żę lista jest pusta i zwraca liste z \mbox{\hyperlink{phone__book__list_8c_a36960d26a9f13daef3d9ba2db9fcd804}{list\+\_\+init()}} jeżeli nie to ustwaia następny element tymczasowgo elemnt jako NULL czyli koniec listy a potem ustawia head listy jako właśnie ten tymczaswowey element. tak zmieniona lista zostaje zwrócona do programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określajaca liste dynamiczną z której ma usunać head \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca strukture list\+\_\+pointers opisujaca liste z już usuniętymi head 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_ad2551e4d1c1ed889b0f4797e4847ecde}\label{phone__book__list_8c_ad2551e4d1c1ed889b0f4797e4847ecde}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!list\_remove\_node@{list\_remove\_node}}
+\index{list\_remove\_node@{list\_remove\_node}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_remove\_node()}{list\_remove\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+remove\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{node\+\_\+to\+\_\+remove }\end{DoxyParamCaption})}
+
+
+
+funkcja usuwa wybrany elemnt z listy dynamicznej 
+
+funckja na samym poczatku sprawdza czy wartośc elemntu do usunięcia jest różna od NULL jeżli nie to wypisuje \char`\"{}\+ERROR\+: no node to remove selected\textbackslash{}n\char`\"{}. Następnie jezeli elemnt do usnięcia jest równy elemntowi head to wywuuje funkcje list\+\_\+remove\+\_\+head a jeżli jest równe tail funkcje list\+\_\+remove\+\_\+tail. jezeli nie jest równy żadnego z tych elemntów to ustawua wartości następnego elemntu poprzedneigo elemtu listy na nastoeny elemnt list , z kolei wartosć porzedniego elemntu kolejengo elemntu listy jest ustawiana na poprzendi elemnt listy, po czym usuwa się wy brany eleemnt za pomoca funkjci free() nastepnie zmieniiona liste zwraca sie do głónego programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określajaca liste dynamiczną z której ma usunać element \\
+\hline
+{\em node\+\_\+to\+\_\+remove} & -\/ wskaźnik na elemnt ktory ma zostać usuniety, wskaźńik taki mozńa uzyskać np poprzez funckje \mbox{\hyperlink{phone__book__list_8c_a2dc8f8411f74f588363b93aa8e973b06}{find\+\_\+node()}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca strukture list\+\_\+pointers opisujaca liste z już usuniętymi elemntem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_a902a61753de40c7598e7b8021ce2d344}\label{phone__book__list_8c_a902a61753de40c7598e7b8021ce2d344}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!list\_remove\_tail@{list\_remove\_tail}}
+\index{list\_remove\_tail@{list\_remove\_tail}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{list\_remove\_tail()}{list\_remove\_tail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list\+\_\+remove\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funkcja usuwa końcowy elemnt (tail) z listy dynamicznje 
+
+na samym początku funkcja sprawdza czy lista nie jest juz pusta jezeli jest to wyswietla \char`\"{}\+ERROR\+: Nothing to remove\textbackslash{}n\char`\"{} następnie pyszpiuje tymczasowemy wskaźnikowi następny elemnt od zaczynajac od tail, nastepnie usuwa tail za pomoca funkcji free() następnei jezeli tymczasowy elemnt jest równy n\+ULL to oznacza żę lista jest pusta i zwraca liste z \mbox{\hyperlink{phone__book__list_8c_a36960d26a9f13daef3d9ba2db9fcd804}{list\+\_\+init()}} jeżeli nie to ustwaia poprzedni element tymczasowgo elemnt jako NULL czyli koniec listy a potem ustawia tail listy jako właśnie ten tymczaswowey element. tak zmieniona lista zostaje zwrócona do programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers określajaca liste dynamiczną z której ma usunać ogon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca strukture list\+\_\+pointers opisujaca liste z już usuniętymi ogonem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_aa039a04bee99175d8bda34f063095c5b}\label{phone__book__list_8c_aa039a04bee99175d8bda34f063095c5b}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!merge@{merge}}
+\index{merge@{merge}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{left,  }\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{right,  }\item[{int($\ast$)(\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}})}]{cmp }\end{DoxyParamCaption})}
+
+
+
+funckja wykorzystwana przez funckje merge\+\_\+sort do scalenia dwóch posortowanych lisr 
+
+funkcja ta towrzy nową liste pustą liste dynamiczna, następnie tworzy nowe wskaźniki na lpointer i rpointer wskazujące koljno na ogon lwejj lsity i ogon prawej lsity....(do dokonczenia)
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & \\
+\hline
+{\em right} & \\
+\hline
+{\em cmp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_a64a2878307e95238731870587851fbf4}\label{phone__book__list_8c_a64a2878307e95238731870587851fbf4}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!merge\_sort@{merge\_sort}}
+\index{merge\_sort@{merge\_sort}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{merge\_sort()}{merge\_sort()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} merge\+\_\+sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{int($\ast$)(\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}}, \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}})}]{cmp }\end{DoxyParamCaption})}
+
+
+
+funckja sortuje liste dynamiczna według elemntu podanago jako wskaźńik funkcji 
+
+funkcja ta jest rekurencyjna którym warunkiem koncowym jest podanie listy jedno elemnotwej czyli head===tail na sam pocztek funkcja znajduje śrdodkowy elemnt i według niegod dzieli ta liste rna lewa i prawa na nastepnie dla kazdej z postalych rowniez wykonuje funkcje merge sort tak dlugo az bedzie liste jedno elemnto w momecnei kiedy masz juz liste jedno elemtowa zscalarz je dwie za pomoca funkcji merge czyli w odpoweinej koljenosci nastepnie scalasz tak tablice rodzica i w tedn spsob zostajesz z posortowana talibca
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list pointers okreslajaca liste do posrotwoania \\
+\hline
+{\em cmp} & -\/ wskaxnik na funkcje porowujaca dwa elemnty listy okreslajace wedlug ktoreg elemntu ma zostac posortowane mozna podac\+: id\+\_\+cmp, name\+\_\+cmp, number\+\_\+cmp, phone\+\_\+cmp, postal\+\_\+code\+\_\+cmp, street\+\_\+cmp \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca strukture list\+\_\+pointer okreslajaca posortowana lsite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{phone__book__list_8c_a15be9e9ccacc4aea366819f9045fd37b}\label{phone__book__list_8c_a15be9e9ccacc4aea366819f9045fd37b}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!print\_list\_head@{print\_list\_head}}
+\index{print\_list\_head@{print\_list\_head}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{print\_list\_head()}{print\_list\_head()}}
+{\footnotesize\ttfamily void print\+\_\+list\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony głowy 
+
+funkcja ta najpierw sprawdza czy lista nie jest psuta, jezeli jest jest to wyswietla komunikat \char`\"{}your list is empty\char`\"{} jezeli nie jest pusta to dla danych każdego elemntu listu od głowy zaczynajac na ogonie kończąc wykonuje funkcje \mbox{\hyperlink{phone__book_8c_acaa0c6091546098d3178389e9b64a1b4}{print\+\_\+contact()}} który wysiwtla na dane elemntu listy w odpowiednim formacie
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ funckja przyjmuje list\+\_\+pointers określającą liste do wyświetlenia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{phone__book__list_8c_a1be4155bd4debdb679084ac51f6e44d0}\label{phone__book__list_8c_a1be4155bd4debdb679084ac51f6e44d0}} 
+\index{phone\_book\_list.c@{phone\_book\_list.c}!print\_list\_tail@{print\_list\_tail}}
+\index{print\_list\_tail@{print\_list\_tail}!phone\_book\_list.c@{phone\_book\_list.c}}
+\doxysubsubsection{\texorpdfstring{print\_list\_tail()}{print\_list\_tail()}}
+{\footnotesize\ttfamily void print\+\_\+list\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony ogona 
+
+funkcja ta najpierw sprawdza czy lista nie jest psuta, jezeli jest jest to wyswietla komunikat \char`\"{}your list is empty\char`\"{} jezeli nie jest pusta to dla danych każdego elemntu listu od ogona zaczynajac na głowie kończąc wykonuje funkcje \mbox{\hyperlink{phone__book_8c_acaa0c6091546098d3178389e9b64a1b4}{print\+\_\+contact()}} który wysiwtla na dane elemntu listy w odpowiednim formacie
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ funckja przyjmuje list\+\_\+pointers określającą liste do wyświetlenia \\
+\hline
+\end{DoxyParams}

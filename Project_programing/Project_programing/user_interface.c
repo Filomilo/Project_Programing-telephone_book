@@ -1,3 +1,14 @@
+/**
+ * @file user_interface.c
+ * @author your name (you@domain.com)
+ * @brief plik zawiera funkcje odpowidzeialne konsolowy interfejs użytkownika 
+ * @version 0.1
+ * @date 2022-03-24
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include "phone_book.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,11 +24,20 @@
 
 
 
-
+/**
+ * @brief funckja odpwodzialna za pisywanie danych do dowanie nowego elmntu do listy o podanych przez użytkowniak danych
+ *
+ * funkjca towrzy nowy elemnt contact_type a nastepnei po kolei prosi uzytkowniak o podanie
+ * imeinai i nazwiska, nazyw ulicy, numeru domu/budynku, kodu pocztowego, nazwy miasta, numer telefonu
+ * nastepnei elemnt_conatact_type zostaje dodany do listy z uzyciem funckji list_add_head
+ * 
+ * @param list - struktura list_pointers okreslajaca lsite do ktorej uztykownik ma dopisac elemnt
+ * @return list_pointers - zwraca struktura lsit_pointers z dodanym elemntem przez uzytkownika
+ */
 list_pointers add_new_element(list_pointers list)
 {
-	//system("cls");
-	/*
+	system("cls");
+	
 
 	system("cls");
 	contact_type contact;
@@ -40,8 +60,8 @@ list_pointers add_new_element(list_pointers list)
 	printf("please provide phone number of your contact:\n");
 	scanf_s("%s", contact.phone_number, 10);
 	contact.id = 1;
-	*/ 
-	contact_type contact = generate_rand_contact(time(0));
+	 
+	//contact_type contact = generate_rand_contact(time(0));
 	contact.id = generate_id(list);
 	list = list_add_head(list, contact);
 
@@ -50,6 +70,18 @@ list_pointers add_new_element(list_pointers list)
 }
 
 
+
+/**
+ * @brief funckja odpowada za interferjsc pozwalajcay pszeszukac liste
+ * 
+ * funckja wpiew w poroszi uzytkownika o podanie ciagu znakow wedlug ktorej ma zostac pszeszukana lsita
+ * a nastepnie tworzy lsite resultatow z uzyciem tego caigu znakow oraz funkcji podanej jako arugmnt funkji okreslajaca
+ * wedlug ktoergo elemntu jest pszeszukwiane 
+ *
+ * @param list - struktura list_pointers okreslajaca lsite która uzytkonik pszesuzkuje
+ * @param search_option - wskaxnik na funkcje okresljaca wedlug ktoego elemtu kontaktu bedzie pszeszukiwanr mozna wybrac: 
+ * is_search_city, is_search_name, is_search_number,  is_search_phone_number, is_search_postal_code, is_search_street, is_search_surname
+ */
 void searching(list_pointers list, int(*search_option)(char[30]))
 {
 	printf("Please provide text by which your going to search: \n");
@@ -71,7 +103,15 @@ void searching(list_pointers list, int(*search_option)(char[30]))
 
 
 
-
+/**
+ * @brief funkcja genuruajca intrefjs wyboru elemtów do pszeszukania
+ * 
+ * funkcja ta na poacztku wysiwtala opcje wyboru od 0 do 7 i pobiera od uztykowniak wartsoc wyboru 
+ * w zaleznoci od wyboru funkjca poźniej przechodzi do do funkcji searching z odpwdnio wybrana fucnkje "is_searching_******"
+ *
+ * 
+ * @param list - struktura list_pointers okreslajaca lsite która uzytkonik pszesuzkuje
+ */
 void search_phone_book(list_pointers list)
 {
 	int choice;
@@ -101,7 +141,16 @@ void search_phone_book(list_pointers list)
 	}
 
 
-
+/**
+ * @brief funckja genruje interefjs umozliwajacy posortowanie listy
+ *
+ * funckja na poczatku wysiwrtla uztkoniwi opcje wybriu wedlug ktorego elemtu chce uzytkonik posrotwac liste
+ * w zaleznosci od wyboru uzytkniak urchamia sie funckja merge_sort ze wskaźnikiem na na funckje "****_cmp" 
+ * na koniec zwraa posrotwana lsite do głownego programu
+ * 
+ * @param list -  struktura list_pointers okreslajaca lsite która uzytkonik che posrotwac
+ * @return list_pointers -  struktura list_pointers okreslajaca posortownaa lsite w zaleznosci od wyboru uzytkownika
+ */
 list_pointers sort_phone_book(list_pointers list)
 {
 	int choice;
@@ -133,7 +182,15 @@ list_pointers sort_phone_book(list_pointers list)
 
 
 
-
+/**
+ * @brief funckja genrujaca interjs umozliwiajacy usuniecie wybranego przez uztykonika elemntu
+ * 
+ * na samym poczatku funckja prosi uztkowinka o podanie id elemtu ktory chce usunac
+ * nastepnei pszeszukuje liste w poszukiwaniu elemnutu o tym id a nastepnei go usuwa
+ * 
+ * @param list  struktura list_pointers okreslajaca lsite z ktorej uztkonika ma usunac elemnt
+ * @return list_pointers -  struktura list_pointers okreslajaca lsite z usunietymi przez uztykonika elemntami
+ */
 list_pointers delete_element(list_pointers list)
 {
 	int choice;
@@ -161,6 +218,15 @@ list_pointers delete_element(list_pointers list)
 }
 
 
+
+/**
+ * @brief funkcja genrujaca interefjs umozliwajacy zapisanie lsity do pliku
+ * 
+ * na poczatku funkcja pytanie sie uzytkownika o podanue caigu znakow okreslajacego nzawe pliku pod jaka ma byc zapsiany 
+ * a na stepnie zapisuje ta lsite pod ta nazwe z uzyciem funckji save()
+ * 
+ * @param list  struktura list_pointers okreslajaca lsite z ktora uzytkownik chce zapisac 
+ */
 void save_phone_book(list_pointers list)
 {
 	char file_name[30];
@@ -183,6 +249,15 @@ void save_phone_book(list_pointers list)
 }
 
 
+/**
+ * @brief funkcja genruje interefjs umozliwajaca edcyje konkretnego elemntu wpisu w ksiazce telefonczije
+ * 
+ * najpiewr funkcja prosi uzytkonika o wybor który elemnt tego wpisu chce zmeinc nastepnei podaje ciag znakow ktory ma nadpisac
+ * aktualny stan elemntu a nastpenie nadpsiuje ten elemnt w zaleznosci od wyboru
+ * 
+ * 
+ * @param element_to_edit - wskaznik na elemnt kotry ma byc poddany edycji
+ */
 void edit_element(list_node* element_to_edit)
 {
 	system("cls");
@@ -220,7 +295,17 @@ void edit_element(list_node* element_to_edit)
 
 }
 
-
+/**
+ * @brief funkckja generujaa interfejs wyboru elemntu do edycji
+ * 
+ * na poczatku funkcja prosi uzytkowniak o podaniue id elemntu kotry ma byc poddany edycji
+ * nastepnie pszeszukuje lsite w jego poszukiwaniu, jezeli nie nie ma elemntu o takim id fucnkja wysiwetal że nie znaleziono takiego 
+ * elemnut, po znalezionu elemntu funkcja aktywuje funckje edit_element na wybranym elemencie listy. po zakonczeniu funckja zwraca\
+ * zedytowana lsite 
+ * 
+ * @param list  struktura list_pointers okreslajaca lsite z ktora uzytkownik chce zapisac 
+ * @return list_pointers  struktura list_pointers okreslajaa lsite z zedytowanymi elementami
+ */
 list_pointers edit_phone_list(list_pointers list)
 {
 	int choice;
@@ -256,7 +341,15 @@ list_pointers edit_phone_list(list_pointers list)
 	return list;
 }
 
-
+/**
+ * @brief funkcja genrujaca interfejs umozliwajacy wybraniae opracji na ksiazce telefonicznej
+ * 
+ * funckja wyswietal uzytkonikowi wybor i w zalenzosci od wyboru funckja moze pszejsc do funkcji intefejsu: save_phone_book, search_phone_book
+ * sort_phone_book, edit_phone_list, delete_element, add_new_element.
+ * po zakonczeniu pracy lista funkcja zwalnia pamiec zajmowana przez liste
+ * 
+ * @param list - struktura list_pointers okreslajaca lsite ktora uzytnik ma poddac edycji
+ */
 void phone_book_manage(list_pointers list)
 {
 	int choice;
@@ -286,7 +379,13 @@ void phone_book_manage(list_pointers list)
 
 
 
-
+/**
+ * @brief funckja odpowiada za tworzenie nwoej listy
+ * funckja torzy nowa psuta liste a na stepnie prosi uzytkonia o podaniaeanie elmntu z pomoca funkji add_new_element
+ * az uzytkonik nie zdecyduje ze chce przestac, po zakonczeniu w wpisywnia przecchodzi z ta lista do interefjsu zarzadzania 
+ * phone_book_manage()
+ * 
+ */
 void create_new_phone_book()
 {
 	int i = 0;
@@ -310,29 +409,16 @@ void create_new_phone_book()
 
 }
 
-void load_phone_book()
-{
-	char file_name[30];
-	int choice;
-	list_pointers list = list_init();
-	do {
-		printf("what phone book would you likr to openn: \n\n");
-		scanf_s("%s", file_name, 30);
-		printf("\n\n would you like to open other element: \n 1- yes \n 0- no \n\n");
-		scanf_s("%d", &choice, 1);
-		if (choice == 0)
-			break;
-		if (choice == 1)
-			continue;
-		printf("\n ERROR: provided wrong value\n\n");
-	} while (1);
 
 
-
-	phone_book_manage(list);
-
-}
-
+/**
+ * @brief funckja odpowiada za segment menu odpowiadzilany za otawcie ksiazki z pliku
+ * 
+ * funckja wyswirtla uztkonkowi liste ksiazek dostepnych w dedykowanym folderze 
+ * a nastepnie pozwala uztykowniowi numer pliku ktory chce otworzyc'
+ * nastpenie na podstawie wybranego numeru ładuje plik do nowej listy i przecchodzi z ta lista do interefjsu zarzadzania 
+ * phone_book_manage()
+ */
 void opening_book()
 {
 	int choice;
@@ -354,7 +440,13 @@ void opening_book()
 }
 
 
-
+/**
+ * @brief funckja rozpoczyna konsolowy interefejsc użykownika
+ * 
+ * funckja daje uztkonikw wybór liczby od 0-2, 0 pozwala na wyjscie z programu, 1 przechodzi do funkcji odpowadizlnej za towrzenie nowej listy
+ * a 2 odpowiada za otwracie ksiażki z pliku
+ * 
+ */
 void start_ui()
 {
 	int choice=0;

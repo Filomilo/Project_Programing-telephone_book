@@ -1,4 +1,16 @@
-//tynmczasowe funkcje wykorzystywane do sprawdzeniea poprawnoœæi dzia³ania programu
+/**
+ * @file temporary_functions.c
+ * @author your name (you@domain.com)
+ * @brief zbiÃ³r funkcji tymczasowych wykorzystywancyh do poprawngo dziaÅ‚ania programu
+ * @version 0.1
+ * @date 2022-03-24
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+
+//tynmczasowe funkcje wykorzystywane do sprawdzeniea poprawnoï¿½ï¿½i dziaï¿½ania programu
 
 
 #include "phone_book.h"
@@ -8,8 +20,14 @@
 #include <string.h>
 
 
-//funckcje generuj¹ca losowy kontakt z okreœlengo wczeœniej zakresu w zale¿nosæi od podanego ziarna losowania
+//funckcje generujï¿½ca losowy kontakt z okreï¿½lengo wczeï¿½niej zakresu w zaleï¿½nosï¿½i od podanego ziarna losowania
 
+/**
+ * @brief funkjca genruje loswy wpis konaktu na podstawie podanego ziarna losowaia
+ * 
+ * @param seed - wartoÅ›Ä‡ ziarana na podstwie ktÃ³rego bÄ™dzie generwoany kontakt 
+ * @return contact_type - zwraca losowow wygenrerowany kontakt
+ */
 contact_type generate_rand_contact(int seed)
 {
 	srand(time(0));
@@ -34,17 +52,17 @@ contact_type generate_rand_contact(int seed)
 	switch (rand() % 13)
 	{
 	case 0: strncpy_s(contact.surname, 30, "Nowak", 30); break;
-	case 1: strncpy_s(contact.surname, 30, "Wójcik", 30); break;
+	case 1: strncpy_s(contact.surname, 30, "Wï¿½jcik", 30); break;
 	case 2: strncpy_s(contact.surname, 30, "Kowalczyk", 30); break;
-	case 3: strncpy_s(contact.surname, 30, "WoŸniak", 30); break;
+	case 3: strncpy_s(contact.surname, 30, "Woï¿½niak", 30); break;
 	case 4: strncpy_s(contact.surname, 30, "Mazur", 30); break;
 	case 5: strncpy_s(contact.surname, 30, "Krawczyk", 30); break;
 	case 6: strncpy_s(contact.surname, 30, "Kaczmarek", 30); break;
-	case 7: strncpy_s(contact.surname, 30, "Stêpieñ", 30); break;
-	case 8: strncpy_s(contact.surname, 30, "Wróbel", 30); break;
+	case 7: strncpy_s(contact.surname, 30, "Stï¿½pieï¿½", 30); break;
+	case 8: strncpy_s(contact.surname, 30, "Wrï¿½bel", 30); break;
 	case 9: strncpy_s(contact.surname, 30, "Baran", 30); break;
 	case 10: strncpy_s(contact.surname, 30, "Sikora", 30); break;
-	case 11: strncpy_s(contact.surname, 30, "B¹k", 30); break;
+	case 11: strncpy_s(contact.surname, 30, "Bï¿½k", 30); break;
 	case 12: strncpy_s(contact.surname, 30, "Lis", 30); break;
 	}
 
@@ -56,14 +74,14 @@ contact_type generate_rand_contact(int seed)
 	switch (rand() % 13)
 	{
 	case 0: strncpy_s(contact.adress.street, 30, "Polna", 30); break;
-	case 1: strncpy_s(contact.adress.street, 30, "Leœna", 30); break;
-	case 2: strncpy_s(contact.adress.street, 30, "S³oneczna", 30); break;
-	case 3: strncpy_s(contact.adress.street, 30, "Krótka", 30); break;
+	case 1: strncpy_s(contact.adress.street, 30, "Leï¿½na", 30); break;
+	case 2: strncpy_s(contact.adress.street, 30, "Sï¿½oneczna", 30); break;
+	case 3: strncpy_s(contact.adress.street, 30, "Krï¿½tka", 30); break;
 	case 4: strncpy_s(contact.adress.street, 30, "Szkolna", 30); break;
 	case 5: strncpy_s(contact.adress.street, 30, "Ogrodowa", 30); break;
 	case 6: strncpy_s(contact.adress.street, 30, "Lipowa", 30); break;
 	case 7: strncpy_s(contact.adress.street, 30, "Brzozowa", 30); break;
-	case 8: strncpy_s(contact.adress.street, 30, "£¹kowa", 30); break;
+	case 8: strncpy_s(contact.adress.street, 30, "ï¿½ï¿½kowa", 30); break;
 	case 9: strncpy_s(contact.adress.street, 30, "Kwiatowa", 30); break;
 	case 10: strncpy_s(contact.adress.street, 30, "Maczka", 30); break;
 	case 11: strncpy_s(contact.adress.street, 30, "Marmurowa", 30); break;
@@ -83,25 +101,30 @@ contact_type generate_rand_contact(int seed)
 	switch (rand() % 13)
 	{
 	case 0: strncpy_s(contact.adress.city, 30, "Warszawa", 30); break;
-	case 1: strncpy_s(contact.adress.city, 30, "Kraków", 30); break;
-	case 2: strncpy_s(contact.adress.city, 30, "£ódŸ", 30); break;
-	case 3: strncpy_s(contact.adress.city, 30, "Wroc³aw", 30); break;
-	case 4: strncpy_s(contact.adress.city, 30, "Poznañ", 30); break;
-	case 5: strncpy_s(contact.adress.city, 30, "Gdañsk", 30); break;
+	case 1: strncpy_s(contact.adress.city, 30, "Krakï¿½w", 30); break;
+	case 2: strncpy_s(contact.adress.city, 30, "ï¿½ï¿½dï¿½", 30); break;
+	case 3: strncpy_s(contact.adress.city, 30, "Wrocï¿½aw", 30); break;
+	case 4: strncpy_s(contact.adress.city, 30, "Poznaï¿½", 30); break;
+	case 5: strncpy_s(contact.adress.city, 30, "Gdaï¿½sk", 30); break;
 	case 6: strncpy_s(contact.adress.city, 30, "Szczecin", 30); break;
 	case 7: strncpy_s(contact.adress.city, 30, "Bydgoszcz", 30); break;
-	case 8: strncpy_s(contact.adress.city, 30, "Bia³ystok", 30); break;
+	case 8: strncpy_s(contact.adress.city, 30, "Biaï¿½ystok", 30); break;
 	case 9: strncpy_s(contact.adress.city, 30, "Katowice", 30); break;
-	case 10: strncpy_s(contact.adress.city, 30, "Czêstochowa", 30); break;
+	case 10: strncpy_s(contact.adress.city, 30, "Czï¿½stochowa", 30); break;
 	case 11: strncpy_s(contact.adress.city, 30, "Radom", 30); break;
-	case 12: strncpy_s(contact.adress.city, 30, "Toruñ", 30); break;
+	case 12: strncpy_s(contact.adress.city, 30, "Toruï¿½", 30); break;
 	}
 	return contact;
 }
 
 
-//funkjca generujaca i wyœwietlajaca 200 losowych konkató wylosowanych funkcj¹ generate_rand_contact
-
+//funkjca generujaca i wyï¿½wietlajaca 200 losowych konkatï¿½ wylosowanych funkcjï¿½ generate_rand_contact
+/**
+ * @brief funkcja testujÄ…ca funckje generowanie losowego kontkatu
+ *
+ * funkcje genruje i wypisuje 200 przykÅ‚adowo losowo wygenerowanych kontaktkÃ³w
+ * 
+ */
 void genrating_contacts_test()
 {
 	srand((int)time(0));
@@ -118,8 +141,13 @@ void genrating_contacts_test()
 }
 
 
-//funkcja testuj¹ca dzia³anie funkcji soryj¹cej liste na losowo wygenerowanej liœæie
-
+//funkcja testujï¿½ca dziaï¿½anie funkcji soryjï¿½cej liste na losowo wygenerowanej liï¿½ï¿½ie
+/**
+ * @brief funckcja pozwala na przetesotwanie funkcji sortujÄ…cych
+ *
+ * funkcka ta najpierw pozwala wygenerowac liste kontaktÃ³w a nastÄ™pnie sortujÄ™ tÄ… liste wedÅ‚ug wartoÅ›ci id i ja wypisuje
+ * 
+ */
 void list_contact_test_sort()
 {
 	srand(time(0));
@@ -144,7 +172,12 @@ void list_contact_test_sort()
 }
 
 
-
+/**
+ * @brief funkcja pozwala na przetestowanie funkcji pszeszukiwania listy
+ *
+ * funkcja na poczatku towrzy 1000 elemtowÄ… losowÄ… lsite kontaktÃ³w nastÄ™pnie wykonuje operacje sortowania na tej liÅ›cie wedlug parametrÃ³w podanych bezpoÅ›rednio w kodzie
+ * 
+ */
 void list_contact_test_search()
 {
 	srand(time(0));
@@ -168,7 +201,12 @@ void list_contact_test_search()
 
 
 
-
+/**
+ * @brief funckja pozwala na przetestowanie funkcji odczyytu i zapisu list do pliku
+ * 
+ * funkcja na poczÄ…tek pozwala stworzyÄ‡ liste zÅ‚oÅ¼ona z 10 elemntÃ³w a na steonie ja wypisuje
+ * po czym zapiuje utworzona liste do pliku o nazwie "test" i ponownie zaÅ‚aduwje tÄ… liste z pliku i wypisuje jÄ… na akrenie
+ */
 void list_file_test()
 {
 	srand(time(0));
@@ -192,13 +230,12 @@ void list_file_test()
 }
 
 
-void open_file_test()
-{
-	opening_book();
-}
-
-
-
+/**
+ * @brief funkcja ta pozwala na prztestowanie generowania unikatowego id
+ * 
+ * funkjca na poczÄ…tek genruje 10 elemntowÄ… lsite a nastÄ™pnie usuwa z listy elemnty o id 3,1,5,7,8 
+ * nastepnie do akiej talbicy dodaje koljen 10 elemntÃ³ i przy kaÅ¼ym doadniu wyÅ›wietla stan listy aby moÅ¼Å„a byÅ‚o zaobserowaÄ‡ czy genwrowane id jest unikatowe
+ */
 void list_id_test()
 {
 	srand(time(0));

@@ -1,0 +1,257 @@
+\hypertarget{user__interface_8c}{}\doxysection{D\+:/gogle drive/studia/\+Semestr 2/\+Podstawy programowania 2/\+Projekt -\/ Podstawy programowania 2/projekt/\+Project\+\_\+\+Programing-\/telephone\+\_\+book/\+Project\+\_\+programing/\+Project\+\_\+programing/user\+\_\+interface.c File Reference}
+\label{user__interface_8c}\index{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/user\_interface.c@{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/user\_interface.c}}
+
+
+plik zawiera funkcje odpowidzeialne konsolowy interfejs użytkownika  
+
+
+{\ttfamily \#include \char`\"{}phone\+\_\+book.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{user__interface_8c_acae1958c448e88785f5b31ad032f27fb}{add\+\_\+new\+\_\+element}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckja odpwodzialna za pisywanie danych do dowanie nowego elmntu do listy o podanych przez użytkowniak danych \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user__interface_8c_a02c59ab7005e2819a32cc3cb46fc76e6}{searching}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, int($\ast$search\+\_\+option)(char\mbox{[}30\mbox{]}))
+\begin{DoxyCompactList}\small\item\em funckja odpowada za interferjsc pozwalajcay pszeszukac liste \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user__interface_8c_a6b9af5782749ff73f646dadddc0c9813}{search\+\_\+phone\+\_\+book}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funkcja genuruajca intrefjs wyboru elemtów do pszeszukania \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{user__interface_8c_a0f51e0cdb1971181485ede7b06f59822}{sort\+\_\+phone\+\_\+book}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckja genruje interefjs umozliwajacy posortowanie listy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{user__interface_8c_a82f57d876380dff9dd8a55f7da9bb16d}{delete\+\_\+element}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funckja genrujaca interjs umozliwiajacy usuniecie wybranego przez uztykonika elemntu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user__interface_8c_a8bffcf30642724864a267ae29fa11bd6}{save\+\_\+phone\+\_\+book}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funkcja genrujaca interefjs umozliwajacy zapisanie lsity do pliku \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user__interface_8c_a570381b29179150f2d0ee13c189154ff}{edit\+\_\+element}} (\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$element\+\_\+to\+\_\+edit)
+\begin{DoxyCompactList}\small\item\em funkcja genruje interefjs umozliwajaca edcyje konkretnego elemntu wpisu w ksiazce telefonczije \end{DoxyCompactList}\item 
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{user__interface_8c_a02689142730781cb448a532889251632}{edit\+\_\+phone\+\_\+list}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funkckja generujaa interfejs wyboru elemntu do edycji \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user__interface_8c_a502049a74b1c4dfc08953ca9639dfc52}{phone\+\_\+book\+\_\+manage}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\begin{DoxyCompactList}\small\item\em funkcja genrujaca interfejs umozliwajacy wybraniae opracji na ksiazce telefonicznej \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user__interface_8c_ae09f26a4000686cbb6af3d2bf9a35e82}{create\+\_\+new\+\_\+phone\+\_\+book}} ()
+\begin{DoxyCompactList}\small\item\em funckja odpowiada za tworzenie nwoej listy funckja torzy nowa psuta liste a na stepnie prosi uzytkonia o podaniaeanie elmntu z pomoca funkji add\+\_\+new\+\_\+element az uzytkonik nie zdecyduje ze chce przestac, po zakonczeniu w wpisywnia przecchodzi z ta lista do interefjsu zarzadzania \mbox{\hyperlink{user__interface_8c_a502049a74b1c4dfc08953ca9639dfc52}{phone\+\_\+book\+\_\+manage()}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user__interface_8c_a9ff867bc6f9209f37a9f8f18de63ba90}{opening\+\_\+book}} ()
+\begin{DoxyCompactList}\small\item\em funckja odpowiada za segment menu odpowiadzilany za otawcie ksiazki z pliku \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user__interface_8c_a948657c2d00c8465e429b5b697e92744}{start\+\_\+ui}} ()
+\begin{DoxyCompactList}\small\item\em funckja rozpoczyna konsolowy interefejsc użykownika \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+plik zawiera funkcje odpowidzeialne konsolowy interfejs użytkownika 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/24
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{user__interface_8c_acae1958c448e88785f5b31ad032f27fb}\label{user__interface_8c_acae1958c448e88785f5b31ad032f27fb}} 
+\index{user\_interface.c@{user\_interface.c}!add\_new\_element@{add\_new\_element}}
+\index{add\_new\_element@{add\_new\_element}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{add\_new\_element()}{add\_new\_element()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} add\+\_\+new\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckja odpwodzialna za pisywanie danych do dowanie nowego elmntu do listy o podanych przez użytkowniak danych 
+
+funkjca towrzy nowy elemnt contact\+\_\+type a nastepnei po kolei prosi uzytkowniak o podanie imeinai i nazwiska, nazyw ulicy, numeru domu/budynku, kodu pocztowego, nazwy miasta, numer telefonu nastepnei elemnt\+\_\+conatact\+\_\+type zostaje dodany do listy z uzyciem funckji list\+\_\+add\+\_\+head
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers okreslajaca lsite do ktorej uztykownik ma dopisac elemnt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ zwraca struktura lsit\+\_\+pointers z dodanym elemntem przez uzytkownika 
+\end{DoxyReturn}
+\mbox{\Hypertarget{user__interface_8c_ae09f26a4000686cbb6af3d2bf9a35e82}\label{user__interface_8c_ae09f26a4000686cbb6af3d2bf9a35e82}} 
+\index{user\_interface.c@{user\_interface.c}!create\_new\_phone\_book@{create\_new\_phone\_book}}
+\index{create\_new\_phone\_book@{create\_new\_phone\_book}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{create\_new\_phone\_book()}{create\_new\_phone\_book()}}
+{\footnotesize\ttfamily void create\+\_\+new\+\_\+phone\+\_\+book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckja odpowiada za tworzenie nwoej listy funckja torzy nowa psuta liste a na stepnie prosi uzytkonia o podaniaeanie elmntu z pomoca funkji add\+\_\+new\+\_\+element az uzytkonik nie zdecyduje ze chce przestac, po zakonczeniu w wpisywnia przecchodzi z ta lista do interefjsu zarzadzania \mbox{\hyperlink{user__interface_8c_a502049a74b1c4dfc08953ca9639dfc52}{phone\+\_\+book\+\_\+manage()}} 
+
+\mbox{\Hypertarget{user__interface_8c_a82f57d876380dff9dd8a55f7da9bb16d}\label{user__interface_8c_a82f57d876380dff9dd8a55f7da9bb16d}} 
+\index{user\_interface.c@{user\_interface.c}!delete\_element@{delete\_element}}
+\index{delete\_element@{delete\_element}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{delete\_element()}{delete\_element()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} delete\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckja genrujaca interjs umozliwiajacy usuniecie wybranego przez uztykonika elemntu 
+
+na samym poczatku funckja prosi uztkowinka o podanie id elemtu ktory chce usunac nastepnei pszeszukuje liste w poszukiwaniu elemnutu o tym id a nastepnei go usuwa
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & struktura list\+\_\+pointers okreslajaca lsite z ktorej uztkonika ma usunac elemnt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ struktura list\+\_\+pointers okreslajaca lsite z usunietymi przez uztykonika elemntami 
+\end{DoxyReturn}
+\mbox{\Hypertarget{user__interface_8c_a570381b29179150f2d0ee13c189154ff}\label{user__interface_8c_a570381b29179150f2d0ee13c189154ff}} 
+\index{user\_interface.c@{user\_interface.c}!edit\_element@{edit\_element}}
+\index{edit\_element@{edit\_element}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{edit\_element()}{edit\_element()}}
+{\footnotesize\ttfamily void edit\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_ae45649e1bf49bca0d951a12786951052}{list\+\_\+node}} $\ast$}]{element\+\_\+to\+\_\+edit }\end{DoxyParamCaption})}
+
+
+
+funkcja genruje interefjs umozliwajaca edcyje konkretnego elemntu wpisu w ksiazce telefonczije 
+
+najpiewr funkcja prosi uzytkonika o wybor który elemnt tego wpisu chce zmeinc nastepnei podaje ciag znakow ktory ma nadpisac aktualny stan elemntu a nastpenie nadpsiuje ten elemnt w zaleznosci od wyboru
+
+
+\begin{DoxyParams}{Parameters}
+{\em element\+\_\+to\+\_\+edit} & -\/ wskaznik na elemnt kotry ma byc poddany edycji \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{user__interface_8c_a02689142730781cb448a532889251632}\label{user__interface_8c_a02689142730781cb448a532889251632}} 
+\index{user\_interface.c@{user\_interface.c}!edit\_phone\_list@{edit\_phone\_list}}
+\index{edit\_phone\_list@{edit\_phone\_list}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{edit\_phone\_list()}{edit\_phone\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} edit\+\_\+phone\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funkckja generujaa interfejs wyboru elemntu do edycji 
+
+na poczatku funkcja prosi uzytkowniak o podaniue id elemntu kotry ma byc poddany edycji nastepnie pszeszukuje lsite w jego poszukiwaniu, jezeli nie nie ma elemntu o takim id fucnkja wysiwetal że nie znaleziono takiego elemnut, po znalezionu elemntu funkcja aktywuje funckje edit\+\_\+element na wybranym elemencie listy. po zakonczeniu funckja zwraca\textbackslash{} zedytowana lsite
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & struktura list\+\_\+pointers okreslajaca lsite z ktora uzytkownik chce zapisac \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers struktura list\+\_\+pointers okreslajaa lsite z zedytowanymi elementami 
+\end{DoxyReturn}
+\mbox{\Hypertarget{user__interface_8c_a9ff867bc6f9209f37a9f8f18de63ba90}\label{user__interface_8c_a9ff867bc6f9209f37a9f8f18de63ba90}} 
+\index{user\_interface.c@{user\_interface.c}!opening\_book@{opening\_book}}
+\index{opening\_book@{opening\_book}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{opening\_book()}{opening\_book()}}
+{\footnotesize\ttfamily void opening\+\_\+book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckja odpowiada za segment menu odpowiadzilany za otawcie ksiazki z pliku 
+
+funckja wyswirtla uztkonkowi liste ksiazek dostepnych w dedykowanym folderze a nastepnie pozwala uztykowniowi numer pliku ktory chce otworzyc\textquotesingle{} nastpenie na podstawie wybranego numeru ładuje plik do nowej listy i przecchodzi z ta lista do interefjsu zarzadzania \mbox{\hyperlink{user__interface_8c_a502049a74b1c4dfc08953ca9639dfc52}{phone\+\_\+book\+\_\+manage()}} \mbox{\Hypertarget{user__interface_8c_a502049a74b1c4dfc08953ca9639dfc52}\label{user__interface_8c_a502049a74b1c4dfc08953ca9639dfc52}} 
+\index{user\_interface.c@{user\_interface.c}!phone\_book\_manage@{phone\_book\_manage}}
+\index{phone\_book\_manage@{phone\_book\_manage}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{phone\_book\_manage()}{phone\_book\_manage()}}
+{\footnotesize\ttfamily void phone\+\_\+book\+\_\+manage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funkcja genrujaca interfejs umozliwajacy wybraniae opracji na ksiazce telefonicznej 
+
+funckja wyswietal uzytkonikowi wybor i w zalenzosci od wyboru funckja moze pszejsc do funkcji intefejsu\+: save\+\_\+phone\+\_\+book, search\+\_\+phone\+\_\+book sort\+\_\+phone\+\_\+book, edit\+\_\+phone\+\_\+list, delete\+\_\+element, add\+\_\+new\+\_\+element. po zakonczeniu pracy lista funkcja zwalnia pamiec zajmowana przez liste
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers okreslajaca lsite ktora uzytnik ma poddac edycji \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{user__interface_8c_a8bffcf30642724864a267ae29fa11bd6}\label{user__interface_8c_a8bffcf30642724864a267ae29fa11bd6}} 
+\index{user\_interface.c@{user\_interface.c}!save\_phone\_book@{save\_phone\_book}}
+\index{save\_phone\_book@{save\_phone\_book}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{save\_phone\_book()}{save\_phone\_book()}}
+{\footnotesize\ttfamily void save\+\_\+phone\+\_\+book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funkcja genrujaca interefjs umozliwajacy zapisanie lsity do pliku 
+
+na poczatku funkcja pytanie sie uzytkownika o podanue caigu znakow okreslajacego nzawe pliku pod jaka ma byc zapsiany a na stepnie zapisuje ta lsite pod ta nazwe z uzyciem funckji \mbox{\hyperlink{file__manage_8c_a05e91a23881226c31872a5f29d8df505}{save()}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & struktura list\+\_\+pointers okreslajaca lsite z ktora uzytkownik chce zapisac \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{user__interface_8c_a6b9af5782749ff73f646dadddc0c9813}\label{user__interface_8c_a6b9af5782749ff73f646dadddc0c9813}} 
+\index{user\_interface.c@{user\_interface.c}!search\_phone\_book@{search\_phone\_book}}
+\index{search\_phone\_book@{search\_phone\_book}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{search\_phone\_book()}{search\_phone\_book()}}
+{\footnotesize\ttfamily void search\+\_\+phone\+\_\+book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funkcja genuruajca intrefjs wyboru elemtów do pszeszukania 
+
+funkcja ta na poacztku wysiwtala opcje wyboru od 0 do 7 i pobiera od uztykowniak wartsoc wyboru w zaleznoci od wyboru funkjca poźniej przechodzi do do funkcji searching z odpwdnio wybrana fucnkje \char`\"{}is\+\_\+searching\+\_\+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers okreslajaca lsite która uzytkonik pszesuzkuje \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{user__interface_8c_a02c59ab7005e2819a32cc3cb46fc76e6}\label{user__interface_8c_a02c59ab7005e2819a32cc3cb46fc76e6}} 
+\index{user\_interface.c@{user\_interface.c}!searching@{searching}}
+\index{searching@{searching}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{searching()}{searching()}}
+{\footnotesize\ttfamily void searching (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{int($\ast$)(char\mbox{[}30\mbox{]})}]{search\+\_\+option }\end{DoxyParamCaption})}
+
+
+
+funckja odpowada za interferjsc pozwalajcay pszeszukac liste 
+
+funckja wpiew w poroszi uzytkownika o podanie ciagu znakow wedlug ktorej ma zostac pszeszukana lsita a nastepnie tworzy lsite resultatow z uzyciem tego caigu znakow oraz funkcji podanej jako arugmnt funkji okreslajaca wedlug ktoergo elemntu jest pszeszukwiane
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers okreslajaca lsite która uzytkonik pszesuzkuje \\
+\hline
+{\em search\+\_\+option} & -\/ wskaxnik na funkcje okresljaca wedlug ktoego elemtu kontaktu bedzie pszeszukiwanr mozna wybrac\+: is\+\_\+search\+\_\+city, is\+\_\+search\+\_\+name, is\+\_\+search\+\_\+number, is\+\_\+search\+\_\+phone\+\_\+number, is\+\_\+search\+\_\+postal\+\_\+code, is\+\_\+search\+\_\+street, is\+\_\+search\+\_\+surname \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{user__interface_8c_a0f51e0cdb1971181485ede7b06f59822}\label{user__interface_8c_a0f51e0cdb1971181485ede7b06f59822}} 
+\index{user\_interface.c@{user\_interface.c}!sort\_phone\_book@{sort\_phone\_book}}
+\index{sort\_phone\_book@{sort\_phone\_book}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{sort\_phone\_book()}{sort\_phone\_book()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} sort\+\_\+phone\+\_\+book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+
+
+
+funckja genruje interefjs umozliwajacy posortowanie listy 
+
+funckja na poczatku wysiwrtla uztkoniwi opcje wybriu wedlug ktorego elemtu chce uzytkonik posrotwac liste w zaleznosci od wyboru uzytkniak urchamia sie funckja merge\+\_\+sort ze wskaźnikiem na na funckje \char`\"{}$\ast$$\ast$$\ast$$\ast$\+\_\+cmp\char`\"{} na koniec zwraa posrotwana lsite do głownego programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers okreslajaca lsite która uzytkonik che posrotwac \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ struktura list\+\_\+pointers okreslajaca posortownaa lsite w zaleznosci od wyboru uzytkownika 
+\end{DoxyReturn}
+\mbox{\Hypertarget{user__interface_8c_a948657c2d00c8465e429b5b697e92744}\label{user__interface_8c_a948657c2d00c8465e429b5b697e92744}} 
+\index{user\_interface.c@{user\_interface.c}!start\_ui@{start\_ui}}
+\index{start\_ui@{start\_ui}!user\_interface.c@{user\_interface.c}}
+\doxysubsubsection{\texorpdfstring{start\_ui()}{start\_ui()}}
+{\footnotesize\ttfamily void start\+\_\+ui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckja rozpoczyna konsolowy interefejsc użykownika 
+
+funckja daje uztkonikw wybór liczby od 0-\/2, 0 pozwala na wyjscie z programu, 1 przechodzi do funkcji odpowadizlnej za towrzenie nowej listy a 2 odpowiada za otwracie ksiażki z pliku 

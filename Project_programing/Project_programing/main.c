@@ -1,10 +1,41 @@
+/*! \mainpage tets
+ *
+ * \section test2
+ *
+ * test3
+ *
+ * \section tset3
+ *
+ * \subsection test4
+ *
+ * 
+ */
+
+/**
+ * @file main.c
+ * @author your name (you@domain.com)
+ * @brief plik ten zaweira funkcje main aktywujaca głowny program
+ * @version 0.1
+ * @date 2022-03-24
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+
+
+
 #include <stdio.h>
 #include "phone_book.h"
 
 //halo halo
 //zmiana
 //zmiana2
-
+/**
+ * @brief funkjca main aaktyujaca glowne dzialanie programu
+ * 
+ * @return int 
+ */
 int main()
 {
 	system("CHCP 1250 >NUL");

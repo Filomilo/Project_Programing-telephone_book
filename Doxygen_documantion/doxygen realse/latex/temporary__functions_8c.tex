@@ -1,0 +1,116 @@
+\hypertarget{temporary__functions_8c}{}\doxysection{D\+:/gogle drive/studia/\+Semestr 2/\+Podstawy programowania 2/\+Projekt -\/ Podstawy programowania 2/projekt/\+Project\+\_\+\+Programing-\/telephone\+\_\+book/\+Project\+\_\+programing/\+Project\+\_\+programing/temporary\+\_\+functions.c File Reference}
+\label{temporary__functions_8c}\index{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/temporary\_functions.c@{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/temporary\_functions.c}}
+
+
+zbiór funkcji tymczasowych wykorzystywancyh do poprawngo działania programu  
+
+
+{\ttfamily \#include \char`\"{}phone\+\_\+book.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} \mbox{\hyperlink{temporary__functions_8c_a22e985f14e1f15ee4abc3c5ae97631d5}{generate\+\_\+rand\+\_\+contact}} (int seed)
+\begin{DoxyCompactList}\small\item\em funkjca genruje loswy wpis konaktu na podstawie podanego ziarna losowaia \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{temporary__functions_8c_aa51908cd178f403a3a4b2a4dc2aee2ac}{genrating\+\_\+contacts\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em funkcja testująca funckje generowanie losowego kontkatu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{temporary__functions_8c_a127692384c2abb9eade2ae8350b13283}{list\+\_\+contact\+\_\+test\+\_\+sort}} ()
+\begin{DoxyCompactList}\small\item\em funckcja pozwala na przetesotwanie funkcji sortujących \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{temporary__functions_8c_a4e01c796058e58a96b8003248b43dc96}{list\+\_\+contact\+\_\+test\+\_\+search}} ()
+\begin{DoxyCompactList}\small\item\em funkcja pozwala na przetestowanie funkcji pszeszukiwania listy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{temporary__functions_8c_a723d3aac8b6795c541b6014e28cb7907}{list\+\_\+file\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em funckja pozwala na przetestowanie funkcji odczyytu i zapisu list do pliku \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{temporary__functions_8c_a6b7c89dcbddf237cbc4b04fa39e8ac7c}{list\+\_\+id\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em funkcja ta pozwala na prztestowanie generowania unikatowego id \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+zbiór funkcji tymczasowych wykorzystywancyh do poprawngo działania programu 
+
+\begin{DoxyAuthor}{Author}
+your name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2022-\/03-\/24
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{temporary__functions_8c_a22e985f14e1f15ee4abc3c5ae97631d5}\label{temporary__functions_8c_a22e985f14e1f15ee4abc3c5ae97631d5}} 
+\index{temporary\_functions.c@{temporary\_functions.c}!generate\_rand\_contact@{generate\_rand\_contact}}
+\index{generate\_rand\_contact@{generate\_rand\_contact}!temporary\_functions.c@{temporary\_functions.c}}
+\doxysubsubsection{\texorpdfstring{generate\_rand\_contact()}{generate\_rand\_contact()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_ac019ecab71fc1390b6baba970809ce10}{contact\+\_\+type}} generate\+\_\+rand\+\_\+contact (\begin{DoxyParamCaption}\item[{int}]{seed }\end{DoxyParamCaption})}
+
+
+
+funkjca genruje loswy wpis konaktu na podstawie podanego ziarna losowaia 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & -\/ wartość ziarana na podstwie którego będzie generwoany kontakt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+contact\+\_\+type -\/ zwraca losowow wygenrerowany kontakt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{temporary__functions_8c_aa51908cd178f403a3a4b2a4dc2aee2ac}\label{temporary__functions_8c_aa51908cd178f403a3a4b2a4dc2aee2ac}} 
+\index{temporary\_functions.c@{temporary\_functions.c}!genrating\_contacts\_test@{genrating\_contacts\_test}}
+\index{genrating\_contacts\_test@{genrating\_contacts\_test}!temporary\_functions.c@{temporary\_functions.c}}
+\doxysubsubsection{\texorpdfstring{genrating\_contacts\_test()}{genrating\_contacts\_test()}}
+{\footnotesize\ttfamily void genrating\+\_\+contacts\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funkcja testująca funckje generowanie losowego kontkatu 
+
+funkcje genruje i wypisuje 200 przykładowo losowo wygenerowanych kontaktków \mbox{\Hypertarget{temporary__functions_8c_a4e01c796058e58a96b8003248b43dc96}\label{temporary__functions_8c_a4e01c796058e58a96b8003248b43dc96}} 
+\index{temporary\_functions.c@{temporary\_functions.c}!list\_contact\_test\_search@{list\_contact\_test\_search}}
+\index{list\_contact\_test\_search@{list\_contact\_test\_search}!temporary\_functions.c@{temporary\_functions.c}}
+\doxysubsubsection{\texorpdfstring{list\_contact\_test\_search()}{list\_contact\_test\_search()}}
+{\footnotesize\ttfamily void list\+\_\+contact\+\_\+test\+\_\+search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funkcja pozwala na przetestowanie funkcji pszeszukiwania listy 
+
+funkcja na poczatku towrzy 1000 elemtową losową lsite kontaktów następnie wykonuje operacje sortowania na tej liście wedlug parametrów podanych bezpośrednio w kodzie \mbox{\Hypertarget{temporary__functions_8c_a127692384c2abb9eade2ae8350b13283}\label{temporary__functions_8c_a127692384c2abb9eade2ae8350b13283}} 
+\index{temporary\_functions.c@{temporary\_functions.c}!list\_contact\_test\_sort@{list\_contact\_test\_sort}}
+\index{list\_contact\_test\_sort@{list\_contact\_test\_sort}!temporary\_functions.c@{temporary\_functions.c}}
+\doxysubsubsection{\texorpdfstring{list\_contact\_test\_sort()}{list\_contact\_test\_sort()}}
+{\footnotesize\ttfamily void list\+\_\+contact\+\_\+test\+\_\+sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckcja pozwala na przetesotwanie funkcji sortujących 
+
+funkcka ta najpierw pozwala wygenerowac liste kontaktów a następnie sortuję tą liste według wartości id i ja wypisuje \mbox{\Hypertarget{temporary__functions_8c_a723d3aac8b6795c541b6014e28cb7907}\label{temporary__functions_8c_a723d3aac8b6795c541b6014e28cb7907}} 
+\index{temporary\_functions.c@{temporary\_functions.c}!list\_file\_test@{list\_file\_test}}
+\index{list\_file\_test@{list\_file\_test}!temporary\_functions.c@{temporary\_functions.c}}
+\doxysubsubsection{\texorpdfstring{list\_file\_test()}{list\_file\_test()}}
+{\footnotesize\ttfamily void list\+\_\+file\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funckja pozwala na przetestowanie funkcji odczyytu i zapisu list do pliku 
+
+funkcja na początek pozwala stworzyć liste złożona z 10 elemntów a na steonie ja wypisuje po czym zapiuje utworzona liste do pliku o nazwie \char`\"{}test\char`\"{} i ponownie załaduwje tą liste z pliku i wypisuje ją na akrenie \mbox{\Hypertarget{temporary__functions_8c_a6b7c89dcbddf237cbc4b04fa39e8ac7c}\label{temporary__functions_8c_a6b7c89dcbddf237cbc4b04fa39e8ac7c}} 
+\index{temporary\_functions.c@{temporary\_functions.c}!list\_id\_test@{list\_id\_test}}
+\index{list\_id\_test@{list\_id\_test}!temporary\_functions.c@{temporary\_functions.c}}
+\doxysubsubsection{\texorpdfstring{list\_id\_test()}{list\_id\_test()}}
+{\footnotesize\ttfamily void list\+\_\+id\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funkcja ta pozwala na prztestowanie generowania unikatowego id 
+
+funkjca na początek genruje 10 elemntową lsite a następnie usuwa z listy elemnty o id 3,1,5,7,8 nastepnie do akiej talbicy dodaje koljen 10 elemntó i przy każym doadniu wyświetla stan listy aby możńa było zaobserować czy genwrowane id jest unikatowe 

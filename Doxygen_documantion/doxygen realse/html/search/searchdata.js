@@ -6,7 +6,7 @@ var indexSectionsWithContent =
   3: "acdefgilmnops",
   4: "acdhinpst",
   5: "acl",
-  6: "t"
+  6: "p"
 };
 
 var indexSectionNames =

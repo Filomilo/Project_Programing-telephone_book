@@ -1,6 +1,6 @@
 /**
  * @file temporary_functions.c
- * @author your name (you@domain.com)
+ * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
  * @brief zbiór funkcji tymczasowych wykorzystywancyh do poprawngo działania programu
  * @version 0.1
  * @date 2022-03-24
@@ -10,9 +10,6 @@
  */
 
 
-//tynmczasowe funkcje wykorzystywane do sprawdzeniea poprawno��i dzia�ania programu
-
-
 #include "phone_book.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,7 +17,6 @@
 #include <string.h>
 
 
-//funckcje generuj�ca losowy kontakt z okre�lengo wcze�niej zakresu w zale�nos�i od podanego ziarna losowania
 
 /**
  * @brief funkjca genruje loswy wpis konaktu na podstawie podanego ziarna losowaia

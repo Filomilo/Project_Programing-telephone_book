@@ -1,6 +1,6 @@
 /**
  * @file phone_book.h
- * @author your name (you@domain.com)
+ * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
  * @brief plik nagłowkowki bibliteki łączacej wszystkie pliki programu
  * @version 0.1
  * @date 2022-03-24

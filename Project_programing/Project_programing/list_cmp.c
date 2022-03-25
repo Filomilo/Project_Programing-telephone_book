@@ -1,6 +1,6 @@
 /**
  * @file list_cmp.c
- * @author your name (you@domain.com)
+ * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
  * @brief plik ten zawiera funckjde porónujace ze soba dwa elemnty listy
  * @version 0.1
  * @date 2022-03-24
@@ -10,16 +10,12 @@
  */
 
 
-//funkcje por�nuj��e ze sob� dwa wpsiy w ks�z�� teleofniczej wykorzystywane w funkcji sortuj�cej
 
 #include "phone_book.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-
-//funkcja por�wnuej ze sob� dwa wpisy w ksi���e telefoniczej w zale�no�ci od warto�ci id
-// 1 - dla a>B		0 - dla a=B			-1 - dla a<B
 
 /**
  * @brief funkcja porównuje ze sobą id dwóch elemtów listy
@@ -46,9 +42,6 @@ int id_cmp(list_node* a, list_node* b)
 
 }
 
-
-//funkcja por�wnuej ze sob� dwa wpisy w ksi���e telefoniczej w zale�no�ci od nazwiska i imienia
-// 1 - dla a>B		0 - dla a=B			-1 - dla a<B
 
 
 
@@ -78,8 +71,6 @@ int name_cmp(list_node* a, list_node* b)
 }
 
 
-//funkcja por�wnuej ze sob� dwa wpisy w ksi���e telefoniczej w zale�no�ci numeru telefonu
-// 1 - dla a>B		0 - dla a=B			-1 - dla a<B
 
 /**
  * @brief funkcja porównuje ze sobą numer telefonu dwóch elemtów listy
@@ -100,8 +91,6 @@ int phone_cmp(list_node* a, list_node* b)
 }
 
 
-//funkcja por�wnuej ze sob� dwa wpisy w ksi���e telefoniczej w zale�no�ci nazwy miasta
-// 1 - dla a>B		0 - dla a=B			-1 - dla a<B
 
 
 
@@ -112,8 +101,6 @@ int city_cmp(list_node* a, list_node* b)
 }
 
 
-//funkcja por�wnuej ze sob� dwa wpisy w ksi���e telefoniczej w zale�no�ci nazwy ulicy
-// 1 - dla a>B		0 - dla a=B			-1 - dla a<B
 
 
 
@@ -135,11 +122,6 @@ int street_cmp(list_node* a, list_node* b)
 	return strcmp(a->data.adress.street, b->data.adress.street);
 }
 
-
-//funkcja por�wnuej ze sob� dwa wpisy w ksi���e telefoniczej w zale�no�ci od kodu pocztowego
-// 1 - dla a>B		0 - dla a=B			-1 - dla a<B
-
-
 /**
  * @brief funkcja porównuje ze sobą kod pocztowy dwóch elemtów listy
  * 
@@ -158,9 +140,6 @@ int postal_code_cmp(list_node* a, list_node* b)
 	return strcmp(a->data.adress.postal_code, b->data.adress.postal_code);
 }
 
-
-//funkcja por�wnuej ze sob� dwa wpisy w ksi���e telefoniczej w zale�no�ci od numeru telefonu
-// 1 - dla a>B		0 - dla a=B			-1 - dla a<B
 
 
 /**

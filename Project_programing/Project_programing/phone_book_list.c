@@ -1,6 +1,6 @@
 /**
  * @file phone_book_list.c
- * @author your name (you@domain.com)
+ * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
  * @brief plik zawierajace funkjce umożliwajaće twrzenie i zarzadzanie lsita dynamiczną
  * @version 0.1
  * @date 2022-03-24
@@ -13,10 +13,6 @@
 #include "phone_book.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-
-
-//funkcja incjuj�c� pust� liste czyli nadaje .head i .tail wartos�i NULL,
 
 
 /**
@@ -36,7 +32,6 @@ list_pointers list_init()
 
 
 
-//funcja dodaj�ca elemnt na pocz�tku listy (za head),
 /**
  * @brief funkja doaje do listy elemnt od storny głowy
  *	
@@ -81,7 +76,7 @@ list_pointers list_add_head(list_pointers list, contact_type data)
 
 
 
-//funcja dodaj�ca elemnt na ko�cu listy(przed tail)
+
 /**
  * @brief funkja doaje do listy elemnt od storny ogona
  *	
@@ -126,7 +121,7 @@ list_pointers list_add_tail(list_pointers list, contact_type data)
 
 
 
-//funkcja znajduj�ca elemnt o danym id we wprowadzonej lis�ie
+
 /**
  * @brief funkcja znajduje elemnt o podanym id
  * 
@@ -152,7 +147,6 @@ list_node* find_node(list_pointers list, int searched_value)
 
 
 
-//funcja usuwaj�ca ostatni elemnt listy(tail), 
 
 
 
@@ -192,8 +186,6 @@ list_pointers list_remove_tail(list_pointers list)
 }
 
 
-
-//funcja usuwaj�ca pierwszy elemnt listy(head)
 
 /**
  * @brief funkcja usuwa początkowy elemnt (head) z listy dynamicznje
@@ -236,7 +228,6 @@ list_pointers list_remove_head(list_pointers list)
 
 
 
-//funkcja usuwajaca wybrany element listy
 /**
  * @brief funkcja usuwa wybrany elemnt z listy dynamicznej
  * 
@@ -288,9 +279,6 @@ list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 
 
 
-//funkcja zminiaj�ca dane wybranego na dane wprowadzone jako argumeny
-
-
 
 /**
  * @brief funckcja podmienia wartośc wybranego elemntu na wartosć podaną w argumencie
@@ -314,7 +302,7 @@ void list_edit_node(list_node* node_to_edit, contact_type data)
 
 
 
-//funckja wy�wietlj�ca liste pocz�wszy od head id�� do tail
+
 /**
  * @brief funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony głowy
  *
@@ -343,8 +331,6 @@ void print_list_head(list_pointers list)
 }
 
 
-
-//funckja wy�wietlj�ca liste pocz�wszy od tail id�c do head
 
 /**
  * @brief funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony ogona
@@ -375,7 +361,6 @@ void print_list_tail(list_pointers list)
 
 
 
-//funkcja znajudj�ca �rodek listy wykorzystywana przy sortowaniu
 
 /**
  * @brief funckcja ta znajduje i zwraca środkowy elemnt listy 
@@ -413,7 +398,6 @@ list_node* find_middle_node(list_pointers list)
 }
 
 
-//funkcja usuwajaca liste z pami�ci
 /**
  * @brief funckja usuwa calą lsite z pamięci
  * 
@@ -434,7 +418,6 @@ list_pointers free_list(list_pointers list)
 
 
 
-//funkcja �acz�ca ze sob� dwie listy sortuj�c je
 /**
  * @brief funckja wykorzystwana przez funckje merge_sort do scalenia dwóch posortowanych lisr 
  * 
@@ -491,7 +474,6 @@ list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(contact_
 
 
 
-// funkcja wykorzstyj�ca spos�b merge sort do posortownaia listy
 /**
  * @brief funckja sortuje liste dynamiczna według elemntu podanago jako wskaźńik funkcji
  *

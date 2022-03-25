@@ -1,6 +1,6 @@
 /**
  * @file file_manage.c
- * @author your name (you@domain.com)
+ * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
  * @brief plik ten zawiera funkcje odpowiedzilne za zarzadzenie plikami ksiazki telefonicznej
  * @version 0.1
  * @date 2022-03-24
@@ -107,7 +107,6 @@ void save(list_pointers list, char file_name[30])
 
 
 	fclose(file);
-	getchar();
 	getchar();
 
 }

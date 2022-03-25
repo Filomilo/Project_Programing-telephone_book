@@ -1,6 +1,6 @@
 /**
  * @file phone_book.c
- * @author your name (you@domain.com)
+ * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
  * @brief plik zaweira funkjce do oblsugi elemntow listy
  * @version 0.1
  * @date 2022-03-24

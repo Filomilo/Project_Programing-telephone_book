@@ -12,5 +12,6 @@ var searchData=
   ['prev_70',['prev',['../structlist__node__struct.html#a15d9cb1c96e617da04c4171d9410e106',1,'list_node_struct']]],
   ['print_5fcontact_71',['print_contact',['../phone__book_8c.html#acaa0c6091546098d3178389e9b64a1b4',1,'print_contact(contact_type contact):&#160;phone_book.c'],['../phone__book_8h.html#acaa0c6091546098d3178389e9b64a1b4',1,'print_contact(contact_type contact):&#160;phone_book.c']]],
   ['print_5flist_5fhead_72',['print_list_head',['../phone__book_8h.html#a15be9e9ccacc4aea366819f9045fd37b',1,'print_list_head(list_pointers list):&#160;phone_book_list.c'],['../phone__book__list_8c.html#a15be9e9ccacc4aea366819f9045fd37b',1,'print_list_head(list_pointers list):&#160;phone_book_list.c']]],
-  ['print_5flist_5ftail_73',['print_list_tail',['../phone__book_8h.html#a1be4155bd4debdb679084ac51f6e44d0',1,'print_list_tail(list_pointers list):&#160;phone_book_list.c'],['../phone__book__list_8c.html#a1be4155bd4debdb679084ac51f6e44d0',1,'print_list_tail(list_pointers list):&#160;phone_book_list.c']]]
+  ['print_5flist_5ftail_73',['print_list_tail',['../phone__book_8h.html#a1be4155bd4debdb679084ac51f6e44d0',1,'print_list_tail(list_pointers list):&#160;phone_book_list.c'],['../phone__book__list_8c.html#a1be4155bd4debdb679084ac51f6e44d0',1,'print_list_tail(list_pointers list):&#160;phone_book_list.c']]],
+  ['projekt_20podstawy_20programowania_202_20_2d_20książka_20telefoniczna_74',['Projekt podstawy programowania 2 - Książka telefoniczna',['../index.html',1,'']]]
 ];

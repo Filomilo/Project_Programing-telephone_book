@@ -1,6 +1,6 @@
 /**
  * @file user_interface.c
- * @author your name (you@domain.com)
+ * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
  * @brief plik zawiera funkcje odpowidzeialne konsolowy interfejs użytkownika 
  * @version 0.1
  * @date 2022-03-24
@@ -198,7 +198,7 @@ list_pointers delete_element(list_pointers list)
 	do
 	{
 		system("cls");
-		print_list_head(list);
+		print_list_tail(list);
 		printf("what is the id of an element  you'd like to remove: \n\n");
 		scanf_s("%d", &id, 1);
 		list_node* element_to_del = find_node(list, id);
@@ -452,7 +452,7 @@ void start_ui()
 	int choice=0;
 	do{
 		system("cls");
-		printf("\nwhat would you like to do: \n\n 2- open phone_book \n1- create_new\n0- close software:\n\n ");
+		printf("\nwhat would you like to do: \n\n2- open phone_book \n1- create_new\n0- close software:\n\n ");
 		scanf_s("%d", &choice, 1);
 		switch (choice)
 		{

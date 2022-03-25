@@ -14,6 +14,7 @@
 #define SCREEN_W 1280
 #define ROW_H 40
 #define UPPER_H 50
+#define ELEMENT_H 30
 
 #define ID_W 50
 #define NAME_W 250
@@ -23,7 +24,7 @@
 #define CITY_W 250
 #define PHONE_W (SCREEN_W-CITY_W-POSTAL_W-NR_W-STREET_W-NAME_W-NAME_W-ID_W)
 
-int upper_menu(ALLEGRO_DISPLAY* display, ALLEGRO_MOUSE_STATE mouse)
+int upper_menu_cliciing(ALLEGRO_DISPLAY* display, ALLEGRO_MOUSE_STATE mouse)
 {
 	 int buttoon_state=0;
 	ALLEGRO_FONT* font = al_load_ttf_font("arial.ttf", 25, 0);
@@ -185,30 +186,131 @@ int upper_menu(ALLEGRO_DISPLAY* display, ALLEGRO_MOUSE_STATE mouse)
 		return buttoon_state;
 }
 
+int upper_menu(ALLEGRO_DISPLAY* display, ALLEGRO_MOUSE_STATE mouse)
+{
+	static int button = 0;
+	static int button_prev = 0;
+	button = upper_menu_cliciing(display, mouse);
+	int ret = 0;
+	ret = 0;
+	if (button == 0 && button_prev!=button)
+	{
+		ret = button_prev;
+	}
+
+	button_prev = button;
+	return ret;
+}
+
+ALLEGRO_BITMAP* genrarate_bitamp_list(list_pointers list)
+{
+	int counter = count_elements(list);
+	ALLEGRO_BITMAP* bitmap;
+	bitmap = al_create_bitmap(SCREEN_W, ROW_H * counter);
+	al_set_target_bitmap(bitmap);
+	ALLEGRO_FONT* font = al_load_ttf_font("arial.ttf", 15, 0);
+	ALLEGRO_COLOR white = al_map_rgb(0, 255, 255);
+	ALLEGRO_COLOR highlight_color = al_map_rgb(255, 0, 0);
+	int Theight = al_get_font_line_height(font);
+	int line_width = 2;
+	char txt[40] = "";
+	for (int i = 0; i < counter-1; i++)
+	{
+		//ID
+		int prev_width_block = 0;
+		int width_block = ID_W;
+		al_draw_rectangle(prev_width_block, 0 + i * ELEMENT_H, width_block + prev_width_block, ELEMENT_H + i * ELEMENT_H, white, line_width);
+		//strncpy_s(txt, 40, list.head->data, 40);
+		sprintf_s(txt, 40, "%d", list.head->data.id);
+		float Twidth = al_get_text_width(font, txt);
+		al_draw_text(font, white, width_block / 2 - Twidth / 2 + prev_width_block, ELEMENT_H / 2 - Theight / 3 + i * ELEMENT_H, 0, txt);
+
+
+		//NAME
+		prev_width_block += width_block;
+		width_block = NAME_W;
+		al_draw_rectangle(prev_width_block, 0 + i * ELEMENT_H, width_block + prev_width_block, ELEMENT_H + i * ELEMENT_H, white, line_width);
+		strncpy_s(txt, 40, list.head->data.name, 40);
+		Twidth = al_get_text_width(font, txt);
+		al_draw_text(font, white, width_block / 2 + prev_width_block - Twidth / 2, ELEMENT_H / 2 - Theight / 3 + i * ELEMENT_H, 0, txt);
+
+
+
+		//SURNAME
+		prev_width_block += width_block;
+		width_block = NAME_W;
+		al_draw_rectangle(prev_width_block, 0 + i * ELEMENT_H, width_block + prev_width_block, ELEMENT_H + i * ELEMENT_H, white, line_width);
+		strncpy_s(txt, 40, list.head->data.surname, 40);
+		Twidth = al_get_text_width(font, txt);
+		al_draw_text(font, white, width_block / 2 + prev_width_block - Twidth / 2, ELEMENT_H / 2 - Theight / 3 + i * ELEMENT_H, 0, txt);
+
+
+
+		//STREET
+		prev_width_block += width_block;
+		width_block = STREET_W;
+		al_draw_rectangle(prev_width_block, 0 + i * ELEMENT_H, width_block + prev_width_block, ELEMENT_H + i * ELEMENT_H, white, line_width);
+		strncpy_s(txt, 40, list.head->data.adress.street, 40);
+		Twidth = al_get_text_width(font, txt);
+		al_draw_text(font, white, width_block / 2 + prev_width_block - Twidth / 2, ELEMENT_H / 2 - Theight / 3 + i * ELEMENT_H, 0, txt);
+
+
+
+		//HOUSE NUMBER
+		prev_width_block += width_block;
+		width_block = NR_W;
+		al_draw_rectangle(prev_width_block, 0 + i * ELEMENT_H, width_block + prev_width_block, ELEMENT_H + i * ELEMENT_H, white, line_width);
+		sprintf_s(txt, 40, "%d", list.head->data.adress.number);
+		Twidth = al_get_text_width(font, txt);
+		al_draw_text(font, white, width_block / 2 + prev_width_block - Twidth / 2, ELEMENT_H / 2 - Theight / 3 + i * ELEMENT_H, 0, txt);
+
+		//POSTAL CODE
+		prev_width_block += width_block;
+		width_block = POSTAL_W;
+		al_draw_rectangle(prev_width_block, 0 + i * ELEMENT_H, width_block + prev_width_block, ELEMENT_H + i * ELEMENT_H, white, line_width);
+		strncpy_s(txt, 40, list.head->data.adress.postal_code, 40);
+		Twidth = al_get_text_width(font, txt);
+		al_draw_text(font, white, width_block / 2 + prev_width_block - Twidth / 2, ELEMENT_H / 2 - Theight / 3 + i * ELEMENT_H, 0, txt);
+
+
+
+		//CITY
+		prev_width_block += width_block;
+		width_block = CITY_W;
+		al_draw_rectangle(prev_width_block, 0 + i * ELEMENT_H, width_block + prev_width_block, ELEMENT_H + i * ELEMENT_H, white, line_width);
+		strncpy_s(txt, 40, list.head->data.adress.city, 40);
+		Twidth = al_get_text_width(font, txt);
+		al_draw_text(font, white, width_block / 2 + prev_width_block - Twidth / 2, ELEMENT_H / 2 - Theight / 3 + i * ELEMENT_H, 0, txt);
+
+
+
+		//NUMer telefonu
+		prev_width_block += width_block;
+		width_block = PHONE_W;
+		al_draw_rectangle(prev_width_block, 0+i* ELEMENT_H, width_block + prev_width_block, ELEMENT_H+i* ELEMENT_H, white, line_width);
+		strncpy_s(txt, 40, list.head->data.phone_number, 40);
+		Twidth = al_get_text_width(font, txt);
+		al_draw_text(font, white, width_block / 2 + prev_width_block - Twidth / 2, ELEMENT_H / 3 - Theight / 3 + i * ELEMENT_H, 0, txt);
+
+
+		list.head = list.head->prev;
+	}
+	al_destroy_font(font);
+	
+	return bitmap;
+}
+
 
 
 
 void draw_menu(ALLEGRO_DISPLAY* display, list_pointers list)
 {
-	ALLEGRO_FONT *font = al_load_ttf_font("arial.ttf", 20,0);
+	ALLEGRO_FONT* font = al_load_ttf_font("arial.ttf", 20, 0);
 	ALLEGRO_COLOR white = al_map_rgb(255, 255, 255);
-	int counter = count_elements(list);
-	printf("ELEMNetTS: %d", counter);
+
 	ALLEGRO_BITMAP* bitmap;
-	bitmap = al_create_bitmap(SCREEN_W, ROW_H*counter);
-	al_set_target_bitmap(bitmap);
-	int font_height = al_get_font_line_height(font);
-
-	int name_block_width= 200;
-	for (int i = 0; i < counter; i++)
-	{
-		al_draw_rectangle(0, 0 + i * ROW_H, 40, ROW_H + i * ROW_H,white ,2);
-		al_draw_rectangle(40, 0 + i * ROW_H, 200, ROW_H + i * ROW_H, white, 2);
-		al_draw_text(font, white, 0, 0 + i * ROW_H+ font_height/2, 0, list.head->data.name);
-
-
-	}
-	al_set_target_backbuffer(display);
+	bitmap = genrarate_bitamp_list(list);
+		al_set_target_backbuffer(display);
 	al_draw_bitmap_region(bitmap, 0, 0, SCREEN_W, SCREEN_H, 0, 80, 0);
 
 	al_flip_display();
@@ -232,10 +334,11 @@ void start_gui()
 	display = al_create_display(SCREEN_W, SCREEN_H);
 
 	list_pointers list;
-	list = load("test");
+	list = load("123");
 	print_list_head(list);
 
-	//draw_menu(display, list);
+	draw_menu(display, list);
+	/*
 	ALLEGRO_MOUSE_STATE mouse;
 	while (1){
 		al_get_mouse_state(&mouse);
@@ -245,7 +348,7 @@ void start_gui()
 	al_clear_to_color(black);
 }
 	getchar();
-
+	*/
 	al_destroy_display(display);
 
 }

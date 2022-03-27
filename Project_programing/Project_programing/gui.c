@@ -24,6 +24,8 @@
 #define CITY_W 250
 #define PHONE_W (SCREEN_W-CITY_W-POSTAL_W-NR_W-STREET_W-NAME_W-NAME_W-ID_W)
 
+#define WHITE al_map_rgb(255,255,255)
+#define RED al_map_rgb(255,0,0)
 int upper_menu_cliciing(ALLEGRO_DISPLAY* display, ALLEGRO_MOUSE_STATE mouse)
 {
 	 int buttoon_state=0;
@@ -330,17 +332,20 @@ void draw_element(list_node* element, int selected)
 	al_draw_textf(font, white, 10, 100, 0, "Nazwisko:");
 	al_draw_text(font, white, 300, 100, 0, element->data.surname);
 
-	al_draw_textf(font, white, 10, 150, 0, "Nr:");
-	al_draw_textf(font, white, 300, 150, 0, "%d", element->data.adress.number);
+	al_draw_textf(font, white, 10, 150, 0, "Ulica:");
+	al_draw_text(font, white, 300, 150, 0, element->data.adress.street);
 
-	al_draw_textf(font, white, 10, 200, 0, "Kod pocztowy:");
-	al_draw_text(font, white, 300, 200, 0, element->data.adress.postal_code);
+	al_draw_textf(font, white, 10, 200, 0, "Nr:");
+	al_draw_textf(font, white, 300, 200, 0, "%d", element->data.adress.number);
 
-	al_draw_textf(font, white, 10, 250, 0, "Miasto:");
-	al_draw_text(font, white, 300, 250, 0, element->data.adress.city);
+	al_draw_textf(font, white, 10, 250, 0, "Kod pocztowy:");
+	al_draw_text(font, white, 300, 250, 0, element->data.adress.postal_code);
 
-	al_draw_textf(font, white, 10, 300, 0, "Numer telefonu:");
-	al_draw_text(font, white, 300, 300, 0, element->data.phone_number);
+	al_draw_textf(font, white, 10, 300, 0, "Miasto:");
+	al_draw_text(font, white, 300, 300, 0, element->data.adress.city);
+
+	al_draw_textf(font, white, 10, 350, 0, "Numer telefonu:");
+	al_draw_text(font, white, 300, 350, 0, element->data.phone_number);
 	
 
 	
@@ -353,22 +358,165 @@ void draw_element(list_node* element, int selected)
 
 }
 
+void write_text(char txt[50], ALLEGRO_EVENT ev)
+{
+	int telement = strlen(txt);
+	if (ev.type == ALLEGRO_EVENT_KEY_DOWN )
+	{
+		printf("%d\n", ev.keyboard.keycode);
+		if (ev.keyboard.keycode < 26 && telement < 29)
+		{
+			txt[telement] = ev.keyboard.keycode + 96;
+			telement += 1;
+			txt[telement] = '\0';
+		}
+		if (ev.keyboard.keycode > 27 && ev.keyboard.keycode < 46 && telement < 29)
+		{
+			txt[telement] = (ev.keyboard.keycode - 27) % 10 + 48;
+			telement += 1;
+			txt[telement] = '\0';
+		}
+		if (ev.keyboard.keycode == ALLEGRO_KEY_BACKSPACE && telement > 0)
+		{
 
-void manage_elemnt(list_node* element)
+			telement -= 1;
+			txt[telement] = '\0';
+		}
+
+
+	}
+}
+
+
+void write_pnum(char txt[50], ALLEGRO_EVENT ev)
+{
+	int telement = strlen(txt);
+	if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
+	{
+		if (ev.keyboard.keycode > 27 && ev.keyboard.keycode < 46 && telement < 10)
+		{
+			txt[telement] = (ev.keyboard.keycode - 27) % 10 + 48;
+			telement += 1;
+			txt[telement] = '\0';
+		}
+		if (ev.keyboard.keycode == ALLEGRO_KEY_BACKSPACE && telement > 0)
+		{
+
+			telement -= 1;
+			txt[telement] = '\0';
+		}
+
+
+	}
+}
+
+
+
+
+
+
+void write_num(char txt[50], ALLEGRO_EVENT ev)
+{
+	int telement = strlen(txt);
+	if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
+	{
+		if (ev.keyboard.keycode > 27 && ev.keyboard.keycode < 46 && telement < 5)
+		{
+			txt[telement] = (ev.keyboard.keycode - 27) % 10 + 48;
+			telement += 1;
+			txt[telement] = '\0';
+		}
+		if (ev.keyboard.keycode == ALLEGRO_KEY_BACKSPACE && telement > 0)
+		{
+
+			telement -= 1;
+			txt[telement] = '\0';
+		}
+
+
+	}
+}
+
+void write_postal_code(char txt[50], ALLEGRO_EVENT ev)
+{
+	int telement = strlen(txt);
+	if (ev.type == ALLEGRO_EVENT_KEY_DOWN)
+	{
+		if (ev.keyboard.keycode > 27 && ev.keyboard.keycode < 46 && telement < 6)
+		{
+			txt[telement] = (ev.keyboard.keycode - 27) % 10 + 48;
+			telement += 1;
+			if (telement == 2)
+			{
+				txt[telement] = '-';
+				telement += 1;
+			}
+			txt[telement] = '\0';
+		}
+		
+		if (ev.keyboard.keycode == ALLEGRO_KEY_BACKSPACE && telement > 0)
+		{
+
+			telement -= 1;
+			txt[telement] = '\0';
+		}
+
+
+	}
+}
+
+
+int down_manage_menu()
+{
+	ALLEGRO_FONT* font = al_load_ttf_font("arial.ttf", 20, 0);
+	int sel = -1;
+	ALLEGRO_MOUSE_STATE mouse;
+	al_get_mouse_state(&mouse);
+	if (mouse.y > SCREEN_H - UPPER_H)
+	{
+		if (mouse.x < SCREEN_W / 2)
+		{
+			sel = 0;
+			al_draw_filled_rectangle(0, SCREEN_H - UPPER_H, SCREEN_W / 2, SCREEN_H, RED);
+		}
+		else
+		{
+			sel = 1;
+			al_draw_filled_rectangle(SCREEN_W / 2, SCREEN_H - UPPER_H, SCREEN_W, SCREEN_H,RED);
+		}
+
+
+	}
+	al_draw_rectangle(0, SCREEN_H - UPPER_H, SCREEN_W / 2, SCREEN_H, WHITE, 2);
+	al_draw_rectangle(SCREEN_W / 2, SCREEN_H - UPPER_H, SCREEN_W , SCREEN_H, WHITE, 2);
+
+	al_draw_textf(font, WHITE, 0, SCREEN_H - 30, 0, "usun");
+	al_draw_textf(font, WHITE, SCREEN_W/2, SCREEN_H - 30, 0, "zakoncz");
+
+	al_destroy_font(font);
+	if (al_mouse_button_down(&mouse, 1))
+		return sel;
+	return -1;
+
+}
+
+
+
+int manage_elemnt(list_node* element)
 {
 
+	al_rest(0.2);
 
-	
 	ALLEGRO_COLOR black = al_map_rgb(0, 0, 0);
 	ALLEGRO_KEYBOARD_STATE key;
-	ALLEGRO_EVENT_QUEUE *event=al_create_event_queue();
+	ALLEGRO_EVENT_QUEUE* event = al_create_event_queue();
 	ALLEGRO_EVENT ev;
 	char txt[50] = "";
-	
+
 	strncpy_s(txt, 30, element->data.name, 30);
 	int sel = 0;
 	int psel = 0;
-
+	int sel_end = -1;
 	int telement = strlen(txt);
 	al_register_event_source(event, al_get_keyboard_event_source());
 	while (1)
@@ -384,7 +532,7 @@ void manage_elemnt(list_node* element)
 		al_get_keyboard_state(&key);
 		if (al_key_down(&key, ALLEGRO_KEY_DOWN) || al_key_down(&key, ALLEGRO_KEY_ENTER))
 		{
-			sel = (sel + 1) % 6;
+			sel = (sel + 1) % 7;
 			al_rest(0.2);
 		}
 		if (al_key_down(&key, ALLEGRO_KEY_UP))
@@ -395,77 +543,48 @@ void manage_elemnt(list_node* element)
 
 
 
-		if (sel != psel)
-			switch (sel)
-			{
-			case 0:   strncpy_s(txt, 30, element->data.name, 30); telement = strlen(txt); break;
-			case 1:  strncpy_s(txt, 30, element->data.surname, 30); telement = strlen(txt); break;
-			case 2:  strncpy_s(txt, 30, element->data.surname, 30); telement = strlen(txt); break;
-			//case 3:  strncpy_s(txt, 7, element->data.adress.postal_code, 7); telement = strlen(txt); break;
-			case 4:  strncpy_s(txt, 20, element->data.adress.city, 20); telement = strlen(txt); break;
-			case 5:  strncpy_s(txt, 30, element->data.phone_number, 10); telement = strlen(txt); break;
-			}
-
-
 
 		al_get_next_event(event, &ev);
-		if (ev.type == ALLEGRO_EVENT_KEY_DOWN && telement<20 && !(sel==2 && telement<=3) && !(sel == 5 && telement <= 10))
-		{
-			printf("%d\n", ev.keyboard.keycode);
-			if (ev.keyboard.keycode < 26)
-			{
-				txt[telement] = ev.keyboard.keycode + 96;
-				telement += 1;
-				txt[telement] = '\0';
-			}
-			if (ev.keyboard.keycode >27 && ev.keyboard.keycode<46)
-			{
-				txt[telement] = (ev.keyboard.keycode  -27)%10+48;
-				telement += 1;
-				txt[telement] = '\0';
-			}
-			if (ev.keyboard.keycode ==ALLEGRO_KEY_BACKSPACE && telement>0)
-			{
-
-				telement -= 1;
-				txt[telement] = '\0';
-			}
-
-			
-			
-			
-		}
 
 
 
+
+
+
+
+
+		//printf("%d", sel);
 
 		switch (sel)
 		{
-		case 0:   strncpy_s(element->data.name, 30, txt, 30);  break;
-		case 1:  strncpy_s(element->data.surname, 30, txt, 30);  break;
-		case 2:  strncpy_s(element->data.surname, 30, txt, 30);  break;
-		case 3:  strncpy_s(element->data.adress.postal_code, 30, txt, 30);  break;
-		case 4:  strncpy_s(element->data.adress.city, 30, txt, 30);  break;
-		case 5:  strncpy_s(element->data.phone_number, 11, txt, 11);  break;
+		case 0: strncpy_s(txt, 30, element->data.name, 30); write_text(txt, ev); strncpy_s(element->data.name, 30, txt, 30); break;
+		case 1: strncpy_s(txt, 30, element->data.surname, 30); write_text(txt, ev); strncpy_s(element->data.surname, 30, txt, 30); break;
+		case 2: strncpy_s(txt, 30, element->data.adress.street, 30); write_text(txt, ev); strncpy_s(element->data.adress.street, 30, txt, 30); break;
+		case 3: sprintf_s(txt,10," % d",element->data.adress.number ); write_num(txt, ev); element->data.adress.number = atoi(txt); break;
+		case 4: strncpy_s(txt, 8, element->data.adress.postal_code, 8); write_postal_code(txt, ev); strncpy_s(element->data.adress.postal_code, 8, txt, 8); break;
+		case 5: strncpy_s(txt, 30, element->data.adress.city, 30); write_text(txt, ev); strncpy_s(element->data.adress.city, 30, txt, 30); break;
+		case 6: strncpy_s(txt, 30, element->data.phone_number, 30); write_pnum(txt, ev); strncpy_s(element->data.phone_number, 30, txt, 30); break;
 		}
-
-
-
-
-
 
 
 
 		
+
+
+
+
+
 		al_clear_to_color(black);
+
+		sel_end=down_manage_menu();
 		draw_element(element, sel);
 		al_flip_display();
 		psel = sel;
-		if (al_key_down(&key, ALLEGRO_KEY_ESCAPE))
+		if (sel_end >= 0)
 			break;
 	}
+	return sel_end;
 }
-
 
 void draw_menu(ALLEGRO_DISPLAY* display, list_pointers list)
 {
@@ -477,6 +596,7 @@ void draw_menu(ALLEGRO_DISPLAY* display, list_pointers list)
 	bitmap = genrarate_bitamp_list(list);
 	al_set_target_backbuffer(display);
 	int sort_choice = 0;
+	int if_delete = 0;
 	int scroll_limit = -al_get_bitmap_height(bitmap) + SCREEN_H * 2 - 2 * UPPER_H;// -2 * SCREEN_H + 2 * UPPER_H;
 	while (1)
 	{
@@ -519,18 +639,24 @@ void draw_menu(ALLEGRO_DISPLAY* display, list_pointers list)
 		int sel_elem = (mouse.y - UPPER_H + -mouse.z * SCROLL_SPEED) / ELEMENT_H;
 		if (mouse.y < UPPER_H)
 			sel_elem = -1;
-		printf("%d\n", sel_elem);
+		
 
 
 
 		//clicing elemnr
 		if (al_mouse_button_down(&mouse, 1))
 		{
-			if (sel_elem >= 0);
-			al_set_target_backbuffer(display);
-			manage_elemnt(select_num_node(list, sel_elem));
-			al_destroy_bitmap(bitmap); list = merge_sort(list, id_cmp); bitmap = genrarate_bitamp_list(list);
-			al_set_mouse_z(0);
+			if (sel_elem >= 0)
+			{
+				al_set_target_backbuffer(display);
+				if_delete = manage_elemnt(select_num_node(list, sel_elem));
+				printf("\nif delet: %d", if_delete);
+				if (if_delete == 0)
+					delte_num_node(&list, sel_elem);
+
+				al_destroy_bitmap(bitmap); bitmap = genrarate_bitamp_list(list);
+				al_set_mouse_z(0);
+			}
 			al_rest(0.2);
 		}
 
@@ -566,8 +692,8 @@ void start_gui()
 	list_pointers list;
 	list = load("123");
 	//print_list_head(list);
-	manage_elemnt(list.tail);
-	//draw_menu(display, list);
+	//manage_elemnt(list.tail);
+	draw_menu(display, list);
 	/*
 	ALLEGRO_MOUSE_STATE mouse;
 	while (1){

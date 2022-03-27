@@ -169,20 +169,20 @@ list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 	else
 	if (node_to_remove==list.tail)
 	{
-		printf("\nremoving tail\n");
+		//printf("\nremoving tail\n");
 		list = list_remove_tail(list);
 		return list;
 	}
 	else
 	if (node_to_remove == list.head)
 	{
-		printf("\nremoving head\n");
+		//printf("\nremoving head\n");
 
 		list = list_remove_head(list);
 		//print_list_head(list);
-		print_contact(list.head->data);
-		printf("\n\n finsihed test");
-		getchar();
+		//print_contact(list.head->data);
+		//printf("\n\n finsihed test");
+		//getchar();
 		return list;
 	}
 	else {
@@ -375,7 +375,7 @@ int count_elements(list_pointers list)
 	}
 	while (list.tail != list.head)
 	{
-		print_contact(list.tail->data);
+		//print_contact(list.tail->data);
 		list.tail = list.tail->next;
 
 		i++;
@@ -383,3 +383,28 @@ int count_elements(list_pointers list)
 	return ++i;
 }
 
+
+
+void delte_num_node(list_pointers* list, int num)
+{
+	list_node* top_tmp = list->head;
+	for (int i = 0; i < num; i++)
+	{
+		top_tmp = top_tmp->prev;
+
+	}
+	*list = list_remove_node(*list, top_tmp);
+
+}
+
+
+list_node* select_num_node(list_pointers list, int num)
+{
+	for (int i = 0; i < num; i++)
+	{
+		list.head = list.head->prev;
+
+	}
+	return list.head;
+
+}

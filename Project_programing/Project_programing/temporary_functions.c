@@ -1,7 +1,7 @@
 /**
  * @file temporary_functions.c
  * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
- * @brief zbiór funkcji tymczasowych wykorzystywancyh do poprawngo działania programu
+ * @brief zbiór funkcji tymczasowych wykorzystywanych do poprawnego działania programu
  * @version 0.1
  * @date 2022-03-24
  * 
@@ -18,12 +18,13 @@
 
 
 
-/**
- * @brief funkjca genruje loswy wpis konaktu na podstawie podanego ziarna losowaia
- * 
- * @param seed - wartość ziarana na podstwie którego będzie generwoany kontakt 
- * @return contact_type - zwraca losowow wygenrerowany kontakt
- */
+ /**
+  * @brief funkcja generuje losowy wpis kontaktu na podstawie podanego ziarna losowania
+  *
+  * @param seed - wartość ziarna na podstawie którego będzie generowany kontakt
+  * @return contact_type - zwraca losowow wygenerowany kontakt
+  */
+
 contact_type generate_rand_contact(int seed)
 {
 	srand(time(0));
@@ -116,11 +117,12 @@ contact_type generate_rand_contact(int seed)
 
 //funkjca generujaca i wy�wietlajaca 200 losowych konkat� wylosowanych funkcj� generate_rand_contact
 /**
- * @brief funkcja testująca funckje generowanie losowego kontkatu
+ * @brief funkcja testująca funkcje generowanie losowego kontaktu
  *
- * funkcje genruje i wypisuje 200 przykładowo losowo wygenerowanych kontaktków
- * 
+ * funkcje generuje i wypisuje 200 przykładowo losowo wygenerowanych kontaktów
+ *
  */
+
 void genrating_contacts_test()
 {
 	srand((int)time(0));
@@ -139,11 +141,12 @@ void genrating_contacts_test()
 
 //funkcja testuj�ca dzia�anie funkcji soryj�cej liste na losowo wygenerowanej li��ie
 /**
- * @brief funckcja pozwala na przetesotwanie funkcji sortujących
+ * @brief funkcja pozwala na przetestowanie funkcji sortujących
  *
- * funkcka ta najpierw pozwala wygenerowac liste kontaktów a następnie sortuję tą liste według wartości id i ja wypisuje
- * 
+ * funkcja ta najpierw pozwala wygenerować listę kontaktów a następnie sortuję tą liste według wartości id i ja wypisuje
+ *
  */
+
 void list_contact_test_sort()
 {
 	srand(time(0));
@@ -169,11 +172,12 @@ void list_contact_test_sort()
 
 
 /**
- * @brief funkcja pozwala na przetestowanie funkcji pszeszukiwania listy
+ * @brief funkcja pozwala na przetestowanie funkcji przeszukiwania listy
  *
- * funkcja na poczatku towrzy 1000 elemtową losową lsite kontaktów następnie wykonuje operacje sortowania na tej liście wedlug parametrów podanych bezpośrednio w kodzie
- * 
+ * funkcja na początku tworzy 1000 elementową losową listę kontaktów następnie wykonuje operacje sortowania na tej liście według parametrów podanych bezpośrednio w kodzie
+ *
  */
+
 void list_contact_test_search()
 {
 	srand(time(0));
@@ -198,11 +202,12 @@ void list_contact_test_search()
 
 
 /**
- * @brief funckja pozwala na przetestowanie funkcji odczyytu i zapisu list do pliku
- * 
- * funkcja na początek pozwala stworzyć liste złożona z 10 elemntów a na steonie ja wypisuje
- * po czym zapiuje utworzona liste do pliku o nazwie "test" i ponownie załaduwje tą liste z pliku i wypisuje ją na akrenie
+ * @brief funkcja pozwala na przetestowanie funkcji odczytu i zapisu list do pliku
+ *
+ * funkcja na początek pozwala stworzyć liste złożona z 10 elementów a na stronie ja wypisuje
+ * po czym zapisuje utworzona listę do pliku o nazwie "test" i ponownie załaduj tą listę z pliku i zapisuje ją na arenie
  */
+
 void list_file_test()
 {
 	srand(time(0));
@@ -227,11 +232,12 @@ void list_file_test()
 
 
 /**
- * @brief funkcja ta pozwala na prztestowanie generowania unikatowego id
- * 
- * funkjca na początek genruje 10 elemntową lsite a następnie usuwa z listy elemnty o id 3,1,5,7,8 
- * nastepnie do akiej talbicy dodaje koljen 10 elemntó i przy każym doadniu wyświetla stan listy aby możńa było zaobserować czy genwrowane id jest unikatowe
+ * @brief funkcja ta pozwala na przetestowanie generowania unikatowego id
+ *
+ * funkcja na początek generuje 10 elementową listę a następnie usuwa z listy elementy o id 3,1,5,7,8
+ * następnie do takiej tablicy dodaje kolejne 10 elementów i przy każdym dodaniu wyświetla stan listy aby można było zaobserwować czy generowane id jest unikatowe
  */
+
 void list_id_test()
 {
 	srand(time(0));

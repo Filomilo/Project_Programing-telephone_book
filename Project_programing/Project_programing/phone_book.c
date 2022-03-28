@@ -1,7 +1,7 @@
 /**
  * @file phone_book.c
  * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
- * @brief plik zaweira funkjce do oblsugi elemntow listy
+ * @brief plik zawiera funkcje do obsługi elementów listy
  * @version 0.1
  * @date 2022-03-24
  * 
@@ -14,25 +14,25 @@
 #include "phone_book.h"
 #include <stdlib.h>
 
-// funckcja wy�wietlaj�c podany jej konkat wraz z podpisamy
 /**
- * @brief funkcja odpowiada ze wyświeltnie jedeno wpisu w kontakcie
+ * @brief funkcja odpowiada za wyświetlanie jednego wpisu w kontakcie
  *
- * funckcja wypisuje elemnt konatku na zasadzie: 
+ * funkcja wypisuje element kontaktu na zasadzie:
  *
  * ID
  *
- * imie, nazwisko
+ * imię, nazwisko
  *
- *miasto, st.ullica numer, kod pocztowy
+ *miasto, st.ulica numer, kod pocztowy
  *
  * numer telefonu
  *
  *
  *
- * 
- * @param contact - typ conact_type zawierajace dane do wysiwtlenia przez funckje 
+ *
+ * @param contact - typ conact_type zawierające dane do wyświetlenia przez funkcje
  */
+
 void print_contact(contact_type contact)
 {
 	printf("ID: %d\n", contact.id);
@@ -44,16 +44,17 @@ void print_contact(contact_type contact)
 
 
 /**
- * @brief funckcja duplikuje otrzymana liste dynamiczną
+ * @brief funkcja duplikuje otrzymana listę dynamiczną
  *
- * funkcja ta przyjmuje jako paremtr lsit_pointers okreslajaca lsite do zdubplikowania
- * nastepnie tworzy nowa liste new i jezeli nie podana lsita nie jest pusta funkjca wchodiz petle
- * przechodząca przez wszystkie elemnty listy i kazdy z elemntow dodaje do nowej listy
- * po przepisaniu wszystkich elemntow funkcja zwraca nowo wytworozna liste
- * 
- * @param list - strutura list_pointers okreslaja liste do zduplikowania
- * @return list_pointers  - struktura lsit_pointers okreslajaca nowa zduplikowana lsite
+ * funkcja ta przyjmuje jako parametr lsit_pointers określająca listę do duplikowania
+ * następnie tworzy nowa liste new i jeżeli niepodana lista nie jest pusta funkcja wchodzi pętle
+ * przechodząca przez wszystkie elementy listy i każdy z elementów dodaje do nowej listy
+ * po przeniesieniu wszystkich elementów funkcja zwraca nowo wytworzona listę
+ *
+ * @param list - struktura list_pointers określają listę do duplikowania
+ * @return list_pointers  - struktura lsit_pointers określająca nowa zduplikowaną listę
  */
+
 list_pointers duplicate_book( list_pointers list)
 {
 	list_pointers new = list_init();
@@ -82,17 +83,18 @@ list_pointers duplicate_book( list_pointers list)
 
 
 /**
- * @brief funkcja genruje dla listy unikatowe id
- * 
- * funckja ta duplikuje liste do ktorej ma zostac wygenrwoany uniktowe id 
- * nastepnie sortuje ja wedlug id po czym bierze wartsoc i=0 i idzie przez kazdy elemnty posortownej listy
- * zwiekszjac wartosc i o 1 jezeli w kotryms momecnie  wartosc i nie bedzie sie zgadzac z wartoscia id elemntu listy
- * znaczy ze to id jest wolne lub jesli lsita sie skonczyla to rowniez powieskzone i bedzie oznaczac wolne id
- * i takie zatem zwracaca
- * 
- * @param list - strutura list_pointers okreslaja liste do zduplikowania
- * @return int - zwraca wartosc int okreslajaca najmniejsze wolne id
+ * @brief funkcja generuje dla listy unikatowe id
+ *
+ * funkcja ta publikuje listę, do której ma zostać wygenerowany unikatowe id
+ * następnie sortuje ja według id, po czym bierze wartość i=0 i idzie przez każdy element posortowanej listy
+ * zwiększając wartość i o 1 jeżeli w którymś momencie  wartość i nie będzie się zgadzać z wartością id elementu listy
+ * znaczy że to id jest wolne lub jeśli lista się skończyła to również powiększone i będzie oznaczać wolne id
+ * i takie zatem zwracać
+ *
+ * @param list - struktura list_pointers określają listę do duplikowania
+ * @return int - zwraca wartość int określająca najmniejsze wolne id
  */
+
 int generate_id(list_pointers list)
 {
 	int i=0;

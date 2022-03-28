@@ -1,8 +1,8 @@
-\hypertarget{file__manage_8c}{}\doxysection{D\+:/gogle drive/studia/\+Semestr 2/\+Podstawy programowania 2/\+Projekt -\/ Podstawy programowania 2/projekt/\+Project\+\_\+\+Programing-\/telephone\+\_\+book/\+Project\+\_\+programing/\+Project\+\_\+programing/file\+\_\+manage.c File Reference}
-\label{file__manage_8c}\index{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/file\_manage.c@{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/file\_manage.c}}
+\hypertarget{file__manage_8c}{}\doxysection{D\+:/gogle drive/studia/\+Semestr 2/\+Podstawy programowania 2/\+Projekt -\/ Podstawy programowania 2/projekt/\+Filomilo/\+Project\+\_\+\+Programing-\/telephone\+\_\+book/\+Project\+\_\+programing/\+Project\+\_\+programing/file\+\_\+manage.c File Reference}
+\label{file__manage_8c}\index{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Filomilo/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/file\_manage.c@{D:/gogle drive/studia/Semestr  2/Podstawy programowania 2/Projekt -\/ Podstawy programowania 2/projekt/Filomilo/Project\_Programing-\/telephone\_book/Project\_programing/Project\_programing/file\_manage.c}}
 
 
-plik ten zawiera funkcje odpowiedzilne za zarzadzenie plikami ksiazki telefonicznej  
+plik ten zawiera funkcje odpowiedzialne za zarządzanie plikami książki telefonicznej  
 
 
 {\ttfamily \#include \char`\"{}phone\+\_\+book.\+h\char`\"{}}\newline
@@ -15,17 +15,17 @@ plik ten zawiera funkcje odpowiedzilne za zarzadzenie plikami ksiazki telefonicz
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{file__manage_8c_a2e3eb4c09f45c47e5a1e4b7b90545904}{phone\+\_\+book\+\_\+list}} ()
-\begin{DoxyCompactList}\small\item\em funckja te generuje liste plików dostenych w folderze przeznaczonym na zapis ksiązek telefonicznych \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em funkcje te generuje listę plików dostępnych w folderze przeznaczonym na zapis książek telefonicznych \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{file__manage_8c_a05e91a23881226c31872a5f29d8df505}{save}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, char file\+\_\+name\mbox{[}30\mbox{]})
-\begin{DoxyCompactList}\small\item\em funckjaja zapisuje liste dynamiczną do pliku o podanej nazwie \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em funkcja zapisuje listę dynamiczną do pliku o podanej nazwie \end{DoxyCompactList}\item 
 \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{file__manage_8c_a46da9c08707171512b37318155d32a77}{load}} (char file\+\_\+name\mbox{[}30\mbox{]})
-\begin{DoxyCompactList}\small\item\em funkcja wczytuje liste z pliku o podanej nazwie \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em funkcja wczytuje listę z pliku o podanej nazwie \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{file__manage_8c_a78aafff3639ca0659fd6427532b6b012}{get\+\_\+file\+\_\+name}} (char file\+\_\+name\mbox{[}30\mbox{]}, int choice)
-\begin{DoxyCompactList}\small\item\em funckja pozwala na zodbycie nazwy pliku w zaleznodci od wybranego numeru pliku \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em funkcja pozwala na zdobycie nazwy pliku w zależności od wybranego numeru pliku \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-plik ten zawiera funkcje odpowiedzilne za zarzadzenie plikami ksiazki telefonicznej 
+plik ten zawiera funkcje odpowiedzialne za zarządzanie plikami książki telefonicznej 
 
 \begin{DoxyAuthor}{Author}
 Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec 
@@ -50,19 +50,19 @@ Copyright (c) 2022
 
 
 
-funckja pozwala na zodbycie nazwy pliku w zaleznodci od wybranego numeru pliku 
+funkcja pozwala na zdobycie nazwy pliku w zależności od wybranego numeru pliku 
 
-funckja bierze wartosc int okreslajaca numer pliku przypisany według schematu co w funckji phone\+\_\+book\+\_\+list a nastepnie wydobywa nazwe tego pliku i zwrraca go do talbicy znakow podanych jako pierwszy argument funkcji
+funkcja bierze wartosc int określająca numer pliku przypisany według schematu co w funkcji phone book list a następnie wydobywa nazwę tego pliku i zwraca go do tablicy znaków podanych jako pierwszy argument funkcji
 
 
 \begin{DoxyParams}{Parameters}
-{\em file\+\_\+name} & -\/ tablica znakow do ktorej zostanie zapisana wybrana nazwa pliku \\
+{\em file\+\_\+name} & -\/ tablica znaków do której zostanie zapisana wybrana nazwa pliku \\
 \hline
-{\em choice} & -\/ wartosc liczbowa wybranego pliku przypisanej na tej same zasadzie co w funkcji phone\+\_\+book\+\_\+list \\
+{\em choice} & -\/ wartość liczbowa wybranego pliku przypisanej na tej samej zasadzie co w funkcji phone\+\_\+book\+\_\+list \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-int zwraca 0 gdy funkcja wykonala sie poprawnie 
+int zwraca 0 gdy funkcja wykona się poprawnie 
 \end{DoxyReturn}
 \mbox{\Hypertarget{file__manage_8c_a46da9c08707171512b37318155d32a77}\label{file__manage_8c_a46da9c08707171512b37318155d32a77}} 
 \index{file\_manage.c@{file\_manage.c}!load@{load}}
@@ -72,17 +72,17 @@ int zwraca 0 gdy funkcja wykonala sie poprawnie
 
 
 
-funkcja wczytuje liste z pliku o podanej nazwie 
+funkcja wczytuje listę z pliku o podanej nazwie 
 
-na samym początku funkjcja towrzy nowa liste nastepenie genruje lokaliazacje nazwe i roserzenie pliku o podanej naziwe nastepnie otwiera ten plik o podanej nazwie i wczytuje elementy listy elemnt po elemencie i dodaje je do nowo utworzonej listy az do osiagniecia konca pliku po wczytaniu wszystkich elemntow moze zostac zwrocona lista wypelniona
+na samym początku funkcja towrzy nowa liste nastepenie generuje lokalizację nazwę i rozszerzenie pliku o podanej nazwie następnie otwiera ten plik o podanej nazwie i wczytuje elementy listy element po elemencie i dodaje je do nowo utworzonej listy aż do osiągnięcia końca pliku po wczytaniu wszystkich elementów może zostać zwrócona lista wypełniona
 
 
 \begin{DoxyParams}{Parameters}
-{\em file\+\_\+name} & -\/ 30 elemtowy ciag znakow okreslajacy nazwe pliku do otworzenia \\
+{\em file\+\_\+name} & -\/ 30 elementowy ciąg znaków określający nazwę pliku do odtworzenia \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-list\+\_\+pointers -\/ struktura list\+\_\+pointers okreslajaca wczytana z pliku 
+list\+\_\+pointers -\/ struktura list\+\_\+pointers określająca wczytana z pliku 
 \end{DoxyReturn}
 \mbox{\Hypertarget{file__manage_8c_a2e3eb4c09f45c47e5a1e4b7b90545904}\label{file__manage_8c_a2e3eb4c09f45c47e5a1e4b7b90545904}} 
 \index{file\_manage.c@{file\_manage.c}!phone\_book\_list@{phone\_book\_list}}
@@ -92,12 +92,12 @@ list\+\_\+pointers -\/ struktura list\+\_\+pointers okreslajaca wczytana z pliku
 
 
 
-funckja te generuje liste plików dostenych w folderze przeznaczonym na zapis ksiązek telefonicznych 
+funkcje te generuje listę plików dostępnych w folderze przeznaczonym na zapis książek telefonicznych 
 
-na samy na poczatku funckacja wyswietal your phone books\+: nastepnie z pomoca bibliotekei dirent.\+h otwiera lokalizacje przeznaczona na zapisywanie ksiązek telefonciznych nastepnie rónwiez z pomoca bilbioteki dirent.\+h wypisuje liste nazw plikow bez roszezrzenia wraz przypiasniem do nich wartosci numerecznej umozliwajacyh późniejszy wybór ksiazki do wybrania
+na samy na początku funkcja wyświetla your phone books\+: następnie z pomocą biblioteki dirent.\+h otwiera lokalizacje przeznaczona na zapisywanie książek telefonicznych następnie również z pomocą biblioteki dirent.\+h wypisuje listę nazw plików bez rozszerzenia wraz przypisaniem do nich wartości numerycznej umożliwiających późniejszy wybór książki do wybrania
 
 \begin{DoxyReturn}{Returns}
-int funckja zwraca wartosc 0 jezeli nie masz zadnych dostepnych ksiazek telfonicnzych i 1-\/ jezeli masz dostepne ksiązki telefonczne 
+int funkcja zwraca wartość 0 jeżeli nie masz żadnych dostępnych książek telefonicznych i 1-\/ jeśli masz dostępne książki telefoniczne 
 \end{DoxyReturn}
 \mbox{\Hypertarget{file__manage_8c_a05e91a23881226c31872a5f29d8df505}\label{file__manage_8c_a05e91a23881226c31872a5f29d8df505}} 
 \index{file\_manage.c@{file\_manage.c}!save@{save}}
@@ -107,14 +107,14 @@ int funckja zwraca wartosc 0 jezeli nie masz zadnych dostepnych ksiazek telfonic
 
 
 
-funckjaja zapisuje liste dynamiczną do pliku o podanej nazwie 
+funkcja zapisuje listę dynamiczną do pliku o podanej nazwie 
 
-na samym poczatku funkjca sprawdza czy istnieje folder przeznaczony na zapisywanie ksiazek telefoncznych jezeli nie tworzy taki folder natepnie tworzy caig znakow okreslajacy lokalziacje nazwe i rozszerzenie pliku do zapisania nastpnie wchodzi w petle ktora przechodzdi przez wszystkie lemnty listy i zapisuje je do pliku binarnego o podnaej nazwie i rozszerzeniu .pbd
+na samym początku funkcja sprawdza czy istnieje folder przeznaczony na zapisywanie książek telefonicznych jeżeli nie tworzy taki folder następnie tworzy ciąg znaków określający lokalizacja nazwę i rozszerzenie pliku do zapisania następnie wchodzi w pętlę która przechodzi przez wszystkie elementy listy i zapisuje je do pliku binarnego o podanej nazwie i rozszerzeniu .pbd
 
 
 \begin{DoxyParams}{Parameters}
-{\em list} & -\/ struktura list\+\_\+pointer okreslajaca liste do zapisania \\
+{\em list} & -\/ struktura list\+\_\+pointer określająca listę do zapisania \\
 \hline
-{\em file\+\_\+name} & -\/ 30 elemntowy ciag znakwy okreslajacy nazwe pod ktora ma zostac zapisana lista \\
+{\em file\+\_\+name} & -\/ 30 elementowy ciąg znaków określający nazwę pod którą ma zostać zapisana lista \\
 \hline
 \end{DoxyParams}

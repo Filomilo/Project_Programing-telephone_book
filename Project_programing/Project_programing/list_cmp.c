@@ -1,7 +1,7 @@
 /**
  * @file list_cmp.c
  * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
- * @brief plik ten zawiera funckjde porónujace ze soba dwa elemnty listy
+  * @brief plik ten zawiera funkcje porównujące ze sobą dwa elementy listy
  * @version 0.1
  * @date 2022-03-24
  * 
@@ -17,19 +17,20 @@
 #include <string.h>
 
 
-/**
- * @brief funkcja porównuje ze sobą id dwóch elemtów listy
- * 
- * funkcja ta porównuje id dwóch elemtów lsity i zwraca -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne, 
- * i 1 jezelie a jest wieksze od b
- *
- * @param a - wskaznik lsit_node na elemnt listy a do porównania
- * @param b - wskaznik lsit_node na elemnt listy b do porównania 
- * @return int - zwraca wynik porownania na zasadzie : -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne,
- * i 1 jezelie a jest wieksze od b
- */
+ /**
+  * @brief funkcja porównuje ze sobą od dwóch elementów listy
+  *
+  * funkcja ta porównuje id dwóch elementów listy i zwraca -1 jeżeli a jest mniejsze od b,
+  * 0 jeśli a i b są równe,
+  * i 1 jeśli a jest większe od b
+  *
+  * @param a - wskaźnik lsit_node na element listy a do porównania
+  * @param b - wskaźnik lsit_node na element listy b do porównania
+  * @return int - zwraca wynik porównania na zasadzie : -1 jeżeli a jest mniejsze od b,
+  * 0 jeśli a i b są równe,
+  * i 1 jeśli a jest większe od b
+  */
+
 int id_cmp(list_node* a, list_node* b)
 {
 	if(a->data.id> b->data.id)
@@ -47,18 +48,19 @@ int id_cmp(list_node* a, list_node* b)
 
 
 /**
- * @brief funkcja porównuje ze sobą imie i nazwisko dwóch elemtów listy
- * 
- * funkcja ta porównuje imie i nazwiska dwóch elemtów lsity i zwraca -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne, 
- * i 1 jezelie a jest wieksze od b
+ * @brief funkcja porównuje ze sobą imię i nazwisko dwóch elementów listy
  *
- * @param a - wskaznik lsit_node na elemnt listy a do porównania
- * @param b - wskaznik lsit_node na elemnt listy b do porównania 
- * @return int - zwraca wynik porownania na zasadzie : -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne,
- * i 1 jezelie a jest wieksze od b
+ * funkcja ta porównuje imię i nazwiska dwóch elementów listy i zwraca -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
+ *
+ * @param a - wskaźnik lsit_node na element listy a do porównania
+ * @param b - wskaźnik lsit_node na element listy b do porównania
+ * @return int - zwraca wynik porównania na zasadzie : -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
  */
+
 int name_cmp(list_node* a, list_node* b)
 {
 	if (strcmp(a->data.surname, b->data.surname) == 0)
@@ -73,18 +75,19 @@ int name_cmp(list_node* a, list_node* b)
 
 
 /**
- * @brief funkcja porównuje ze sobą numer telefonu dwóch elemtów listy
- * 
- * funkcja ta porównuje numer telefonu dwóch elemtów lsity i zwraca -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne, 
- * i 1 jezelie a jest wieksze od b
+ * @brief funkcja porównuje ze sobą numer telefonu dwóch elementów listy
  *
- * @param a - wskaznik lsit_node na elemnt listy a do porównania
- * @param b - wskaznik lsit_node na elemnt listy b do porównania 
- * @return int - zwraca wynik porownania na zasadzie : -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne,
- * i 1 jezelie a jest wieksze od b
+ * funkcja ta porównuje numer telefonu dwóch elementów listy i zwraca -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
+ *
+ * @param a - wskaźnik lsit_node na element listy a do porównania
+ * @param b - wskaźnik lsit_node na element listy b do porównania
+ * @return int - zwraca wynik porównania na zasadzie : -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
  */
+
 int phone_cmp(list_node* a, list_node* b)
 {
 	return strcmp(a->data.phone_number, b->data.phone_number);
@@ -105,36 +108,38 @@ int city_cmp(list_node* a, list_node* b)
 
 
 /**
- * @brief funkcja porównuje ze sobą nazwy ulic dwóch elemtów listy
- * 
- * funkcja ta porównuje ulice dwóch elemtów lsity i zwraca -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne, 
- * i 1 jezelie a jest wieksze od b
+ * @brief funkcja porównuje ze sobą nazwy ulic dwóch elementów listy
  *
- * @param a - wskaznik lsit_node na elemnt listy a do porównania
- * @param b - wskaznik lsit_node na elemnt listy b do porównania 
- * @return int - zwraca wynik porownania na zasadzie : -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne,
- * i 1 jezelie a jest wieksze od b
+ * funkcja ta porównuje ulice dwóch elementów listy i zwraca -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
+ *
+ * @param a - wskaźnik lsit_node na element listy a do porównania
+ * @param b - wskaźnik lsit_node na element listy b do porównania
+ * @return int - zwraca wynik porównania na zasadzie : -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
  */
+
 int street_cmp(list_node* a, list_node* b)
 {
 	return strcmp(a->data.adress.street, b->data.adress.street);
 }
 
 /**
- * @brief funkcja porównuje ze sobą kod pocztowy dwóch elemtów listy
- * 
- * funkcja ta porównuje kod pocztowy dwóch elemtów lsity i zwraca -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne, 
- * i 1 jezelie a jest wieksze od b
+ * @brief funkcja porównuje ze sobą kod pocztowy dwóch elementów listy
  *
- * @param a - wskaznik lsit_node na elemnt listy a do porównania
- * @param b - wskaznik lsit_node na elemnt listy b do porównania 
- * @return int - zwraca wynik porownania na zasadzie : -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne,
- * i 1 jezelie a jest wieksze od b
+ * funkcja ta porównuje kod pocztowy dwóch elementów listy i zwraca -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
+ *
+ * @param a - wskaźnik lsit_node na element listy a do porównania
+ * @param b - wskaźnik lsit_node na element listy b do porównania
+ * @return int - zwraca wynik porównania na zasadzie : -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
  */
+
 int postal_code_cmp(list_node* a, list_node* b)
 {
 	return strcmp(a->data.adress.postal_code, b->data.adress.postal_code);
@@ -143,18 +148,19 @@ int postal_code_cmp(list_node* a, list_node* b)
 
 
 /**
- * @brief funkcja porównuje ze sobą numer domu/budynku dwóch elemtów listy
- * 
- * funkcja ta porównuje numer domu/budynku dwóch elemtów lsity i zwraca -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne, 
- * i 1 jezelie a jest wieksze od b
+ * @brief funkcja porównuje ze sobą numer domu/budynku dwóch elementów listy
  *
- * @param a - wskaznik lsit_node na elemnt listy a do porównania
- * @param b - wskaznik lsit_node na elemnt listy b do porównania 
- * @return int - zwraca wynik porownania na zasadzie : -1 jezeli a jest mniejsze od b, 
- * 0 jezeli a i b sa rowne,
- * i 1 jezelie a jest wieksze od b
+ * funkcja ta porównuje numer domu/budynku dwóch elementów listy i zwraca -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
+ *
+ * @param a - wskaźnik lsit_node na element listy a do porównania
+ * @param b - wskaźnik lsit_node na element listy b do porównania
+ * @return int - zwraca wynik porównania na zasadzie : -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
  */
+
 int number_cmp(list_node* a, list_node* b)
 {
 	if (a->data.adress.number > b->data.adress.number)

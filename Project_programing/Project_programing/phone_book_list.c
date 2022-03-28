@@ -1,8 +1,7 @@
 /**
  * @file phone_book_list.c
  * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
- * @brief plik zawierajace funkjce umożliwajaće twrzenie i zarzadzanie lsita dynamiczną
- * @version 0.1
+* @brief plik zawierające funkcje umożliwiające tworzenie i zarządzanie lista dynamiczną * @version 0.1
  * @date 2022-03-24
  * 
  * @copyright Copyright (c) 2022
@@ -15,13 +14,14 @@
 #include <stdlib.h>
 
 
-/**
- * @brief funkcja incjująca pusta liste dynamiczną
- * 
- * funckja ta tworzy liste dynamiczną w formie typu list pointers i następnie ustawia wszystkie jej elemnty na NULL jako oznaczenie żę jest pusta
- * a nastęnie przekazuje ja do zwrotu
- * @return list_pointers - zwraca typ lsit_pointers któy jest okreśłeneim pustej listy dynamicznej
- */
+ /**
+  * @brief funkcja incjująca pusta liste dynamiczną
+  *
+  * funkcja ta tworzy listę dynamiczną w formie typu list pointers i następnie ustawia wszystkie jej elemnty na NULL jako oznaczenie żę jest pusta
+  * a następnie przekazuje ja do zwrotu
+  * @return list_pointers - zwraca typ lsit_pointers który jest określeniem pustej listy dynamicznej
+  */
+
 list_pointers list_init()
 {
 	list_pointers list;
@@ -33,18 +33,19 @@ list_pointers list_init()
 
 
 /**
- * @brief funkja doaje do listy elemnt od storny głowy
- *	
- * na samym poczatku funkcja umieszczaw w pamieci nowy elemnt listy dynamicznej w przypadku jeśli się nie uda wyświetla komunikat "ERROR: Stack oberflow" 
- * następnie przypisuje do danych tego elemntu dane podane jaako argumet wywołanaia funkjci, w kolejnym koroku wartosć poprzedniego elemntu dla nowo utworzonego
- * jest elemnt head a następnym NULL czyli koniec listy. Następnie jeżli aktualny head nie jest psuty to ustawia wartość jego nastepnego lemntu na ten utworzony
- * kolejno jezli tail lsity dynamicznej jest pusty zostaje on również ustawiony na nowy element.
- * na sam koniec ustwaia wartość head na nowy elemnt, tak zmieniiona struktura zostaje zwrócona do programu 
- * 
- * @param list - struktura list_pointers określająca liste do któej użytkownik che dodaćelemnt
- * @param data - struktura contactt_type który ma zostać dodany do lsity dynamicznej
- * @return list_pointers - zwraca zmieniona struktura lsit_pointers określajaca liste z już dodanym elemntem
+ * @brief funkcja dodaje do listy element od strony głowy
+ *
+ * na samym początku funkcja umieszcza w pamięci nowy element listy dynamicznej w przypadku jeśli się nie uda wyświetla komunikat "ERROR: Stack overflow"
+ * następnie przypisuje do danych tego elementu dane podane jako argument wywołania funkcji, w kolejnym kroku wartość poprzedniego elementu dla nowo utworzonego
+ * jest element head a następnym NULL czyli koniec listy. Następnie jeśli aktualny head nie jest psuty to ustawia wartość jego następnego elementu na ten utworzony
+ * kolejno jeśli tail listy dynamicznej jest pusty zostaje on również ustawiony na nowy element.
+ * na sam koniec ustawia wartość head na nowy element, tak zmieniona struktura zostaje zwrócona do programu
+ *
+ * @param list - struktura list_pointers określająca listę do której użytkownik chce dodać element
+ * @param data - struktura contactt_type który ma zostać dodany do listy dynamicznej
+ * @return list_pointers - zwraca zmieniona struktura lsit_pointers określająca listę z już dodanym elementem
  */
+
 list_pointers list_add_head(list_pointers list, contact_type data)
 {
 	list_node* new_node = (list_node*)malloc(sizeof(list_node));
@@ -78,18 +79,19 @@ list_pointers list_add_head(list_pointers list, contact_type data)
 
 
 /**
- * @brief funkja doaje do listy elemnt od storny ogona
- *	
- * na samym poczatku funkcja umieszczaw w pamieci nowy elemnt listy dynamicznej w przypadku jeśli się nie uda wyświetla komunikat "ERROR: Stack oberflow" 
- * następnie przypisuje do danych tego elemntu dane podane jaako argumet wywołanaia funkjci, w kolejnym koroku wartosć kolejnego elemntu dla nowo utworzonego
- * jest elemnt tail a poprzednim NULL czyli koniec listy. Następnie jeżli aktualny tail nie jest psuty to ustawia wartość jego poprzediniego lemntu na ten utworzony
- * kolejno jezli head lsity dynamicznej jest pusty zostaje on również ustawiony na nowy element.
- * na sam koniec ustwaia wartość tail na nowy elemnt, tak zmieniiona struktura zostaje zwrócona do programu 
- * 
- * @param list - struktura list_pointers określająca liste do któej użytkownik che dodaćelemnt
- * @param data - struktura contactt_type który ma zostać dodany do lsity dynamicznej
- * @return list_pointers - zwraca zmieniona struktura lsit_pointers określajaca liste z już dodanym elemntem
+ * @brief funkcja dodaje do listy element od storny ogona
+ *
+ * na samym początku funkcja umieszcza w pamięci nowy element listy dynamicznej w przypadku jeśli się nie uda wyświetla komunikat "ERROR: Stack overflow"
+ * następnie przypisuje do danych tego elementu dane podane jako argument wywołania funkcji, w kolejnym kroku wartość kolejnego elementu dla nowo utworzonego
+ * jest element tail a poprzednim NULL czyli koniec listy. Następnie jeśli aktualny tail nie jest psuty to ustawia wartość jego poprzedniego lematu na ten utworzony
+ * kolejno jeśli head listy dynamicznej jest pusty zostaje on również ustawiony na nowy element.
+ * na sam koniec ustawia wartość tail na nowy element, tak zmieniona struktura zostaje zwrócona do programu
+ *
+ * @param list - struktura list_pointers określająca listę do której użytkownik chce dodać element
+ * @param data - struktura contactt_type który ma zostać dodany do listy dynamicznej
+ * @return list pointers - zwraca zmieniona struktura lsit_pointers określająca listę z już dodanym elementem
  */
+
 list_pointers list_add_tail(list_pointers list, contact_type data)
 {
 	list_node* new_node = (list_node*)malloc(sizeof(list_node));
@@ -123,15 +125,16 @@ list_pointers list_add_tail(list_pointers list, contact_type data)
 
 
 /**
- * @brief funkcja znajduje elemnt o podanym id
- * 
- * funckja ta przechodzi przez kolejne elemnty listy dynamicznej tak długo aż nie osiagnie lub nie znajdzie elemntu o id równym podanego w searched_value
- * jezei znajdzie takowy elemnt to zwraca wskaźnik na ten właśnie element a jeżeli zwraca pusty wskaźnik
- * 
- * @param list - struktura list_pointers na liste dynamiczną któej elemnt należy znaleźć 
- * @param searched_value - wartość int określająca id elemntu który ma zostać odnaleziony
- * @return list_node* - zwraca wskaźńik na odnaleziony elemnt listy dynamicznej lub jeżeli taki nie został odnaleziony w pusty wskaźńk
+ * @brief funkcja znajduje element o podanym id
+ *
+ * funkcja ta przechodzi przez kolejne elementy listy dynamicznej tak długo aż nie osiągnie lub nie znajdzie elementu o id równym podanego w searched_value
+ * jeśli znajdzie takowy element to zwraca wskaźnik na ten właśnie element a jeżeli zwraca pusty wskaźnik
+ *
+ * @param list - struktura list_pointers na listę dynamiczną której element należy znaleźć
+ * @param searched value - wartość int określająca id elementu który ma zostać odnaleziony
+ * @return list_node* - zwraca wskaźnik na znaleziony element listy dynamicznej lub jeżeli taki nie został odnaleziony w pusty wskaźnik
  */
+
 list_node* find_node(list_pointers list, int searched_value)
 {
 	while (list.tail != NULL || list.head == NULL)
@@ -151,17 +154,18 @@ list_node* find_node(list_pointers list, int searched_value)
 
 
 /**
- * @brief funkcja usuwa końcowy elemnt (tail) z listy dynamicznje
- * 
- * na samym początku funkcja sprawdza czy lista nie jest juz pusta jezeli jest to wyswietla "ERROR: Nothing to remove\n" 
- * następnie pyszpiuje tymczasowemy wskaźnikowi następny elemnt od zaczynajac od tail, nastepnie usuwa tail za pomoca funkcji free()
- * następnei jezeli tymczasowy elemnt jest równy nULL to oznacza żę lista jest pusta i zwraca liste z list_init() 
- * jeżeli nie to ustwaia  poprzedni element tymczasowgo elemnt jako NULL czyli koniec listy a potem ustawia tail listy jako właśnie ten tymczaswowey element. 
- * tak zmieniona lista zostaje zwrócona do programu 
- * 
- * @param list - struktura list_pointers określajaca liste dynamiczną z której ma usunać ogon
- * @return list_pointers - zwraca strukture list_pointers opisujaca liste z już usuniętymi ogonem
+ * @brief funkcja usuwa końcowy element (tail) z listy dynamicznej
+ *
+ * na samym początku funkcja sprawdza czy lista nie jest już pusta jeżeli jest to wyświetla "ERROR: Nothing to remove\n"
+ * następnie pyszpiuje tymczasowemu wskaźnikowi następny element od zaczynając od tail, następnie usuwa tail za pomocą funkcji free()
+ * następnei jezeli tymczasowy elemnt jest równy nULL to oznacza żę lista jest pusta i zwraca listę z list_init()
+ * jeżeli nie to ustawia  poprzedni element tymczasowego element jako NULL czyli koniec listy a potem ustawia tail listy jako właśnie ten tymczasowy element.
+ * tak zmieniona lista zostaje zwrócona do programu
+ *
+ * @param list - struktura list_pointers określająca listę dynamiczną z której ma usunąć ogon
+ * @return list_pointers - zwraca strukturę list_pointers opisująca listę z już usuniętymi ogonem
  */
+
 list_pointers list_remove_tail(list_pointers list)
 {
 	if (list.tail == NULL)
@@ -188,17 +192,18 @@ list_pointers list_remove_tail(list_pointers list)
 
 
 /**
- * @brief funkcja usuwa początkowy elemnt (head) z listy dynamicznje
- * 
- * na samym początku funkcja sprawdza czy lista nie jest juz pusta jezeli jest to wyswietla "ERROR: Nothing to remove\n" 
- * następnie pyszpiuje tymczasowemy wskaźnikowi poprzedni elemnt od zaczynajac od head, nastepnie usuwa head za pomoca funkcji free()
- * następnei jezeli tymczasowy elemnt jest równy nULL to oznacza żę lista jest pusta i zwraca liste z list_init() 
- * jeżeli nie to ustwaia  następny element tymczasowgo elemnt jako NULL czyli koniec listy a potem ustawia head listy jako właśnie ten tymczaswowey element. 
- * tak zmieniona lista zostaje zwrócona do programu 
- * 
- * @param list - struktura list_pointers określajaca liste dynamiczną z której ma usunać head
- * @return list_pointers - zwraca strukture list_pointers opisujaca liste z już usuniętymi head
+ * @brief funkcja usuwa początkowy element (head) z listy dynamicznej
+ *
+ * na samym początku funkcja sprawdza czy lista nie jest już pusta jeżeli jest to wyświetla "ERROR: Nothing to remove\n"
+ * następnie pyszpiuje tymczasowemu wskaźnikowi poprzedni element od zaczynając od head, następnie usuwa head za pomocą funkcji free()
+ * następnei jezeli tymczasowy elemnt jest równy nULL to oznacza żę lista jest pusta i zwraca listę z list_init()
+ * jeżeli nie to ustawia  następny element tymczasowy element jako NULL czyli koniec listy a potem ustawia head listy jako właśnie ten tymczasowy element.
+ * tak zmieniona lista zostaje zwrócona do programu
+ *
+ * @param list - struktura list_pointers określająca listę dynamiczną z której ma usunąć head
+ * @return list_pointers - zwraca strukturę list_pointers opisująca listę z już usuniętymi head
  */
+
 list_pointers list_remove_head(list_pointers list)
 {
 	if (list.tail == NULL || list.head == NULL)
@@ -229,18 +234,19 @@ list_pointers list_remove_head(list_pointers list)
 
 
 /**
- * @brief funkcja usuwa wybrany elemnt z listy dynamicznej
- * 
- * funckja na samym poczatku sprawdza czy wartośc elemntu do usunięcia jest różna od NULL jeżli nie to wypisuje "ERROR: no node to remove selected\n".
- * Następnie  jezeli elemnt do usnięcia jest równy elemntowi head to wywuuje funkcje list_remove_head a jeżli jest równe tail funkcje list_remove_tail.
- * jezeli nie jest równy żadnego z tych elemntów to ustawua wartości następnego elemntu poprzedneigo elemtu listy na nastoeny elemnt list , 
- *  z kolei wartosć porzedniego elemntu kolejengo elemntu listy jest ustawiana na poprzendi elemnt listy, po czym usuwa się wy brany eleemnt za pomoca funkjci free()
- *  nastepnie zmieniiona liste zwraca sie do głónego programu
- * 
- * @param list - struktura list_pointers określajaca liste dynamiczną z której ma usunać element
- * @param node_to_remove - wskaźnik na elemnt ktory ma zostać usuniety, wskaźńik taki mozńa uzyskać np poprzez funckje find_node()
- * @return list_pointers  - zwraca strukture list_pointers opisujaca liste z już usuniętymi elemntem
+ * @brief funkcja usuwa wybrany element z listy dynamicznej
+ *
+ * funckja na samym początku sprawdza czy wartość elementu do usunięcia jest różna od NULL jeśli nie to wypisuje "ERROR: no node to remove selected\n".
+ * Następnie  jeżeli element do usunięcia jest równy elementowi head to wywołuje funkcje list_remove_head a jeżli jest równe tail funkcje list_remove_tail.
+ * jeżeli nie jest równy żadnego z tych elementów to ustawia wartości następnego elementu poprzedniego elementu listy na następny element list ,
+ *  z kolei wartość poprzedniego elementu kolejnego elementu listy jest ustawiana na poprzedni element listy, po czym usuwa się wybrany element za pomocą funkcji free()
+ *  następnie zmieniona listę zwraca się do głównego programu
+ *
+ * @param list - struktura list_pointers określająca listę dynamiczną z której ma usunąć element
+ * @param node_to_remove - wskaźnik na element który ma zostać usunięty, wskaźnik taki można uzyskać np poprzez funkcje find_node()
+ * @return list_pointers  - zwraca strukturę list_pointers opisująca listę z już usuniętymi elementem
  */
+
 list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 {
 	if (node_to_remove == NULL)
@@ -281,14 +287,15 @@ list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 
 
 /**
- * @brief funckcja podmienia wartośc wybranego elemntu na wartosć podaną w argumencie
- * 
- * funkcja ta najpierw sprwadza czy wybrany elemnt do podmiany nie jest psuty jezeli jest pusty to wysiwetla "ERROR: no node to edit selected"
- * jeżeli nie jest pusty podmienia wartosć jego data na wartosć podana w agumencies
- * 
- * @param node_to_edit - wskaźnik na elment ktorgo dane ma funkcja podmienic, może zostać uzyskany np poprez funckje find_node()
- * @param data - struktura contact_type który zawiera dane na któe ma zostać podminiony podany element
+ * @brief funkcja podmienia wartośc wybranego elementu na wartość podaną w argumencie
+ *
+ * funkcja ta najpierw sprawdza czy wybrany element do podmiany nie jest psuty jeżeli jest pusty to wyświetla "ERROR: no node to edit selected"
+ * jeżeli nie jest pusty podmienia wartość jego data na wartość podana w agumencies
+ *
+ * @param node_to_edit - wskaźnik na element którego dane ma funkcja podmienić, może zostać uzyskany np poprzez funkcje findnode()
+ * @param data - struktura contact_type który zawiera dane na które ma zostać podmieniony podany element
  */
+
 void list_edit_node(list_node* node_to_edit, contact_type data)
 {
 	if (node_to_edit == NULL)
@@ -304,14 +311,15 @@ void list_edit_node(list_node* node_to_edit, contact_type data)
 
 
 /**
- * @brief funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony głowy
+ * @brief funkcja wyświetla wszystkie elementy listy dynamicznej od strony głowy
  *
- * funkcja ta najpierw sprawdza czy lista nie jest psuta, jezeli jest jest to wyswietla komunikat "your list is empty"
- * jezeli nie jest pusta to dla danych każdego elemntu listu od głowy zaczynajac na ogonie kończąc wykonuje funkcje print_contact() 
- * który wysiwtla na dane elemntu listy w odpowiednim formacie 
- * 
- * @param list - funckja przyjmuje list_pointers określającą liste do wyświetlenia
+ * funkcja ta najpierw sprawdza czy lista nie jest pusta, jeżeli jest jest to wyświetla komunikat "your list is empty"
+ * jezeli nie jest pusta to dla danych każdego elementu listu od głowy zaczynając na ogonie kończąc wykonuje funkcje print_contact()
+ * który wyświetla na dane elementu listy w odpowiednim formacie
+ *
+ * @param list - funkcja przyjmuje list_pointers określającą listę do wyświetlenia
  */
+
 void print_list_head(list_pointers list)
 {
 	if (list.head == NULL)
@@ -333,14 +341,15 @@ void print_list_head(list_pointers list)
 
 
 /**
- * @brief funckjca wsyświetla wszystkie elemnty lsity dynamicznej od strony ogona
+ * @brief funkcja wyświetla wszystkie elementy listy dynamicznej od strony głowy
  *
- * funkcja ta najpierw sprawdza czy lista nie jest psuta, jezeli jest jest to wyswietla komunikat "your list is empty"
- * jezeli nie jest pusta to dla danych każdego elemntu listu od ogona zaczynajac na głowie kończąc wykonuje funkcje print_contact() 
- * który wysiwtla na dane elemntu listy w odpowiednim formacie 
- * 
- * @param list - funckja przyjmuje list_pointers określającą liste do wyświetlenia
+ * funkcja ta najpierw sprawdza czy lista nie jest pusta, jeżeli jest jest to wyświetla komunikat "your list is empty"
+ * jezeli nie jest pusta to dla danych każdego elementu listu od głowy zaczynając na ogonie kończąc wykonuje funkcje print_contact()
+ * który wyświetla na dane elementu listy w odpowiednim formacie
+ *
+ * @param list - funkcja przyjmuje list_pointers określającą listę do wyświetlenia
  */
+
 void print_list_tail(list_pointers list)
 {
 	if (list.head == NULL)
@@ -363,18 +372,19 @@ void print_list_tail(list_pointers list)
 
 
 /**
- * @brief funckcja ta znajduje i zwraca środkowy elemnt listy 
- * 
- * funkcja ta najpierw sprawdza czy lista nie jest psuta, jezeli jest jest to wyswietla komunikat "your list is empty".
- * nastepnie jezeli lista jedno elemtowa to zwraca ten jeden elemnt.
- * następnie jezeli nie jest jedno elmntowa to tworzy dwa wskażńiki first i sec oba przyjmujące wartosc tail
- * następnie do czasu aż wskaźnik sec nie osiągnie końca listy to wskaźńik first przemiesza się z każdą iteracja o jeden elemnt listy
- * do przodu natomiast sec o dwa elemnty do przodu
- * po zakończeniu listy wartosć first jest wskaźnikime na na środkowy elemnt listy i taki też i dzie do zwortu
- * 
- * @param list - funckja przyjmuje list_pointers określającą liste której środkowy elemnt ma zostać znaleziony
- * @return list_node* - funckja zwraca wskaźńik na środkowy elemnt listy
+ * @brief funkcja ta znajduje i zwraca środkowy element listy
+ *
+ * funkcja ta najpierw sprawdza czy lista nie jest pusta, jeżeli jest jest to wyświetla komunikat "your list is empty".
+ * następnie jeżeli lista jednoelementowa to zwraca ten jeden element.
+ * następnie jeżeli nie jest jednoelementowa to tworzy dwa wskaźniki first i sec oba przyjmujące wartość tail
+ * następnie do czasu aż wskaźnik sec nie osiągnie końca listy to wskaźnik first przemiesza się z każdą iteracja o jeden elemnt listy
+ * do przodu natomiast sec o dwa elementy do przodu
+ * po zakończeniu listy wartość first jest wskaźnikiem na na środkowy element listy i taki też idzie do zwrotu
+ *
+ * @param list - funkcja przyjmuje list_pointers określającą listę której środkowy element ma zostać znaleziony
+ * @return list_node* - funkcja zwraca wskaźnik na środkowy element listy
  */
+
 list_node* find_middle_node(list_pointers list)
 {
 	if (list.head==NULL )
@@ -399,14 +409,15 @@ list_node* find_middle_node(list_pointers list)
 
 
 /**
- * @brief funckja usuwa calą lsite z pamięci
- * 
- * funckja ta wykonuje operacja list_remove_head dla lsity aż head i tail nie sa sobie równe po osiągnięciu wychodzi z listy
- * i usuwa ostani pozostaly elemnt listy  i zwraca pustą lite 
+ * @brief funkcja usuwa całą listę z pamięci
  *
- * @param list - funckja przyjmuje list_pointers określającą liste która chemy usunąc 
- * @return list_pointers - funkcja zwraca pustą liste
+ * funkcja ta wykonuje operacja list_remove_head dla listy aż head i tail nie są sobie równe po osiągnięciu wychodzi z listy
+ * i usuwa ostatni pozostały element listy  i zwraca pustą lite
+ *
+ * @param list - funkcja przyjmuje list_pointers określającą listę która chcemy usunąc
+ * @return list_pointers - funkcja zwraca pustą listę
  */
+
 list_pointers free_list(list_pointers list)
 {
 
@@ -419,16 +430,17 @@ list_pointers free_list(list_pointers list)
 
 
 /**
- * @brief funckja wykorzystwana przez funckje merge_sort do scalenia dwóch posortowanych lisr 
- * 
- * funkcja ta towrzy nową liste pustą liste dynamiczna, następnie tworzy nowe wskaźniki na lpointer i rpointer wskazujące koljno
- * na ogon lwejj lsity i ogon prawej lsity....(do dokonczenia)
- * 
- * @param left 
- * @param right 
- * @param cmp 
- * @return list_pointers 
+ * @brief funkcja wykorzystywana przez funkcje merge_sort do scalenia dwóch posortowanych list
+ *
+ * funkcja ta tworzy nową listę pustą listę dynamiczna, następnie tworzy nowe wskaźniki na lpointer i rpointer wskazujące koljno
+ * na ogon lewej listy i ogon prawej listy....(do dokonczenia)
+ *
+ * @param left
+ * @param right
+ * @param cmp
+ * @return list_pointers
  */
+
 list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(contact_type, contact_type))
 {
 	list_pointers list = list_init();
@@ -475,19 +487,20 @@ list_pointers merge(list_pointers left, list_pointers right, int (*cmp)(contact_
 
 
 /**
- * @brief funckja sortuje liste dynamiczna według elemntu podanago jako wskaźńik funkcji
+ * @brief funkcja sortuje listę dynamiczna według elementu podanego jako wskaźnik funkcji
  *
- * funkcja ta jest rekurencyjna którym warunkiem koncowym jest podanie listy jedno elemnotwej czyli head===tail
- * na sam pocztek funkcja znajduje śrdodkowy elemnt i według niegod dzieli ta liste rna lewa i prawa
- * na nastepnie dla kazdej z postalych rowniez wykonuje funkcje merge sort tak dlugo az bedzie liste jedno elemnto
- * w momecnei kiedy masz juz liste jedno elemtowa zscalarz je dwie za pomoca funkcji merge czyli w odpoweinej koljenosci
- * nastepnie scalasz tak tablice rodzica i w tedn spsob zostajesz z posortowana talibca
- * 
- * @param list - struktura list pointers okreslajaca liste do posrotwoania
- * @param cmp - wskaxnik na funkcje porowujaca dwa elemnty listy okreslajace wedlug ktoreg elemntu ma zostac posortowane
+ * funkcja ta jest rekurencyjna którym warunkiem końcowym jest podanie listy jednoelementowej czyli head===tail
+ * na sam początek funkcja znajduje środkowy element i według niego dzieli ta liste rna lewa i prawa
+ * na następnie dla każdej z pozostałych również wykonuje funkcje merge sort tak dlugo az bedzie listę jedno elemento
+ * w momencie kiedy masz już listę jednoelementowa zscaler je dwie za pomocą funkcji merge czyli w odpowiedniej kolejności
+ * następnie scalasz tak tablice rodzica i w ten sposób zostajesz z posortowana tablica
+ *
+ * @param list - struktura list pointers określająca listę do posortowania
+ * @param cmp - wskaźnik na funkcję porównując dwa elementy listy określające według którego elementu ma zostać posortowane
  * mozna podac: id_cmp, name_cmp, number_cmp, phone_cmp, postal_code_cmp, street_cmp
- * @return list_pointers - zwraca strukture list_pointer okreslajaca posortowana lsite 
+ * @return list_pointers - zwraca strukture list_pointer okreslajaca posortowana lsite
  */
+
 list_pointers merge_sort(list_pointers list, int (*cmp)(contact_type, contact_type))
 {
 	if (list.head == list.tail)

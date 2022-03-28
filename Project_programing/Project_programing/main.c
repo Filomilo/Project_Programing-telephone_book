@@ -2,7 +2,7 @@
  *
  * \section Opis
  *
- * ...tresc...
+ * Program umożliwia tworzenie otwieranie i zarządzanie książką telefoniczną
  *
  * \section autorzy
  *
@@ -20,8 +20,7 @@
 /**
  * @file main.c
  * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
- * @brief plik ten zaweira funkcje main aktywujaca głowny program
- * @version 0.1
+ * @brief plik ten zawiera funkcje main aktywująca główny program * @version 0.1
  * @date 2022-03-24
  * 
  * @copyright Copyright (c) 2022
@@ -34,11 +33,12 @@
 #include <stdio.h>
 #include "phone_book.h"
 
-/**
- * @brief funkjca main aaktyujaca glowne dzialanie programu
- * 
- * @return int 
- */
+ /**
+  * @brief funkcja main aktywująca główne działanie programu
+  *
+  * @return int
+  */
+
 int main()
 {
 	system("CHCP 1250 >NUL");

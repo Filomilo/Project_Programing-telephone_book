@@ -155,16 +155,35 @@ void search_phone_book(list_pointers list)
  * @return list_pointers -  struktura list_pointers określająca posortowaną listę w zależności od wyboru użytkownika
  */
 
-list_pointers sort_phone_book(list_pointers list)
+/**
+ * @brief funkcja generuje interfejs umożliwiający sortowanie listy
+ *
+ * funckja na początku wyświetla użytkownika opcje wyboru według którego elementu chce użytkownik posortować listę
+ * w zależności od wyboru użytkownika uruchamia się funkcja merge_sort ze wskaźnikiem na na funkcje "****_cmp"
+ * na koniec zwraca posortowana listę do głównego programu
+ *
+ * @param list -  struktura list_pointers okreslajaca listę która użytkownik che posortować
+ * @param order - wskaźnik na zmienna order określajaća w jakim kierunku ma się wyświetlać lista
+ * @return list_pointers -  struktura list_pointers określająca posortowaną listę w zależności od wyboru użytkownika
+ */
+list_pointers sort_phone_book(list_pointers list, int *order)
 {
 	int choice;
 	do
 	{
 		system("cls");
-		print_list_tail(list);
+		if (*order)
+			print_list_tail(list);
+		else
+			print_list_head(list);
 		printf("Depending on what parameter, would you like to sort: \n\n");
 		printf("7- id\n6- full name\n5- phone number\n4- city \n3- street\n2- postal code\n1- house number\n0-fisnish searching phone book\n\n ");
 		scanf_s("%d", &choice, 1);
+
+		printf("In what order would you like to sort: \n\n");
+		printf("1- descending \n0-Ascending\n\n ");
+		scanf_s("%d", order, 1);
+
 		switch (choice)
 		{
 		case 0:  break;
@@ -193,17 +212,23 @@ list_pointers sort_phone_book(list_pointers list)
  * następnie przeszukuje listę w poszukiwaniu elementu o tym id a następnie go usuwa
  *
  * @param list  struktura list_pointers określająca listę z której użytkownika ma usunąć element
+ * @param order - zmienna order określajaća w jakim kierunku ma się wyświetlać lista
  * @return list_pointers -  struktura list_pointers określająca listę z usuniętymi przez użytkownika elementami
  */
 
-list_pointers delete_element(list_pointers list)
+list_pointers delete_element(list_pointers list, int order)
 {
 	int choice;
 	int id;
 	do
 	{
 		system("cls");
-		print_list_tail(list);
+		
+		if (order)
+			print_list_tail(list);
+		else
+			print_list_head(list);
+
 		printf("what is the id of an element  you'd like to remove: \n\n");
 		scanf_s("%d", &id, 1);
 		list_node* element_to_del = find_node(list, id);
@@ -362,9 +387,15 @@ list_pointers edit_phone_list(list_pointers list)
 void phone_book_manage(list_pointers list)
 {
 	int choice;
+	int order = 0;
 	do {
 		system("cls");
+
+		if(order)
 		print_list_tail(list);
+		else
+			print_list_head(list);
+
 		printf("what would you like to do with your phone list: \n\n");
 		printf("6- add new element\n5- delete element\n4- edit element\n3- sort phone book \n2- search for element\n1- save phone book\n0-fisnish working with this phone book\n\n ");
 		scanf_s("%d", &choice, 1);
@@ -373,9 +404,9 @@ void phone_book_manage(list_pointers list)
 			case 0:  break;
 			case 1 :  save_phone_book(list); break;
 			case 2 : search_phone_book(list); break;
-			case 3 : list= sort_phone_book(list); break;
+			case 3 : list= sort_phone_book(list, &order); break;
 			case 4 : list = edit_phone_list(list); break;
-			case 5 : list = delete_element(list); break;
+			case 5 : list = delete_element(list,order); break;
 			case 6 : list=add_new_element(list); break;
 		default: printf("\n ERROR: provided wrong value\n\n"); break;
 		}

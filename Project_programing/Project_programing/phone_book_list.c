@@ -432,12 +432,13 @@ list_pointers free_list(list_pointers list)
 /**
  * @brief funkcja wykorzystywana przez funkcje merge_sort do scalenia dwóch posortowanych list
  *
- * funkcja ta tworzy nową listę pustą listę dynamiczna, następnie tworzy nowe wskaźniki na lpointer i rpointer wskazujące koljno
- * na ogon lewej listy i ogon prawej listy....(do dokonczenia)
+ * funckja ta tworzy nową liste następnie przepisuje obie listy do niej w odpowniej kolejnoći po wykorzystainiu 
+ * wyszystkiich elemntow z jednej listy przepisuje pozostałę elementy z pozostałej listy towrząc tym samym jedna liste z posortowanymi
+ * elemntami
  *
- * @param left
- * @param right
- * @param cmp
+ * @param left - list_pointers opisujące lewą część listy
+ * @param right - list_pointers opisujące prawą część listy
+ * @param cmp - wskaźnik na funkjcje określającą według którego elemenru ma być posortowana lista
  * @return list_pointers
  */
 

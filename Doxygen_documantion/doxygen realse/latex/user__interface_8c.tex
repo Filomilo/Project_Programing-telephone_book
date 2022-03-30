@@ -19,9 +19,9 @@ void \mbox{\hyperlink{user__interface_8c_a02c59ab7005e2819a32cc3cb46fc76e6}{sear
 \begin{DoxyCompactList}\small\item\em funkcja odpowiada za interfejs pozwalający przeszukać listę \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user__interface_8c_a6b9af5782749ff73f646dadddc0c9813}{search\+\_\+phone\+\_\+book}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
 \begin{DoxyCompactList}\small\item\em funkcja generująca interfejs wyboru elementów do przeszukania \end{DoxyCompactList}\item 
-\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{user__interface_8c_a0f51e0cdb1971181485ede7b06f59822}{sort\+\_\+phone\+\_\+book}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{user__interface_8c_ae07d188eeea21e112b54328f5b4879d0}{sort\+\_\+phone\+\_\+book}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, int $\ast$order)
 \begin{DoxyCompactList}\small\item\em funkcja generuje interfejs umożliwiający sortowanie listy \end{DoxyCompactList}\item 
-\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{user__interface_8c_a82f57d876380dff9dd8a55f7da9bb16d}{delete\+\_\+element}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
+\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} \mbox{\hyperlink{user__interface_8c_aa059779628cf67847bb6d7e0b3a8a235}{delete\+\_\+element}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list, int order)
 \begin{DoxyCompactList}\small\item\em funkcja generująca interfejs umożliwiający usunięcie wybranego przez użytkownika elementu \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user__interface_8c_a8bffcf30642724864a267ae29fa11bd6}{save\+\_\+phone\+\_\+book}} (\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} list)
 \begin{DoxyCompactList}\small\item\em funkcja generująca interfejs umożliwiający zapisanie listy do pliku \end{DoxyCompactList}\item 
@@ -87,11 +87,11 @@ list\+\_\+pointers -\/ zwraca struktura lsit\+\_\+pointers z dodanym elementem p
 
 funkcja odpowiada za tworzenie nowej listy funkcja torzy nowa psuta listę a następnie prosi użytkownika o podanie elementu z pomocą funkcji add\+\_\+new\+\_\+element az użytkownik nie zdecyduje że chce przestać, po zakończeniu w wpisywania przechodzi z ta lista do interfejsu zarządzania \mbox{\hyperlink{user__interface_8c_a502049a74b1c4dfc08953ca9639dfc52}{phone\+\_\+book\+\_\+manage()}} 
 
-\mbox{\Hypertarget{user__interface_8c_a82f57d876380dff9dd8a55f7da9bb16d}\label{user__interface_8c_a82f57d876380dff9dd8a55f7da9bb16d}} 
+\mbox{\Hypertarget{user__interface_8c_aa059779628cf67847bb6d7e0b3a8a235}\label{user__interface_8c_aa059779628cf67847bb6d7e0b3a8a235}} 
 \index{user\_interface.c@{user\_interface.c}!delete\_element@{delete\_element}}
 \index{delete\_element@{delete\_element}!user\_interface.c@{user\_interface.c}}
 \doxysubsubsection{\texorpdfstring{delete\_element()}{delete\_element()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} delete\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} delete\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{int}]{order }\end{DoxyParamCaption})}
 
 
 
@@ -102,6 +102,8 @@ na samym początku funkcja prosi użytkownika o podanie id elementu który chce 
 
 \begin{DoxyParams}{Parameters}
 {\em list} & struktura list\+\_\+pointers określająca listę z której użytkownika ma usunąć element \\
+\hline
+{\em order} & -\/ zmienna order określajaća w jakim kierunku ma się wyświetlać lista \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -224,11 +226,11 @@ funkcja wpierw w porodzi użytkownika o podanie ciągu znaków według której m
 {\em search\+\_\+option} & -\/ wskaźnik na funkcje określające według którego elementu kontaktu będzie przeszukiwanie można wybrać\+: is\+\_\+search\+\_\+city, is\+\_\+search\+\_\+name, is\+\_\+search\+\_\+number, is\+\_\+search\+\_\+phone\+\_\+number, is\+\_\+search\+\_\+postal\+\_\+code, is\+\_\+search\+\_\+street, is\+\_\+search\+\_\+surname \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{user__interface_8c_a0f51e0cdb1971181485ede7b06f59822}\label{user__interface_8c_a0f51e0cdb1971181485ede7b06f59822}} 
+\mbox{\Hypertarget{user__interface_8c_ae07d188eeea21e112b54328f5b4879d0}\label{user__interface_8c_ae07d188eeea21e112b54328f5b4879d0}} 
 \index{user\_interface.c@{user\_interface.c}!sort\_phone\_book@{sort\_phone\_book}}
 \index{sort\_phone\_book@{sort\_phone\_book}!user\_interface.c@{user\_interface.c}}
 \doxysubsubsection{\texorpdfstring{sort\_phone\_book()}{sort\_phone\_book()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} sort\+\_\+phone\+\_\+book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}} sort\+\_\+phone\+\_\+book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{phone__book_8h_a78becf181354a193adc61987626098cb}{list\+\_\+pointers}}}]{list,  }\item[{int $\ast$}]{order }\end{DoxyParamCaption})}
 
 
 
@@ -239,6 +241,20 @@ funckja na początku wyświetla użytkownika opcje wyboru według którego eleme
 
 \begin{DoxyParams}{Parameters}
 {\em list} & -\/ struktura list\+\_\+pointers okreslajaca listę która użytkownik che posortować \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list\+\_\+pointers -\/ struktura list\+\_\+pointers określająca posortowaną listę w zależności od wyboru użytkownika
+\end{DoxyReturn}
+funkcja generuje interfejs umożliwiający sortowanie listy
+
+funckja na początku wyświetla użytkownika opcje wyboru według którego elementu chce użytkownik posortować listę w zależności od wyboru użytkownika uruchamia się funkcja merge\+\_\+sort ze wskaźnikiem na na funkcje \char`\"{}$\ast$$\ast$$\ast$$\ast$\+\_\+cmp\char`\"{} na koniec zwraca posortowana listę do głównego programu
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & -\/ struktura list\+\_\+pointers okreslajaca listę która użytkownik che posortować \\
+\hline
+{\em order} & -\/ wskaźnik na zmienna order określajaća w jakim kierunku ma się wyświetlać lista \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

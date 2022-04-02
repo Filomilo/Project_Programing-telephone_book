@@ -103,7 +103,6 @@ void save(list_pointers list, char file_name[30])
 
 		
 	}while (list.head != NULL);
-	//fwrite(&list.head->data, sizeof(list.head->data), 1, file);
 
 
 

@@ -62,7 +62,6 @@ list_pointers add_new_element(list_pointers list)
 	scanf_s("%s", contact.phone_number, 10);
 	contact.id = 1;
 	 
-	//contact_type contact = generate_rand_contact(time(0));
 	contact.id = generate_id(list);
 	list = list_add_head(list, contact);
 
@@ -177,12 +176,14 @@ list_pointers sort_phone_book(list_pointers list, int *order)
 		else
 			print_list_head(list);
 		printf("Depending on what parameter, would you like to sort: \n\n");
-		printf("7- id\n6- full name\n5- phone number\n4- city \n3- street\n2- postal code\n1- house number\n0-fisnish searching phone book\n\n ");
+		printf("7- id\n6- full name\n5- phone number\n4- city \n3- street\n2- postal code\n1- house number\n0-fisnish soting phone book\n\n ");
 		scanf_s("%d", &choice, 1);
-
-		printf("In what order would you like to sort: \n\n");
-		printf("1- descending \n0-Ascending\n\n ");
-		scanf_s("%d", order, 1);
+		if (choice != 0)
+		{
+			printf("In what order would you like to sort: \n\n");
+			printf("1- descending \n0-Ascending\n\n ");
+			scanf_s("%d", order, 1);
+		}
 
 		switch (choice)
 		{
@@ -381,7 +382,7 @@ list_pointers edit_phone_list(list_pointers list)
  * sort_phone_book, edit_phone_list, delete_element, add_new_element.
  * po zakończeniu pracy lista funkcja zwalnia pamięć zajmowana przez listę
  *
- * @param list - struktura list_pointers określająca listę która użytnik ma poddać edycji
+ * @param list - struktura list_pointers określająca listę która użytkownik ma poddać edycji
  */
 
 void phone_book_manage(list_pointers list)

@@ -96,15 +96,14 @@ void save(list_pointers list, char file_name[30])
 		printf("cant save empty phone book\n");
 		return;
 	}
-	while (list.head != list.tail)
+	do
 	{
 		fwrite(&list.head->data, sizeof(list.head->data),1,file);
 		list.head = list.head->prev;
 
-
-	}
-	fwrite(&list.head->data, sizeof(list.head->data), 1, file);
-
+		
+	}while (list.head != NULL);
+	//fwrite(&list.head->data, sizeof(list.head->data), 1, file);
 
 
 
@@ -142,15 +141,19 @@ list_pointers load(char file_name[30])
 	printf("file: \n%s", directory);
 	int a = fopen_s(&file, directory, "r");
 
-
+	int i = 0;
 	contact_type contact;
 	while (!feof(file))
 	{
+		
 		fread(&contact, sizeof(contact), 1, file);
+		if (feof(file)) //zabezoiuercznie przed wczytaniem koncowego lementu dwa razy, przyccyzna nie zidetifkowana
+			break;
 		list=list_add_tail(list, contact);
 	}
-
 	
+	getchar();
+	getchar();
 
 
 	fclose(file);

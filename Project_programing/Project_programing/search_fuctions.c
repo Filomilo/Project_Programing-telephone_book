@@ -225,9 +225,10 @@ list_pointers search_results(list_pointers list, int(*is_selected)(char[30], con
 
 	if (list.head == NULL)
 	{
+		
 		return new_list;
 	}
-	while (list.tail != list.head)
+	while (list.tail != NULL)
 	{
 		
 		if(is_selected(text,list.tail->data))
@@ -241,7 +242,7 @@ list_pointers search_results(list_pointers list, int(*is_selected)(char[30], con
 	
 	printf("\n");
 
-		print_list_tail(new_list);
+		//print_list_tail(new_list);
 
 
 		return new_list;

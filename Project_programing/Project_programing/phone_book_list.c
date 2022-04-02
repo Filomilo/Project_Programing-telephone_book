@@ -257,19 +257,14 @@ list_pointers list_remove_node(list_pointers list, list_node* node_to_remove)
 	else
 	if (node_to_remove==list.tail)
 	{
-		printf("\nremoving tail\n");
 		list = list_remove_tail(list);
 		return list;
 	}
 	else
 	if (node_to_remove == list.head)
 	{
-		printf("\nremoving head\n");
 
 		list = list_remove_head(list);
-		//print_list_head(list);
-		print_contact(list.head->data);
-		printf("\n\n finsihed test");
 		getchar();
 		return list;
 	}

@@ -105,7 +105,7 @@ int generate_id(list_pointers list)
 
 	if (tmp.head == NULL)
 	{
-		printf("your list is empty\n");
+		//printf("your list is empty\n");
 		return i;
 	}
 	while (tmp.tail != active)

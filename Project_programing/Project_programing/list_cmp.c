@@ -30,7 +30,7 @@
   * 0 jeśli a i b są równe,
   * i 1 jeśli a jest większe od b
   */
-
+/*
 int id_cmp(list_node* a, list_node* b)
 {
 	if(a->data.id> b->data.id)
@@ -42,8 +42,12 @@ int id_cmp(list_node* a, list_node* b)
 			return 0;
 
 }
+*/
+int id_cmp(list_node* a, list_node* b)
+{
+	return a->data.id <= b->data.id;
 
-
+}
 
 
 

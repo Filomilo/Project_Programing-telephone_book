@@ -27,9 +27,11 @@
 
 contact_type generate_rand_contact(int seed)
 {
-	srand(time(0));
+	static s = 0;
+	s++;
+	srand(time(0)*s);
 	contact_type contact;
-	contact.id = rand() % 20000;
+	contact.id = rand() % 10;
 	switch (rand()%13)
 	{
 	case 0: strncpy_s(contact.name, 30, "Julia",30); break;
@@ -152,18 +154,19 @@ void list_contact_test_sort()
 	srand(time(0));
 	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
 	
-	getchar();
+	//getchar();
 	
 	list_pointers list = list_init();
-	for (int i = 0; i < 20; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		list = add_new_element(list);
 
 	}
 	print_list_tail(list);
-	getchar();
+	//getchar();
 	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by id: \n\n\n\n");
-	list = merge_sort(list, id_cmp);
+	//list = merge_sort(list, id_cmp);
+	quick_sort(list.tail, list.head, id_cmp);
 	print_list_tail(list);
 	getchar();
 

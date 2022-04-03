@@ -34,7 +34,7 @@
   * @param list - struktura list_pointers określająca listę do której użytkownik ma dopisać element
   * @return list_pointers - zwraca struktura lsit_pointers z dodanym elementem przez użytkownika
   */
-
+/*
 list_pointers add_new_element(list_pointers list)
 {
 	system("cls");
@@ -68,7 +68,20 @@ list_pointers add_new_element(list_pointers list)
 
 	return list;
 }
+*/
+int i = 1;
+list_pointers add_new_element(list_pointers list)
+{
+	system("cls");
 
+
+	system("cls");
+	contact_type contact=generate_rand_contact(time(0)*clock()*i+i);
+	list = list_add_head(list, contact);
+
+	i++;
+	return list;
+}
 
 
 /**

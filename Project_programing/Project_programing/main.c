@@ -42,7 +42,8 @@
 int main()
 {
 	system("CHCP 1250 >NUL");
-	start_ui();
+	//start_ui();
+	list_contact_test_sort();
 	return 0;
 
 }

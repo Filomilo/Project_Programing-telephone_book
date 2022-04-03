@@ -33,6 +33,7 @@
  * @param contact - typ conact_type zawierające dane do wyświetlenia przez funkcje
  */
 
+
 void print_contact(contact_type contact)
 {
 	printf("ID: %d\n", contact.id);
@@ -42,7 +43,11 @@ void print_contact(contact_type contact)
 	printf("\n\n\n");
 }
 
-
+/*
+void print_contact(contact_type contact)
+{
+	printf("%d, ", contact.id);
+}*/
 /**
  * @brief funkcja duplikuje otrzymana listę dynamiczną
  *

@@ -518,3 +518,38 @@ list_pointers merge_sort(list_pointers list, int (*cmp)(contact_type, contact_ty
 }
 
 
+void swap(list_node* a, list_node* b)
+{
+	contact_type tmp = a->data;
+	a->data = b->data;
+	b->data = tmp;
+}
+
+void quick_sort(list_node* l, list_node* r, int (*cmp)(list_node* a, list_node* b))
+{
+	if (l == r || l->next == NULL)
+		return;
+	list_node* tmp = (list_node*)malloc(sizeof(list_node));
+	tmp->next = l;
+	tmp->prev = NULL;
+	list_node* pivot = r;
+	list_node* i = tmp;
+	list_node* j = l;
+	while (j != r)
+	{
+		if (cmp(j, pivot))
+		{
+
+			i = i->next;
+			swap(i, j);
+		}
+		j = j->next;
+	}
+
+
+	swap(i->next, r);
+
+	quick_sort(l, i, cmp);
+	quick_sort(i->next, r, cmp);
+	free(tmp);
+}

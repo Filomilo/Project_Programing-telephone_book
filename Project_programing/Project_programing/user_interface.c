@@ -42,6 +42,7 @@ list_pointers add_new_element(list_pointers list)
 
 	system("cls");
 	contact_type contact;
+	
 	printf("please provide full name of your contact:\n");
 	scanf_s("%s", contact.name, 30);
 	scanf_s("%s", contact.surname, 30);
@@ -60,7 +61,6 @@ list_pointers add_new_element(list_pointers list)
 
 	printf("please provide phone number of your contact:\n");
 	scanf_s("%s", contact.phone_number, 10);
-	contact.id = 1;
 	 
 	contact.id = generate_id(list);
 	list = list_add_head(list, contact);

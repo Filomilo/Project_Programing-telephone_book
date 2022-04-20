@@ -87,7 +87,7 @@ void save(list_pointers list, char file_name[30])
 	char directory[60]="phone_data\\";
 	strcat_s(directory, 60, file_name);
 	strcat_s(directory, 60, ".pbd");
-	int a =fopen_s(&file , directory, "w");
+	int a =fopen_s(&file , directory, "wb");
 	
 
 
@@ -107,7 +107,7 @@ void save(list_pointers list, char file_name[30])
 
 
 	fclose(file);
-	getchar();
+	//getchar();
 
 }
 
@@ -137,8 +137,8 @@ list_pointers load(char file_name[30])
 	char directory[60] = "phone_data\\";
 	strcat_s(directory, 60, file_name);
 	strcat_s(directory, 60, ".pbd");
-	printf("file: \n%s", directory);
-	int a = fopen_s(&file, directory, "r");
+	//printf("file: \n%s", directory);
+	int a = fopen_s(&file, directory, "rb");
 
 	int i = 0;
 	contact_type contact;
@@ -151,8 +151,8 @@ list_pointers load(char file_name[30])
 		list=list_add_tail(list, contact);
 	}
 	
-	getchar();
-	getchar();
+	//getchar();
+//	getchar();
 
 
 	fclose(file);

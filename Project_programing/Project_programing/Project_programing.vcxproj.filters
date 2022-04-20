@@ -44,11 +44,11 @@
     <ClInclude Include="phone_book.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Spis funkcji.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

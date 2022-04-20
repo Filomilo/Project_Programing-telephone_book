@@ -49,17 +49,17 @@ contact_type generate_rand_contact(int seed)
 	switch (rand() % 13)
 	{
 	case 0: strncpy_s(contact.surname, 30, "Nowak", 30); break;
-	case 1: strncpy_s(contact.surname, 30, "W�jcik", 30); break;
+	case 1: strncpy_s(contact.surname, 30, "Wojcik", 30); break;
 	case 2: strncpy_s(contact.surname, 30, "Kowalczyk", 30); break;
-	case 3: strncpy_s(contact.surname, 30, "Wo�niak", 30); break;
+	case 3: strncpy_s(contact.surname, 30, "Wozniak", 30); break;
 	case 4: strncpy_s(contact.surname, 30, "Mazur", 30); break;
 	case 5: strncpy_s(contact.surname, 30, "Krawczyk", 30); break;
 	case 6: strncpy_s(contact.surname, 30, "Kaczmarek", 30); break;
-	case 7: strncpy_s(contact.surname, 30, "St�pie�", 30); break;
-	case 8: strncpy_s(contact.surname, 30, "Wr�bel", 30); break;
+	case 7: strncpy_s(contact.surname, 30, "Stepien", 30); break;
+	case 8: strncpy_s(contact.surname, 30, "Wrobel", 30); break;
 	case 9: strncpy_s(contact.surname, 30, "Baran", 30); break;
 	case 10: strncpy_s(contact.surname, 30, "Sikora", 30); break;
-	case 11: strncpy_s(contact.surname, 30, "B�k", 30); break;
+	case 11: strncpy_s(contact.surname, 30, "Buk", 30); break;
 	case 12: strncpy_s(contact.surname, 30, "Lis", 30); break;
 	}
 
@@ -71,14 +71,14 @@ contact_type generate_rand_contact(int seed)
 	switch (rand() % 13)
 	{
 	case 0: strncpy_s(contact.adress.street, 30, "Polna", 30); break;
-	case 1: strncpy_s(contact.adress.street, 30, "Le�na", 30); break;
-	case 2: strncpy_s(contact.adress.street, 30, "S�oneczna", 30); break;
-	case 3: strncpy_s(contact.adress.street, 30, "Kr�tka", 30); break;
+	case 1: strncpy_s(contact.adress.street, 30, "Lenna", 30); break;
+	case 2: strncpy_s(contact.adress.street, 30, "Sloneczna", 30); break;
+	case 3: strncpy_s(contact.adress.street, 30, "Krotka", 30); break;
 	case 4: strncpy_s(contact.adress.street, 30, "Szkolna", 30); break;
 	case 5: strncpy_s(contact.adress.street, 30, "Ogrodowa", 30); break;
 	case 6: strncpy_s(contact.adress.street, 30, "Lipowa", 30); break;
 	case 7: strncpy_s(contact.adress.street, 30, "Brzozowa", 30); break;
-	case 8: strncpy_s(contact.adress.street, 30, "��kowa", 30); break;
+	case 8: strncpy_s(contact.adress.street, 30, "bukowa", 30); break;
 	case 9: strncpy_s(contact.adress.street, 30, "Kwiatowa", 30); break;
 	case 10: strncpy_s(contact.adress.street, 30, "Maczka", 30); break;
 	case 11: strncpy_s(contact.adress.street, 30, "Marmurowa", 30); break;
@@ -98,18 +98,18 @@ contact_type generate_rand_contact(int seed)
 	switch (rand() % 13)
 	{
 	case 0: strncpy_s(contact.adress.city, 30, "Warszawa", 30); break;
-	case 1: strncpy_s(contact.adress.city, 30, "Krak�w", 30); break;
-	case 2: strncpy_s(contact.adress.city, 30, "��d�", 30); break;
-	case 3: strncpy_s(contact.adress.city, 30, "Wroc�aw", 30); break;
-	case 4: strncpy_s(contact.adress.city, 30, "Pozna�", 30); break;
-	case 5: strncpy_s(contact.adress.city, 30, "Gda�sk", 30); break;
+	case 1: strncpy_s(contact.adress.city, 30, "Krakow", 30); break;
+	case 2: strncpy_s(contact.adress.city, 30, "dziurow", 30); break;
+	case 3: strncpy_s(contact.adress.city, 30, "Wroclaw", 30); break;
+	case 4: strncpy_s(contact.adress.city, 30, "Poznan", 30); break;
+	case 5: strncpy_s(contact.adress.city, 30, "Gdansk", 30); break;
 	case 6: strncpy_s(contact.adress.city, 30, "Szczecin", 30); break;
 	case 7: strncpy_s(contact.adress.city, 30, "Bydgoszcz", 30); break;
-	case 8: strncpy_s(contact.adress.city, 30, "Bia�ystok", 30); break;
+	case 8: strncpy_s(contact.adress.city, 30, "Bialystok", 30); break;
 	case 9: strncpy_s(contact.adress.city, 30, "Katowice", 30); break;
-	case 10: strncpy_s(contact.adress.city, 30, "Cz�stochowa", 30); break;
+	case 10: strncpy_s(contact.adress.city, 30, "Czestochowa", 30); break;
 	case 11: strncpy_s(contact.adress.city, 30, "Radom", 30); break;
-	case 12: strncpy_s(contact.adress.city, 30, "Toru�", 30); break;
+	case 12: strncpy_s(contact.adress.city, 30, "Torun", 30); break;
 	}
 	return contact;
 }

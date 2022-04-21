@@ -220,7 +220,7 @@ extern list_pointers add_new_element(list_pointers list);
 
 
 
-// tymczasowe funkcje znajduj�ce sie w pliku temporary_functions.c u�ywane do tesowtaia poprawno��i dzia�ania prgramu
+// tymczasowe funkcje znajdujące sie w pliku temporary_functions.c używane do tesowtaia poprawno��i działaania prgramu
 
 extern void genrating_contacts_test();
 extern void list_test_sort();

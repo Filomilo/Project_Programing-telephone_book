@@ -96,7 +96,19 @@ int phone_cmp(list_node* a, list_node* b)
 
 
 
-
+/**
+ * @brief funkcja porównuje ze sobą nazwy miast dwóch elmentów
+ *
+ * funkcja ta porównuje nazwy miast dwóch elementów listy i zwraca -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
+ *
+ * @param a - wskaźnik lsit_node na element listy a do porównania
+ * @param b - wskaźnik lsit_node na element listy b do porównania
+ * @return int - zwraca wynik porównania na zasadzie : -1 jeżeli a jest mniejsze od b,
+ * 0 jeśli a i b są równe,
+ * i 1 jeśli a jest większe od b
+ */
 
 int city_cmp(list_node* a, list_node* b)
 {

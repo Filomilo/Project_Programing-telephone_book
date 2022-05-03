@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PP2_Phone_Book: D:/dysk google/studia/Semestr  2/Podstawy programowania 2/Projekt - Podstawy programowania 2/projekt/Project_Programing-telephone_book/Project_programing/Project_programing/file_manage.c File Reference</title>
+<title>PP2_Phone_Book: D:/dysk google/studia/Semestr  2/Podstawy programowania 2/Projekt - Podstawy programowania 2/projekt/Filomilo/Project_Programing-telephone_book/Project_programing/Project_programing/file_manage.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,7 +84,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2e3eb4c09f45c47e5a1e4b7b90545904"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__manage_8c.html#a2e3eb4c09f45c47e5a1e4b7b90545904">phone_book_list</a> ()</td></tr>
-<tr class="memdesc:a2e3eb4c09f45c47e5a1e4b7b90545904"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcje te generuje listę plików dostępnych w folderze przeznaczonym na zapis książek telefonicznych  <a href="file__manage_8c.html#a2e3eb4c09f45c47e5a1e4b7b90545904">More...</a><br /></td></tr>
+<tr class="memdesc:a2e3eb4c09f45c47e5a1e4b7b90545904"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcje te generuja listę plików dostępnych w folderze przeznaczonym na zapis książek telefonicznych  <a href="file__manage_8c.html#a2e3eb4c09f45c47e5a1e4b7b90545904">More...</a><br /></td></tr>
 <tr class="separator:a2e3eb4c09f45c47e5a1e4b7b90545904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05e91a23881226c31872a5f29d8df505"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file__manage_8c.html#a05e91a23881226c31872a5f29d8df505">save</a> (<a class="el" href="phone__book_8h.html#a78becf181354a193adc61987626098cb">list_pointers</a> list, char file_name[30])</td></tr>
 <tr class="memdesc:a05e91a23881226c31872a5f29d8df505"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja zapisuje listę dynamiczną do pliku o podanej nazwie  <a href="file__manage_8c.html#a05e91a23881226c31872a5f29d8df505">More...</a><br /></td></tr>
@@ -159,7 +159,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>funkcja wczytuje listę z pliku o podanej nazwie </p>
-<p >na samym początku funkcja towrzy nowa liste nastepenie generuje lokalizację nazwę i rozszerzenie pliku o podanej nazwie następnie otwiera ten plik o podanej nazwie i wczytuje elementy listy element po elemencie i dodaje je do nowo utworzonej listy aż do osiągnięcia końca pliku po wczytaniu wszystkich elementów może zostać zwrócona lista wypełniona</p>
+<p >na samym początku funkcja tworzy nowa liste nastepnie generuje lokalizację, nazwę i rozszerzenie pliku o podanej nazwie następnie otwiera ten plik o podanej nazwie i wczytuje elementy listy, element po elemencie i dodaje je do nowo utworzonej listy aż do osiągnięcia końca pliku po wczytaniu wszystkich elementów może zostać zwrócona lista wypełniona</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td>- 30 elementowy ciąg znaków określający nazwę pliku do odtworzenia </td></tr>
@@ -185,7 +185,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>funkcje te generuje listę plików dostępnych w folderze przeznaczonym na zapis książek telefonicznych </p>
+<p>funkcje te generuja listę plików dostępnych w folderze przeznaczonym na zapis książek telefonicznych </p>
 <p >na samy na początku funkcja wyświetla your phone books: następnie z pomocą biblioteki dirent.h otwiera lokalizacje przeznaczona na zapisywanie książek telefonicznych następnie również z pomocą biblioteki dirent.h wypisuje listę nazw plików bez rozszerzenia wraz przypisaniem do nich wartości numerycznej umożliwiających późniejszy wybór książki do wybrania</p>
 <dl class="section return"><dt>Returns</dt><dd>int funkcja zwraca wartość 0 jeżeli nie masz żadnych dostępnych książek telefonicznych i 1- jeśli masz dostępne książki telefoniczne </dd></dl>
 
@@ -218,7 +218,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>funkcja zapisuje listę dynamiczną do pliku o podanej nazwie </p>
-<p >na samym początku funkcja sprawdza czy istnieje folder przeznaczony na zapisywanie książek telefonicznych jeżeli nie tworzy taki folder następnie tworzy ciąg znaków określający lokalizacja nazwę i rozszerzenie pliku do zapisania następnie wchodzi w pętlę która przechodzi przez wszystkie elementy listy i zapisuje je do pliku binarnego o podanej nazwie i rozszerzeniu .pbd</p>
+<p >na samym początku funkcja sprawdza czy istnieje folder przeznaczony na zapisywanie książek telefonicznych jeżeli nie, tworzy taki folder następnie tworzy ciąg znaków określający lokalizacja, nazwę i rozszerzenie pliku do zapisania następnie wchodzi w pętlę która przechodzi przez wszystkie elementy listy i zapisuje je do pliku binarnego o podanej nazwie i rozszerzeniu .pbd</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">list</td><td>- struktura list_pointer określająca listę do zapisania </td></tr>

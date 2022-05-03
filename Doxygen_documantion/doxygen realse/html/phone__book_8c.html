@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PP2_Phone_Book: D:/dysk google/studia/Semestr  2/Podstawy programowania 2/Projekt - Podstawy programowania 2/projekt/Project_Programing-telephone_book/Project_programing/Project_programing/phone_book.c File Reference</title>
+<title>PP2_Phone_Book: D:/dysk google/studia/Semestr  2/Podstawy programowania 2/Projekt - Podstawy programowania 2/projekt/Filomilo/Project_Programing-telephone_book/Project_programing/Project_programing/phone_book.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -113,14 +113,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>funkcja duplikuje otrzymana listę dynamiczną </p>
-<p >funkcja ta przyjmuje jako parametr lsit_pointers określająca listę do duplikowania następnie tworzy nowa liste new i jeżeli niepodana lista nie jest pusta funkcja wchodzi pętle przechodząca przez wszystkie elementy listy i każdy z elementów dodaje do nowej listy po przeniesieniu wszystkich elementów funkcja zwraca nowo wytworzona listę</p>
+<p >funkcja ta przyjmuje jako parametr lsit_pointers określający listę do duplikowania, następnie tworzy nowa liste new i jeżeli niepodana lista nie jest pusta, funkcja wchodzi w pętle przechodząca przez wszystkie elementy listy i każdy z elementów dodaje do nowej listy, po przeniesieniu wszystkich elementów funkcja zwraca nowo wytworzona listę</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">list</td><td>- struktura list_pointers określają listę do duplikowania </td></tr>
+    <tr><td class="paramname">list</td><td>- struktura list_pointers określająca listę do duplikowania </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>list_pointers - struktura lsit_pointers określająca nowa zduplikowaną listę </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>list_pointers - struktura list_pointers określająca nowa zduplikowaną listę </dd></dl>
 
 </div>
 </div>
@@ -141,14 +141,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>funkcja generuje dla listy unikatowe id </p>
-<p >funkcja ta publikuje listę, do której ma zostać wygenerowany unikatowe id następnie sortuje ja według id, po czym bierze wartość i=0 i idzie przez każdy element posortowanej listy zwiększając wartość i o 1 jeżeli w którymś momencie wartość i nie będzie się zgadzać z wartością id elementu listy znaczy że to id jest wolne lub jeśli lista się skończyła to również powiększone i będzie oznaczać wolne id i takie zatem zwracać</p>
+<p >funkcja ta publikuje listę, do której ma zostać wygenerowane unikatowe id następnie sortuje ja według id, po czym bierze wartość i=0 i idzie przez każdy element posortowanej listy zwiększając wartość i o 1, jeżeli w którymś momencie wartość i nie będzie się zgadzać z wartością id elementu listy oznacza to, że id jest wolne lub jeśli lista się skończyła to również powiększona zostaje o 1 i będzie oznaczać wolne id</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">list</td><td>- struktura list_pointers określają listę do duplikowania </td></tr>
+    <tr><td class="paramname">list</td><td>- struktura list_pointers określająca listę do duplikowania </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int - zwraca wartość int określająca najmniejsze wolne id </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int - zwraca wartość int określającą najmniejsze wolne id </dd></dl>
 
 </div>
 </div>

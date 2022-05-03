@@ -17,7 +17,7 @@
 #include <filesystem>
 
  /**
-  * @brief funkcje te generuje listę plików dostępnych w folderze przeznaczonym na zapis książek telefonicznych
+  * @brief funkcje te generuja listę plików dostępnych w folderze przeznaczonym na zapis książek telefonicznych
   *
   * na samy na początku funkcja wyświetla your phone books:
   * następnie z pomocą biblioteki dirent.h otwiera lokalizacje przeznaczona na zapisywanie książek telefonicznych
@@ -30,7 +30,7 @@
 
 int phone_book_list()
 {
-	printf("your phone books:\n\n");
+	printf("Your phone books:\n\n");
 	DIR* dirct;
 	dirct = opendir("\phone_data");
 	struct dirent* dir;
@@ -38,7 +38,7 @@ int phone_book_list()
 	dir = readdir(dirct);
 	if (!(dir = readdir(dirct)))
 	{
-		printf("there are no phonebooks saved\n");
+		printf("There are no phonebooks saved\n");
 		return 0;
 	}
 	int i = 0;
@@ -56,8 +56,8 @@ int phone_book_list()
  * @brief funkcja zapisuje listę dynamiczną do pliku o podanej nazwie
  *
  * na samym początku funkcja sprawdza czy istnieje folder przeznaczony na zapisywanie książek telefonicznych
- * jeżeli nie tworzy taki folder
- * następnie tworzy ciąg znaków określający lokalizacja nazwę i rozszerzenie pliku do zapisania
+ * jeżeli nie, tworzy taki folder
+ * następnie tworzy ciąg znaków określający lokalizacja, nazwę i rozszerzenie pliku do zapisania
  * następnie wchodzi w pętlę która przechodzi przez wszystkie elementy listy i zapisuje je do pliku binarnego
  * o podanej nazwie i rozszerzeniu .pbd
  *
@@ -68,7 +68,7 @@ int phone_book_list()
 void save(list_pointers list, char file_name[30])
 {
 
-	//tworzenie folderu jesli nie instje
+	//tworzenie folderu jesli nie istnieje
 
 	DIR *dirct;
 	dirct = opendir("\phone_data");
@@ -93,7 +93,7 @@ void save(list_pointers list, char file_name[30])
 
 	if (list.head == NULL)
 	{
-		printf("cant save empty phone book\n");
+		printf("Can't save empty phone book\n");
 		return;
 	}
 	do
@@ -115,9 +115,9 @@ void save(list_pointers list, char file_name[30])
 /**
  * @brief funkcja wczytuje listę z pliku o podanej nazwie
  *
- * na samym początku funkcja towrzy nowa liste nastepenie generuje lokalizację nazwę i rozszerzenie pliku o  podanej nazwie
+ * na samym początku funkcja tworzy nowa liste nastepnie generuje lokalizację, nazwę i rozszerzenie pliku o  podanej nazwie
  * następnie otwiera ten plik o podanej nazwie
- * i wczytuje elementy listy element po elemencie i dodaje je do nowo utworzonej listy aż do osiągnięcia końca pliku
+ * i wczytuje elementy listy, element po elemencie i dodaje je do nowo utworzonej listy aż do osiągnięcia końca pliku
  * po wczytaniu wszystkich elementów może zostać zwrócona lista wypełniona
  *
  *
@@ -146,7 +146,7 @@ list_pointers load(char file_name[30])
 	{
 		
 		fread(&contact, sizeof(contact), 1, file);
-		if (feof(file)) //zabezoiuercznie przed wczytaniem koncowego lementu dwa razy, przyccyzna nie zidetifkowana
+		if (feof(file)) //zabeczpieczenie przed wczytaniem koncowego elementu dwa razy, przyczyna nie zidentyfikowana
 			break;
 		list=list_add_tail(list, contact);
 	}

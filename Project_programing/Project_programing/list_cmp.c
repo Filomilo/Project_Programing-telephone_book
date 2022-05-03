@@ -97,7 +97,7 @@ int phone_cmp(list_node* a, list_node* b)
 
 
 /**
- * @brief funkcja porównuje ze sobą nazwy miast dwóch elmentów
+ * @brief funkcja porównuje ze sobą nazwy miast dwóch elementów
  *
  * funkcja ta porównuje nazwy miast dwóch elementów listy i zwraca -1 jeżeli a jest mniejsze od b,
  * 0 jeśli a i b są równe,

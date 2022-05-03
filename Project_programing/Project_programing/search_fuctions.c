@@ -1,4 +1,4 @@
-//funkcje odopwiadaj�ce za wyszukiwanie we liscie
+//funkcje odopwiadajace za wyszukiwanie w liscie
 /**
  * @file search_fuctions.c
  * @author
@@ -46,8 +46,8 @@ void string_to_low(char string[30])
  *
  * funkcja zamienia najpierw zarówno imię jak i warunek wyszukiwania na małe litery za pomocą funkcji string_to_low
  * następnie porównuje oba ciągi za pomocą funkcji strcmp i jeżeli ciągi są takie same zwraca wartość 1 a jeżeli nie to 0
- * @param string - 30 elemnotwy ciąg znaków który określający wyszukiwany element
- * @param node - sprawdzony wpis w książce telefonicznej który jest sprawdzany z tekstem string
+ * @param string - 30 elemnotwy ciąg znaków który określa wyszukiwany element
+ * @param node - wpis w książce telefonicznej który jest sprawdzany z tekstem string
  * @return int - liczba zwracana przez funkcje określająca czy dany element spełnia warunek wyszukiwania
  * 0- jeżeli nie spełnia warunku
  * 1- jeżeli spełnia warunek
@@ -71,8 +71,8 @@ int is_search_name(char string[30], contact_type node)
  *
  * funkcja zamienia najpierw zarówno nazwisko jak i warunek wyszukiwania na małe litery za pomocą funkcji string_to_low
  * następnie porównuje oba ciągi za pomocą funkcji strcmp i jeżeli ciągi są takie same zwraca wartość 1 a jeżeli nie to 0
- * @param string - 30 elemnotwy ciąg znaków który określający wyszukiwany element
- * @param node - sprawdzony wpis w książce telefonicznej który jest sprawdzany z tekstem string
+ * @param string - 30 elemnotwy ciąg znaków który określa wyszukiwany element
+ * @param node - wpis w książce telefonicznej który jest sprawdzany z tekstem string
  * @return int - liczba zwracana przez funkcje określająca czy dany element spełnia warunek wyszukiwania
  * 0- jeżeli nie spełnia warunku
  * 1- jeżeli spełnia warunek
@@ -95,8 +95,8 @@ int is_search_surname(char string[30], contact_type node)
  *
  *
  * funkcja porównuje parametr wyszukiwania oraz numer telefonu za pomocą funkcji strcmp() i jeżeli ciągi są takie same zwraca wartość 1 a jeżeli nie to 0
- * @param string - 30 elemnotwy ciąg znaków który określający wyszukiwany element
- * @param name - sprawdzony wpis w książce telefonicznej który jest sprawdzany z tekstem string
+ * @param string - 30 elemnotwy ciąg znaków który określa wyszukiwany element
+ * @param name - wpis w książce telefonicznej który jest sprawdzany z tekstem string
  * @return int - liczba zwracana przez funkcje określająca czy dany element spełnia warunek wyszukiwania
  * 0- jeżeli nie spełnia warunku
  * 1 - jeżeli spełnia warunek
@@ -115,8 +115,8 @@ int is_search_phone_number(char string[30], contact_type node)
  *
  * funkcja zamienia najpierw zarówno miasto jak i warunek wyszukiwania na małe litery za pomocą funkcji string_to_low
  * następnie porównuje oba ciągi za pomocą funkcji strcmp i jeżeli ciągi są takie same zwraca wartość 1 a jeżeli nie to 0
- * @param string - 30 elemnotwy ciąg znaków który określający wyszukiwany element
- * @param node - sprawdzony wpis w książce telefonicznej który jest sprawdzany z tekstem string
+ * @param string - 30 elemnotwy ciąg znaków który określa wyszukiwany element
+ * @param node - wpis w książce telefonicznej który jest sprawdzany z tekstem string
  * @return int - liczba zwracana przez funkcje określająca czy dany element spełnia warunek wyszukiwania
  * 0- jeżeli nie spełnia warunku
  * 1- jeżeli spełnia warunek
@@ -139,8 +139,8 @@ int is_search_city(char string[30], contact_type node)
  *
  * funkcja zamienia najpierw zarówno ulica  jak i warunek wyszukiwania na małe litery za pomocą funkcji string_to_low
  * następnie porównuje oba ciągi za pomocą funkcji strncmp i jeżeli ciągi są takie same zwraca wartość 1 a jeżeli nie to 0
- * @param string - 30 elemnotwy ciąg znaków który określający wyszukiwany element
- * @param node - sprawdzony wpis w książce telefonicznej który jest sprawdzany z tekstem string
+ * @param string - 30 elemnotwy ciąg znaków który określa wyszukiwany element
+ * @param node - wpis w książce telefonicznej który jest sprawdzany z tekstem string
  * @return int - liczba zwracana przez funkcje określająca czy dany element spełnia warunek wyszukiwania
  * 0- jeżeli nie spełnia warunku
  * 1- jeżeli spełnia warunek
@@ -164,8 +164,8 @@ int is_search_street(char string[30], contact_type node)
  *
  *
  * funkcja porównuje parametr wyszukiwania oraz kod pocztowym za pomocą funkcji strncmp() i jeżeli ciągi są takie same zwraca wartość 1 a jeżeli nie to 0
- * @param string - 30 elemnotwy ciąg znaków który określający wyszukiwany element
- * @param node - sprawdzony wpis w książce telefonicznej który jest sprawdzany z tekstem string
+ * @param string - 30 elemnotwy ciąg znaków który określa wyszukiwany element
+ * @param node - wpis w książce telefonicznej który jest sprawdzany z tekstem string
  * @return int - liczba zwracana przez funkcje określająca czy dany element spełnia warunek wyszukiwania
  * 0- jeżeli nie spełnia warunku
  * 1 - jeżeli spełnia warunek
@@ -186,8 +186,8 @@ int is_search_postal_code(char string[30], contact_type node)
  *
  * funkcja najpierw zamienia ciąg znaków podany jako warunek wyszukiwania na wartość int z pomocą funkcji atoi()
  * a następnie porównuje tą wartość z wartością numeru adresu w danym wpisie i zwraca 0 jeżeli nie są równe i 1 kiedy są równe
- * @param string - 30 elemnotwy ciąg znaków który określający wyszukiwany element
- * @param node - sprawdzony wpis w książce telefonicznej który jest sprawdzany z tekstem string
+ * @param string - 30 elemnotwy ciąg znaków który określa wyszukiwany element
+ * @param node - wpis w książce telefonicznej który jest sprawdzany z tekstem string
  * @return int - liczba zwracana przez funkcje określająca czy dany element spełnia warunek wyszukiwania
  * 0- jeżeli nie spełnia warunku
  * 1 - jeżeli spełnia warunek
@@ -207,14 +207,14 @@ int is_search_number(char string[30], contact_type node)
  * następnie zwraca listę wypełniona wyszukiwanymi elementami
  *
  * funkcja na samym początku tworzy nową listę do której będą zapisywane wyniki wyszukiwania następnie dla każdego elementu listy oryginalnej wywołuje wskaźnik na funkcję
- * w zależności od tego która kategorie danych się wyszukuje,  funkcja sprawdzająca zwraca wartość 1 wtedy dany element jest dodawany do nowej listy z wynikami wyszukiwania
+ * w zależności od tego która kategorie danych się wyszukuje,  funkcja sprawdzająca zwraca wartość 1 wtedy, dany element jest dodawany do nowej listy z wynikami wyszukiwania,
  * po stworzeniu listy z wynikami wyszukiwania jest ona wyświetlona na ekranie a także i zwrócona jako wynik funkcji
  *
  * @param list - list_pointers określająca listę która ma zostać przeszukana
  * @param is_selected - wskaźnik na funkcje sprawdzająca czy dany element spełnia warunki wyszukiwania można podać:
  * is_search_city, is_search_name, is_search_number, is_search_phone_number, is_search_postal_code,  is_search_street, is_search_surname
- * @param text - 30 elementowy ciąg znaków określająca wyszukiwany element
- * @return list_pointers - struktura list pointers określająca listę z elementami spełniającymi podane warunki
+ * @param text - 30 elementowy ciąg znaków określajacy wyszukiwany element
+ * @return list_pointers - struktura list pointers określający listę z elementami spełniającymi podane warunki
  */
 
 

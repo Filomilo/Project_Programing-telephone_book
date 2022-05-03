@@ -9,7 +9,7 @@
  * 
  */
 
-//funckcje odpowiedzlane za zarz�dzanie ksi�zk� telefoniczn�
+//funckcje odpowiedzialne za zarzadzanie ksiazka telefoniczna
 
 #include "phone_book.h"
 #include <stdlib.h>
@@ -46,13 +46,13 @@ void print_contact(contact_type contact)
 /**
  * @brief funkcja duplikuje otrzymana listę dynamiczną
  *
- * funkcja ta przyjmuje jako parametr lsit_pointers określająca listę do duplikowania
- * następnie tworzy nowa liste new i jeżeli niepodana lista nie jest pusta funkcja wchodzi pętle
- * przechodząca przez wszystkie elementy listy i każdy z elementów dodaje do nowej listy
+ * funkcja ta przyjmuje jako parametr lsit_pointers określający listę do duplikowania,
+ * następnie tworzy nowa liste new i jeżeli niepodana lista nie jest pusta, funkcja wchodzi w pętle
+ * przechodząca przez wszystkie elementy listy i każdy z elementów dodaje do nowej listy,
  * po przeniesieniu wszystkich elementów funkcja zwraca nowo wytworzona listę
  *
- * @param list - struktura list_pointers określają listę do duplikowania
- * @return list_pointers  - struktura lsit_pointers określająca nowa zduplikowaną listę
+ * @param list - struktura list_pointers określająca listę do duplikowania
+ * @return list_pointers  - struktura list_pointers określająca nowa zduplikowaną listę
  */
 
 list_pointers duplicate_book( list_pointers list)
@@ -85,14 +85,14 @@ list_pointers duplicate_book( list_pointers list)
 /**
  * @brief funkcja generuje dla listy unikatowe id
  *
- * funkcja ta publikuje listę, do której ma zostać wygenerowany unikatowe id
+ * funkcja ta publikuje listę, do której ma zostać wygenerowane unikatowe id
  * następnie sortuje ja według id, po czym bierze wartość i=0 i idzie przez każdy element posortowanej listy
- * zwiększając wartość i o 1 jeżeli w którymś momencie  wartość i nie będzie się zgadzać z wartością id elementu listy
- * znaczy że to id jest wolne lub jeśli lista się skończyła to również powiększone i będzie oznaczać wolne id
- * i takie zatem zwracać
+ * zwiększając wartość i o 1, jeżeli w którymś momencie wartość i nie będzie się zgadzać z wartością id elementu listy
+ * oznacza to, że id jest wolne lub jeśli lista się skończyła to również powiększona zostaje o 1 i będzie oznaczać wolne id
+ * 
  *
- * @param list - struktura list_pointers określają listę do duplikowania
- * @return int - zwraca wartość int określająca najmniejsze wolne id
+ * @param list - struktura list_pointers określająca listę do duplikowania
+ * @return int - zwraca wartość int określającą najmniejsze wolne id
  */
 
 int generate_id(list_pointers list)
@@ -105,7 +105,7 @@ int generate_id(list_pointers list)
 
 	if (tmp.head == NULL)
 	{
-		//printf("your list is empty\n");
+		//printf("Your list is empty\n");
 		return i;
 	}
 	while (tmp.tail != active)

@@ -1,7 +1,7 @@
 /**
  * @file phone_book.h
  * @author Tomasz Bogdan, Maciej Cedzyński, Filip Borowiec
- * @brief plik nagłowkowki bibliteki łączacej wszystkie pliki programu
+ * @brief plik nagłowkowy bibliteki łączacej wszystkie pliki programu
  * @version 0.1
  * @date 2022-03-24
  * 
@@ -13,79 +13,79 @@
 #ifndef PHONE_BOOK
 #define PHONE_BOOK
 
-//struktura adresu wykorzystywana we strukturze wpisu w ksi�zce telefoniczej
+//struktura adresu wykorzystywana w strukturze wpisu w ksiazce telefoniczej
 
 /**
- * @brief struktura zawierająća dane o adresie danej osoby
+ * @brief struktura zawierająca dane o adresie danej osoby
  * 
  */
 struct adress_struct
 {
 	/**
-	 * @brief 30 elemnotowy ciąg znaków przeznaczony do zapisania nazwy ulicy zamieszkania
+	 * @brief 30 elementowy ciąg znaków przeznaczony do zapisania nazwy ulicy zamieszkania
 	 * 
 	 */
 	char street[30];
 	/**
-	 * @brief wartosć liczbowa służąca określninu mueru domu lib budynku adresu danej osoby
+	 * @brief wartosć liczbowa służąca określeniu mumeru domu lub budynku danej osoby
 	 * 
 	 */
 	short int number;
 	/**
-	 * @brief 8 elemntowy ciąg znaków służący do pszechowywania kodu pocztowego danej osoby w książce
+	 * @brief 8 elementowy ciąg znaków służący do przechowywania kodu pocztowego danej osoby w książce
 	 * 
 	 */
 	char postal_code[8];
 	/**
-	 * @brief 30 elemntowy ciąg znakó służacy do pszechowywania maista zamieszkania danej osoby w książce teleofoniczej
+	 * @brief 30 elementowy ciąg znaków służacy do przechowywania nazwy miasta zamieszkania danej osoby
 	 * 
 	 */
 	char city[30];
 }; 
 /**
- * @brief typ struktury adresu utworzony aby skrócić nazwe typu do krótzej przystępniejszej formy
+ * @brief typ struktury adresu utworzony aby skrócić nazwe typu do krótszej przystępniejszej formy
  * 
  */
 typedef struct adress_struct adress_type;
 
 
-//struktura pojedy�czego wpisu w ksi�zce telefoniczej
+//struktura pojedynczego wpisu w ksiazce telefoniczej
 /**
- * @brief struktura pojedyńczego wpisusu w książće telefoniczej
+ * @brief struktura pojedynczego wpisus w książce telefoniczej
  * 
  */
 struct contact_struct
 {
 	/**
-	 * @brief wartość liczbowa int bez znaku określająca id danego konkaktu w ksiżce telefonicznej
+	 * @brief wartość liczbowa int bez znaku określająca id danego kontaktu w ksiażce telefonicznej
 	 * 
 	 */
 	unsigned int id;
 
 
 	/**
-	 * @brief 30 elemtowy ciąg znaków pozwakjacy na zapisanie imienia danego kontaktu w książce telefonicznej
+	 * @brief 30 elementowy ciąg znaków pozwalajacy na zapisanie imienia danego kontaktu w książce telefonicznej
 	 * 
 	 */
 	char name[30];
 
 
 	/**
-	 * @brief 30 elemtowy ciąg znaków pozwakjacy na zapisanie nazwiska danego kontaktu w książce telefonicznej
+	 * @brief 30 elementowy ciąg znaków pozwalajacy na zapisanie nazwiska danego kontaktu w książce telefonicznej
 	 * 
 	 */
 	char surname[30];
 
 
 	/**
-	 * @brief typ danych struktury adresu gdzie maja byc zapisywane wszelkie dane odnośnie adrsu zamieskzania danego adresu
+	 * @brief typ danych struktury adresu gdzie maja byc zapisywane wszelkie dane odnośnie adresu zamieszkania 
 	 * 
 	 */
 	adress_type adress;
 
 
 	/**
-	 * @brief 11 elemtowy ciąg znaków przeznaczony do zapisania numeru telfonu danego wpisu w książce telefonicznej
+	 * @brief 11 elementowy ciąg znaków przeznaczony do zapisania numeru telefonu danego wpisu w książce telefonicznej
 	 * 
 	 */
 	char phone_number[11];
@@ -93,42 +93,42 @@ struct contact_struct
 };
 
 /**
- * @brief typ danych struktury wpisu w konakcie aby ułatwić poźnijesze odnoszenie sie do tego typu
+ * @brief typ danych struktury wpisu w kontakcie aby ułatwić poźniejsze odnoszenie sie do tego typu
  * 
  */
 typedef struct contact_struct contact_type;
 
 
-//typ danych struktry pojedy�czego elemntu list, zawiera dane oraz onaczenie poprzeniego i koljengo elemenmtu
+//typ danych struktry pojedynczego elementu list, zawiera dane oraz oznaczenie poprzedniego i kolejnego elementu
 
 
 /**
- * @brief typ struktury opisujące pojedyńczy elemnt listy dynamicznej ksiązki telefonicznej
+ * @brief typ struktury opisujący pojedynczy element listy dynamicznej ksiązki telefonicznej
  * 
  */
 struct list_node_struct
 {
 	/**
-	 * @brief dane zapisane w pojedyńczym elemncie listy, dane są jednym wpisem w książće o typue contact_type
+	 * @brief dane zapisane w pojedynczym elemencie listy, dane są jednym wpisem w książce o typie contact_type
 	 * 
 	 */
 	contact_type data;
 
 	/**
-	 * @brief wskaźnik na nastęny elemnt w liście dynamicznje
+	 * @brief wskaźnik na następny element w liście dynamicznej
 	 * 
 	 */
 	struct list_node_struct* next;
 
 	/**
-	 * @brief wksaźnik na poprzedni elemnt listy dynamicznej
+	 * @brief wksaźnik na poprzedni element listy dynamicznej
 	 * 
 	 */
 	struct list_node_struct* prev;
 };
 
 /**
- * @brief typ danych struktury pojedyńczego lemntu listy dynamicznje utworzony w celu późniejszego łatwiejszego przywoływania tego typu w kodzie
+ * @brief typ danych struktury pojedynczego elementu listy dynamicznej utworzony w celu późniejszego łatwiejszego przywoływania tego typu w kodzie
  * 
  */
 typedef struct list_node_struct list_node;
@@ -136,19 +136,19 @@ typedef struct list_node_struct list_node;
 
 // typ danych struktury list_pointers do oznaczenia listy dynamicznej
 /**
- * @brief struktura wykorzystana jako określnnie listy dynamicznej
+ * @brief struktura wykorzystana jako określenie listy dynamicznej
  * 
  */
 struct list_pointers_strucrt
 {
 	/**
-	 * @brief wskaźnik na początkowy elemnt listy dynamicznej
+	 * @brief wskaźnik na początkowy element listy dynamicznej
 	 * 
 	 */
 	list_node* head;
 
 	/**
-	 * @brief wskaźńk na końcowy element listy dynamicznej
+	 * @brief wskaźnik na końcowy element listy dynamicznej
 	 * 
 	 */
 	list_node* tail;
@@ -156,13 +156,13 @@ struct list_pointers_strucrt
 };
 
 /**
- * @brief typ danych struktualny dla opisu listy dynamicznej  w celu późnijeszego ułatwienia odniesienia się w dalszej części programu
+ * @brief typ danych struktualny dla opisu listy dynamicznej w celu późnijeszego ułatwienia odniesienia się w dalszej części programu
  * 
  */
 typedef struct list_pointers_strucrt list_pointers;
 
 
-//funckcje zjaduje sie w pliku phone_book_list.c do osbsu�ugi listy dynamicznej
+//funkcje znajdujace sie w pliku phone_book_list.c do obslugi listy dynamicznej
 
 extern list_pointers list_init();
 extern list_pointers list_add_head(list_pointers list, contact_type data);
@@ -179,14 +179,14 @@ extern list_pointers merge_sort(list_pointers list, int (*cmp)(contact_type, con
 extern list_pointers free_list(list_pointers list);
 
 
-//funkcje znajduj�ce sie w pliku phone_book.c do obs�ugi ksi�zki telefonicznej
+//funkcje znajdujace sie w pliku phone_book.c do obslugi ksiazki telefonicznej
 
 extern void print_contact(contact_type contact);
 
 
 
-//funkcje por�uja�e ze sob� dwa elemnty listy w zale�no�ci od parametru opisanegro w nazwie funkcjiu, znajudj� si� w pliku list_cmp.c
-// zwracaj� -1 gdy a<b, 0 gdy a=b, 1 gdy a>b 1
+//funkcje porownujace ze soba dwa elementy listy w zależności od parametru opisanego w nazwie funkcji znajdującej sie w pliku list_cmp.c
+// zwracającej -1 gdy a<b, 0 gdy a=b, 1 gdy a>b 1
 
 extern int id_cmp(list_node* a, list_node* b);
 extern int name_cmp(list_node* a, list_node* b);
@@ -199,7 +199,7 @@ extern number_cmp(list_node* a, list_node* b);
 
 
 
-// funkcje wyszukiwujce
+// funkcje wyszukujace
 
 extern list_pointers search_results(list_pointers list, int(*is_selected)(char[30], int));
 extern int is_search_name(char string[30], contact_type node);
@@ -212,7 +212,7 @@ extern int is_search_number(char string[30], contact_type node);
 
 
 
-//user interface functions 
+//interfejs 
 extern void start_ui();
 extern list_pointers add_new_element(list_pointers list);
 
@@ -220,7 +220,7 @@ extern list_pointers add_new_element(list_pointers list);
 
 
 
-// tymczasowe funkcje znajdujące sie w pliku temporary_functions.c używane do tesowtaia poprawno��i działaania prgramu
+//tymczasowe funkcje znajdujące sie w pliku temporary_functions.c używane do testowania poprawnosci działania programu
 
 extern void genrating_contacts_test();
 extern void list_test_sort();

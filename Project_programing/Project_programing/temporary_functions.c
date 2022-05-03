@@ -22,7 +22,7 @@
   * @brief funkcja generuje losowy wpis kontaktu na podstawie podanego ziarna losowania
   *
   * @param seed - wartość ziarna na podstawie którego będzie generowany kontakt
-  * @return contact_type - zwraca losowow wygenerowany kontakt
+  * @return contact_type - zwraca losowo wygenerowany kontakt
   */
 
 contact_type generate_rand_contact(int seed)
@@ -115,11 +115,11 @@ contact_type generate_rand_contact(int seed)
 }
 
 
-//funkjca generujaca i wy�wietlajaca 200 losowych konkat� wylosowanych funkcj� generate_rand_contact
+//funkjca generujaca i wyswietlajaca 200 losowych kontaktow wylosowanych funkcja generate_rand_contact
 /**
- * @brief funkcja testująca funkcje generowanie losowego kontaktu
+ * @brief funkcja testująca funkcje - generowanie losowego kontaktu
  *
- * funkcje generuje i wypisuje 200 przykładowo losowo wygenerowanych kontaktów
+ * funkcje generuje i wypisuje 200 losowo wygenerowanych kontaktów
  *
  */
 
@@ -139,18 +139,18 @@ void genrating_contacts_test()
 }
 
 
-//funkcja testuj�ca dzia�anie funkcji soryj�cej liste na losowo wygenerowanej li��ie
+//funkcja testujaca dzialanie funkcji sortujacej liste na losowo wygenerowanej liscie
 /**
  * @brief funkcja pozwala na przetestowanie funkcji sortujących
  *
- * funkcja ta najpierw pozwala wygenerować listę kontaktów a następnie sortuję tą liste według wartości id i ja wypisuje
+ * funkcja ta najpierw pozwala wygenerować listę kontaktów a następnie sortuję te liste według wartości id i ja wypisuje
  *
  */
 
 void list_contact_test_sort()
 {
 	srand(time(0));
-	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
+	printf("\n\n\n\n\n This is the test of sorting list data structure: \n\n");
 	
 	getchar();
 	
@@ -162,7 +162,7 @@ void list_contact_test_sort()
 	}
 	print_list_tail(list);
 	getchar();
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n sorted by id: \n\n\n\n");
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n Sorted by id: \n\n\n\n");
 	list = merge_sort(list, id_cmp);
 	print_list_tail(list);
 	getchar();
@@ -174,14 +174,14 @@ void list_contact_test_sort()
 /**
  * @brief funkcja pozwala na przetestowanie funkcji przeszukiwania listy
  *
- * funkcja na początku tworzy 1000 elementową losową listę kontaktów następnie wykonuje operacje sortowania na tej liście według parametrów podanych bezpośrednio w kodzie
+ * funkcja na początku tworzy 1000 elementową losową listę kontaktów, następnie wykonuje operacje sortowania na tej liście według parametrów podanych bezpośrednio w kodzie
  *
  */
 
 void list_contact_test_search()
 {
 	srand(time(0));
-	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
+	printf("\n\n\n\n\n This is the test of sorting list data structure: \n\n");
 
 	getchar();
 
@@ -204,14 +204,14 @@ void list_contact_test_search()
 /**
  * @brief funkcja pozwala na przetestowanie funkcji odczytu i zapisu list do pliku
  *
- * funkcja na początek pozwala stworzyć liste złożona z 10 elementów a na stronie ja wypisuje
- * po czym zapisuje utworzona listę do pliku o nazwie "test" i ponownie załaduj tą listę z pliku i zapisuje ją na arenie
+ * funkcja na początek pozwala stworzyć liste złożona z 10 elementów a nastepnie ja wypisuje,
+ * po czym zapisuje utworzona listę do pliku o nazwie "test" i ponownie załaduje tą listę z pliku.
  */
 
 void list_file_test()
 {
 	srand(time(0));
-	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
+	printf("\n\n\n\n\n This is the test of sorting list data structure: \n\n");
 
 	getchar();
 
@@ -241,7 +241,7 @@ void list_file_test()
 void list_id_test()
 {
 	srand(time(0));
-	printf("\n\n\n\n\n thisi s the test of sorting list data structure: \n\n");
+	printf("\n\n\n\n\n This is the test of sorting list data structure: \n\n");
 
 	getchar();
 
